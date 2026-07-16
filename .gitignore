@@ -1,0 +1,12 @@
+.DS_Store
+*.textClipping
+
+# Surat rasmi mengandungi maklumat peribadi dan tidak diterbitkan.
+Surat Lantikan Penceramah_*.pdf
+
+# Fail sementara dan hasil sistem
+tmp/
+temp/
+*.tmp
+~$*
+
