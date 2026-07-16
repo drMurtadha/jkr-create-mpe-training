@@ -146,9 +146,8 @@ Modul 1/
 - [x] demonstrasi MPE Hub mempunyai data contoh serta pelan sandaran;
 - [x] penilaian awal, rubrik, kuiz dan exit ticket tersedia;
 - [ ] istilah dan contoh operasi disahkan oleh pemilik proses MPE;
-- [ ] reka bentuk visual slaid ditambah baik dan dieksport kepada PPTX/PDF;
+- [x] reka bentuk visual slaid ditambah baik dan dieksport kepada PPTX/PDF;
 - [ ] nota dan lembaran kerja diformat sebagai PDF cetak;
-- [ ] dokumentasi web Modul 1 diterbitkan.
+- [x] dokumentasi web Modul 1 tersedia dalam portal GitHub Pages.
 
 Kandungan pengajaran sumber telah siap. Item yang belum ditanda ialah kerja pengeluaran visual, pengesahan pemilik proses dan penerbitan akhir.
-

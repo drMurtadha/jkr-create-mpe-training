@@ -2,6 +2,8 @@
 
 Repositori induk bahan latihan bagi Bengkel Transformasi Digital dan Pemerkasaan Operasi Pintar Makmal Penyelidikan Elektrik (MPE), CREaTE JKR, pada 28–29 Julai 2026.
 
+**Portal web:** [drmurtadha.github.io/jkr-create-mpe-training](https://drmurtadha.github.io/jkr-create-mpe-training/)
+
 ## Maklumat bengkel
 
 - Tempat: Makmal Energy Efficiency, Aras 1, Blok F, CREaTE JKR, Alor Gajah
@@ -12,7 +14,7 @@ Repositori induk bahan latihan bagi Bengkel Transformasi Digital dan Pemerkasaan
 
 | Modul | Tarikh dan masa | Fokus | Kedudukan bahan |
 |---|---|---|---|
-| [Modul 1](./Modul%201/) | 28 Julai, 9.00–10.30 pagi | Pengenalan aplikasi pintar untuk meningkatkan produktiviti kerja MPE | Kandungan sumber lengkap; pengeluaran visual seterusnya |
+| [Modul 1](./Modul%201/) | 28 Julai, 9.00–10.30 pagi | Pengenalan aplikasi pintar untuk meningkatkan produktiviti kerja MPE | Kandungan, PPTX/PDF dan portal web lengkap |
 | [Modul 2](./Modul%202/) | 28 Julai, 11.00 pagi–1.00 petang | Penggunaan automasi digital dalam penyediaan dokumen rasmi | Ruang modul tersedia |
 | [Modul 3](./Modul%203/) | 28 Julai, 2.30–4.30 petang dan 29 Julai, 9.00–10.30 pagi | Pendekatan sistematik dalam analisis data dan pengurusan rekod teknikal | Ruang modul tersedia |
 | [Modul 4](./Modul%204/) | 29 Julai, 11.00 pagi–1.00 petang | Automasi untuk penambahbaikan aliran kerja dan pendigitalan proses makmal | Ruang modul tersedia |
@@ -33,6 +35,8 @@ Kajian kes meliputi Buku Log Makmal, KEW.PA-9, MCCB Test Report, Google Apps Scr
 Repositori ini ialah pusat navigasi dan bahan bersama. Modul yang hanya mengandungi slaid, nota dan lembaran kerja disimpan terus di sini. Modul atau projek yang mempunyai aplikasi dan kitaran pembangunan sendiri boleh disimpan dalam repositori berasingan dan dipautkan daripada halaman modul berkaitan.
 
 Pautan terus digunakan sebagai kaedah lalai supaya peserta tidak perlu mengurus Git submodule.
+
+Portal GitHub Pages dibina daripada folder [`docs/`](./docs/) dan diterbitkan secara automatik melalui GitHub Actions apabila kandungannya berubah pada cabang `main`.
 
 ## Struktur bahan setiap modul
 
