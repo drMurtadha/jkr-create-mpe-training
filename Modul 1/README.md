@@ -13,6 +13,20 @@
 
 Modul ini membina kefahaman asas tentang aplikasi pintar dan membantu peserta mengenal pasti peluang peningkatan produktiviti dalam operasi Makmal Penyelidikan Elektrik (MPE). Fokusnya ialah pemilihan masalah dan penyelesaian yang tepat sebelum peserta bergerak kepada automasi dokumen, analisis data, aliran kerja dan penyediaan bahan projek dalam Modul 2–5.
 
+## Navigasi bahan
+
+| Bahan | Kegunaan |
+|---|---|
+| [Nota Fasilitator](./01-Nota-Fasilitator.md) | Panduan persediaan, skrip dan pelaksanaan 90 minit |
+| [Kandungan Slaid](./02-Kandungan-Slaid.md) | Sumber 22 slaid berserta nota penyampai dan cadangan visual |
+| [Kanvas Peluang Produktiviti](./03-Kanvas-Peluang-Produktiviti.md) | Lembaran kerja kumpulan, skor keutamaan dan contoh lengkap |
+| [Skrip Demonstrasi MPE Hub](./04-Skrip-Demonstrasi-MPE-Hub.md) | Demo langsung 12 minit, data rekaan dan pelan sandaran |
+| [Penilaian dan Exit Ticket](./05-Penilaian-dan-Exit-Ticket.md) | Tinjauan, kuiz, rubrik, exit ticket dan ringkasan fasilitator |
+| [Folder slaid](./slaid/) | Indeks dan hasil PPTX/PDF apabila dibangunkan |
+| [Folder nota](./nota/) | Indeks dan hasil nota peserta/fasilitator |
+| [Folder lembaran kerja](./lembaran-kerja/) | Indeks versi cetak/digital bahan peserta |
+| [Folder aset](./aset/) | Senarai visual, tangkap layar dan data demonstrasi |
+
 ## Hasil pembelajaran
 
 Pada akhir sesi, peserta dapat:
@@ -108,7 +122,7 @@ Pautan contoh:
 - Dokumentasi: https://drmurtadha.github.io/mpe-hub/docs.html
 - Repositori: https://github.com/drMurtadha/mpe-hub
 
-## Struktur bahan yang akan dibina
+## Struktur bahan
 
 ```text
 Modul 1/
@@ -126,11 +140,15 @@ Modul 1/
 
 ## Kriteria Modul 1 lengkap
 
-- slaid latihan siap dan disemak;
-- nota fasilitator mempunyai skrip serta masa bagi setiap segmen;
-- lembaran Kanvas Peluang Produktiviti boleh dicetak dan diisi secara digital;
-- demonstrasi MPE Hub mempunyai data contoh serta pelan sandaran jika internet gagal;
-- penilaian awal dan exit ticket tersedia;
-- semua pautan, istilah MPE dan contoh operasi disahkan;
-- versi PDF, PPTX dan dokumentasi web boleh dicapai.
+- [x] sumber kandungan 22 slaid tersedia;
+- [x] nota fasilitator mempunyai skrip serta masa bagi setiap segmen;
+- [x] Kanvas Peluang Produktiviti mempunyai versi kosong dan contoh lengkap;
+- [x] demonstrasi MPE Hub mempunyai data contoh serta pelan sandaran;
+- [x] penilaian awal, rubrik, kuiz dan exit ticket tersedia;
+- [ ] istilah dan contoh operasi disahkan oleh pemilik proses MPE;
+- [ ] reka bentuk visual slaid ditambah baik dan dieksport kepada PPTX/PDF;
+- [ ] nota dan lembaran kerja diformat sebagai PDF cetak;
+- [ ] dokumentasi web Modul 1 diterbitkan.
+
+Kandungan pengajaran sumber telah siap. Item yang belum ditanda ialah kerja pengeluaran visual, pengesahan pemilik proses dan penerbitan akhir.
 

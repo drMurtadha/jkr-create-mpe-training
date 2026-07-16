@@ -12,7 +12,7 @@ Repositori induk bahan latihan bagi Bengkel Transformasi Digital dan Pemerkasaan
 
 | Modul | Tarikh dan masa | Fokus | Kedudukan bahan |
 |---|---|---|---|
-| [Modul 1](./Modul%201/) | 28 Julai, 9.00–10.30 pagi | Pengenalan aplikasi pintar untuk meningkatkan produktiviti kerja MPE | Reka bentuk awal tersedia |
+| [Modul 1](./Modul%201/) | 28 Julai, 9.00–10.30 pagi | Pengenalan aplikasi pintar untuk meningkatkan produktiviti kerja MPE | Kandungan sumber lengkap; pengeluaran visual seterusnya |
 | [Modul 2](./Modul%202/) | 28 Julai, 11.00 pagi–1.00 petang | Penggunaan automasi digital dalam penyediaan dokumen rasmi | Ruang modul tersedia |
 | [Modul 3](./Modul%203/) | 28 Julai, 2.30–4.30 petang dan 29 Julai, 9.00–10.30 pagi | Pendekatan sistematik dalam analisis data dan pengurusan rekod teknikal | Ruang modul tersedia |
 | [Modul 4](./Modul%204/) | 29 Julai, 11.00 pagi–1.00 petang | Automasi untuk penambahbaikan aliran kerja dan pendigitalan proses makmal | Ruang modul tersedia |
@@ -53,4 +53,3 @@ Setiap modul hendaklah mempunyai hasil pembelajaran, atur cara mengikut masa, no
 ## Privasi dan bahan rasmi
 
 Surat lantikan asal tidak dimasukkan ke dalam repositori kerana mengandungi maklumat peribadi, nombor telefon dan tandatangan. Repositori hanya merekodkan maklumat jadual yang diperlukan untuk pembangunan latihan.
-
