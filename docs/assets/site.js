@@ -20,3 +20,39 @@ if (articleNav) {
     articleNav.appendChild(link);
   });
 }
+
+document.querySelectorAll('.prose pre code').forEach((code) => {
+  const value = code.textContent.trim();
+  const looksLikePrompt = value.includes('KONTEKS:') && value.includes('TUGAS:');
+  if (!looksLikePrompt) return;
+
+  const block = code.closest('pre');
+  block.classList.add('prompt-block');
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'copy-prompt';
+  button.textContent = 'Salin prompt';
+  button.setAttribute('aria-label', 'Salin prompt ke papan klip');
+
+  button.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(code.textContent);
+    } catch {
+      const range = document.createRange();
+      range.selectNodeContents(code);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      document.execCommand('copy');
+      selection.removeAllRanges();
+    }
+    button.textContent = 'Disalin ✓';
+    button.classList.add('copied');
+    window.setTimeout(() => {
+      button.textContent = 'Salin prompt';
+      button.classList.remove('copied');
+    }, 1800);
+  });
+
+  block.appendChild(button);
+});

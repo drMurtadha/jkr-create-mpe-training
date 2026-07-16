@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prompt neutral platform untuk surat, minit, audit fakta dan kawalan rekod.">
+  <meta name="theme-color" content="#0d272b">
+  <title>Pustaka Prompt Boleh Salin · Portal Latihan MPE</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#kandungan">Langkau ke kandungan</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html"><span class="brand-mark">MPE</span><span>Portal Latihan<small>CREaTE JKR · 2026</small></span></a>
+    <button class="menu-button" data-menu aria-expanded="false" aria-label="Buka navigasi">Menu</button>
+    <nav class="nav-links" data-nav-links aria-label="Navigasi utama">
+      <a href="../index.html">Utama</a>
+      <a href="../modul-1/index.html">Modul 1</a>
+      <a href="../modul-2/index.html">Modul 2</a>
+      <a href="../modul-1/slaid.html">Slaid web</a>
+      <a href="https://drmurtadha.github.io/mpe-hub/" target="_blank" rel="noopener">MPE Hub ↗</a>
+      <a href="https://github.com/drMurtadha/jkr-create-mpe-training" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Pustaka Prompt Boleh Salin</div><h1>Pustaka Prompt Boleh Salin</h1><p>Prompt neutral platform untuk surat, minit, audit fakta dan kawalan rekod.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 2</strong><a href="index.html">Ringkasan modul</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kandungan-slaid.html">Kandungan slaid</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="latihan-surat.html">Latihan surat</a><a href="latihan-minit.html">Latihan minit</a><a href="kawalan-rekod.html">Kawalan rekod</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><h1>Buku Kerja dan Pustaka Prompt</h1>
+<p>Halaman ini boleh digunakan terus semasa latihan. Di GitHub, tekan ikon salin pada penjuru blok kod. Di portal web, tekan <strong>Salin prompt</strong>.</p>
+<h2>Buka platform AI generatif</h2>
+<ul>
+<li><a href="https://chatgpt.com/">Buka ChatGPT</a></li>
+<li><a href="https://gemini.google.com/app">Buka Google Gemini</a></li>
+<li><a href="https://claude.ai/new">Buka Claude</a></li>
+</ul>
+<blockquote>
+<p>Gunakan hanya data latihan rekaan dan tidak terperingkat. Jangan masukkan dokumen sebenar, data peribadi, kata laluan, nombor pengenalan, maklumat kontrak sensitif atau apa-apa bahan berlabel Rahsia Besar, Rahsia, Sulit atau Terhad.</p>
+</blockquote>
+<h2>Formula K–T–B–F–S</h2>
+<table>
+<thead>
+<tr>
+<th>Unsur</th>
+<th>Maksud</th>
+<th>Soalan panduan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>K</td>
+<td>Konteks</td>
+<td>Siapa penulis, penerima dan tujuan?</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Tugas</td>
+<td>Apakah hasil yang perlu dijana?</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Bahan</td>
+<td>Fakta sah apa yang boleh digunakan?</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Format</td>
+<td>Apakah struktur dan gaya keluaran?</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Semakan</td>
+<td>Apakah larangan dan pemeriksaan wajib?</td>
+</tr>
+</tbody></table>
+<h2>Prompt 1 — Draf surat rasmi</h2>
+<pre><code class="language-text">KONTEKS:
+Anda membantu menyediakan DRAF surat rasmi kerajaan berdasarkan data latihan rekaan dan tidak terperingkat.
+
+TUGAS:
+Sediakan draf surat rasmi untuk tujuan yang dinyatakan dalam BAHAN.
+
+BAHAN:
+[Tampal lembaran fakta yang diluluskan di sini]
+
+FORMAT:
+Susun sebagai: nombor rujukan, tarikh, penerima, sapaan, tajuk huruf besar, perenggan bernombor, penutup, blok tandatangan bertanda DRAF dan senarai s.k. jika diberikan. Gunakan Bahasa Melayu rasmi, jelas dan ringkas.
+
+SEMAKAN:
+Gunakan fakta yang diberikan sahaja. Jangan mereka nama, jawatan, tarikh, nombor rujukan, keputusan atau komitmen. Jika maklumat penting tiada, tulis [PERLU PENGESAHAN]. Jangan gambarkan draf ini sebagai telah diluluskan atau dihantar. Akhiri dengan senarai maklumat yang masih perlu disahkan manusia.
+</code></pre>
+<h2>Prompt 2 — Audit fakta surat</h2>
+<pre><code class="language-text">KONTEKS:
+Anda ialah pembantu semakan. Ini ialah data latihan rekaan dan tidak terperingkat.
+
+TUGAS:
+Bandingkan DRAF SURAT dengan FAKTA SUMBER. Jangan tulis semula surat dahulu.
+
+FAKTA SUMBER:
+[Tampal lembaran fakta]
+
+DRAF SURAT:
+[Tampal draf]
+
+FORMAT:
+Hasilkan jadual dengan lajur: Pernyataan dalam draf | Status (Disokong/Tidak disokong/Perlu pengesahan) | Bukti daripada fakta sumber | Cadangan pembetulan. Selepas jadual, senaraikan fakta sumber yang tertinggal.
+
+SEMAKAN:
+Anggap setiap butiran yang tiada dalam fakta sumber sebagai tidak disokong. Jangan membuat andaian dan jangan menambah fakta baharu.
+</code></pre>
+<h2>Prompt 3 — Baiki surat selepas audit</h2>
+<pre><code class="language-text">KONTEKS:
+Ini ialah draf latihan bagi dokumen tidak terperingkat.
+
+TUGAS:
+Baiki DRAF SURAT berdasarkan LAPORAN AUDIT sahaja.
+
+DRAF SURAT:
+[Tampal draf]
+
+LAPORAN AUDIT:
+[Tampal jadual audit yang telah disemak manusia]
+
+FORMAT:
+Kekalkan struktur surat rasmi. Tandakan maklumat belum pasti dengan [PERLU PENGESAHAN]. Selepas surat, berikan log perubahan ringkas.
+
+SEMAKAN:
+Jangan menambah fakta, keputusan, penerima, pemilik tindakan atau tarikh baharu. Keluaran kekal DRAF dan mesti disemak serta diluluskan pegawai berkuasa.
+</code></pre>
+<h2>Prompt 4 — Ringkaskan bahasa tanpa mengubah fakta</h2>
+<pre><code class="language-text">KONTEKS:
+Teks berikut ialah draf latihan tidak terperingkat.
+
+TUGAS:
+Perkemas bahasa supaya rasmi, mudah difahami dan tidak berulang.
+
+TEKS:
+[Tampal perenggan]
+
+FORMAT:
+Berikan (A) versi diperkemas dan (B) senarai perubahan bahasa.
+
+SEMAKAN:
+Jangan mengubah fakta, maksud, skop, tahap komitmen, tarikh atau angka. Jika ayat kabur, tandakan [PERLU PENGESAHAN] dan jangan meneka.
+</code></pre>
+<h2>Prompt 5 — Draf minit dan tindakan</h2>
+<pre><code class="language-text">KONTEKS:
+Anda membantu menstruktur catatan mesyuarat latihan yang rekaan dan tidak terperingkat. Catatan mungkin tidak lengkap.
+
+TUGAS:
+Hasilkan DRAF minit mesyuarat dan daftar tindakan menggunakan CATATAN SUMBER sahaja.
+
+CATATAN SUMBER:
+[Tampal catatan mesyuarat]
+
+FORMAT:
+Bahagian 1: maklumat mesyuarat, kehadiran, agenda, perbincangan dan keputusan.
+Bahagian 2: jadual tindakan dengan lajur ID | Tindakan | Pemilik | Tarikh sasaran | Status | Bukti sumber.
+
+SEMAKAN:
+Bezakan perbincangan, keputusan dan tindakan. Jangan mereka keputusan, pemilik atau tarikh. Gunakan [PERLU PENGESAHAN] apabila catatan tidak jelas. Jangan tukar cadangan kepada keputusan. Keluaran mesti dilabel DRAF.
+</code></pre>
+<h2>Prompt 6 — Audit minit</h2>
+<pre><code class="language-text">KONTEKS:
+Ini ialah semakan minit latihan tidak terperingkat.
+
+TUGAS:
+Audit DRAF MINIT terhadap CATATAN SUMBER.
+
+CATATAN SUMBER:
+[Tampal catatan asal]
+
+DRAF MINIT:
+[Tampal draf minit]
+
+FORMAT:
+Senaraikan: (1) keputusan yang disokong, (2) dakwaan yang tidak disokong, (3) tindakan tanpa pemilik/tarikh yang sah, (4) perkara tertinggal, dan (5) soalan pengesahan kepada urus setia.
+
+SEMAKAN:
+Petik bukti ringkas daripada catatan bagi setiap penemuan. Jangan membetulkan dengan fakta rekaan.
+</code></pre>
+<h2>Prompt 7 — Daftar tindakan dalam CSV</h2>
+<pre><code class="language-text">KONTEKS:
+Gunakan hanya minit latihan yang telah disahkan manusia.
+
+TUGAS:
+Tukarkan bahagian tindakan kepada CSV.
+
+MINIT DISAHKAN:
+[Tampal bahagian tindakan]
+
+FORMAT:
+Gunakan tepat tajuk lajur berikut:
+ID,Tindakan,Pemilik,Tarikh Sasaran,Status,Rujukan Minit
+Letakkan keseluruhan CSV dalam satu blok kod dan jangan tambah ulasan di dalam blok.
+
+SEMAKAN:
+Jangan mereka nilai yang tiada. Gunakan [PERLU PENGESAHAN] dalam sel berkaitan.
+</code></pre>
+<h2>Prompt 8 — Banding dua draf</h2>
+<pre><code class="language-text">KONTEKS:
+Draf A dan Draf B dihasilkan daripada fakta latihan yang sama menggunakan dua platform AI.
+
+TUGAS:
+Bandingkan kedua-dua draf tanpa menganggap mana-mana platform sentiasa lebih baik.
+
+FAKTA SUMBER:
+[Tampal fakta]
+
+DRAF A:
+[Tampal draf A]
+
+DRAF B:
+[Tampal draf B]
+
+FORMAT:
+Beri skor 0–2 untuk setiap kriteria: ketepatan fakta, kelengkapan, format rasmi, kejelasan bahasa dan keselamatan/ketelusan. Sertakan bukti serta risiko utama. Cadangkan unsur terbaik untuk draf gabungan, bukan terus menggabungkannya.
+
+SEMAKAN:
+Fakta sumber ialah rujukan utama. Gaya penulisan tidak boleh mengatasi ketepatan fakta.
+</code></pre>
+<h2>Prompt 9 — Semakan akhir sebelum kelulusan</h2>
+<pre><code class="language-text">KONTEKS:
+Dokumen ini masih DRAF dan akan diperiksa pegawai berkuasa.
+
+TUGAS:
+Jalankan semakan pra-kelulusan tanpa menulis semula dokumen.
+
+DOKUMEN:
+[Tampal draf latihan]
+
+FORMAT:
+Hasilkan senarai semak Lulus/Gagal/Perlu pengesahan bagi: fakta, penerima, nombor rujukan, tarikh, kuasa/komitmen, format, bahasa, lampiran, keselamatan maklumat, pemilik tindakan, kawalan versi dan lokasi simpanan rasmi. Akhiri dengan keputusan: Belum sedia / Sedia untuk semakan pegawai.
+
+SEMAKAN:
+Jangan memberi status Diluluskan. Hanya manusia yang diberi kuasa boleh meluluskan, menandatangani, menghantar atau mendaftarkan dokumen.
+</code></pre>
+<h2>Prompt 10 — Bina templat tanpa mendedahkan dokumen sebenar</h2>
+<pre><code class="language-text">KONTEKS:
+Saya mahu templat generik bagi dokumen rasmi tidak terperingkat. Jangan minta atau gunakan dokumen sebenar.
+
+TUGAS:
+Bina templat dengan medan tempat letak untuk surat rasmi berkaitan [nyatakan tujuan umum].
+
+FORMAT:
+Gunakan medan seperti [NOMBOR RUJUKAN], [TARIKH], [NAMA PENERIMA], [FAKTA DISAHKAN] dan [PEGAWAI PELULUS]. Sertakan senarai fakta minimum yang perlu dikumpul sebelum draf dijana.
+
+SEMAKAN:
+Jangan cipta contoh yang kelihatan seperti rekod sebenar. Letakkan amaran bahawa hanya data rekaan atau data yang diluluskan untuk platform tersebut boleh digunakan.
+</code></pre>
+<h2>Catatan perbandingan kumpulan</h2>
+<table>
+<thead>
+<tr>
+<th>Perkara</th>
+<th>Platform A</th>
+<th>Platform B</th>
+<th>Keputusan kumpulan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fakta tepat</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tiada fakta rekaan</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Format sesuai</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bahasa jelas</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mudah disemak</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<div class="resource-bar"><a class="button ghost" href="https://github.com/drMurtadha/jkr-create-mpe-training/blob/main/Modul%202/03-Buku-Kerja-dan-Pustaka-Prompt.md" target="_blank" rel="noopener">Lihat sumber Markdown ↗</a><button class="button ghost" onclick="window.print()">Cetak halaman</button></div></article></main>
+<footer class="site-footer"><div class="container footer-grid"><div><strong>Bengkel Transformasi Digital dan Pemerkasaan Operasi Pintar MPE</strong><br>CREaTE JKR · 28–29 Julai 2026</div><div>Prof. Madya Dr. Mohd Murtadha Mohamad<br><a href="https://github.com/drMurtadha/jkr-create-mpe-training">Sumber terbuka di GitHub</a></div></div></footer>
+<script src="../assets/site.js"></script>
+
+</body>
+</html>

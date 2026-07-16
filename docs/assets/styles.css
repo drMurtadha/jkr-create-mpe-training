@@ -127,6 +127,10 @@ button, .button { font: inherit; }
 .prose code { padding: .12rem .35rem; border-radius: 5px; background: #edf2f1; }
 .prose pre { overflow: auto; padding: 1rem; border-radius: 14px; background: var(--ink-deep); color: white; }
 .prose pre code { padding: 0; background: none; }
+.prose pre.prompt-block { position: relative; padding-top: 4rem; }
+.copy-prompt { position: absolute; top: .75rem; right: .75rem; padding: .45rem .7rem; border: 1px solid #527177; border-radius: 9px; background: #173e44; color: white; font-size: .8rem; font-weight: 800; cursor: pointer; }
+.copy-prompt:hover, .copy-prompt:focus-visible { border-color: var(--lime); color: var(--lime); }
+.copy-prompt.copied { border-color: var(--lime); background: #214b38; color: var(--lime); }
 
 .resource-bar { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.5rem; }
 .notice { padding: 1rem 1.2rem; border-left: 4px solid var(--amber); background: #fff5df; color: #674b17; }
