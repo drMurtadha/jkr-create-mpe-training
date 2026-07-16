@@ -71,7 +71,7 @@ Sekian, terima kasih.
 
 Contoh ini menunjukkan tahap ketepatan yang diharapkan, bukan surat yang telah diluluskan.
 
-## Semakan rakan sebaya
+## Semakan rakan sekerja
 
 | Kriteria | Ya | Belum | Catatan |
 |---|---:|---:|---|
@@ -80,4 +80,3 @@ Contoh ini menunjukkan tahap ketepatan yang diharapkan, bukan surat yang telah d
 | Tujuan surat tidak diperluas |  |  |  |
 | Maklumat belum lengkap ditanda |  |  |  |
 | Dokumen jelas berstatus DRAF/SIMULASI |  |  |  |
-
