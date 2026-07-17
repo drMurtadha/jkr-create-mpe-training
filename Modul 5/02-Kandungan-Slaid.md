@@ -9,7 +9,7 @@
 
 ---
 
-## Slaid 1 - Siapkan dan sesuaikan MPE Hub
+## Slaid 1 - Daripada idea kepada MPE Hub
 
 GitHub Pages -> Apps Script API -> Google Sheets + Google Drive.
 
