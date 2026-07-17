@@ -20,7 +20,7 @@ const nav = (prefix = '') => `
       <a href="${prefix}modul-1/index.html">Modul 1</a>
       <a href="${prefix}modul-2/index.html">Modul 2</a>
       <a href="${prefix}modul-3/index.html">Modul 3</a>
-      <a href="${prefix}modul-1/slaid.html">Slaid web</a>
+      <a href="${prefix}slaid.html">Slaid web</a>
       <a href="https://drmurtadha.github.io/mpe-hub/" target="_blank" rel="noopener">MPE Hub ↗</a>
       <a href="https://github.com/drMurtadha/jkr-create-mpe-training" target="_blank" rel="noopener">GitHub ↗</a>
     </nav>
@@ -83,6 +83,7 @@ function rewriteModuleLinks(markdown, moduleNumber) {
     ['./05-Latihan-Minit-Tindakan.md', 'latihan-minit.html'],
     ['./06-Kawalan-Rekod-dan-Semakan.md', 'kawalan-rekod.html'],
     ['./07-Penilaian-dan-Exit-Ticket.md', 'penilaian.html'],
+    ['./slaid/', 'slaid.html'],
     ['./templat/', 'https://github.com/drMurtadha/jkr-create-mpe-training/tree/main/Modul%202/templat']
   ];
   const moduleThree = [
@@ -103,7 +104,7 @@ async function markdownPage({ source, output, title, description, prefix = '../'
   markdown = rewriteModuleLinks(markdown, moduleNumber);
   const content = marked.parse(markdown);
   const moduleOneAside = `<aside class="article-nav"><strong>Dalam Modul 1</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kanvas.html">Kanvas peluang</a><a href="demonstrasi.html">Demonstrasi</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
-  const moduleTwoAside = `<aside class="article-nav"><strong>Dalam Modul 2</strong><a href="index.html">Ringkasan modul</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kandungan-slaid.html">Kandungan slaid</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="latihan-surat.html">Latihan surat</a><a href="latihan-minit.html">Latihan minit</a><a href="kawalan-rekod.html">Kawalan rekod</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
+  const moduleTwoAside = `<aside class="article-nav"><strong>Dalam Modul 2</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kandungan-slaid.html">Kandungan slaid</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="latihan-surat.html">Latihan surat</a><a href="latihan-minit.html">Latihan minit</a><a href="kawalan-rekod.html">Kawalan rekod</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
   const moduleThreeAside = `<aside class="article-nav"><strong>Dalam Modul 3</strong><a href="index.html">Ringkasan modul</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="latihan-analisis.html">Analisis data</a><a href="rekod-teknikal.html">Rekod teknikal</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
   const generalAside = `<aside class="article-nav"><strong>Modul bengkel</strong><a href="../modul-1/index.html">Modul 1</a><a href="../modul-2/index.html">Modul 2</a><a href="../modul-3/index.html">Modul 3</a><a href="../modul-4/index.html">Modul 4</a><a href="../modul-5/index.html">Modul 5</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
   const aside = moduleNumber === 1 ? moduleOneAside : moduleNumber === 2 ? moduleTwoAside : moduleNumber === 3 ? moduleThreeAside : generalAside;
@@ -127,6 +128,13 @@ const home = shell({
 });
 
 await write('index.html', home);
+
+const slideHub = shell({
+  title: 'Slaid web',
+  description: 'Pilih slaid web interaktif bagi setiap modul latihan MPE.',
+  body: `${pageHero('Slaid web', 'Pilih modul untuk membuka dek interaktif lengkap dengan nota penyampai.', '')}<main id="kandungan" class="container section"><div class="grid two"><a class="card-link" href="modul-1/slaid.html"><article class="card"><span class="module-number">01</span><h3>Modul 1</h3><p>Aplikasi pintar untuk produktiviti kerja MPE · 22 slaid</p><span class="status ready">Buka slaid</span></article></a><a class="card-link" href="modul-2/slaid.html"><article class="card"><span class="module-number">02</span><h3>Modul 2</h3><p>AI generatif untuk dokumen rasmi tidak terperingkat · 26 slaid</p><span class="status ready">Buka slaid</span></article></a></div></main>`
+});
+await write('slaid.html', slideHub);
 
 const moduleOneIntro = `Portal Modul 1 lengkap dengan slaid web, nota penyampai, aktiviti kanvas, demonstrasi MPE Hub dan penilaian.`;
 await markdownPage({ source: 'Modul 1/README.md', output: 'modul-1/index.html', title: 'Modul 1 — Pengenalan Aplikasi Pintar', description: moduleOneIntro, downloads: true });
@@ -160,8 +168,9 @@ for (const number of [4, 5]) {
   await markdownPage({ source: `Modul ${number}/README.md`, output: `modul-${number}/index.html`, title: `Modul ${number} — ${moduleTitles[number]}`, description, moduleNumber: 0 });
 }
 
-const slidesPage = `<!doctype html><html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0d272b"><title>Slaid Web Modul 1 · Portal Latihan MPE</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css"></head><body class="slide-mode"><main class="deck"><div class="slides-viewport" data-slides aria-live="polite"></div><div class="deck-toolbar"><a href="index.html" title="Kembali ke Modul 1">← Modul 1</a><button data-prev aria-label="Slaid sebelumnya">←</button><button data-next aria-label="Slaid seterusnya">→</button><span class="slide-count" data-slide-count></span><div class="deck-progress" aria-hidden="true"><span data-progress></span></div><button class="optional" data-notes title="Tekan N">Nota</button><button class="optional" data-fullscreen title="Tekan F">Skrin penuh</button></div></main><aside class="speaker-notes" data-notes-panel></aside><script src="../assets/slides.js"></script></body></html>`;
-await write('modul-1/slaid.html', slidesPage);
+const slidePage = (moduleNumber, script) => `<!doctype html><html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0d272b"><title>Slaid Web Modul ${moduleNumber} · Portal Latihan MPE</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css?v=${assetVersion}"></head><body class="slide-mode"><main class="deck"><div class="slides-viewport" data-slides aria-live="polite"></div><div class="deck-toolbar"><a href="index.html" title="Kembali ke Modul ${moduleNumber}">← Modul ${moduleNumber}</a><button data-prev aria-label="Slaid sebelumnya">←</button><button data-next aria-label="Slaid seterusnya">→</button><span class="slide-count" data-slide-count></span><div class="deck-progress" aria-hidden="true"><span data-progress></span></div><button class="optional" data-notes title="Tekan N">Nota</button><button class="optional" data-fullscreen title="Tekan F">Skrin penuh</button></div></main><aside class="speaker-notes" data-notes-panel></aside><script src="../assets/${script}?v=${assetVersion}"></script></body></html>`;
+await write('modul-1/slaid.html', slidePage(1, 'slides.js'));
+await write('modul-2/slaid.html', slidePage(2, 'slides-modul-2.js'));
 
 await fs.mkdir(path.join(docs, 'downloads'), { recursive: true });
 await fs.copyFile(path.join(root, 'Modul 1/slaid/Slaid-Modul-1-MPE.pptx'), path.join(docs, 'downloads/Slaid-Modul-1-MPE.pptx'));

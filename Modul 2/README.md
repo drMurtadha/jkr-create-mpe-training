@@ -1,5 +1,7 @@
 # Modul 2 — Penggunaan AI Generatif dalam Penyediaan Dokumen Rasmi Tidak Terperingkat
 
+[Buka slaid web Modul 2](./slaid/)
+
 ## Kedudukan dalam bengkel
 
 - Tarikh: 28 Julai 2026 (Selasa)
@@ -112,4 +114,3 @@ Pakej-Modul-2-Kumpulan-X/
 - [ ] istilah serta format surat disahkan oleh pemilik proses JKR;
 - [ ] PPTX/PDF Modul 2 dikeluarkan dan diperiksa secara visual;
 - [ ] ujian rintis dilaksanakan menggunakan akaun percuma sebenar pada hari latihan.
-
