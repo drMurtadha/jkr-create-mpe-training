@@ -2,39 +2,9 @@
 
 ## Kuiz akhir
 
-1. Apakah langkah pertama dalam analisis sistematik?
-   - A. Membina carta
-   - B. Menjelaskan soalan dan keputusan yang hendak disokong
-   - C. Memadam nilai luar biasa
+Pilih satu jawapan bagi setiap soalan. Markah dan jawapan hanya dipaparkan selepas semua soalan dijawab dan butang **Hantar jawapan** ditekan.
 
-2. Apakah tindakan yang betul bagi nilai kosong?
-   - A. Tukar kepada sifar
-   - B. Abaikan semua baris
-   - C. Tentukan maksudnya melalui kamus data atau pemilik rekod
-
-3. Apakah perbezaan pemerhatian dan tafsiran?
-   - A. Pemerhatian disokong nilai; tafsiran menerangkan makna dan perlu dinyatakan batasannya
-   - B. Tiada perbezaan
-   - C. Tafsiran sentiasa lebih tepat
-
-4. Jika dua rekod teknikal bercanggah, apakah tindakan utama?
-   - A. Pilih rekod paling baharu secara automatik
-   - B. Minta AI memilih
-   - C. Rujuk sumber autoritatif dan pemilik rekod
-
-5. Di manakah hasil akhir perlu disimpan?
-   - A. Sejarah chat
-   - B. Sistem atau fail rekod rasmi jabatan
-   - C. Folder muat turun peribadi
-
-6. Siapakah boleh memberikan status Diluluskan?
-   - A. AI
-   - B. Pegawai diberi kuasa
-   - C. Mana-mana peserta
-
-### Skema
-
-1-B, 2-C, 3-A, 4-C, 5-B, 6-B.
+<div class="interactive-quiz" data-quiz="modul-3"></div>
 
 ## Rubrik hasil kumpulan
 
@@ -51,18 +21,10 @@ Skor maksimum: 12. Cadangan tahap: 10–12 bersedia; 7–9 perlu pembetulan keci
 
 ## Exit ticket
 
-1. Langkah sistematik yang paling berguna kepada saya: __________
-2. Satu semakan data yang akan saya lakukan: __________
-3. Satu kawalan rekod teknikal yang wajib: __________
-4. Satu perkara yang AI tidak boleh putuskan: __________
-5. Keyakinan saya menjalankan analisis boleh audit (1–5): __________
+Lengkapkan refleksi dan tandakan bukti yang benar-benar telah disiapkan. Semua jawapan akan disimpan dalam dokumen Google rasmi latihan.
+
+<div class="exit-ticket" data-exit-ticket="modul-3"></div>
 
 ## Bukti penyempurnaan
 
-- [ ] Soalan analisis dan kamus data.
-- [ ] Laporan kualiti dengan bukti.
-- [ ] Jadual serta carta yang disahkan.
-- [ ] Dua pengiraan semula.
-- [ ] Log perubahan.
-- [ ] Daftar rekod teknikal.
-- [ ] Nota batasan dan lokasi simpanan rasmi.
+Peserta menandakan bukti melalui kotak semak dalam exit ticket di atas. Tanda ini ialah pengisytiharan kendiri, bukan kelulusan fasilitator. Senarai yang ditanda dihantar bersama maklum balas untuk semakan.

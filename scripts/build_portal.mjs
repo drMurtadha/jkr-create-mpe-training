@@ -18,6 +18,7 @@ const nav = (prefix = '') => `
       <a href="${prefix}index.html">Utama</a>
       <a href="${prefix}modul-1/index.html">Modul 1</a>
       <a href="${prefix}modul-2/index.html">Modul 2</a>
+      <a href="${prefix}modul-3/index.html">Modul 3</a>
       <a href="${prefix}modul-1/slaid.html">Slaid web</a>
       <a href="https://drmurtadha.github.io/mpe-hub/" target="_blank" rel="noopener">MPE Hub ↗</a>
       <a href="https://github.com/drMurtadha/jkr-create-mpe-training" target="_blank" rel="noopener">GitHub ↗</a>

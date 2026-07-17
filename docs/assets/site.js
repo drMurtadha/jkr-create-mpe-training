@@ -141,6 +141,21 @@ const quizzes = {
       if (score >= 3) return 'Perlu bimbingan.';
       return 'Ulang pagar keselamatan dan audit fakta.';
     }
+  },
+  'modul-3': {
+    questions: [
+      { question: 'Apakah langkah pertama dalam analisis sistematik?', options: ['Membina carta', 'Menjelaskan soalan dan keputusan yang hendak disokong', 'Memadam nilai luar biasa'], answer: 1, explanation: 'Analisis bermula dengan soalan, pengguna dan keputusan yang hendak disokong.' },
+      { question: 'Apakah tindakan yang betul bagi nilai kosong?', options: ['Tukar kepada sifar', 'Abaikan semua baris', 'Tentukan maksudnya melalui kamus data atau pemilik rekod'], answer: 2, explanation: 'Nilai kosong tidak semestinya sifar dan perlu disemak terhadap definisi atau pemilik rekod.' },
+      { question: 'Apakah perbezaan pemerhatian dan tafsiran?', options: ['Pemerhatian disokong nilai; tafsiran menerangkan makna dan perlu dinyatakan batasannya', 'Tiada perbezaan', 'Tafsiran sentiasa lebih tepat'], answer: 0, explanation: 'Pemerhatian datang daripada data; tafsiran menerangkan makna dan mesti menyatakan batasan.' },
+      { question: 'Jika dua rekod teknikal bercanggah, apakah tindakan utama?', options: ['Pilih rekod paling baharu secara automatik', 'Minta AI memilih', 'Rujuk sumber autoritatif dan pemilik rekod'], answer: 2, explanation: 'Konflik rekod perlu dirujuk kepada sumber autoritatif dan pemilik yang bertanggungjawab.' },
+      { question: 'Di manakah hasil akhir perlu disimpan?', options: ['Sejarah chat', 'Sistem atau fail rekod rasmi jabatan', 'Folder muat turun peribadi'], answer: 1, explanation: 'Hasil akhir mesti disimpan dalam repositori rekod rasmi, bukan sejarah chat.' },
+      { question: 'Siapakah boleh memberikan status Diluluskan?', options: ['AI', 'Pegawai diberi kuasa', 'Mana-mana peserta'], answer: 1, explanation: 'Status Diluluskan hanya boleh diberikan oleh pegawai yang diberi kuasa.' }
+    ],
+    result(score) {
+      if (score >= 5) return 'Bersedia menerapkan kaedah Modul 3.';
+      if (score >= 3) return 'Perlu pengukuhan pada beberapa langkah.';
+      return 'Ulang semakan kualiti dan kebolehkesanan rekod.';
+    }
   }
 };
 
@@ -265,6 +280,25 @@ const exitTickets = {
       ['useful_prompt', 'Prompt yang paling berguna hari ini']
     ],
     confidence: 'Tahap keyakinan saya sekarang'
+  },
+  'modul-3': {
+    module: 'Modul 3',
+    fields: [
+      ['systematic_step', 'Langkah sistematik yang paling berguna kepada saya'],
+      ['data_check', 'Satu semakan data yang akan saya lakukan'],
+      ['record_control', 'Satu kawalan rekod teknikal yang wajib'],
+      ['human_decision', 'Satu perkara yang AI tidak boleh putuskan']
+    ],
+    confidence: 'Keyakinan saya menjalankan analisis yang boleh diaudit',
+    evidence: [
+      'Soalan analisis dan kamus data',
+      'Laporan kualiti dengan bukti',
+      'Jadual serta carta yang disahkan',
+      'Dua pengiraan semula',
+      'Log perubahan',
+      'Daftar rekod teknikal',
+      'Nota batasan dan lokasi simpanan rasmi'
+    ]
   }
 };
 
@@ -294,6 +328,15 @@ function renderExitTicket(container) {
       </div>
       <div class="confidence-scale"><span>1 · Tidak yakin</span><span>5 · Sangat yakin</span></div>
     </fieldset>
+    ${ticket.evidence ? `
+      <fieldset class="evidence-field">
+        <legend>Bukti penyempurnaan <span>(tandakan yang telah siap)</span></legend>
+        <div class="evidence-options">
+          ${ticket.evidence.map(item => `<label><input type="checkbox" name="evidence" value="${item}"><span>${item}</span></label>`).join('')}
+        </div>
+        <p>Tanda ini ialah pengisytiharan kendiri dan masih tertakluk kepada semakan fasilitator.</p>
+      </fieldset>
+    ` : ''}
     <div class="exit-ticket-trap" aria-hidden="true">
       <label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label>
     </div>
@@ -317,10 +360,13 @@ function renderExitTicket(container) {
     status.textContent = 'Maklum balas sedang disimpan.';
 
     try {
+      const formData = new FormData(form);
+      const evidence = formData.getAll('evidence');
+      if (evidence.length) formData.set('evidence_summary', evidence.join(' | '));
       await fetch(EXIT_TICKET_ENDPOINT, {
         method: 'POST',
         mode: 'no-cors',
-        body: new URLSearchParams(new FormData(form))
+        body: new URLSearchParams(formData)
       });
       form.reset();
       status.className = 'exit-ticket-status success';

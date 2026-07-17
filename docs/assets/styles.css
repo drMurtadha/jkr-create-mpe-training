@@ -186,6 +186,14 @@ button, .button { font: inherit; }
 .exit-ticket-status { margin: 0; color: var(--muted); font-size: .9rem; }
 .exit-ticket-status.success { color: #215f3d; font-weight: 750; }
 .exit-ticket-status.error { color: #813b3b; font-weight: 750; }
+.evidence-field { margin: 0; padding: 1rem; border: 1px solid var(--line); border-radius: 12px; background: white; }
+.evidence-field legend { color: var(--ink); font-weight: 800; }
+.evidence-field legend span, .evidence-field p { color: var(--muted); font-weight: 500; font-size: .85rem; }
+.evidence-options { display: grid; gap: .55rem; margin-top: .7rem; }
+.evidence-options label { display: flex; gap: .65rem; align-items: flex-start; padding: .65rem .75rem; border: 1px solid var(--line); border-radius: 10px; cursor: pointer; }
+.evidence-options label:has(input:checked) { border-color: var(--teal); background: var(--teal-soft); }
+.evidence-options input { flex: 0 0 auto; width: 1.1rem; height: 1.1rem; margin-top: .22rem; accent-color: var(--teal); }
+.evidence-field p { margin: .7rem 0 0; }
 
 .site-footer { padding: 2.5rem 0; border-top: 1px solid var(--line); background: #eef2ef; color: var(--muted); }
 .footer-grid { display: flex; justify-content: space-between; gap: 2rem; }
