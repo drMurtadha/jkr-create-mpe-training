@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url);
 const { marked } = require('marked');
 const root = process.cwd();
 const docs = path.join(root, 'docs');
-const assetVersion = '20260717-4';
+const assetVersion = '20260717-5';
 
 marked.setOptions({ gfm: true, breaks: false });
 
