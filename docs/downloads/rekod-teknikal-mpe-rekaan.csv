@@ -1,0 +1,19 @@
+record_id,record_type,asset_id,record_date,activity,reading,unit,status,source_file,version,reviewer
+REC-001,LOG,MPE-MCCB-01,2026-07-01,Pemeriksaan visual,,,Selesai,buku-log-julai.csv,v01,Nadia
+REC-002,MCCB_TEST,MPE-MCCB-01,2026-07-02,Ujian arus trip,98.4,A,LULUS,ujian-mccb-01.csv,v01,Farid
+REC-003,KEWPA9,MPE-MCCB-01,03/07/2026,Pergerakan ke Bilik Ujian 2,,,Dalam penggunaan,kewpa9-julai.csv,v01,Ravi
+REC-004,LOG,mpe-mccb-01,2026-07-03,Digunakan untuk latihan,,,selesai,buku-log-julai.csv,v1,Nadia
+REC-005,MCCB_TEST,MCCB01,2026-07-04,Ujian arus trip,101.2,,Pass,ujian-mccb-01.csv,v01,Farid
+REC-006,LOG,MPE-MCCB-02,2026-07-05,Pemeriksaan sambungan,,,Selesai,buku-log-julai.csv,v01,Nadia
+REC-007,MCCB_TEST,MPE-MCCB-02,2026-07-06,Ujian arus trip,97.9,A,Passed,ujian-mccb-02.csv,v01,Farid
+REC-008,KEWPA9,MPE-MCCB-02,2026-07-06,Pergerakan ke Stor B,,,Dikembalikan,kewpa9-julai.csv,v01,Ravi
+REC-009,LOG,MPE-MCCB-03,2026-07-07,Pemeriksaan visual,,,Selesai,buku-log-julai.csv,v01,Nadia
+REC-010,MCCB_TEST,MPE-MCCB-03,2026-13-07,Ujian arus trip,105.0,A,Gagal,ujian-mccb-03.csv,v01,Farid
+REC-010,MCCB_TEST,MPE-MCCB-03,2026-07-08,Ujian arus trip,99.8,A,LULUS,ujian-mccb-03.csv,v02,Farid
+REC-012,LOG,MPE-MCCB-03,2026-07-08,Pelarasan tetapan,,,Dalam Semakan,buku-log-julai.csv,v01,
+REC-013,KEWPA9,MPE-MCCB-03,2026-07-09,Pergerakan ke Bilik Kalibrasi,,,Diluluskan,kewpa9-julai.csv,v01,
+REC-014,LOG,MPE-METER-01,2026-07-10,Bacaan voltan,240.1,V,Selesai,buku-log-julai.csv,v01,Nadia
+REC-015,LOG,MPE-METER-01,10-07-2026,Bacaan voltan,240100,mV,Selesai,buku-log-julai.csv,v01,Nadia
+REC-016,MCCB_TEST,MPE-MCCB-04,2026-07-11,Ujian kesinambungan,0.04,ohm,LULUS,ujian-mccb-04.csv,,Farid
+REC-017,LOG,MPE-MCCB-04,2026-07-11,Pemeriksaan label,,,Selesai,,v01,Nadia
+REC-018,KEWPA9,MPE-MCCB-04,,Pergerakan ke Bilik Ujian 1,,,Dalam penggunaan,kewpa9-julai.csv,v01,Ravi

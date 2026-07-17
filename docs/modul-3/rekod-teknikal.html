@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Audit dan kawalan rekod MPE rekaan yang boleh dijejak.">
+  <meta name="theme-color" content="#0d272b">
+  <title>Pengurusan Rekod Teknikal · Portal Latihan MPE</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#kandungan">Langkau ke kandungan</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html"><span class="brand-mark">MPE</span><span>Portal Latihan<small>CREaTE JKR · 2026</small></span></a>
+    <button class="menu-button" data-menu aria-expanded="false" aria-label="Buka navigasi">Menu</button>
+    <nav class="nav-links" data-nav-links aria-label="Navigasi utama">
+      <a href="../index.html">Utama</a>
+      <a href="../modul-1/index.html">Modul 1</a>
+      <a href="../modul-2/index.html">Modul 2</a>
+      <a href="../modul-1/slaid.html">Slaid web</a>
+      <a href="https://drmurtadha.github.io/mpe-hub/" target="_blank" rel="noopener">MPE Hub ↗</a>
+      <a href="https://github.com/drMurtadha/jkr-create-mpe-training" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Pengurusan Rekod Teknikal</div><h1>Pengurusan Rekod Teknikal</h1><p>Audit dan kawalan rekod MPE rekaan yang boleh dijejak.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 3</strong><a href="index.html">Ringkasan modul</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="latihan-analisis.html">Analisis data</a><a href="rekod-teknikal.html">Rekod teknikal</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><h1>Latihan Pengurusan Rekod Teknikal</h1>
+<h2>Senario</h2>
+<p>Satu fail latihan menggabungkan rekod Buku Log, pergerakan aset KEW.PA-9 dan ujian MCCB. Semua data adalah rekaan. Penggabungan awal mempunyai kesalahan yang disengajakan dan belum boleh dianggap sebagai rekod rasmi.</p>
+<p><a href="../downloads/rekod-teknikal-mpe-rekaan.csv">Muat turun data latihan MPE rekaan</a></p>
+<h2>Objektif</h2>
+<ol>
+<li>mengesan isu identiti, format, pendua, status dan bukti;</li>
+<li>membezakan pembetulan automatik daripada pengesahan pemilik rekod;</li>
+<li>menghubungkan rekod dengan ID aset dan sumber;</li>
+<li>membina daftar rekod teknikal;</li>
+<li>menentukan versi, pemilik, penyemak dan lokasi simpanan rasmi.</li>
+</ol>
+<h2>Struktur medan</h2>
+<table>
+<thead>
+<tr>
+<th>Medan</th>
+<th>Maksud</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>record_id</code></td>
+<td>ID unik rekod</td>
+</tr>
+<tr>
+<td><code>record_type</code></td>
+<td>LOG, KEWPA9 atau MCCB_TEST</td>
+</tr>
+<tr>
+<td><code>asset_id</code></td>
+<td>ID aset yang sepatutnya konsisten</td>
+</tr>
+<tr>
+<td><code>record_date</code></td>
+<td>Tarikh rekod, sasaran ISO <code>YYYY-MM-DD</code></td>
+</tr>
+<tr>
+<td><code>activity</code></td>
+<td>Aktiviti/peristiwa teknikal</td>
+</tr>
+<tr>
+<td><code>reading</code></td>
+<td>Nilai bacaan jika berkenaan</td>
+</tr>
+<tr>
+<td><code>unit</code></td>
+<td>Unit bacaan</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Status kerja atau rekod</td>
+</tr>
+<tr>
+<td><code>source_file</code></td>
+<td>Nama fail sumber rekaan</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>Versi fail/rekod</td>
+</tr>
+<tr>
+<td><code>reviewer</code></td>
+<td>Penyemak manusia</td>
+</tr>
+</tbody></table>
+<h2>Prosedur sistematik</h2>
+<h3>1. Kekalkan sumber</h3>
+<p>Jangan menulis ganti fail asal. Salin sebagai data kerja dan rekodkan checksum atau sekurang-kurangnya nama, tarikh muat turun dan saiz fail.</p>
+<h3>2. Audit tanpa membetulkan</h3>
+<p>Gunakan Prompt 8. Cari isu berikut dan petik baris bukti:</p>
+<ul>
+<li><code>MPE-MCCB-01</code>, <code>mpe-mccb-01</code> dan <code>MCCB01</code>;</li>
+<li>tarikh ISO, format <code>DD/MM/YYYY</code> dan tarikh tidak sah;</li>
+<li><code>Pass</code>, <code>LULUS</code>, <code>Passed</code> dan status kosong;</li>
+<li>satu ID rekod pendua;</li>
+<li>bacaan tanpa unit;</li>
+<li>rekod “Diluluskan” tanpa penyemak;</li>
+<li>versi atau fail sumber yang tiada.</li>
+</ul>
+<h3>3. Tentukan autoriti</h3>
+<table>
+<thead>
+<tr>
+<th>Konflik</th>
+<th>Rujukan utama latihan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Identiti aset</td>
+<td>Daftar aset yang disahkan</td>
+</tr>
+<tr>
+<td>Pergerakan aset</td>
+<td>KEW.PA-9 yang diluluskan</td>
+</tr>
+<tr>
+<td>Aktiviti harian</td>
+<td>Buku Log bertarikh</td>
+</tr>
+<tr>
+<td>Keputusan ujian</td>
+<td>Laporan ujian bertandatangan</td>
+</tr>
+<tr>
+<td>Status kelulusan</td>
+<td>Pegawai diberi kuasa</td>
+</tr>
+</tbody></table>
+<p>AI tidak boleh memilih rekod “paling masuk akal” apabila sumber bercanggah.</p>
+<h3>4. Standardisasi</h3>
+<p>Cadangkan peraturan, tetapi jangan laksanakan tanpa semakan:</p>
+<ul>
+<li>ID aset kepada pola <code>MPE-[JENIS]-NN</code>;</li>
+<li>tarikh kepada ISO 8601;</li>
+<li>kamus status terkawal;</li>
+<li>unit wajib bagi bacaan;</li>
+<li>rekod pendua ditanda, bukan terus dipadam;</li>
+<li>nilai hilang menggunakan <code>[PERLU PENGESAHAN]</code>, bukan sifar.</li>
+</ul>
+<h3>5. Daftar dan pakej rekod</h3>
+<p>Gunakan Prompt 9 untuk draf daftar. Gunakan Prompt 10 untuk semakan pakej.</p>
+<p>Cadangan struktur folder:</p>
+<pre><code class="language-text">01_Sumber_Asal/
+02_Data_Kerja/
+03_Log_Perubahan/
+04_Analisis_Draf/
+05_Hasil_Disahkan/
+06_Rekod_Rasmi/
+</code></pre>
+<h2>Matriks status</h2>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Maksud</th>
+<th>Siapa boleh menetapkan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Draf</td>
+<td>Belum disemak</td>
+<td>Penyedia</td>
+</tr>
+<tr>
+<td>Dalam Semakan</td>
+<td>Sedang diperiksa</td>
+<td>Penyedia/penyemak</td>
+</tr>
+<tr>
+<td>Disahkan</td>
+<td>Fakta dan pengiraan diperiksa</td>
+<td>Penyemak ditetapkan</td>
+</tr>
+<tr>
+<td>Diluluskan</td>
+<td>Diterima untuk tujuan rasmi</td>
+<td>Pegawai diberi kuasa</td>
+</tr>
+</tbody></table>
+<p>AI tidak boleh menetapkan <code>Disahkan</code> atau <code>Diluluskan</code>.</p>
+<h2>Hasil serahan</h2>
+<ul>
+<li>laporan isu dengan nombor baris;</li>
+<li>kamus status dan pola ID;</li>
+<li>log perubahan cadangan;</li>
+<li>daftar rekod teknikal;</li>
+<li>peta sumber autoritatif;</li>
+<li>struktur folder dan kaedah penamaan versi;</li>
+<li>senarai perkara yang perlu dirujuk kepada pemilik rekod.</li>
+</ul>
+<div class="resource-bar"><a class="button ghost" href="https://github.com/drMurtadha/jkr-create-mpe-training/blob/main/Modul%203/04-Pengurusan-Rekod-Teknikal.md" target="_blank" rel="noopener">Lihat sumber Markdown ↗</a><button class="button ghost" onclick="window.print()">Cetak halaman</button></div></article></main>
+<footer class="site-footer"><div class="container footer-grid"><div><strong>Bengkel Transformasi Digital dan Pemerkasaan Operasi Pintar MPE</strong><br>CREaTE JKR · 28–29 Julai 2026</div><div>Prof. Madya Dr. Mohd Murtadha Mohamad<br><a href="https://github.com/drMurtadha/jkr-create-mpe-training">Sumber terbuka di GitHub</a></div></div></footer>
+<script src="../assets/site.js"></script>
+
+</body>
+</html>
