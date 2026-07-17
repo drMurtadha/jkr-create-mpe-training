@@ -59,6 +59,7 @@ Latihan menggunakan rekod MPE rekaan yang menyerupai Buku Log Makmal, KEW.PA-9 d
 | Bahan | Kegunaan |
 |---|---|
 | [Nota fasilitator](./01-Nota-Fasilitator.md) | Pelaksanaan Modul 3A dan 3B |
+| [Kandungan slaid untuk cetakan](./02-Kandungan-Slaid.md) | Sumber 30 slaid Modul 3A dan 3B |
 | [Pustaka prompt boleh salin](./02-Pustaka-Prompt-Analisis-dan-Rekod.md) | Arahan lengkap, neutral platform |
 | [Latihan analisis data](./03-Latihan-Analisis-Data.md) | Dataset kerajaan dan lembaran kerja |
 | [Latihan rekod teknikal](./04-Pengurusan-Rekod-Teknikal.md) | Audit, pembersihan dan daftar rekod |
