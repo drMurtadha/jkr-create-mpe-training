@@ -11,40 +11,9 @@ Minta peserta memilih satu jawapan bagi setiap pernyataan: **Yakin / Kurang yaki
 
 ## Kuiz akhir
 
-1. Apakah tindakan bagi dokumen bertanda **Terhad**?
-   - A. Tampal selepas memadam tajuk
-   - B. Jangan masukkan ke platform AI awam
-   - C. Gunakan jika akaun percuma
+Pilih satu jawapan bagi setiap soalan. Markah dan jawapan hanya dipaparkan selepas semua soalan dijawab dan butang **Hantar jawapan** ditekan.
 
-2. Apakah rujukan utama apabila draf AI dan lembaran fakta bercanggah?
-   - A. Draf yang paling lancar
-   - B. Platform yang paling popular
-   - C. Lembaran fakta yang disahkan
-
-3. Catatan menyebut “Ravi mencadangkan”. Bolehkah minit menyebut “Mesyuarat meluluskan”?
-   - A. Ya
-   - B. Tidak
-
-4. Apakah tanda yang sesuai apabila penandatangan belum diketahui?
-   - A. Pilih nama paling kanan
-   - B. `[PERLU PENGESAHAN]`
-   - C. Tinggalkan tanpa catatan
-
-5. Siapakah yang boleh memberi status diluluskan?
-   - A. AI
-   - B. Mana-mana peserta
-   - C. Pegawai yang diberi kuasa
-
-6. Di manakah versi akhir perlu disimpan?
-   - A. Sejarah chat sahaja
-   - B. Sistem atau fail rekod rasmi jabatan
-   - C. Papan klip komputer
-
-### Skema jawapan
-
-1-B, 2-C, 3-B, 4-B, 5-C, 6-B.
-
-Cadangan tahap: 5–6 betul = bersedia; 3–4 = perlu bimbingan; 0–2 = ulang pagar keselamatan dan audit fakta.
+<div class="interactive-quiz" data-quiz="modul-2"></div>
 
 ## Rubrik hasil kumpulan
 
@@ -75,4 +44,3 @@ Lengkapkan sebelum meninggalkan sesi:
 - [ ] Satu perbandingan output dua platform.
 - [ ] Senarai semak kawalan rekod lengkap.
 - [ ] Exit ticket diserahkan.
-

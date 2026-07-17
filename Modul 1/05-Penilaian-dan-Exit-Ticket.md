@@ -108,68 +108,9 @@ Tandakan semasa aktiviti:
 
 ## 5. Kuiz akhir ringkas
 
-Kuiz boleh dijalankan secara lisan atau digital. Satu markah bagi setiap jawapan betul.
+Pilih satu jawapan bagi setiap soalan. Markah dan jawapan hanya dipaparkan selepas semua soalan dijawab dan butang **Hantar jawapan** ditekan.
 
-### Soalan 1
-
-Apakah langkah pertama apabila mempertimbangkan aplikasi pintar?
-
-A. Memilih vendor  
-B. Memilih teknologi terkini  
-C. Menjelaskan pengguna, masalah dan kesan  
-D. Mengumpul semua data yang ada
-
-**Jawapan:** C
-
-### Soalan 2
-
-Apakah perbezaan utama kerja digital dan kerja pintar?
-
-A. Kerja pintar mesti menggunakan robot  
-B. Kerja pintar menggunakan data untuk menyemak, membantu, mencetus tindakan atau memantau  
-C. Kerja digital tidak menggunakan komputer  
-D. Tiada perbezaan
-
-**Jawapan:** B
-
-### Soalan 3
-
-Yang manakah paling sesuai menggunakan automasi berasaskan peraturan?
-
-A. Menjana ID rekod mengikut format tetap  
-B. Menafsir keputusan teknikal yang kompleks tanpa semakan  
-C. Menulis kesimpulan akhir audit secara autonomi  
-D. Meluluskan laporan ujian tanpa pegawai
-
-**Jawapan:** A
-
-### Soalan 4
-
-Mengapa semakan manusia perlu dinyatakan dalam kanvas?
-
-A. Supaya aplikasi menjadi lebih perlahan  
-B. Supaya tanggungjawab terhadap keputusan penting, ketepatan dan pematuhan jelas  
-C. Supaya semua kerja dibuat dua kali  
-D. Supaya data tidak perlu disimpan
-
-**Jawapan:** B
-
-### Soalan 5
-
-Apakah percubaan awal yang baik?
-
-A. Meliputi semua proses dan semua pengguna  
-B. Tiada tempoh atau ukuran  
-C. Satu proses, pengguna terhad, tempoh pendek dan metrik jelas  
-D. Menggantikan semua sistem sedia ada
-
-**Jawapan:** C
-
-### Ambang
-
-- 4–5 betul: mencapai kefahaman asas Modul 1.
-- 3 betul: perlu pengukuhan ringkas.
-- 0–2 betul: fasilitator perlu menjelaskan semula prinsip utama.
+<div class="interactive-quiz" data-quiz="modul-1"></div>
 
 ## 6. Exit ticket individu, 3 minit
 
@@ -244,4 +185,3 @@ Lengkapkan selepas sesi.
 - Kumpulkan isu akses, keselamatan dan data untuk dibincangkan dengan pemilik proses.
 - Gunakan maklum balas rentak dan demo untuk menambah baik slaid.
 - Simpan keputusan agregat sahaja; jangan terbitkan respons individu tanpa kebenaran.
-
