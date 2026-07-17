@@ -21,7 +21,7 @@ Paparkan sepanjang sesi:
 
 | Masa | Aktiviti | Hasil |
 |---:|---|---|
-| 0–10 | Sambungan Modul 2 dan pagar data | Data dibenarkan dikenal pasti |
+| 0–10 | Sambungan Modul 2 serta had dan kawalan keselamatan data | Data dibenarkan dikenal pasti |
 | 10–25 | Tanya: bina soalan analisis | Soalan, pengguna dan keputusan |
 | 25–40 | Kenal: baca metadata dan kamus data | Definisi lajur, unit dan sumber |
 | 40–60 | Semak: profil kualiti data | Isu lengkap, sah, konsisten dan unik |

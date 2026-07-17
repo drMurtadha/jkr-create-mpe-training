@@ -4,7 +4,7 @@
 
 AI generatif ialah ruang menyediakan draf. Ia bukan sistem rekod rasmi, bukan pihak berkuasa melulus dan bukan tempat simpanan muktamad dokumen kerajaan.
 
-## Pagar maklumat sebelum menggunakan AI
+## Had dan kawalan keselamatan maklumat sebelum menggunakan AI
 
 | Warna | Contoh | Tindakan latihan |
 |---|---|---|
@@ -84,4 +84,3 @@ Jangan gunakan nama seperti `final_baru_latest2.docx`.
 - [MyPPSM — elemen surat rasmi kerajaan](https://docs.jpa.gov.my/docs/myppsm/PPSM/PO/Pentadbiran-dan-Pengurusan-Pejabat/53/)
 - [Arkib Negara Malaysia — Panduan Pengurusan Rekod Sektor Awam](https://www.arkib.gov.my/images/akta-pekeliling-garis-panduan/Panduan%20Pengurusan%20Rekod%20Sektor%20Awam.pdf)
 - [CGSO — pengurusan dan pengendalian rahsia rasmi](https://www.cgso.gov.my/wp-content/uploads/2024/09/SPA-8-TAHUN-2024-GARIS-PANDUAN-PENGURUSAN-DAN-PENGENDALIAN-RAHSIA-RASMI-DALAM-PERKHIDMATAN-AWAM.pdf)
-

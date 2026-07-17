@@ -139,7 +139,7 @@ const quizzes = {
     result(score) {
       if (score >= 5) return 'Bersedia.';
       if (score >= 3) return 'Perlu bimbingan.';
-      return 'Ulang pagar keselamatan dan audit fakta.';
+      return 'Ulang had dan kawalan keselamatan serta audit fakta.';
     }
   },
   'modul-3': {

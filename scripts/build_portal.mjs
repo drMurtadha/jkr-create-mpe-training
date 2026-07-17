@@ -151,7 +151,7 @@ await markdownPage({ source: 'Modul 2/02-Kandungan-Slaid.md', output: 'modul-2/k
 await markdownPage({ source: 'Modul 2/03-Buku-Kerja-dan-Pustaka-Prompt.md', output: 'modul-2/pustaka-prompt.html', title: 'Pustaka Prompt Boleh Salin', description: 'Prompt neutral platform untuk surat, minit, audit fakta dan kawalan rekod.', moduleNumber: 2 });
 await markdownPage({ source: 'Modul 2/04-Latihan-Surat-Rasmi.md', output: 'modul-2/latihan-surat.html', title: 'Latihan Surat Rasmi', description: 'Latihan draf dan audit surat menggunakan data rekaan.', moduleNumber: 2 });
 await markdownPage({ source: 'Modul 2/05-Latihan-Minit-Tindakan.md', output: 'modul-2/latihan-minit.html', title: 'Latihan Minit dan Tindakan', description: 'Latihan menukar catatan simulasi kepada minit dan daftar tindakan.', moduleNumber: 2 });
-await markdownPage({ source: 'Modul 2/06-Kawalan-Rekod-dan-Semakan.md', output: 'modul-2/kawalan-rekod.html', title: 'Kawalan Rekod dan Semakan', description: 'Pagar maklumat, audit manusia, kawalan versi dan rekod rasmi.', moduleNumber: 2 });
+await markdownPage({ source: 'Modul 2/06-Kawalan-Rekod-dan-Semakan.md', output: 'modul-2/kawalan-rekod.html', title: 'Kawalan Rekod dan Semakan', description: 'Had dan kawalan keselamatan maklumat, audit manusia, kawalan versi dan rekod rasmi.', moduleNumber: 2 });
 await markdownPage({ source: 'Modul 2/07-Penilaian-dan-Exit-Ticket.md', output: 'modul-2/penilaian.html', title: 'Penilaian dan Exit Ticket Modul 2', description: 'Kuiz, rubrik hasil kumpulan dan refleksi individu.', moduleNumber: 2 });
 
 const moduleThreeIntro = `Kaedah tujuh langkah untuk menyoal, memahami, menyemak, membersih, menganalisis, mengesahkan dan merekod data teknikal.`;

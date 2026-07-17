@@ -63,7 +63,7 @@ Latihan menggunakan rekod MPE rekaan yang menyerupai Buku Log Makmal, KEW.PA-9 d
 | [Penilaian](./05-Penilaian.md) | Kuiz, rubrik dan bukti penyempurnaan |
 | [Data latihan MPE rekaan](./data/rekod-teknikal-mpe-rekaan.csv) | CSV kecil untuk muat naik atau salin-tampal |
 
-## Pagar penggunaan platform percuma
+## Had dan kawalan keselamatan penggunaan platform percuma
 
 - Jangan gunakan data peribadi, kata laluan, maklumat kontrak sensitif atau dokumen terperingkat.
 - Keupayaan muat naik dan analisis mempunyai had yang boleh berubah mengikut platform dan akaun.
