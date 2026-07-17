@@ -85,3 +85,13 @@ Rujukan semasa: [ChatGPT Free Tier](https://help.openai.com/en/articles/9275245-
 5. satu jadual ringkasan dan satu carta yang disahkan;
 6. satu daftar rekod teknikal dan cadangan kawalan;
 7. satu nota batasan dan jejak sumber.
+
+## Video pembelajaran berdasarkan slaid Modul 3
+
+Video berikut dijana berdasarkan kandungan slaid Modul 3. Peserta boleh menontonnya untuk mengikuti penerangan slaid secara kendiri atau mengulang kaji selepas sesi.
+
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/xq0VixTHGuc" title="Video pembelajaran yang dijana berdasarkan slaid Modul 3 — Analisis Data dan Pengurusan Rekod Teknikal" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+Jika video tidak dapat dipaparkan, [buka video Modul 3 di YouTube](https://youtu.be/xq0VixTHGuc).
