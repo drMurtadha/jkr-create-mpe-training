@@ -100,8 +100,33 @@ function rewriteModuleLinks(markdown, moduleNumber) {
   return markdown;
 }
 
-async function markdownPage({ source, output, title, description, prefix = '../', moduleNumber = 1, downloads = false }) {
+function removeMarkdownSections(markdown, headings = []) {
+  if (!headings.length) return markdown;
+  const hidden = new Set(headings.map(heading => heading.trim().toLocaleLowerCase('ms')));
+  const lines = markdown.split('\n');
+  const output = [];
+  let hiddenLevel = 0;
+
+  for (const line of lines) {
+    const match = line.match(/^(#{1,6})\s+(.+?)\s*$/);
+    if (match) {
+      const level = match[1].length;
+      const heading = match[2].replace(/\s+#+\s*$/, '').trim().toLocaleLowerCase('ms');
+      if (hidden.has(heading)) {
+        hiddenLevel = level;
+        continue;
+      }
+      if (hiddenLevel && level <= hiddenLevel) hiddenLevel = 0;
+    }
+    if (!hiddenLevel) output.push(line);
+  }
+
+  return output.join('\n').trimEnd() + '\n';
+}
+
+async function markdownPage({ source, output, title, description, prefix = '../', moduleNumber = 1, downloads = false, hiddenSections = [] }) {
   let markdown = await fs.readFile(path.join(root, source), 'utf8');
+  markdown = removeMarkdownSections(markdown, hiddenSections);
   markdown = rewriteModuleLinks(markdown, moduleNumber);
   const content = marked.parse(markdown);
   const moduleOneAside = `<aside class="article-nav"><strong>Dalam Modul 1</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kanvas.html">Kanvas peluang</a><a href="demonstrasi.html">Demonstrasi</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
@@ -138,7 +163,7 @@ const slideHub = shell({
 await write('slaid.html', slideHub);
 
 const moduleOneIntro = `Portal Modul 1 lengkap dengan slaid web, nota penyampai, aktiviti kanvas, demonstrasi MPE Hub dan penilaian.`;
-await markdownPage({ source: 'Modul 1/README.md', output: 'modul-1/index.html', title: 'Modul 1 — Pengenalan Aplikasi Pintar', description: moduleOneIntro, downloads: true });
+await markdownPage({ source: 'Modul 1/README.md', output: 'modul-1/index.html', title: 'Modul 1 — Pengenalan Aplikasi Pintar', description: moduleOneIntro, downloads: true, hiddenSections: ['Struktur bahan', 'Kriteria Modul 1 lengkap'] });
 await markdownPage({ source: 'Modul 1/01-Nota-Fasilitator.md', output: 'modul-1/nota-fasilitator.html', title: 'Nota Fasilitator', description: 'Panduan persediaan, skrip dan pelaksanaan sesi Modul 1 selama 90 minit.' });
 await markdownPage({ source: 'Modul 1/02-Kandungan-Slaid.md', output: 'modul-1/kandungan-slaid.html', title: 'Kandungan dan Nota Slaid', description: 'Sumber kandungan bagi 22 slaid Modul 1 berserta nota penyampai.' });
 await markdownPage({ source: 'Modul 1/03-Kanvas-Peluang-Produktiviti.md', output: 'modul-1/kanvas.html', title: 'Kanvas Peluang Produktiviti MPE', description: 'Lembaran kerja kumpulan, rubrik pemarkahan dan contoh lengkap.' });
@@ -146,7 +171,7 @@ await markdownPage({ source: 'Modul 1/04-Skrip-Demonstrasi-MPE-Hub.md', output: 
 await markdownPage({ source: 'Modul 1/05-Penilaian-dan-Exit-Ticket.md', output: 'modul-1/penilaian.html', title: 'Penilaian dan Exit Ticket', description: 'Tinjauan awal, kuiz, rubrik dan exit ticket Modul 1.' });
 
 const moduleTwoIntro = `Bahan lengkap penggunaan AI generatif untuk draf surat rasmi, minit tindakan dan kawalan rekod tidak terperingkat.`;
-await markdownPage({ source: 'Modul 2/README.md', output: 'modul-2/index.html', title: 'Modul 2 — AI Generatif untuk Dokumen Rasmi', description: moduleTwoIntro, moduleNumber: 2 });
+await markdownPage({ source: 'Modul 2/README.md', output: 'modul-2/index.html', title: 'Modul 2 — AI Generatif untuk Dokumen Rasmi', description: moduleTwoIntro, moduleNumber: 2, hiddenSections: ['Kriteria Modul 2 lengkap'] });
 await markdownPage({ source: 'Modul 2/01-Nota-Fasilitator.md', output: 'modul-2/nota-fasilitator.html', title: 'Nota Fasilitator Modul 2', description: 'Panduan terperinci pelaksanaan sesi selama 120 minit.', moduleNumber: 2 });
 await markdownPage({ source: 'Modul 2/02-Kandungan-Slaid.md', output: 'modul-2/kandungan-slaid.html', title: 'Kandungan Slaid Modul 2', description: 'Sumber 26 slaid, nota penyampai dan aktiviti interaktif.', moduleNumber: 2 });
 await markdownPage({ source: 'Modul 2/03-Buku-Kerja-dan-Pustaka-Prompt.md', output: 'modul-2/pustaka-prompt.html', title: 'Pustaka Prompt Boleh Salin', description: 'Prompt neutral platform untuk surat, minit, audit fakta dan kawalan rekod.', moduleNumber: 2 });
