@@ -174,14 +174,14 @@ const quizzes = {
   },
   'modul-5': {
     questions: [
-      { question: 'Apakah peranan Google Sheets dalam prototaip?', options: ['Model AI', 'Pangkalan data latihan', 'Sistem kelulusan'], answer: 1, explanation: 'Google Sheets menyimpan rekod latihan dan status; ia bukan model AI atau pelulus.' },
-      { question: 'Bolehkah AI menetapkan status Diluluskan?', options: ['Ya', 'Tidak', 'Hanya jika kod lengkap'], answer: 1, explanation: 'Status Diluluskan hanya boleh ditetapkan oleh manusia yang diberi kuasa.' },
-      { question: 'Apakah akses Web App yang patut dipilih?', options: ['Akses paling luas', 'Akses paling sempit yang memenuhi latihan', 'Sesiapa sahaja tanpa akaun'], answer: 1, explanation: 'Gunakan prinsip akses minimum untuk mengehadkan pendedahan.' },
-      { question: 'Apakah bukti aliran lengkap berfungsi?', options: ['Kod kelihatan kemas', 'Rekod muncul dalam Sheet dan Doc dijana', 'AI menyatakan kod betul'], answer: 1, explanation: 'Bukti mesti diperhatikan pada data dan dokumen sebenar dalam akaun latihan.' },
-      { question: 'Apakah tindakan apabila fungsi gagal?', options: ['Abaikan rekod', 'Gunakan laluan manual dan catat kegagalan', 'Tetapkan status Disahkan'], answer: 1, explanation: 'Laluan manual dan rekod kegagalan memastikan proses boleh dipulihkan dan diaudit.' }
+      { question: 'Di manakah antaramuka MPE Hub diterbitkan?', options: ['Google Docs', 'GitHub Pages', 'Google Sheets'], answer: 1, explanation: 'Fail HTML, CSS dan JavaScript statik diterbitkan melalui GitHub Pages.' },
+      { question: 'Apakah peranan Google Apps Script?', options: ['Menjadi API antara frontend dan storan Google', 'Menggantikan GitHub Pages', 'Meluluskan rekod'], answer: 0, explanation: 'Apps Script menerima permintaan GET/POST dan membaca atau menulis Sheets serta Drive.' },
+      { question: 'Bolehkah URL deployment atau ID Google ditampal kepada AI?', options: ['Ya, jika data rekaan', 'Tidak', 'Hanya selepas commit'], answer: 1, explanation: 'URL deployment dan ID Google ialah konfigurasi peribadi yang tidak perlu dihantar kepada platform AI.' },
+      { question: 'Apakah bukti tiga modul berfungsi?', options: ['AI menyatakan kod betul', 'Tiga ID dapat dijejak kepada tab dan data storan yang betul', 'Halaman mempunyai tiga menu'], answer: 1, explanation: 'Bukti operasi ialah rekod sebenar latihan yang boleh dijejak dari aplikasi kepada storan.' },
+      { question: 'Mengapa endpoint “Anyone” tidak sesuai untuk data sensitif?', options: ['Ia boleh menerima permintaan pihak luar tanpa kawalan tambahan', 'Ia menjadikan CSS lambat', 'Ia memadam GitHub Pages'], answer: 0, explanation: 'Endpoint terbuka memerlukan autentikasi, rate limit dan kawalan tambahan sebelum menerima data sensitif.' }
     ],
     result(score) {
-      if (score >= 4) return 'Bersedia membina dan menguji prototaip MPE Hub.';
+      if (score >= 4) return 'Bersedia mengkonfigurasi dan menguji MPE Hub.';
       if (score >= 3) return 'Perlu pengukuhan kecil pada akses, bukti atau kawalan.';
       return 'Ulang kit binaan, ujian kegagalan dan kawalan manusia.';
     }
@@ -358,7 +358,7 @@ const exitTickets = {
   'modul-5': {
     module: 'Modul 5',
     fields: [
-      ['hub_result', 'Fungsi MPE Hub yang berjaya dibina'],
+      ['hub_result', 'Fungsi MPE Hub yang berjaya dikonfigurasi dan diuji'],
       ['test_result', 'Satu keputusan ujian yang penting'],
       ['safety_control', 'Satu kawalan keselamatan atau akses yang digunakan'],
       ['next_step', 'Langkah seterusnya selepas latihan']
@@ -366,12 +366,12 @@ const exitTickets = {
     confidence: 'Keyakinan saya membina dan menguji prototaip MPE Hub',
     evidence: [
       'Pautan Web App boleh dibuka',
-      'Satu rekod rekaan disimpan dalam Google Sheets',
-      'Satu Google Doc dijana daripada rekod',
-      'Input tidak lengkap ditolak dengan sebab',
-      'Status dan pemilik direkodkan',
-      'Akses dan batasan prototaip disemak',
-      'Laluan manual dikenal pasti'
+      'Rekod Buku Log disimpan dan dijejak',
+      'Rekod KEW.PA-9 disimpan dan dijejak',
+      'Rekod MCCB disimpan dan dijejak',
+      'Satu perubahan kecil telah di-commit',
+      'GitHub Pages menggunakan versi terkini',
+      'Akses, rahsia dan batasan prototaip disemak'
     ]
   }
 };

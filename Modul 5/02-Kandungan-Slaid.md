@@ -4,125 +4,125 @@
 
 - Jumlah: 20 slaid
 - Tempoh: 120 minit
-- Fokus: hands-on dan hasil berfungsi
-- Data: rekaan sahaja
+- Latihan amali: 80 minit
+- Kaedah: konfigurasi dan penyesuaian templat MPE Hub
 
 ---
 
-## Slaid 1 - Bina MPE Hub
+## Slaid 1 - Siapkan dan sesuaikan MPE Hub
 
-Gabungkan Modul 1-4 menggunakan AI generatif percuma, Google Sheets, Google Docs dan Apps Script.
+GitHub Pages -> Apps Script API -> Google Sheets + Google Drive.
 
 ---
 
 ## Slaid 2 - Hasil akhir hari ini
 
-Web App, pangkalan data Sheet, borang rekod, paparan rekod, Google Doc dijana dan dua keputusan ujian.
+Repositori peserta, URL GitHub Pages, Apps Script Web App, tiga rekod rekaan, satu perubahan, satu commit dan keputusan ujian.
 
 ---
 
-## Slaid 3 - Perjalanan Modul 1-5
+## Slaid 3 - Modul 1-5 menjadi satu aplikasi
 
-Masalah -> Dokumen -> Data -> Aliran kerja -> MPE Hub.
-
----
-
-## Slaid 4 - Seni bina paling kecil yang berfungsi
-
-Pengguna -> halaman MPE Hub -> Google Sheets dan Google Docs -> semakan manusia.
+Masalah -> dokumen -> data -> aliran kerja -> konfigurasi dan penerbitan MPE Hub.
 
 ---
 
-## Slaid 5 - Had latihan
+## Slaid 4 - Kita menyesuaikan templat
 
-Data rekaan, akaun sendiri, akses terkawal, AI tidak meluluskan dan prototaip bukan sistem rasmi.
-
----
-
-## Slaid 6 - Pilih satu kes sahaja
-
-Buku Log, QR aktiviti, KEW.PA-9, MCCB atau analisis data. Satu pengguna, satu borang dan satu dokumen.
+Peserta tidak menulis keseluruhan aplikasi dari kosong. Gunakan aplikasi sedia ada, hubungkan akaun sendiri, uji dan buat perubahan kecil.
 
 ---
 
-## Slaid 7 - Struktur Google Sheet
+## Slaid 5 - Seni bina MPE Hub
 
-`timestamp`, `record_id`, `record_type`, `activity_date`, `asset_id`, `activity`, `status`, `owner`, `notes`, `document_url`.
-
----
-
-## Slaid 8 - Tiga fail utama
-
-`Code.gs` mengurus data; `Index.html` memaparkan MPE Hub; Google Doc menjadi templat keluaran.
+Pengguna -> GitHub Pages -> Apps Script GET/POST -> Sheets dan Drive.
 
 ---
 
-## Slaid 9 - AI sebagai pembantu kod
+## Slaid 6 - Prasyarat wajib
 
-Minta AI menerangkan dahulu, ubah satu fungsi pada satu masa, jangan beri ID atau data sensitif dan uji setiap perubahan.
-
----
-
-## Slaid 10 - Hands-on 1: sediakan Sheet
-
-Cipta Sheet, namakan tab `Records`, masukkan tajuk lajur dan simpan ID secara peribadi.
+Akaun Google, Drive, Sheets, Apps Script, akaun GitHub, GitHub Pages, komputer riba, internet dan AI generatif percuma.
 
 ---
 
-## Slaid 11 - Hands-on 2: sambungkan Apps Script
+## Slaid 7 - Had keselamatan
 
-Salin kod pelayan, tetapkan ID Sheet, jalankan persediaan dan luluskan kebenaran yang diperlukan sahaja.
-
----
-
-## Slaid 12 - Hands-on 3: sesuaikan MPE Hub
-
-Tukar tajuk, penerangan, jenis rekod dan medan tanpa membuang validasi serta mesej ralat.
+Data rekaan, tiada URL atau ID Google dalam AI, storan private, kod Pages boleh dilihat umum dan endpoint `Anyone` bukan untuk data sensitif.
 
 ---
 
-## Slaid 13 - Hands-on 4: jana Google Doc
+## Slaid 8 - Tiga modul operasi
 
-Pilih rekod, salin templat, gantikan penanda dan simpan URL dokumen kembali ke Sheet.
-
----
-
-## Slaid 14 - Status dan kuasa manusia
-
-Draf -> Dalam Semakan -> Disahkan. AI dan sistem tidak menetapkan Disahkan atau Diluluskan.
+Buku Log, KEW.PA-9 dan MCCB. Setiap modul mempunyai medan, peranan dan storan berbeza.
 
 ---
 
-## Slaid 15 - Terbit sebagai Web App
+## Slaid 9 - Fail utama
 
-Gunakan skop akses paling sempit, catat versi penerbitan dan simpan pautan demonstrasi.
-
----
-
-## Slaid 16 - Uji laluan lengkap
-
-Hantar rekod -> periksa Sheet -> jana Doc -> periksa URL dan kandungan.
+`index.html`, `styles.css`, `app.js`, `config.js` dan `apps-script/Code.gs`.
 
 ---
 
-## Slaid 17 - Uji kegagalan
+## Slaid 10 - Sediakan Apps Script
 
-Kosongkan medan wajib atau gunakan tarikh tidak sah. Sistem mesti berhenti dengan mesej yang boleh diambil tindakan.
-
----
-
-## Slaid 18 - Bukti penyempurnaan
-
-Pautan Web App, rekod rekaan, baris Sheet, Google Doc, ujian gagal, pemilik dan nota batasan.
+Salin `Code.gs`, jalankan `ensureSetup`, benarkan Sheets/Drive, deploy Web App dan masukkan URL `/exec` ke `config.js`.
 
 ---
 
-## Slaid 19 - Demonstrasi dua minit
+## Slaid 11 - Storan berpusat
 
-Masalah, borang, rekod, dokumen, kawalan dan satu perkara yang akan ditambah baik.
+Spreadsheet mempunyai tab `logbook`, `asset` dan `mccb`; lampiran rekaan disimpan dalam folder Drive.
 
 ---
 
-## Slaid 20 - MPE Hub ialah permulaan
+## Slaid 12 - Terbit GitHub Pages
 
-Kecil, boleh diuji, boleh dihentikan dan meninggalkan jejak. Gunakan penilaian akhir program selepas demonstrasi.
+Settings -> Pages -> Deploy from a branch -> `main` -> `/(root)`.
+
+---
+
+## Slaid 13 - Latihan amali 80 minit
+
+15 minit peta medan; 20 minit isi tiga modul; 15 minit semak storan; 20 minit ubah dan commit; 10 minit semak Pages.
+
+---
+
+## Slaid 14 - Peta medan
+
+Tentukan medan wajib, pilihan, terbitan dan teknikal serta siapa mengisi, menyemak dan membetulkan.
+
+---
+
+## Slaid 15 - Isi tiga modul
+
+Hantar satu Buku Log, satu KEW.PA-9 dan satu MCCB menggunakan data rekaan. Catat tiga ID rekod.
+
+---
+
+## Slaid 16 - Semak storan
+
+Jejak ID kepada tab, baris, JSON dan lampiran. Mesej berjaya sahaja belum mencukupi.
+
+---
+
+## Slaid 17 - Ubah dengan AI dan commit
+
+Ubah satu label, pilihan, mesej, warna atau nota keselamatan. Jangan berikan URL, ID atau data sebenar kepada AI.
+
+---
+
+## Slaid 18 - Ujian penerimaan
+
+Skrin kecil, tiga modul, kegagalan rangkaian, input tidak lengkap dan metrik dashboard.
+
+---
+
+## Slaid 19 - Checklist serahan
+
+URL diuji, tiga rekod wujud, commit tersedia, deployment terkini, pemilik storan sesuai, sandaran dan pentadbir kedua dikenal pasti.
+
+---
+
+## Slaid 20 - Hasil yang boleh dibawa pulang
+
+Salinan MPE Hub yang boleh dikembangkan—bukan sistem pengeluaran—dengan bukti konfigurasi, storan, perubahan dan ujian.

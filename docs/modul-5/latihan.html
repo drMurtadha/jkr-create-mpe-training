@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Arahan langkah demi langkah daripada Google Sheet kepada Web App dan Google Doc.">
+  <meta name="description" content="Peta medan, isi tiga modul, semak storan, ubah, commit dan uji GitHub Pages.">
   <meta name="theme-color" content="#0d272b">
-  <title>Latihan Hands-on Bina MPE Hub · Portal Latihan MPE</title>
+  <title>Latihan Amali MPE Hub — 80 Minit · Portal Latihan MPE</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/styles.css?v=20260717-8">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260718-9">
 </head>
 <body>
 <a class="skip-link" href="#kandungan">Langkau ke kandungan</a>
@@ -29,107 +29,171 @@
     </nav>
   </div>
 </header>
-<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Latihan Hands-on Bina MPE Hub</div><h1>Latihan Hands-on Bina MPE Hub</h1><p>Arahan langkah demi langkah daripada Google Sheet kepada Web App dan Google Doc.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 5</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kit-binaan.html">Kit binaan & prompt</a><a href="latihan.html">Latihan MPE Hub</a><a href="penilaian.html">Penilaian akhir</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><h1>Latihan Hands-on: Bina MPE Hub</h1>
-<h2>Objektif</h2>
-<p>Menghasilkan prototaip kecil yang menerima rekod rekaan, menyimpan ke Google Sheets dan menjana Google Doc.</p>
-<h2>Langkah 1 - Tetapkan skop</h2>
-<p>Lengkapkan ayat:</p>
+<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Latihan Amali MPE Hub — 80 Minit</div><h1>Latihan Amali MPE Hub — 80 Minit</h1><p>Peta medan, isi tiga modul, semak storan, ubah, commit dan uji GitHub Pages.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 5</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kit-binaan.html">Prasyarat & prompt</a><a href="latihan.html">Latihan 80 minit</a><a href="penilaian.html">Penilaian akhir</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><h1>Latihan Amali MPE Hub - 80 Minit</h1>
+<h2>Sasaran</h2>
+<p>Peserta menyediakan salinan MPE Hub, menghubungkannya kepada Google Apps Script, mengisi tiga modul dengan data rekaan, membuat satu perubahan serta menguji GitHub Pages.</p>
 <blockquote>
-<p>MPE Hub kami membantu <strong>[PENGGUNA]</strong> merekod <strong>[JENIS REKOD]</strong>, menyemak <strong>[PERATURAN]</strong> dan menghasilkan <strong>[DOKUMEN]</strong> tanpa mengambil alih keputusan <strong>[PERANAN MANUSIA]</strong>.</p>
+<p>Latihan ini menyesuaikan templat sedia ada. Ia bukan latihan menulis keseluruhan aplikasi dari kosong.</p>
 </blockquote>
-<h2>Langkah 2 - Cipta Google Sheet</h2>
-<ol>
-<li>Cipta Sheet baharu dalam akaun kumpulan.</li>
-<li>Namakan tab <code>Records</code>.</li>
-<li>Masukkan tajuk lajur daripada kit binaan.</li>
-<li>Bekukan baris pertama.</li>
-<li>Jangan kongsi ID Sheet dalam platform AI.</li>
-</ol>
-<h2>Langkah 3 - Cipta Apps Script</h2>
-<ol>
-<li>Dari Google Sheet pilih <strong>Extensions -&gt; Apps Script</strong>.</li>
-<li>Tampal kod <code>Code.gs</code>.</li>
-<li>Tambah <code>Index.html</code> dan tampal antaramuka.</li>
-<li>Masukkan ID Sheet secara manual.</li>
-<li>Jalankan fungsi yang diperlukan dan baca skop kebenaran.</li>
-</ol>
-<h2>Langkah 4 - Cipta templat Google Doc</h2>
-<ol>
-<li>Cipta Doc baharu.</li>
-<li>Tampal templat dengan penanda <code>{{...}}</code>.</li>
-<li>Masukkan ID Doc secara manual ke <code>Code.gs</code>.</li>
-<li>Pastikan Doc kekal dalam akaun kumpulan.</li>
-</ol>
-<h2>Langkah 5 - Sesuaikan dengan AI</h2>
-<p>Pilih maksimum dua perubahan:</p>
+<h2>Sebelum pemasa dimulakan</h2>
 <ul>
-<li>tukar tajuk dan penerangan;</li>
-<li>tambah satu jenis rekod;</li>
-<li>tambah satu medan rekaan;</li>
-<li>ubah warna atau susun atur;</li>
-<li>tambah penapis paparan.</li>
+<li><input disabled="" type="checkbox"> Akaun Google dan GitHub telah log masuk.</li>
+<li><input disabled="" type="checkbox"> Repositori MPE Hub telah disalin atau difork.</li>
+<li><input disabled="" type="checkbox"> Apps Script boleh dibuka.</li>
+<li><input disabled="" type="checkbox"> URL GitHub Pages boleh dicapai.</li>
+<li><input disabled="" type="checkbox"> Data latihan rekaan tersedia.</li>
+<li><input disabled="" type="checkbox"> Seorang pemilik akaun ditetapkan bagi setiap kumpulan.</li>
 </ul>
-<p>Gunakan prompt daripada kit. Jangan ubah banyak fungsi serentak.</p>
-<h2>Langkah 6 - Terbit dan uji</h2>
+<h2>Aktiviti 1 - Peta medan, 15 minit</h2>
 <ol>
-<li>Terbitkan Web App dengan akses minimum.</li>
-<li>Buka pautan dalam tab baharu.</li>
-<li>Hantar satu rekod lengkap.</li>
-<li>Sahkan rekod muncul dalam Sheet.</li>
-<li>Jalankan penjanaan dokumen bagi rekod tersebut.</li>
-<li>Sahkan URL Doc direkodkan.</li>
+<li>Buka Buku Log, KEW.PA-9 dan MCCB dalam aplikasi contoh.</li>
+<li>Pilih satu medan bagi setiap kategori: wajib, pilihan, terbitan dan teknikal.</li>
+<li>Bandingkan medan antaramuka dengan tab <code>logbook</code>, <code>asset</code> dan <code>mccb</code>.</li>
+<li>Catat siapa mengisi, menyemak dan membetulkan setiap jenis rekod.</li>
 </ol>
-<h2>Langkah 7 - Ujian gagal dengan selamat</h2>
+<p><strong>Bukti:</strong> jadual medan dan peranan ringkas.</p>
+<h2>Aktiviti 2 - Isi tiga modul, 20 minit</h2>
+<p>Gunakan data rekaan untuk menghantar:</p>
+<ol>
+<li>satu rekod Buku Log;</li>
+<li>satu permohonan KEW.PA-9;</li>
+<li>satu laporan MCCB.</li>
+</ol>
+<p>Catat ID rekod selepas setiap penghantaran. Jangan gunakan nama, nombor aset, tandatangan atau bacaan sebenar.</p>
+<p><strong>Bukti:</strong> tiga ID rekod dan mesej berjaya.</p>
+<h2>Aktiviti 3 - Semak storan, 15 minit</h2>
+<ol>
+<li>Buka Google Spreadsheet yang dicipta oleh <code>ensureSetup</code>.</li>
+<li>Cari setiap ID pada tab yang betul.</li>
+<li>Semak bahawa satu rekod ialah satu baris.</li>
+<li>Semak senarai aset, peralatan atau bacaan JSON jika berkenaan.</li>
+<li>Jika Buku Log mempunyai lampiran rekaan, semak fail dan URL dalam folder Drive.</li>
+</ol>
+<p><strong>Bukti:</strong> tiga baris wujud dan lampiran boleh dijejak.</p>
+<h2>Aktiviti 4 - Ubah dan commit, 20 minit</h2>
+<p>Pilih satu perubahan kecil sahaja:</p>
+<ul>
+<li>ubah label atau arahan;</li>
+<li>tambah satu pilihan rekaan;</li>
+<li>perkemas satu mesej ralat;</li>
+<li>ubah satu unsur warna atau susun atur;</li>
+<li>tambah nota keselamatan.</li>
+</ul>
+<p>Gunakan AI untuk menerangkan atau mencadangkan perubahan. Jangan berikan <code>config.js</code>, URL <code>/exec</code>, ID Google atau data sebenar kepada AI.</p>
+<p>Selepas semakan:</p>
+<ol>
+<li>commit perubahan dalam repositori peserta;</li>
+<li>gunakan mesej yang menerangkan tujuan perubahan;</li>
+<li>pastikan tiada maklumat rahsia dalam perbezaan kod.</li>
+</ol>
+<p><strong>Bukti:</strong> satu commit baharu.</p>
+<h2>Aktiviti 5 - Semak GitHub Pages, 10 minit</h2>
+<ol>
+<li>Tunggu penerbitan selesai.</li>
+<li>Buat hard refresh.</li>
+<li>Semak perubahan muncul.</li>
+<li>Hantar satu rekod ujian tambahan.</li>
+<li>Pastikan dashboard dan storan masih berfungsi.</li>
+</ol>
+<p><strong>Bukti:</strong> URL GitHub Pages dan keputusan ujian selepas commit.</p>
+<h2>Ujian penerimaan minimum</h2>
 <table>
 <thead>
 <tr>
-<th>Ujian</th>
-<th>Input</th>
+<th>ID</th>
+<th>Senario</th>
 <th>Hasil dijangka</th>
 <th>Hasil sebenar</th>
 <th>Status</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Lengkap</td>
-<td>Semua medan wajib</td>
-<td>Rekod Draf disimpan</td>
+<td>T01</td>
+<td>Buka pada skrin kecil</td>
+<td>Tiada skrol mendatar</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Tidak lengkap</td>
-<td>Pemilik kosong</td>
-<td>Rekod ditolak dengan sebab</td>
+<td>T02</td>
+<td>Hantar Buku Log</td>
+<td>ID, baris dan lampiran wujud</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T03</td>
+<td>Hantar KEW.PA-9</td>
+<td>Senarai item lengkap</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T04</td>
+<td>Hantar MCCB</td>
+<td>Nilai teknikal tepat</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T05</td>
+<td>Input tidak lengkap</td>
+<td>Mesej jelas; tiada rekod separuh</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T06</td>
+<td>Dashboard</td>
+<td>Metrik sepadan dengan storan</td>
 <td></td>
 <td></td>
 </tr>
 </tbody></table>
-<h2>Langkah 8 - Audit kawalan</h2>
+<h2>Jika sesuatu gagal</h2>
+<table>
+<thead>
+<tr>
+<th>Gejala</th>
+<th>Semakan</th>
+<th>Tindakan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dashboard luar talian</td>
+<td>URL <code>/exec</code> dan deployment</td>
+<td>Gunakan URL deployment terkini</td>
+</tr>
+<tr>
+<td>Data tidak muncul</td>
+<td>Execution log dan nama tab</td>
+<td>Semak kuota, kebenaran dan struktur data</td>
+</tr>
+<tr>
+<td>Lampiran gagal</td>
+<td>Saiz, MIME dan kuota</td>
+<td>Kecilkan fail rekaan atau semak folder</td>
+</tr>
+<tr>
+<td>Pages belum berubah</td>
+<td>Commit dan status Pages</td>
+<td>Tunggu kemudian hard refresh</td>
+</tr>
+</tbody></table>
+<h2>Checklist serahan</h2>
 <ul>
-<li><input disabled="" type="checkbox"> Semua data adalah rekaan.</li>
-<li><input disabled="" type="checkbox"> Tiada ID, pautan peribadi atau data sebenar dihantar kepada AI.</li>
-<li><input disabled="" type="checkbox"> Akses Web App tidak lebih luas daripada keperluan.</li>
-<li><input disabled="" type="checkbox"> AI tidak menetapkan status Disahkan atau Diluluskan.</li>
-<li><input disabled="" type="checkbox"> Sheet menyimpan masa, ID, status dan pemilik.</li>
-<li><input disabled="" type="checkbox"> Ujian input tidak lengkap mempunyai mesej jelas.</li>
-<li><input disabled="" type="checkbox"> Kumpulan boleh menerangkan batasan prototaip.</li>
-<li><input disabled="" type="checkbox"> Laluan manual dikenal pasti jika Web App gagal.</li>
+<li><input disabled="" type="checkbox"> URL aplikasi dan dokumentasi boleh dibuka.</li>
+<li><input disabled="" type="checkbox"> Tiga rekod rekaan wujud dalam storan yang betul.</li>
+<li><input disabled="" type="checkbox"> Repositori mempunyai satu commit perubahan peserta.</li>
+<li><input disabled="" type="checkbox"> Apps Script menggunakan deployment terkini.</li>
+<li><input disabled="" type="checkbox"> Google Sheets dan Drive dimiliki akaun kumpulan yang sesuai.</li>
+<li><input disabled="" type="checkbox"> Tiada ID, URL peribadi atau data sebenar dihantar kepada AI.</li>
+<li><input disabled="" type="checkbox"> Sandaran dan pentadbir kedua dikenal pasti.</li>
+<li><input disabled="" type="checkbox"> Batasan prototaip diterangkan.</li>
 </ul>
-<h2>Demonstrasi dua minit</h2>
-<ol>
-<li>Nyatakan masalah kerja.</li>
-<li>Tunjukkan borang MPE Hub.</li>
-<li>Hantar satu rekod rekaan.</li>
-<li>Tunjukkan baris dalam Sheet.</li>
-<li>Tunjukkan Google Doc.</li>
-<li>Nyatakan satu kawalan dan satu penambahbaikan.</li>
-</ol>
-<h2>Bukti penyempurnaan</h2>
-<p>Catat pautan Web App, ID rekod rekaan, pautan Doc, keputusan dua ujian, pemilik prototaip dan nota bahawa ia bukan sistem pengeluaran.</p>
 <div class="resource-bar"><a class="button ghost" href="https://github.com/drMurtadha/jkr-create-mpe-training/blob/main/Modul%205/04-Latihan-Bina-MPE-Hub.md" target="_blank" rel="noopener">Lihat sumber Markdown ↗</a><button class="button ghost" onclick="window.print()">Cetak halaman</button></div></article></main>
 <footer class="site-footer"><div class="container footer-grid"><div><strong>Bengkel Transformasi Digital dan Pemerkasaan Operasi Pintar MPE</strong><br>CREaTE JKR · 28–29 Julai 2026</div><div>Prof. Madya Dr. Mohd Murtadha Mohamad<br><a href="https://github.com/drMurtadha/jkr-create-mpe-training">Sumber terbuka di GitHub</a></div></div></footer>
-<script src="../assets/site.js?v=20260717-8"></script>
+<script src="../assets/site.js?v=20260718-9"></script>
 
 </body>
 </html>

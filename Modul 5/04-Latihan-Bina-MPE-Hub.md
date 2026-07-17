@@ -1,86 +1,108 @@
-# Latihan Hands-on: Bina MPE Hub
+# Latihan Amali MPE Hub - 80 Minit
 
-## Objektif
+## Sasaran
 
-Menghasilkan prototaip kecil yang menerima rekod rekaan, menyimpan ke Google Sheets dan menjana Google Doc.
+Peserta menyediakan salinan MPE Hub, menghubungkannya kepada Google Apps Script, mengisi tiga modul dengan data rekaan, membuat satu perubahan serta menguji GitHub Pages.
 
-## Langkah 1 - Tetapkan skop
+> Latihan ini menyesuaikan templat sedia ada. Ia bukan latihan menulis keseluruhan aplikasi dari kosong.
 
-Lengkapkan ayat:
+## Sebelum pemasa dimulakan
 
-> MPE Hub kami membantu **[PENGGUNA]** merekod **[JENIS REKOD]**, menyemak **[PERATURAN]** dan menghasilkan **[DOKUMEN]** tanpa mengambil alih keputusan **[PERANAN MANUSIA]**.
+- [ ] Akaun Google dan GitHub telah log masuk.
+- [ ] Repositori MPE Hub telah disalin atau difork.
+- [ ] Apps Script boleh dibuka.
+- [ ] URL GitHub Pages boleh dicapai.
+- [ ] Data latihan rekaan tersedia.
+- [ ] Seorang pemilik akaun ditetapkan bagi setiap kumpulan.
 
-## Langkah 2 - Cipta Google Sheet
+## Aktiviti 1 - Peta medan, 15 minit
 
-1. Cipta Sheet baharu dalam akaun kumpulan.
-2. Namakan tab `Records`.
-3. Masukkan tajuk lajur daripada kit binaan.
-4. Bekukan baris pertama.
-5. Jangan kongsi ID Sheet dalam platform AI.
+1. Buka Buku Log, KEW.PA-9 dan MCCB dalam aplikasi contoh.
+2. Pilih satu medan bagi setiap kategori: wajib, pilihan, terbitan dan teknikal.
+3. Bandingkan medan antaramuka dengan tab `logbook`, `asset` dan `mccb`.
+4. Catat siapa mengisi, menyemak dan membetulkan setiap jenis rekod.
 
-## Langkah 3 - Cipta Apps Script
+**Bukti:** jadual medan dan peranan ringkas.
 
-1. Dari Google Sheet pilih **Extensions -> Apps Script**.
-2. Tampal kod `Code.gs`.
-3. Tambah `Index.html` dan tampal antaramuka.
-4. Masukkan ID Sheet secara manual.
-5. Jalankan fungsi yang diperlukan dan baca skop kebenaran.
+## Aktiviti 2 - Isi tiga modul, 20 minit
 
-## Langkah 4 - Cipta templat Google Doc
+Gunakan data rekaan untuk menghantar:
 
-1. Cipta Doc baharu.
-2. Tampal templat dengan penanda `{{...}}`.
-3. Masukkan ID Doc secara manual ke `Code.gs`.
-4. Pastikan Doc kekal dalam akaun kumpulan.
+1. satu rekod Buku Log;
+2. satu permohonan KEW.PA-9;
+3. satu laporan MCCB.
 
-## Langkah 5 - Sesuaikan dengan AI
+Catat ID rekod selepas setiap penghantaran. Jangan gunakan nama, nombor aset, tandatangan atau bacaan sebenar.
 
-Pilih maksimum dua perubahan:
+**Bukti:** tiga ID rekod dan mesej berjaya.
 
-- tukar tajuk dan penerangan;
-- tambah satu jenis rekod;
-- tambah satu medan rekaan;
-- ubah warna atau susun atur;
-- tambah penapis paparan.
+## Aktiviti 3 - Semak storan, 15 minit
 
-Gunakan prompt daripada kit. Jangan ubah banyak fungsi serentak.
+1. Buka Google Spreadsheet yang dicipta oleh `ensureSetup`.
+2. Cari setiap ID pada tab yang betul.
+3. Semak bahawa satu rekod ialah satu baris.
+4. Semak senarai aset, peralatan atau bacaan JSON jika berkenaan.
+5. Jika Buku Log mempunyai lampiran rekaan, semak fail dan URL dalam folder Drive.
 
-## Langkah 6 - Terbit dan uji
+**Bukti:** tiga baris wujud dan lampiran boleh dijejak.
 
-1. Terbitkan Web App dengan akses minimum.
-2. Buka pautan dalam tab baharu.
-3. Hantar satu rekod lengkap.
-4. Sahkan rekod muncul dalam Sheet.
-5. Jalankan penjanaan dokumen bagi rekod tersebut.
-6. Sahkan URL Doc direkodkan.
+## Aktiviti 4 - Ubah dan commit, 20 minit
 
-## Langkah 7 - Ujian gagal dengan selamat
+Pilih satu perubahan kecil sahaja:
 
-| Ujian | Input | Hasil dijangka | Hasil sebenar | Status |
+- ubah label atau arahan;
+- tambah satu pilihan rekaan;
+- perkemas satu mesej ralat;
+- ubah satu unsur warna atau susun atur;
+- tambah nota keselamatan.
+
+Gunakan AI untuk menerangkan atau mencadangkan perubahan. Jangan berikan `config.js`, URL `/exec`, ID Google atau data sebenar kepada AI.
+
+Selepas semakan:
+
+1. commit perubahan dalam repositori peserta;
+2. gunakan mesej yang menerangkan tujuan perubahan;
+3. pastikan tiada maklumat rahsia dalam perbezaan kod.
+
+**Bukti:** satu commit baharu.
+
+## Aktiviti 5 - Semak GitHub Pages, 10 minit
+
+1. Tunggu penerbitan selesai.
+2. Buat hard refresh.
+3. Semak perubahan muncul.
+4. Hantar satu rekod ujian tambahan.
+5. Pastikan dashboard dan storan masih berfungsi.
+
+**Bukti:** URL GitHub Pages dan keputusan ujian selepas commit.
+
+## Ujian penerimaan minimum
+
+| ID | Senario | Hasil dijangka | Hasil sebenar | Status |
 |---|---|---|---|---|
-| Lengkap | Semua medan wajib | Rekod Draf disimpan |  |  |
-| Tidak lengkap | Pemilik kosong | Rekod ditolak dengan sebab |  |  |
+| T01 | Buka pada skrin kecil | Tiada skrol mendatar |  |  |
+| T02 | Hantar Buku Log | ID, baris dan lampiran wujud |  |  |
+| T03 | Hantar KEW.PA-9 | Senarai item lengkap |  |  |
+| T04 | Hantar MCCB | Nilai teknikal tepat |  |  |
+| T05 | Input tidak lengkap | Mesej jelas; tiada rekod separuh |  |  |
+| T06 | Dashboard | Metrik sepadan dengan storan |  |  |
 
-## Langkah 8 - Audit kawalan
+## Jika sesuatu gagal
 
-- [ ] Semua data adalah rekaan.
-- [ ] Tiada ID, pautan peribadi atau data sebenar dihantar kepada AI.
-- [ ] Akses Web App tidak lebih luas daripada keperluan.
-- [ ] AI tidak menetapkan status Disahkan atau Diluluskan.
-- [ ] Sheet menyimpan masa, ID, status dan pemilik.
-- [ ] Ujian input tidak lengkap mempunyai mesej jelas.
-- [ ] Kumpulan boleh menerangkan batasan prototaip.
-- [ ] Laluan manual dikenal pasti jika Web App gagal.
+| Gejala | Semakan | Tindakan |
+|---|---|---|
+| Dashboard luar talian | URL `/exec` dan deployment | Gunakan URL deployment terkini |
+| Data tidak muncul | Execution log dan nama tab | Semak kuota, kebenaran dan struktur data |
+| Lampiran gagal | Saiz, MIME dan kuota | Kecilkan fail rekaan atau semak folder |
+| Pages belum berubah | Commit dan status Pages | Tunggu kemudian hard refresh |
 
-## Demonstrasi dua minit
+## Checklist serahan
 
-1. Nyatakan masalah kerja.
-2. Tunjukkan borang MPE Hub.
-3. Hantar satu rekod rekaan.
-4. Tunjukkan baris dalam Sheet.
-5. Tunjukkan Google Doc.
-6. Nyatakan satu kawalan dan satu penambahbaikan.
-
-## Bukti penyempurnaan
-
-Catat pautan Web App, ID rekod rekaan, pautan Doc, keputusan dua ujian, pemilik prototaip dan nota bahawa ia bukan sistem pengeluaran.
+- [ ] URL aplikasi dan dokumentasi boleh dibuka.
+- [ ] Tiga rekod rekaan wujud dalam storan yang betul.
+- [ ] Repositori mempunyai satu commit perubahan peserta.
+- [ ] Apps Script menggunakan deployment terkini.
+- [ ] Google Sheets dan Drive dimiliki akaun kumpulan yang sesuai.
+- [ ] Tiada ID, URL peribadi atau data sebenar dihantar kepada AI.
+- [ ] Sandaran dan pentadbir kedua dikenal pasti.
+- [ ] Batasan prototaip diterangkan.

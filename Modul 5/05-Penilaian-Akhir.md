@@ -10,14 +10,14 @@ Pilih satu jawapan bagi setiap soalan. Markah dan jawapan hanya dipaparkan selep
 
 | Kriteria | 0 | 1 | 2 |
 |---|---|---|---|
-| Skop | Kabur | Sebahagian jelas | Satu pengguna, rekod dan dokumen jelas |
-| Sambungan Sheet | Tidak berfungsi | Sebahagian | Rekod lengkap disimpan |
-| Google Doc | Tiada | Manual sahaja | Dijana dan URL direkodkan |
-| Validasi | Tiada | Medan asas | Input salah ditolak dengan sebab |
-| Kawalan | Tiada | Umum | Akses, status manusia dan batasan jelas |
-| Ujian | Tiada | Laluan lengkap | Lengkap dan gagal dengan selamat |
+| Persediaan | Akaun atau bahan tiada | Sebahagian tersedia | Google, GitHub, repositori dan Pages tersedia |
+| Tiga modul | Tiada rekod | Sebahagian | Buku Log, KEW.PA-9 dan MCCB disimpan |
+| Storan | Tidak disemak | Sebahagian | ID dijejak kepada Sheets dan Drive |
+| Perubahan | Tiada | Diubah tanpa bukti | Perubahan kecil diaudit dan di-commit |
+| Kawalan | Tiada | Umum | Akses, rahsia, data rekaan dan batasan jelas |
+| Ujian | Tiada | Fungsi asas | Enam ujian penerimaan direkodkan |
 
-Skor maksimum: 12. Cadangan tahap: 10-12 bersedia untuk demonstrasi; 7-9 perlu pembetulan kecil; 0-6 perlu bantuan lanjut.
+Skor maksimum: 12. Cadangan tahap: 10-12 bersedia untuk demonstrasi; 7-9 perlu pembetulan kecil; 0-6 perlu bantuan fasilitator.
 
 ## Exit ticket dan bukti
 

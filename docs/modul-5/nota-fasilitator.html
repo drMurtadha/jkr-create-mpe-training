@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#0d272b">
   <title>Nota Fasilitator Modul 5 · Portal Latihan MPE</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/styles.css?v=20260717-8">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260718-9">
 </head>
 <body>
 <a class="skip-link" href="#kandungan">Langkau ke kandungan</a>
@@ -29,65 +29,64 @@
     </nav>
   </div>
 </header>
-<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Nota Fasilitator Modul 5</div><h1>Nota Fasilitator Modul 5</h1><p>Pelan hands-on 120 minit untuk membina dan menguji MPE Hub.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 5</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kit-binaan.html">Kit binaan & prompt</a><a href="latihan.html">Latihan MPE Hub</a><a href="penilaian.html">Penilaian akhir</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><h1>Nota Fasilitator Modul 5</h1>
-<h2>Matlamat sesi</h2>
-<p>Peserta menyepadukan hasil Modul 1-4 menjadi prototaip MPE Hub menggunakan akaun Google sendiri dan bantuan AI generatif percuma.</p>
+<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Nota Fasilitator Modul 5</div><h1>Nota Fasilitator Modul 5</h1><p>Pelan hands-on 120 minit untuk membina dan menguji MPE Hub.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 5</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kit-binaan.html">Prasyarat & prompt</a><a href="latihan.html">Latihan 80 minit</a><a href="penilaian.html">Penilaian akhir</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><h1>Nota Fasilitator Modul 5</h1>
+<h2>Matlamat</h2>
+<p>Peserta menyesuaikan templat MPE Hub dan membuktikan aliran GitHub Pages -&gt; Apps Script -&gt; Google Sheets/Drive berfungsi menggunakan data rekaan.</p>
 <h2>Persediaan sebelum sesi</h2>
 <ol>
-<li>Pastikan peserta boleh membuka Google Sheets, Google Docs dan Apps Script.</li>
-<li>Sediakan satu demonstrasi MPE Hub menggunakan data rekaan.</li>
-<li>Paparkan pautan kit binaan dan arahan latihan.</li>
-<li>Bentuk kumpulan dua atau tiga orang jika tahap kemahiran berbeza.</li>
-<li>Tegaskan bahawa prototaip bukan sistem pengeluaran.</li>
+<li>Edarkan pautan prasyarat sekurang-kurangnya sehari lebih awal.</li>
+<li>Pastikan setiap kumpulan mempunyai akaun Google dan GitHub yang boleh digunakan.</li>
+<li>Uji akses rangkaian kepada GitHub, Apps Script dan Drive.</li>
+<li>Sediakan satu repositori templat dan satu deployment demonstrasi yang berfungsi.</li>
+<li>Sediakan data rekaan Buku Log, KEW.PA-9 dan MCCB.</li>
+<li>Bentuk kumpulan dua atau tiga orang dengan seorang pemilik akaun.</li>
+<li>Sediakan laluan sandaran jika akaun organisasi menyekat Apps Script.</li>
 </ol>
 <h2>Hasil minimum lulus</h2>
 <ul>
-<li>Web App boleh dibuka;</li>
-<li>borang menerima satu rekod rekaan;</li>
-<li>rekod muncul dalam Google Sheets;</li>
-<li>satu Google Doc boleh dijana;</li>
-<li>input tidak lengkap ditolak dengan mesej jelas;</li>
-<li>pautan, pemilik dan batasan direkodkan.</li>
+<li>repositori peserta dan GitHub Pages boleh dibuka;</li>
+<li>URL Apps Script <code>/exec</code> dikonfigurasi secara peribadi;</li>
+<li>rekod rekaan Buku Log, KEW.PA-9 dan MCCB disimpan;</li>
+<li>data muncul pada tab Google Sheets yang betul;</li>
+<li>lampiran rekaan, jika digunakan, muncul dalam Drive;</li>
+<li>satu perubahan kecil telah di-commit;</li>
+<li>ujian penerimaan dan checklist serahan dilengkapkan.</li>
 </ul>
 <h2>Pelan 120 minit</h2>
-<h3>0-10 minit - Tetapkan skop</h3>
-<p>Minta kumpulan memilih satu kes daripada Modul 1-4. Skop mesti mempunyai satu pengguna, satu borang, satu Sheet dan satu jenis dokumen.</p>
-<h3>10-25 minit - Sediakan data</h3>
-<p>Peserta mencipta Google Sheet dan tajuk lajur: <code>timestamp</code>, <code>record_id</code>, <code>record_type</code>, <code>activity_date</code>, <code>asset_id</code>, <code>activity</code>, <code>status</code>, <code>owner</code>, <code>notes</code>, <code>document_url</code>.</p>
-<h3>25-45 minit - Sambungkan Apps Script</h3>
-<p>Peserta menyalin <code>Code.gs</code>, menetapkan ID Sheet dan menguji fungsi persediaan. Berhenti jika kebenaran akaun atau organisasi menghalang penerbitan; gunakan demonstrasi fasilitator dan teruskan reka bentuk secara berpasangan.</p>
-<h3>45-65 minit - Sesuaikan antaramuka</h3>
-<p>Peserta menyalin <code>Index.html</code>, menukar tajuk, medan dan warna tanpa membuang validasi atau mesej kegagalan. AI boleh membantu menjelaskan atau mengubah kod satu bahagian pada satu masa.</p>
-<h3>65-80 minit - Jana dokumen</h3>
-<p>Peserta mencipta Google Doc kosong sebagai templat, menetapkan ID dan menguji penjanaan dokumen bagi satu rekod.</p>
-<h3>80-95 minit - Terbit dan isi rekod</h3>
-<p>Terbitkan sebagai Web App dengan skop akses paling sempit yang masih membolehkan latihan. Jangan pilih akses awam jika tidak diperlukan.</p>
-<h3>95-105 minit - Ujian meja</h3>
-<p>Uji satu laluan lengkap dan satu input tidak lengkap. Catat input, hasil dijangka, hasil sebenar dan tindakan pembetulan.</p>
-<h3>105-115 minit - Audit kawalan</h3>
-<p>Semak data rekaan, akses, status manusia, rekod URL, pelan manual dan batasan prototaip.</p>
-<h3>115-120 minit - Demonstrasi dan exit ticket</h3>
-<p>Setiap kumpulan menunjukkan pautan, satu rekod dalam Sheet dan satu Doc yang dijana.</p>
-<h2>Peranan fasilitator</h2>
-<ul>
-<li>membantu peserta mengecilkan skop;</li>
-<li>mengelakkan peserta menampal data sebenar kepada AI;</li>
-<li>memeriksa bahawa kod dan kebenaran difahami;</li>
-<li>mengutamakan prototaip kecil yang berfungsi;</li>
-<li>menyediakan laluan manual apabila Apps Script disekat.</li>
-</ul>
+<h3>0-15 minit - Semak prasyarat dan demonstrasi</h3>
+<p>Tunjukkan seni bina dan perbezaan antara kod GitHub Pages yang boleh dilihat umum dengan storan Google yang dikawal. Sahkan semua kumpulan sudah log masuk dan mempunyai salinan repositori.</p>
+<h3>15-30 minit - Peta medan</h3>
+<p>Peserta memadankan antaramuka Buku Log, KEW.PA-9 dan MCCB dengan tab serta medan storan.</p>
+<h3>30-50 minit - Isi tiga modul</h3>
+<p>Peserta menghantar satu rekod rekaan bagi setiap modul dan mencatat ID.</p>
+<h3>50-65 minit - Semak Sheets dan Drive</h3>
+<p>Peserta menjejak ID kepada baris, data JSON dan lampiran.</p>
+<h3>65-85 minit - Ubah dengan AI dan commit</h3>
+<p>Peserta membuat satu perubahan kecil sahaja. Semak bahawa prompt tidak mengandungi <code>config.js</code>, URL deployment, ID Google atau data sebenar.</p>
+<h3>85-95 minit - Semak GitHub Pages</h3>
+<p>Peserta mengesahkan perubahan diterbitkan dan fungsi penghantaran masih berjalan.</p>
+<h3>95-105 minit - Audit keselamatan</h3>
+<p>Semak akses, pemilik storan, endpoint, data rekaan, sandaran dan pentadbir kedua.</p>
+<h3>105-115 minit - Demonstrasi kumpulan</h3>
+<p>Setiap kumpulan menunjukkan aplikasi, tiga rekod, storan dan commit.</p>
+<h3>115-120 minit - Penilaian</h3>
+<p>Lengkapkan kuiz, exit ticket dan penilaian akhir program.</p>
+<h2>Laluan sandaran</h2>
+<p>Jika Apps Script disekat, peserta bekerja bersama kumpulan yang mempunyai deployment sah atau menggunakan demonstrasi fasilitator untuk latihan peta medan, ujian dan perubahan frontend. Jangan memintas kawalan organisasi.</p>
+<p>Jika GitHub Pages lambat, semak commit dan status Pages, kemudian teruskan checklist menggunakan pratonton repositori. Catat ujian Pages sebagai belum selesai.</p>
 <h2>Tanda bahaya</h2>
 <ul>
-<li>peserta cuba membina terlalu banyak modul serentak;</li>
-<li>ID Sheet atau Doc dikongsi dalam prompt awam;</li>
-<li>Web App diterbitkan kepada sesiapa sahaja tanpa keperluan;</li>
-<li>AI mencipta fungsi kelulusan automatik;</li>
-<li>status dan kesalahan tidak direkodkan;</li>
-<li>peserta menganggap prototaip sebagai sistem rasmi.</li>
+<li>peserta cuba membina semula semua kod dari kosong;</li>
+<li>URL <code>/exec</code> atau ID Google dimasukkan ke prompt AI;</li>
+<li>data sebenar digunakan;</li>
+<li>endpoint <code>Anyone</code> dianggap selamat untuk operasi sebenar;</li>
+<li>perubahan merosakkan padanan frontend dan backend;</li>
+<li>peserta mengubah lebih daripada satu fungsi besar;</li>
+<li>tiada bukti storan atau sejarah commit.</li>
 </ul>
 <div class="resource-bar"><a class="button ghost" href="https://github.com/drMurtadha/jkr-create-mpe-training/blob/main/Modul%205/01-Nota-Fasilitator.md" target="_blank" rel="noopener">Lihat sumber Markdown ↗</a><button class="button ghost" onclick="window.print()">Cetak halaman</button></div></article></main>
 <footer class="site-footer"><div class="container footer-grid"><div><strong>Bengkel Transformasi Digital dan Pemerkasaan Operasi Pintar MPE</strong><br>CREaTE JKR · 28–29 Julai 2026</div><div>Prof. Madya Dr. Mohd Murtadha Mohamad<br><a href="https://github.com/drMurtadha/jkr-create-mpe-training">Sumber terbuka di GitHub</a></div></div></footer>
-<script src="../assets/site.js?v=20260717-8"></script>
+<script src="../assets/site.js?v=20260718-9"></script>
 
 </body>
 </html>

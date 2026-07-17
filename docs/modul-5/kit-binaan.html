@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kod, struktur data dan prompt yang boleh disalin untuk membina MPE Hub.">
+  <meta name="description" content="Prasyarat, konfigurasi akaun dan prompt bantuan AI untuk menyesuaikan MPE Hub.">
   <meta name="theme-color" content="#0d272b">
-  <title>Kit Binaan dan Pustaka Prompt · Portal Latihan MPE</title>
+  <title>Kit Persediaan dan Pustaka Prompt · Portal Latihan MPE</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/styles.css?v=20260717-8">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260718-9">
 </head>
 <body>
 <a class="skip-link" href="#kandungan">Langkau ke kandungan</a>
@@ -29,165 +29,87 @@
     </nav>
   </div>
 </header>
-<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Kit Binaan dan Pustaka Prompt</div><h1>Kit Binaan dan Pustaka Prompt</h1><p>Kod, struktur data dan prompt yang boleh disalin untuk membina MPE Hub.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 5</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kit-binaan.html">Kit binaan & prompt</a><a href="latihan.html">Latihan MPE Hub</a><a href="penilaian.html">Penilaian akhir</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><h1>Kit Binaan dan Pustaka Prompt MPE Hub</h1>
-<h2>Sebelum bermula</h2>
-<p>Gunakan data rekaan. Jangan tampal ID Google Sheet, ID Google Doc, pautan peribadi atau data sebenar ke platform AI.</p>
-<h2>1. Struktur Google Sheet</h2>
-<p>Cipta Google Sheet, namakan tab pertama <code>Records</code> dan masukkan tajuk berikut pada baris pertama:</p>
-<pre><code class="language-text">timestamp | record_id | record_type | activity_date | asset_id | activity | status | owner | notes | document_url
+<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Kit Persediaan dan Pustaka Prompt</div><h1>Kit Persediaan dan Pustaka Prompt</h1><p>Prasyarat, konfigurasi akaun dan prompt bantuan AI untuk menyesuaikan MPE Hub.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 5</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kit-binaan.html">Prasyarat & prompt</a><a href="latihan.html">Latihan 80 minit</a><a href="penilaian.html">Penilaian akhir</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><h1>Kit Persediaan dan Pustaka Prompt MPE Hub</h1>
+<h2>1. Semakan sebelum hari latihan</h2>
+<p>Peserta perlu menyelesaikan perkara berikut sebelum sesi hands-on bermula:</p>
+<ol>
+<li>log masuk akaun Google dan GitHub;</li>
+<li>buka <a href="https://script.google.com">Google Apps Script</a> dan pastikan projek boleh dicipta;</li>
+<li>buka <a href="https://github.com/drMurtadha/mpe-hub">repositori MPE Hub</a>;</li>
+<li>pastikan GitHub Pages tidak disekat;</li>
+<li>pilih ChatGPT, Gemini atau Claude percuma;</li>
+<li>gunakan komputer riba dan data rekaan sahaja.</li>
+</ol>
+<p>Jika akaun organisasi menyekat Apps Script, peserta perlu menggunakan akaun Google lain yang dibenarkan atau bekerja bersama pemilik akaun kumpulan. Jangan cuba memintas polisi organisasi.</p>
+<h2>2. Dapatkan salinan MPE Hub</h2>
+<p>Pilihan tanpa terminal:</p>
+<ol>
+<li>buka repositori MPE Hub;</li>
+<li>gunakan <strong>Use this template</strong> atau <strong>Fork</strong> jika tersedia;</li>
+<li>namakan repositori <code>mpe-hub-latihan</code>;</li>
+<li>pastikan fail <code>index.html</code>, <code>styles.css</code>, <code>app.js</code>, <code>config.js</code> dan folder <code>apps-script</code> tersedia.</li>
+</ol>
+<p>Peserta hanya menyesuaikan salinan sendiri. Jangan membuat perubahan terus pada repositori sumber fasilitator.</p>
+<h2>3. Sediakan Google Apps Script</h2>
+<ol>
+<li>Buka <code>script.google.com</code> dan cipta projek.</li>
+<li>Salin kandungan <code>apps-script/Code.gs</code> daripada repositori peserta.</li>
+<li>Jalankan fungsi <code>ensureSetup</code>.</li>
+<li>Semak permintaan kebenaran Google Sheets dan Google Drive.</li>
+<li>Pilih <strong>Deploy -&gt; New deployment -&gt; Web app</strong>.</li>
+<li>Tetapkan <strong>Execute as: Me</strong> dan tahap akses yang dibenarkan untuk latihan.</li>
+<li>Salin URL yang berakhir dengan <code>/exec</code>.</li>
+<li>Masukkan URL tersebut dalam <code>config.js</code> pada repositori peserta.</li>
+</ol>
+<p>Jangan hantar URL <code>/exec</code> kepada AI. Gantikan dengan <code>[URL_APPS_SCRIPT]</code> apabila meminta bantuan.</p>
+<h2>4. Semak storan Google</h2>
+<p>Fungsi <code>ensureSetup</code> menyediakan:</p>
+<ul>
+<li>spreadsheet dengan tab <code>logbook</code>, <code>asset</code> dan <code>mccb</code>;</li>
+<li>folder Google Drive untuk lampiran;</li>
+<li>tajuk lajur yang diperlukan aplikasi.</li>
+</ul>
+<p>Google Sheets dan folder Drive kekal dalam akaun pemilik deployment. Catat pemilik, pentadbir kedua dan kaedah sandaran.</p>
+<h2>5. Terbitkan GitHub Pages</h2>
+<ol>
+<li>Buka <strong>Settings -&gt; Pages</strong> dalam repositori peserta.</li>
+<li>Pilih <strong>Deploy from a branch</strong>.</li>
+<li>Pilih <code>main</code> dan folder <code>/(root)</code>.</li>
+<li>Simpan dan tunggu URL GitHub Pages.</li>
+<li>Buka URL dan semak bahawa dashboard tidak memaparkan status luar talian.</li>
+</ol>
+<h2>6. Prompt bantuan AI</h2>
+<h3>Terangkan struktur aplikasi</h3>
+<pre><code class="language-text">KONTEKS: Saya menyesuaikan salinan MPE Hub latihan. Frontend menggunakan GitHub Pages dan backend menggunakan Google Apps Script, Sheets dan Drive.
+TUGAS: Terangkan peranan index.html, styles.css, app.js, config.js dan apps-script/Code.gs.
+BATASAN: Jangan meminta atau mencipta URL deployment, ID Google, token atau data sebenar. Jangan ubah kod dahulu.
+FORMAT: Fail | Peranan | Data masuk | Data keluar | Risiko | Cara uji.
 </code></pre>
-<p>Salin ID Sheet daripada URL dan masukkan sendiri dalam kod selepas meninggalkan platform AI.</p>
-<h2>2. Kod pelayan <code>Code.gs</code></h2>
-<pre><code class="language-javascript">const SPREADSHEET_ID = &#39;MASUKKAN_ID_GOOGLE_SHEET_DI_SINI&#39;;
-const SHEET_NAME = &#39;Records&#39;;
-const DOC_TEMPLATE_ID = &#39;MASUKKAN_ID_GOOGLE_DOC_DI_SINI&#39;;
-
-function doGet() {
-  return HtmlService.createHtmlOutputFromFile(&#39;Index&#39;)
-    .setTitle(&#39;MPE Hub Latihan&#39;);
-}
-
-function getSheet_() {
-  return SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(SHEET_NAME);
-}
-
-function validateRecord_(record) {
-  const required = [&#39;record_type&#39;, &#39;activity_date&#39;, &#39;activity&#39;, &#39;owner&#39;];
-  const missing = required.filter(key =&gt; !String(record[key] || &#39;&#39;).trim());
-  if (missing.length) throw new Error(&#39;Medan wajib belum lengkap: &#39; + missing.join(&#39;, &#39;));
-  if (Number.isNaN(Date.parse(record.activity_date))) throw new Error(&#39;Tarikh aktiviti tidak sah.&#39;);
-}
-
-function createRecord(record) {
-  validateRecord_(record);
-  const sheet = getSheet_();
-  const id = &#39;MPE-&#39; + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), &#39;yyyyMMdd-HHmmss&#39;);
-  sheet.appendRow([
-    new Date(), id, record.record_type, record.activity_date,
-    record.asset_id || &#39;&#39;, record.activity, &#39;Draf&#39;, record.owner,
-    record.notes || &#39;&#39;, &#39;&#39;
-  ]);
-  return { ok: true, record_id: id, message: &#39;Rekod berjaya disimpan sebagai Draf.&#39; };
-}
-
-function listRecords() {
-  const values = getSheet_().getDataRange().getDisplayValues();
-  if (values.length &lt; 2) return [];
-  const headers = values.shift();
-  return values.reverse().slice(0, 20).map(row =&gt;
-    Object.fromEntries(headers.map((header, index) =&gt; [header, row[index]]))
-  );
-}
-
-function generateDocument(recordId) {
-  const sheet = getSheet_();
-  const values = sheet.getDataRange().getValues();
-  const headers = values[0];
-  const idIndex = headers.indexOf(&#39;record_id&#39;);
-  const urlIndex = headers.indexOf(&#39;document_url&#39;);
-  const rowIndex = values.findIndex((row, index) =&gt; index &gt; 0 &amp;&amp; row[idIndex] === recordId);
-  if (rowIndex &lt; 1) throw new Error(&#39;Rekod tidak ditemui.&#39;);
-
-  const record = Object.fromEntries(headers.map((header, index) =&gt; [header, values[rowIndex][index]]));
-  const copy = DriveApp.getFileById(DOC_TEMPLATE_ID).makeCopy(&#39;Laporan &#39; + recordId);
-  const doc = DocumentApp.openById(copy.getId());
-  const body = doc.getBody();
-  Object.entries(record).forEach(([key, value]) =&gt;
-    body.replaceText(&#39;{{&#39; + key.toUpperCase() + &#39;}}&#39;, String(value || &#39;-&#39;))
-  );
-  doc.saveAndClose();
-  const url = doc.getUrl();
-  sheet.getRange(rowIndex + 1, urlIndex + 1).setValue(url);
-  return { ok: true, url };
-}
+<h3>Ubah satu label atau medan</h3>
+<pre><code class="language-text">KONTEKS: MPE Hub latihan mempunyai Buku Log, KEW.PA-9 dan MCCB. Semua data rekaan.
+TUGAS: Tukar [LABEL_ASAL] kepada [LABEL_BAHARU] tanpa mengubah nama medan data atau API.
+SEMAKAN: Nyatakan fail dan baris konsep yang terlibat. Berikan perubahan minimum sahaja. Kekalkan validasi, paparan mudah alih dan mesej ralat.
 </code></pre>
-<h2>3. Antaramuka <code>Index.html</code></h2>
-<p>Dalam Apps Script, tambah fail HTML bernama <code>Index</code> dan tampal kod berikut:</p>
-<pre><code class="language-html">&lt;!doctype html&gt;
-&lt;html lang=&quot;ms&quot;&gt;
-&lt;head&gt;
-  &lt;base target=&quot;_top&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
-  &lt;style&gt;
-    body{font:16px system-ui;margin:0;background:#f4f6f2;color:#16323a}
-    main{max-width:900px;margin:auto;padding:24px}
-    .card{background:white;border:1px solid #dbe4df;border-radius:18px;padding:22px;margin:18px 0}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    label{display:grid;gap:6px;font-weight:700}
-    input,select,textarea,button{font:inherit;padding:12px;border:1px solid #b9c8c2;border-radius:10px}
-    textarea{min-height:90px}.wide{grid-column:1/-1}
-    button{background:#123a43;color:white;font-weight:800;cursor:pointer}
-    #message{font-weight:700}.record{padding:12px 0;border-top:1px solid #e4ebe7}
-    @media(max-width:650px){.grid{grid-template-columns:1fr}}
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;&lt;main&gt;
-  &lt;h1&gt;MPE Hub Latihan&lt;/h1&gt;
-  &lt;p&gt;Prototaip menggunakan data rekaan sahaja.&lt;/p&gt;
-  &lt;section class=&quot;card&quot;&gt;
-    &lt;h2&gt;Rekod baharu&lt;/h2&gt;
-    &lt;form id=&quot;recordForm&quot; class=&quot;grid&quot;&gt;
-      &lt;label&gt;Jenis rekod&lt;select name=&quot;record_type&quot; required&gt;&lt;option value=&quot;&quot;&gt;Pilih&lt;/option&gt;&lt;option&gt;Buku Log&lt;/option&gt;&lt;option&gt;KEW.PA-9&lt;/option&gt;&lt;option&gt;Ujian MCCB&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;
-      &lt;label&gt;Tarikh aktiviti&lt;input name=&quot;activity_date&quot; type=&quot;date&quot; required&gt;&lt;/label&gt;
-      &lt;label&gt;ID aset&lt;input name=&quot;asset_id&quot; placeholder=&quot;MPE-REKAAN-01&quot;&gt;&lt;/label&gt;
-      &lt;label&gt;Pemilik&lt;input name=&quot;owner&quot; placeholder=&quot;Peranan rekaan&quot; required&gt;&lt;/label&gt;
-      &lt;label class=&quot;wide&quot;&gt;Aktiviti&lt;input name=&quot;activity&quot; required&gt;&lt;/label&gt;
-      &lt;label class=&quot;wide&quot;&gt;Catatan&lt;textarea name=&quot;notes&quot;&gt;&lt;/textarea&gt;&lt;/label&gt;
-      &lt;button class=&quot;wide&quot; type=&quot;submit&quot;&gt;Simpan sebagai Draf&lt;/button&gt;
-    &lt;/form&gt;
-    &lt;p id=&quot;message&quot; role=&quot;status&quot;&gt;&lt;/p&gt;
-  &lt;/section&gt;
-  &lt;section class=&quot;card&quot;&gt;&lt;h2&gt;Rekod terkini&lt;/h2&gt;&lt;div id=&quot;records&quot;&gt;Memuatkan...&lt;/div&gt;&lt;/section&gt;
-&lt;/main&gt;
-&lt;script&gt;
-  const form=document.querySelector(&#39;#recordForm&#39;),message=document.querySelector(&#39;#message&#39;),records=document.querySelector(&#39;#records&#39;);
-  function esc(value){return String(value||&#39;&#39;).replace(/[&amp;&lt;&gt;&quot;&#39;]/g,char=&gt;({&#39;&amp;&#39;:&#39;&amp;amp;&#39;,&#39;&lt;&#39;:&#39;&amp;lt;&#39;,&#39;&gt;&#39;:&#39;&amp;gt;&#39;,&#39;&quot;&#39;:&#39;&amp;quot;&#39;,&quot;&#39;&quot;:&#39;&amp;#39;&#39;}[char]))}
-  function load(){google.script.run.withSuccessHandler(items=&gt;{records.innerHTML=items.length?items.map(x=&gt;`&lt;div class=&quot;record&quot;&gt;&lt;b&gt;${esc(x.record_id)}&lt;/b&gt; · ${esc(x.record_type)} · ${esc(x.status)}&lt;br&gt;${esc(x.activity)}&lt;br&gt;&lt;button type=&quot;button&quot; onclick=&quot;makeDoc(&#39;${esc(x.record_id)}&#39;)&quot;&gt;Jana Google Doc&lt;/button&gt;${x.document_url?` &lt;a href=&quot;${esc(x.document_url)}&quot; target=&quot;_blank&quot;&gt;Buka Doc&lt;/a&gt;`:&#39;&#39;}&lt;/div&gt;`).join(&#39;&#39;):&#39;Belum ada rekod.&#39;}).withFailureHandler(showError).listRecords()}
-  function showError(error){message.textContent=&#39;Ralat: &#39;+error.message}
-  function makeDoc(id){message.textContent=&#39;Menjana dokumen...&#39;;google.script.run.withSuccessHandler(result=&gt;{message.innerHTML=`Dokumen berjaya dijana: &lt;a href=&quot;${result.url}&quot; target=&quot;_blank&quot;&gt;Buka Google Doc&lt;/a&gt;`;load()}).withFailureHandler(showError).generateDocument(id)}
-  form.addEventListener(&#39;submit&#39;,event=&gt;{event.preventDefault();message.textContent=&#39;Menyimpan...&#39;;const data=Object.fromEntries(new FormData(form));google.script.run.withSuccessHandler(result=&gt;{message.textContent=result.message+&#39; ID: &#39;+result.record_id;form.reset();load()}).withFailureHandler(showError).createRecord(data)});
-  load();
-&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+<h3>Audit perubahan sebelum commit</h3>
+<pre><code class="language-text">Audit perubahan kod berikut. Semak: data sebenar atau rahsia, URL/ID terdedah, medan frontend tidak sepadan dengan backend, validasi hilang, status manusia diautomasi, dan kegagalan rangkaian tanpa mesej. Format Isu | Bukti | Risiko | Pembetulan | Ujian.
 </code></pre>
-<h2>4. Templat Google Doc</h2>
-<p>Cipta Google Doc kosong dan tampal:</p>
-<pre><code class="language-text">LAPORAN REKOD MPE
-
-ID Rekod: {{RECORD_ID}}
-Jenis Rekod: {{RECORD_TYPE}}
-Tarikh Aktiviti: {{ACTIVITY_DATE}}
-ID Aset: {{ASSET_ID}}
-Aktiviti: {{ACTIVITY}}
-Status: {{STATUS}}
-Pemilik: {{OWNER}}
-Catatan: {{NOTES}}
-
-Dokumen latihan menggunakan data rekaan dan memerlukan semakan manusia.
+<h3>Bantu menyelesaikan ralat</h3>
+<pre><code class="language-text">KONTEKS: MPE Hub GitHub Pages menghantar JSON kepada Google Apps Script.
+GEJALA: [SALIN MESEJ RALAT TANPA ID, URL ATAU DATA SEBENAR]
+HASIL DIJANGKA: [NYATAKAN]
+TUGAS: Cadangkan tiga punca paling mungkin mengikut urutan. Bagi setiap punca, nyatakan semakan selamat dan pembetulan minimum. Jangan reka kredensial atau endpoint.
 </code></pre>
-<h2>5. Prompt boleh salin</h2>
-<h3>Prompt A - Fahami kod sebelum mengubah</h3>
-<pre><code class="language-text">KONTEKS: Saya peserta latihan dan sedang membina prototaip Google Apps Script menggunakan data rekaan.
-TUGAS: Terangkan kod berikut mengikut fungsi, input, output dan kemungkinan ralat.
-BATASAN: Jangan mencipta ID, kunci, data atau fungsi kelulusan. Jangan mengubah kod dahulu.
-FORMAT: Jadual dengan lajur Fungsi | Tujuan | Input | Output | Risiko | Cara uji.
-KOD: [TAMPAL HANYA KOD TANPA ID ATAU DATA SEBENAR]
-</code></pre>
-<h3>Prompt B - Sesuaikan satu medan</h3>
-<pre><code class="language-text">KONTEKS: Prototaip MPE Hub menggunakan Google Sheets dan Apps Script. Semua data rekaan.
-TUGAS: Tambah satu medan bernama [NAMA_MEDAN] pada borang, createRecord dan paparan rekod.
-SEMAKAN: Kekalkan validasi sedia ada. Jangan menambah kelulusan automatik. Senaraikan setiap baris yang perlu diubah dan berikan kod lengkap bagi fungsi terlibat sahaja.
-</code></pre>
-<h3>Prompt C - Audit keselamatan</h3>
-<pre><code class="language-text">Audit kod prototaip ini. Cari pendedahan ID atau data, akses terlalu luas, input tanpa validasi, mesej ralat lemah, perubahan status tanpa kuasa dan kegagalan tanpa laluan manual. Jangan andaikan prototaip ini sistem rasmi. Berikan Isu | Risiko | Bukti kod | Pembetulan | Ujian.
-</code></pre>
-<h3>Prompt D - Jana kes ujian</h3>
-<pre><code class="language-text">Bina enam kes ujian untuk borang MPE Hub: dua lengkap, dua medan wajib kosong, satu tarikh tidak sah dan satu kegagalan perkhidmatan. Gunakan data rekaan. Format: ID Ujian | Input | Hasil Dijangka | Hasil Sebenar | Lulus/Gagal | Tindakan.
-</code></pre>
-<h2>6. Penerbitan Web App</h2>
-<p>Pilih <strong>Deploy -&gt; New deployment -&gt; Web app</strong>. Gunakan akses paling sempit yang sesuai dengan akaun dan organisasi. Catat versi serta tarikh. Jangan pilih akses awam jika tidak diperlukan.</p>
+<h2>7. Pautan rujukan</h2>
+<ul>
+<li><a href="https://drmurtadha.github.io/mpe-hub/docs.html">Dokumentasi MPE Hub</a></li>
+<li><a href="https://drmurtadha.github.io/mpe-hub/">Aplikasi contoh</a></li>
+<li><a href="https://github.com/drMurtadha/mpe-hub">Repositori GitHub</a></li>
+<li><a href="https://drmurtadha.github.io/mpe-hub/downloads/Nota_Latihan_MPE_Hub.pdf">Nota PDF</a></li>
+<li><a href="https://drmurtadha.github.io/mpe-hub/downloads/Slaid_Latihan_MPE_Hub.pptx">Slaid PPTX</a></li>
+</ul>
 <div class="resource-bar"><a class="button ghost" href="https://github.com/drMurtadha/jkr-create-mpe-training/blob/main/Modul%205/03-Kit-Binaan-dan-Pustaka-Prompt.md" target="_blank" rel="noopener">Lihat sumber Markdown ↗</a><button class="button ghost" onclick="window.print()">Cetak halaman</button></div></article></main>
 <footer class="site-footer"><div class="container footer-grid"><div><strong>Bengkel Transformasi Digital dan Pemerkasaan Operasi Pintar MPE</strong><br>CREaTE JKR · 28–29 Julai 2026</div><div>Prof. Madya Dr. Mohd Murtadha Mohamad<br><a href="https://github.com/drMurtadha/jkr-create-mpe-training">Sumber terbuka di GitHub</a></div></div></footer>
-<script src="../assets/site.js?v=20260717-8"></script>
+<script src="../assets/site.js?v=20260718-9"></script>
 
 </body>
 </html>

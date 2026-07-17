@@ -1,77 +1,79 @@
 # Nota Fasilitator Modul 5
 
-## Matlamat sesi
+## Matlamat
 
-Peserta menyepadukan hasil Modul 1-4 menjadi prototaip MPE Hub menggunakan akaun Google sendiri dan bantuan AI generatif percuma.
+Peserta menyesuaikan templat MPE Hub dan membuktikan aliran GitHub Pages -> Apps Script -> Google Sheets/Drive berfungsi menggunakan data rekaan.
 
 ## Persediaan sebelum sesi
 
-1. Pastikan peserta boleh membuka Google Sheets, Google Docs dan Apps Script.
-2. Sediakan satu demonstrasi MPE Hub menggunakan data rekaan.
-3. Paparkan pautan kit binaan dan arahan latihan.
-4. Bentuk kumpulan dua atau tiga orang jika tahap kemahiran berbeza.
-5. Tegaskan bahawa prototaip bukan sistem pengeluaran.
+1. Edarkan pautan prasyarat sekurang-kurangnya sehari lebih awal.
+2. Pastikan setiap kumpulan mempunyai akaun Google dan GitHub yang boleh digunakan.
+3. Uji akses rangkaian kepada GitHub, Apps Script dan Drive.
+4. Sediakan satu repositori templat dan satu deployment demonstrasi yang berfungsi.
+5. Sediakan data rekaan Buku Log, KEW.PA-9 dan MCCB.
+6. Bentuk kumpulan dua atau tiga orang dengan seorang pemilik akaun.
+7. Sediakan laluan sandaran jika akaun organisasi menyekat Apps Script.
 
 ## Hasil minimum lulus
 
-- Web App boleh dibuka;
-- borang menerima satu rekod rekaan;
-- rekod muncul dalam Google Sheets;
-- satu Google Doc boleh dijana;
-- input tidak lengkap ditolak dengan mesej jelas;
-- pautan, pemilik dan batasan direkodkan.
+- repositori peserta dan GitHub Pages boleh dibuka;
+- URL Apps Script `/exec` dikonfigurasi secara peribadi;
+- rekod rekaan Buku Log, KEW.PA-9 dan MCCB disimpan;
+- data muncul pada tab Google Sheets yang betul;
+- lampiran rekaan, jika digunakan, muncul dalam Drive;
+- satu perubahan kecil telah di-commit;
+- ujian penerimaan dan checklist serahan dilengkapkan.
 
 ## Pelan 120 minit
 
-### 0-10 minit - Tetapkan skop
+### 0-15 minit - Semak prasyarat dan demonstrasi
 
-Minta kumpulan memilih satu kes daripada Modul 1-4. Skop mesti mempunyai satu pengguna, satu borang, satu Sheet dan satu jenis dokumen.
+Tunjukkan seni bina dan perbezaan antara kod GitHub Pages yang boleh dilihat umum dengan storan Google yang dikawal. Sahkan semua kumpulan sudah log masuk dan mempunyai salinan repositori.
 
-### 10-25 minit - Sediakan data
+### 15-30 minit - Peta medan
 
-Peserta mencipta Google Sheet dan tajuk lajur: `timestamp`, `record_id`, `record_type`, `activity_date`, `asset_id`, `activity`, `status`, `owner`, `notes`, `document_url`.
+Peserta memadankan antaramuka Buku Log, KEW.PA-9 dan MCCB dengan tab serta medan storan.
 
-### 25-45 minit - Sambungkan Apps Script
+### 30-50 minit - Isi tiga modul
 
-Peserta menyalin `Code.gs`, menetapkan ID Sheet dan menguji fungsi persediaan. Berhenti jika kebenaran akaun atau organisasi menghalang penerbitan; gunakan demonstrasi fasilitator dan teruskan reka bentuk secara berpasangan.
+Peserta menghantar satu rekod rekaan bagi setiap modul dan mencatat ID.
 
-### 45-65 minit - Sesuaikan antaramuka
+### 50-65 minit - Semak Sheets dan Drive
 
-Peserta menyalin `Index.html`, menukar tajuk, medan dan warna tanpa membuang validasi atau mesej kegagalan. AI boleh membantu menjelaskan atau mengubah kod satu bahagian pada satu masa.
+Peserta menjejak ID kepada baris, data JSON dan lampiran.
 
-### 65-80 minit - Jana dokumen
+### 65-85 minit - Ubah dengan AI dan commit
 
-Peserta mencipta Google Doc kosong sebagai templat, menetapkan ID dan menguji penjanaan dokumen bagi satu rekod.
+Peserta membuat satu perubahan kecil sahaja. Semak bahawa prompt tidak mengandungi `config.js`, URL deployment, ID Google atau data sebenar.
 
-### 80-95 minit - Terbit dan isi rekod
+### 85-95 minit - Semak GitHub Pages
 
-Terbitkan sebagai Web App dengan skop akses paling sempit yang masih membolehkan latihan. Jangan pilih akses awam jika tidak diperlukan.
+Peserta mengesahkan perubahan diterbitkan dan fungsi penghantaran masih berjalan.
 
-### 95-105 minit - Ujian meja
+### 95-105 minit - Audit keselamatan
 
-Uji satu laluan lengkap dan satu input tidak lengkap. Catat input, hasil dijangka, hasil sebenar dan tindakan pembetulan.
+Semak akses, pemilik storan, endpoint, data rekaan, sandaran dan pentadbir kedua.
 
-### 105-115 minit - Audit kawalan
+### 105-115 minit - Demonstrasi kumpulan
 
-Semak data rekaan, akses, status manusia, rekod URL, pelan manual dan batasan prototaip.
+Setiap kumpulan menunjukkan aplikasi, tiga rekod, storan dan commit.
 
-### 115-120 minit - Demonstrasi dan exit ticket
+### 115-120 minit - Penilaian
 
-Setiap kumpulan menunjukkan pautan, satu rekod dalam Sheet dan satu Doc yang dijana.
+Lengkapkan kuiz, exit ticket dan penilaian akhir program.
 
-## Peranan fasilitator
+## Laluan sandaran
 
-- membantu peserta mengecilkan skop;
-- mengelakkan peserta menampal data sebenar kepada AI;
-- memeriksa bahawa kod dan kebenaran difahami;
-- mengutamakan prototaip kecil yang berfungsi;
-- menyediakan laluan manual apabila Apps Script disekat.
+Jika Apps Script disekat, peserta bekerja bersama kumpulan yang mempunyai deployment sah atau menggunakan demonstrasi fasilitator untuk latihan peta medan, ujian dan perubahan frontend. Jangan memintas kawalan organisasi.
+
+Jika GitHub Pages lambat, semak commit dan status Pages, kemudian teruskan checklist menggunakan pratonton repositori. Catat ujian Pages sebagai belum selesai.
 
 ## Tanda bahaya
 
-- peserta cuba membina terlalu banyak modul serentak;
-- ID Sheet atau Doc dikongsi dalam prompt awam;
-- Web App diterbitkan kepada sesiapa sahaja tanpa keperluan;
-- AI mencipta fungsi kelulusan automatik;
-- status dan kesalahan tidak direkodkan;
-- peserta menganggap prototaip sebagai sistem rasmi.
+- peserta cuba membina semula semua kod dari kosong;
+- URL `/exec` atau ID Google dimasukkan ke prompt AI;
+- data sebenar digunakan;
+- endpoint `Anyone` dianggap selamat untuk operasi sebenar;
+- perubahan merosakkan padanan frontend dan backend;
+- peserta mengubah lebih daripada satu fungsi besar;
+- tiada bukti storan atau sejarah commit.

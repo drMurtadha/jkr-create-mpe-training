@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sesi integrasi hands-on untuk membina prototaip MPE Hub menggunakan AI generatif percuma, Google Sheets, Google Docs dan Google Apps Script.">
+  <meta name="description" content="Sesi integrasi hands-on untuk mengkonfigurasi, menyesuaikan dan menguji MPE Hub melalui GitHub Pages, Google Apps Script, Sheets dan Drive.">
   <meta name="theme-color" content="#0d272b">
-  <title>Modul 5 — Bina MPE Hub · Portal Latihan MPE</title>
+  <title>Modul 5 — Siapkan dan Sesuaikan MPE Hub · Portal Latihan MPE</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/styles.css?v=20260717-8">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260718-9">
 </head>
 <body>
 <a class="skip-link" href="#kandungan">Langkau ke kandungan</a>
@@ -29,27 +29,62 @@
     </nav>
   </div>
 </header>
-<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Modul 5 — Bina MPE Hub</div><h1>Modul 5 — Bina MPE Hub</h1><p>Sesi integrasi hands-on untuk membina prototaip MPE Hub menggunakan AI generatif percuma, Google Sheets, Google Docs dan Google Apps Script.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 5</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kit-binaan.html">Kit binaan & prompt</a><a href="latihan.html">Latihan MPE Hub</a><a href="penilaian.html">Penilaian akhir</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><h1>Modul 5 - Bina MPE Hub dengan AI Generatif Percuma</h1>
+<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Modul 5 — Siapkan dan Sesuaikan MPE Hub</div><h1>Modul 5 — Siapkan dan Sesuaikan MPE Hub</h1><p>Sesi integrasi hands-on untuk mengkonfigurasi, menyesuaikan dan menguji MPE Hub melalui GitHub Pages, Google Apps Script, Sheets dan Drive.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 5</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kit-binaan.html">Prasyarat & prompt</a><a href="latihan.html">Latihan 80 minit</a><a href="penilaian.html">Penilaian akhir</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><h1>Modul 5 - Siapkan dan Sesuaikan MPE Hub</h1>
 <ul>
 <li><strong>Tarikh:</strong> 29 Julai 2026</li>
 <li><strong>Masa:</strong> 2.30-4.30 petang</li>
-<li><strong>Tempoh:</strong> 120 minit</li>
-<li><strong>Kaedah:</strong> 15% demonstrasi, 75% hands-on, 10% pembentangan dan penilaian</li>
-<li><strong>Platform:</strong> ChatGPT, Gemini atau Claude percuma; Google Sheets, Google Docs dan Google Apps Script dalam akaun peserta</li>
+<li><strong>Tempoh keseluruhan:</strong> 120 minit</li>
+<li><strong>Latihan amali utama:</strong> 80 minit</li>
+<li><strong>Kaedah:</strong> salin templat, konfigurasi akaun, isi tiga modul, uji, ubah dan terbit</li>
+<li><strong>Platform:</strong> AI generatif percuma, GitHub Pages, Google Apps Script, Google Sheets dan Google Drive</li>
 </ul>
-<p>Modul ini menggabungkan hasil Modul 1-4 menjadi satu prototaip <strong>MPE Hub</strong> yang boleh dibuka, menerima rekod rekaan, menyimpan data ke Google Sheets dan menghasilkan dokumen dalam Google Docs.</p>
+<p>Modul ini menyepadukan hasil Modul 1-4 dengan membimbing peserta menyediakan salinan <strong>MPE Hub</strong> sedia ada. Peserta tidak menulis aplikasi lengkap dari halaman kosong. Mereka menghubungkan salinan aplikasi kepada storan Google sendiri, memasukkan data rekaan bagi Buku Log, KEW.PA-9 dan MCCB, membuat satu perubahan dengan bantuan AI serta menguji penerbitan GitHub Pages.</p>
 <h2>Hasil akhir peserta</h2>
-<p>Pada akhir sesi, setiap kumpulan mempunyai:</p>
 <ol>
-<li>satu MPE Hub yang diterbitkan sebagai Google Apps Script Web App;</li>
-<li>satu Google Sheet dengan lajur dan status terkawal;</li>
-<li>satu borang kemasukan rekod;</li>
-<li>satu paparan senarai atau dashboard ringkas;</li>
-<li>satu fungsi menjana Google Doc daripada rekod dipilih;</li>
-<li>satu rekod rekaan yang berjaya dihantar dan dijejak;</li>
-<li>satu ujian input tidak lengkap atau kegagalan;</li>
-<li>satu pautan prototaip untuk demonstrasi.</li>
+<li>satu salinan repositori MPE Hub dalam akaun GitHub kumpulan;</li>
+<li>satu URL aplikasi melalui GitHub Pages;</li>
+<li>satu Google Apps Script Web App sebagai API;</li>
+<li>satu Google Spreadsheet dengan tab <code>logbook</code>, <code>asset</code> dan <code>mccb</code>;</li>
+<li>satu folder Google Drive bagi lampiran latihan;</li>
+<li>sekurang-kurangnya satu rekod rekaan bagi setiap modul;</li>
+<li>satu perubahan antaramuka atau medan yang dicadangkan dengan AI;</li>
+<li>keputusan ujian penerimaan dan checklist serahan.</li>
 </ol>
+<h2>Seni bina yang digunakan</h2>
+<pre><code class="language-text">Pengguna
+   -&gt; GitHub Pages (HTML, CSS, JavaScript)
+      -&gt; Google Apps Script Web API (GET/POST)
+         -&gt; Google Sheets (data)
+         -&gt; Google Drive (lampiran)
+</code></pre>
+<p>Kredensial Google tidak diletakkan dalam kod pelayar. Namun endpoint yang boleh dicapai oleh sesiapa masih memerlukan kawalan tambahan dan hanya digunakan dengan data rekaan semasa latihan.</p>
+<h2>Prasyarat wajib</h2>
+<h3>Akaun dan akses</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Akaun Google aktif.</li>
+<li><input disabled="" type="checkbox"> Boleh membuka Google Drive dan Google Sheets.</li>
+<li><input disabled="" type="checkbox"> Boleh membuka dan menjalankan Google Apps Script.</li>
+<li><input disabled="" type="checkbox"> Akaun organisasi membenarkan penerbitan Apps Script Web App.</li>
+<li><input disabled="" type="checkbox"> Akaun GitHub aktif.</li>
+<li><input disabled="" type="checkbox"> Boleh mencipta atau menyalin repositori.</li>
+<li><input disabled="" type="checkbox"> Boleh mengaktifkan GitHub Pages.</li>
+<li><input disabled="" type="checkbox"> Sudah log masuk ke Google, GitHub dan satu platform AI percuma.</li>
+</ul>
+<h3>Peralatan</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Komputer riba dengan pelayar moden.</li>
+<li><input disabled="" type="checkbox"> Sambungan internet stabil.</li>
+<li><input disabled="" type="checkbox"> Akses kepada <code>github.com</code>, <code>script.google.com</code> dan Google Drive melalui rangkaian latihan.</li>
+<li><input disabled="" type="checkbox"> Data latihan rekaan; tiada data operasi sebenar.</li>
+</ul>
+<h3>Bahan yang perlu dibuka</h3>
+<ul>
+<li><a href="https://drmurtadha.github.io/mpe-hub/">Aplikasi MPE Hub</a></li>
+<li><a href="https://drmurtadha.github.io/mpe-hub/docs.html">Dokumentasi lengkap MPE Hub</a></li>
+<li><a href="https://github.com/drMurtadha/mpe-hub">Repositori templat MPE Hub</a></li>
+<li><a href="https://drmurtadha.github.io/mpe-hub/downloads/Nota_Latihan_MPE_Hub.pdf">Nota PDF</a></li>
+<li><a href="https://drmurtadha.github.io/mpe-hub/downloads/Slaid_Latihan_MPE_Hub.pptx">Slaid PPTX</a></li>
+</ul>
 <h2>Sambungan Modul 1-5</h2>
 <table>
 <thead>
@@ -60,98 +95,90 @@
 </thead>
 <tbody><tr>
 <td>1</td>
-<td>Masalah kerja, pengguna dan peluang produktiviti</td>
+<td>Masalah, pengguna dan peluang produktiviti</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Prompt, dokumen rasmi dan semakan manusia</td>
+<td>Struktur dokumen dan semakan manusia</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Struktur data, analisis dan kawalan rekod</td>
+<td>Medan data, analisis dan kawalan rekod</td>
 </tr>
 <tr>
 <td>4</td>
-<td>Peta proses, status, peranan dan ujian kegagalan</td>
+<td>Aliran kerja, status, peranan dan pengecualian</td>
 </tr>
 <tr>
 <td>5</td>
-<td>Penyepaduan menjadi prototaip MPE Hub</td>
+<td>Konfigurasi, pengujian dan penerbitan MPE Hub</td>
 </tr>
 </tbody></table>
-<h2>Seni bina latihan</h2>
-<pre><code class="language-text">Pengguna
-   -&gt; MPE Hub (HTML Google Apps Script)
-      -&gt; Google Sheets (rekod dan status)
-      -&gt; Google Docs (laporan atau dokumen)
-      -&gt; Semakan manusia (keputusan dan pengesahan)
-</code></pre>
-<p>AI generatif membantu menyediakan dan menyesuaikan kod. AI tidak menerima data sebenar, tidak meluluskan rekod dan bukan repositori rasmi.</p>
-<h2>Aliran hands-on 120 minit</h2>
+<h2>Aliran sesi 120 minit</h2>
 <table>
 <thead>
 <tr>
 <th>Minit</th>
 <th>Aktiviti</th>
-<th>Bukti</th>
+<th>Hasil</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>0-10</td>
-<td>Pilih kes dan hasil Modul 1-4</td>
-<td>Skop MPE Hub</td>
+<td>0-15</td>
+<td>Semak prasyarat dan demonstrasi seni bina</td>
+<td>Akaun serta bahan tersedia</td>
 </tr>
 <tr>
-<td>10-25</td>
-<td>Salin templat Google Sheet</td>
-<td>Pangkalan data</td>
-</tr>
-<tr>
-<td>25-45</td>
-<td>Salin Apps Script dan tetapkan ID</td>
-<td>Sambungan data</td>
-</tr>
-<tr>
-<td>45-65</td>
-<td>Bina serta sesuaikan halaman MPE Hub</td>
-<td>Antaramuka</td>
-</tr>
-<tr>
-<td>65-80</td>
-<td>Sambungkan templat Google Docs</td>
-<td>Dokumen dijana</td>
-</tr>
-<tr>
-<td>80-95</td>
-<td>Terbitkan Web App dan masukkan rekod</td>
-<td>Pautan berfungsi</td>
+<td>15-95</td>
+<td>Latihan amali mengikut dokumentasi MPE Hub</td>
+<td>Aplikasi, storan dan perubahan diuji</td>
 </tr>
 <tr>
 <td>95-105</td>
-<td>Uji laluan lengkap dan input tidak sah</td>
-<td>Log ujian</td>
+<td>Audit keselamatan dan checklist serahan</td>
+<td>Kawalan disahkan</td>
 </tr>
 <tr>
 <td>105-115</td>
-<td>Semak keselamatan dan kawalan</td>
-<td>Senarai semak</td>
+<td>Demonstrasi kumpulan</td>
+<td>Bukti hasil</td>
 </tr>
 <tr>
 <td>115-120</td>
-<td>Demonstrasi pantas dan exit ticket</td>
-<td>Bukti penyempurnaan</td>
+<td>Kuiz dan exit ticket</td>
+<td>Penilaian akhir</td>
 </tr>
 </tbody></table>
-<h2>Pilihan kes MPE Hub</h2>
-<ul>
-<li>Buku Log Makmal;</li>
-<li>aktiviti melalui QR;</li>
-<li>pinjaman atau pergerakan aset KEW.PA-9;</li>
-<li>rekod pengujian MCCB;</li>
-<li>analisis data teknikal;</li>
-<li>dokumen atau rekod kerja lain yang diluluskan fasilitator.</li>
-</ul>
-<h2>Bahan modul</h2>
+<h2>Pecahan latihan amali 80 minit</h2>
+<table>
+<thead>
+<tr>
+<th>Masa</th>
+<th>Aktiviti</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>15 minit</td>
+<td>Peta medan</td>
+</tr>
+<tr>
+<td>20 minit</td>
+<td>Isi Buku Log, KEW.PA-9 dan MCCB</td>
+</tr>
+<tr>
+<td>15 minit</td>
+<td>Semak Google Sheets dan Google Drive</td>
+</tr>
+<tr>
+<td>20 minit</td>
+<td>Buat satu perubahan dan commit</td>
+</tr>
+<tr>
+<td>10 minit</td>
+<td>Semak GitHub Pages</td>
+</tr>
+</tbody></table>
+<h2>Bahan Modul 5</h2>
 <table>
 <thead>
 <tr>
@@ -161,47 +188,44 @@
 </thead>
 <tbody><tr>
 <td><a href="nota-fasilitator.html">Nota fasilitator</a></td>
-<td>Pelaksanaan hands-on 120 minit</td>
+<td>Pelaksanaan sesi dan laluan sandaran</td>
 </tr>
 <tr>
 <td><a href="kandungan-slaid.html">Kandungan slaid untuk cetakan</a></td>
-<td>Sumber slaid dan nota penyampai</td>
+<td>Sumber slaid Modul 5</td>
 </tr>
 <tr>
-<td><a href="kit-binaan.html">Kit binaan dan pustaka prompt</a></td>
-<td>Kod, struktur data dan prompt boleh salin</td>
+<td><a href="kit-binaan.html">Kit persediaan dan prompt</a></td>
+<td>Prasyarat, konfigurasi dan prompt bantuan AI</td>
 </tr>
 <tr>
-<td><a href="latihan.html">Latihan bina MPE Hub</a></td>
-<td>Arahan langkah demi langkah</td>
+<td><a href="latihan.html">Latihan MPE Hub</a></td>
+<td>Arahan amali 80 minit</td>
 </tr>
 <tr>
 <td><a href="penilaian.html">Penilaian akhir</a></td>
-<td>Kuiz, bukti, maklum balas dan penilaian program</td>
+<td>Kuiz, rubrik, exit ticket dan penilaian program</td>
 </tr>
 </tbody></table>
 <h2>Had dan kawalan keselamatan</h2>
 <ul>
-<li>Gunakan akaun Google peserta sendiri dan data latihan rekaan sahaja.</li>
-<li>Jangan masukkan nama sebenar, nombor aset sebenar, tandatangan, kata laluan atau dokumen terperingkat.</li>
-<li>Jangan kongsi pautan dengan akses suntingan kepada orang awam.</li>
-<li>Status Disahkan atau Diluluskan hanya ditetapkan oleh manusia yang diberi kuasa.</li>
-<li>Kod yang dijana AI mesti dibaca, diuji dan dibandingkan dengan keperluan.</li>
-<li>Prototaip latihan bukan sistem pengeluaran atau repositori rasmi jabatan.</li>
+<li>Gunakan data rekaan sahaja.</li>
+<li>Jangan masukkan nama, nombor aset, tandatangan, rekod atau lampiran sebenar.</li>
+<li>Jangan tampal URL deployment, ID Google, token atau maklumat akaun ke platform AI.</li>
+<li>Kod GitHub Pages boleh dilihat umum.</li>
+<li>Google Sheets dan folder Drive hendaklah kekal private atau terhad kepada kumpulan.</li>
+<li>Endpoint Apps Script <code>Anyone</code> tidak sesuai untuk data sensitif tanpa autentikasi dan kawalan tambahan.</li>
+<li>MPE Hub latihan bukan sistem pengeluaran atau repositori rasmi jabatan.</li>
 </ul>
-<h2>Video pembelajaran</h2>
-<p>Ruang ini akan memaparkan video Modul 5 apabila pautan disediakan.</p>
 <h2>Penilaian akhir program</h2>
-<p>Lengkapkan penilaian ini sekali sahaja selepas kelima-lima modul selesai. Respons dihantar ke dokumen Google rasmi latihan.</p>
 <h3>Maklum balas peserta</h3>
 <div class="final-evaluation" data-final-evaluation="participant"></div>
 
 <h3>Ringkasan penilaian fasilitator</h3>
-<p>Borang ini hanya dilengkapkan oleh fasilitator menggunakan keputusan agregat. Jangan masukkan respons individu atau maklumat sensitif.</p>
 <div class="final-evaluation" data-final-evaluation="facilitator"></div>
 <div class="resource-bar"><a class="button accent" href="slaid.html">Buka slaid web</a><a class="button ghost" href="https://github.com/drMurtadha/jkr-create-mpe-training/blob/main/Modul%205/README.md" target="_blank" rel="noopener">Lihat sumber Markdown ↗</a><button class="button ghost" onclick="window.print()">Cetak halaman</button></div></article></main>
 <footer class="site-footer"><div class="container footer-grid"><div><strong>Bengkel Transformasi Digital dan Pemerkasaan Operasi Pintar MPE</strong><br>CREaTE JKR · 28–29 Julai 2026</div><div>Prof. Madya Dr. Mohd Murtadha Mohamad<br><a href="https://github.com/drMurtadha/jkr-create-mpe-training">Sumber terbuka di GitHub</a></div></div></footer>
-<script src="../assets/site.js?v=20260717-8"></script>
+<script src="../assets/site.js?v=20260718-9"></script>
 
 </body>
 </html>
