@@ -1,5 +1,7 @@
 # Modul 3 — Pendekatan Sistematik dalam Analisis Data dan Pengurusan Rekod Teknikal
 
+[Buka slaid web Modul 3](./slaid/)
+
 - **Modul 3A:** 28 Julai 2026, 2.30–4.30 petang — 120 minit
 - **Modul 3B:** 29 Julai 2026, 9.00–10.30 pagi — 90 minit
 - **Jumlah:** 210 minit
