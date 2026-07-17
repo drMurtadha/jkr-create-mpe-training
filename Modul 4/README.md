@@ -97,3 +97,13 @@ Medan penting: nombor rujukan ujian, butiran MCCB, keadaan kerja, faktor TCD, se
 5. satu kamus medan serta status;
 6. sekurang-kurangnya tiga kes ujian termasuk satu pengecualian;
 7. satu spesifikasi percubaan kecil dengan ukuran kejayaan dan pelan sandaran.
+
+## Video pembelajaran berdasarkan slaid Modul 4
+
+Video berikut dijana berdasarkan kandungan slaid Modul 4. Peserta boleh menontonnya untuk mengikuti penerangan slaid secara kendiri atau mengulang kaji selepas sesi.
+
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/CIua_FV9pSs" title="Video pembelajaran yang dijana berdasarkan slaid Modul 4 — Automasi Aliran Kerja dan Proses Makmal" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+Jika video tidak dapat dipaparkan, [buka video Modul 4 di YouTube](https://youtu.be/CIua_FV9pSs).
