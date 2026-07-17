@@ -73,6 +73,7 @@ Medan penting: nombor rujukan ujian, butiran MCCB, keadaan kerja, faktor TCD, se
 | Bahan | Kegunaan |
 |---|---|
 | [Nota fasilitator](./01-Nota-Fasilitator.md) | Pelaksanaan sesi 120 minit |
+| [Kandungan slaid untuk cetakan](./02-Kandungan-Slaid.md) | Sumber 23 slaid Modul 4 |
 | [Pustaka prompt](./02-Pustaka-Prompt-Automasi.md) | Prompt lengkap yang boleh disalin |
 | [Latihan pemetaan proses](./03-Latihan-Pemetaan-Proses.md) | Peta proses semasa dan proses cadangan |
 | [Latihan automasi terkawal](./04-Latihan-Automasi-Terkawal.md) | Senario KEW.PA-9 dan MCCB menggunakan data rekaan |
