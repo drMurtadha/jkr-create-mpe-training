@@ -242,3 +242,99 @@ function renderQuiz(container) {
 }
 
 document.querySelectorAll('[data-quiz]').forEach(renderQuiz);
+
+const EXIT_TICKET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwNWocv0bT-AoGPU_VGu1FiGIV--Z2IJ9ZDD4yJ22VS_Jc18-KQpxVpOzmNKftigNYR/exec';
+
+const exitTickets = {
+  'modul-1': {
+    module: 'Modul 1',
+    fields: [
+      ['understanding', 'Satu perkara yang kini saya faham tentang aplikasi pintar'],
+      ['opportunity', 'Satu kerja MPE yang wajar dikaji untuk penambahbaikan'],
+      ['risk', 'Satu risiko atau kawalan yang tidak boleh diabaikan'],
+      ['action', 'Dalam tempoh dua minggu, langkah pertama yang boleh dibuat']
+    ],
+    confidence: 'Sejauh mana anda kini yakin boleh memilih peluang aplikasi pintar yang sesuai untuk MPE?'
+  },
+  'modul-2': {
+    module: 'Modul 2',
+    fields: [
+      ['ai_help', 'Satu perkara yang AI boleh bantu dalam kerja saya'],
+      ['prohibited_info', 'Satu jenis maklumat yang saya tidak akan masukkan'],
+      ['human_check', 'Satu pemeriksaan manusia yang wajib'],
+      ['useful_prompt', 'Prompt yang paling berguna hari ini']
+    ],
+    confidence: 'Tahap keyakinan saya sekarang'
+  }
+};
+
+function renderExitTicket(container) {
+  const ticket = exitTickets[container.dataset.exitTicket];
+  if (!ticket) return;
+
+  const form = document.createElement('form');
+  form.className = 'exit-ticket-form';
+  form.innerHTML = `
+    <div class="exit-ticket-field">
+      <label for="${container.dataset.exitTicket}-name">Nama <span>(pilihan)</span></label>
+      <input id="${container.dataset.exitTicket}-name" name="name" type="text" maxlength="120" autocomplete="name">
+    </div>
+    ${ticket.fields.map(([name, label], index) => `
+      <div class="exit-ticket-field">
+        <label for="${container.dataset.exitTicket}-${name}"><span>${index + 1}.</span> ${label}</label>
+        <textarea id="${container.dataset.exitTicket}-${name}" name="${name}" rows="3" maxlength="1500" required></textarea>
+      </div>
+    `).join('')}
+    <fieldset class="confidence-field">
+      <legend>${ticket.confidence}</legend>
+      <div class="confidence-options">
+        ${[1, 2, 3, 4, 5].map(value => `
+          <label><input type="radio" name="confidence" value="${value}" required><span>${value}</span></label>
+        `).join('')}
+      </div>
+      <div class="confidence-scale"><span>1 · Tidak yakin</span><span>5 · Sangat yakin</span></div>
+    </fieldset>
+    <div class="exit-ticket-trap" aria-hidden="true">
+      <label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+    </div>
+    <input name="module" type="hidden" value="${ticket.module}">
+    <p class="exit-ticket-note">Jangan masukkan maklumat sulit, terperingkat atau data peribadi pihak lain.</p>
+    <div class="exit-ticket-actions">
+      <button class="button" type="submit">Hantar exit ticket</button>
+      <p class="exit-ticket-status" aria-live="polite"></p>
+    </div>
+  `;
+
+  const button = form.querySelector('[type="submit"]');
+  const status = form.querySelector('.exit-ticket-status');
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    button.disabled = true;
+    button.textContent = 'Menghantar…';
+    status.className = 'exit-ticket-status';
+    status.textContent = 'Maklum balas sedang disimpan.';
+
+    try {
+      await fetch(EXIT_TICKET_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new URLSearchParams(new FormData(form))
+      });
+      form.reset();
+      status.className = 'exit-ticket-status success';
+      status.textContent = 'Terima kasih. Exit ticket telah dihantar.';
+    } catch {
+      status.className = 'exit-ticket-status error';
+      status.textContent = 'Maklum balas tidak dapat dihantar. Semak sambungan internet dan cuba lagi.';
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Hantar exit ticket';
+    }
+  });
+
+  container.appendChild(form);
+}
+
+document.querySelectorAll('[data-exit-ticket]').forEach(renderExitTicket);

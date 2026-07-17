@@ -29,13 +29,9 @@ Skor maksimum: 10. Hasil tidak boleh lulus jika terdapat fakta kritikal rekaan w
 
 ## Exit ticket individu
 
-Lengkapkan sebelum meninggalkan sesi:
+Lengkapkan borang berikut sebelum meninggalkan sesi. Maklum balas akan disimpan dalam dokumen Google rasmi latihan selepas butang **Hantar exit ticket** ditekan.
 
-1. Satu perkara yang AI boleh bantu dalam kerja saya: __________
-2. Satu jenis maklumat yang saya tidak akan masukkan: __________
-3. Satu pemeriksaan manusia yang wajib: __________
-4. Prompt yang paling berguna hari ini: __________
-5. Tahap keyakinan saya sekarang (1–5): __________
+<div class="exit-ticket" data-exit-ticket="modul-2"></div>
 
 ## Bukti penyempurnaan modul
 

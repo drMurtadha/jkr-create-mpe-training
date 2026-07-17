@@ -161,6 +161,32 @@ button, .button { font: inherit; }
 .quiz-result strong, .quiz-result p { margin: 0; color: var(--ink); }
 .quiz-score { display: grid; flex: 0 0 5rem; place-items: center; min-height: 5rem; border-radius: 50%; background: var(--ink-deep); color: var(--lime); font-size: 1.25rem; font-weight: 900; }
 
+/* Exit ticket forms */
+.exit-ticket { margin: 1.5rem 0 2rem; }
+.exit-ticket-form { display: grid; gap: 1rem; padding: clamp(1rem, 3vw, 1.5rem); border: 1px solid var(--line); border-radius: 16px; background: #fbfcfa; }
+.exit-ticket-field { display: grid; gap: .4rem; }
+.exit-ticket-field label, .confidence-field legend { color: var(--ink); font-weight: 800; }
+.exit-ticket-field label span, .exit-ticket-note { color: var(--muted); font-weight: 500; }
+.exit-ticket-field input, .exit-ticket-field textarea { width: 100%; padding: .75rem .85rem; border: 1px solid #b9c8c4; border-radius: 10px; background: white; color: var(--text); font: inherit; }
+.exit-ticket-field textarea { resize: vertical; }
+.exit-ticket-field input:focus, .exit-ticket-field textarea:focus { outline: 3px solid rgba(0,169,157,.18); border-color: var(--teal); }
+.confidence-field { margin: 0; padding: 1rem; border: 1px solid var(--line); border-radius: 12px; background: white; }
+.confidence-options { display: grid; grid-template-columns: repeat(5, 1fr); gap: .5rem; margin-top: .7rem; }
+.confidence-options label { cursor: pointer; }
+.confidence-options input { position: absolute; opacity: 0; }
+.confidence-options span { display: grid; place-items: center; min-height: 44px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); font-weight: 800; }
+.confidence-options input:checked + span { border-color: var(--teal); background: var(--teal-soft); }
+.confidence-options input:focus-visible + span { outline: 3px solid rgba(47,114,196,.25); }
+.confidence-scale { display: flex; justify-content: space-between; margin-top: .35rem; color: var(--muted); font-size: .78rem; }
+.exit-ticket-trap { position: absolute; left: -9999px; }
+.exit-ticket-note { margin: 0; font-size: .88rem; }
+.exit-ticket-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; }
+.exit-ticket-actions button { cursor: pointer; }
+.exit-ticket-actions button:disabled { cursor: wait; opacity: .55; }
+.exit-ticket-status { margin: 0; color: var(--muted); font-size: .9rem; }
+.exit-ticket-status.success { color: #215f3d; font-weight: 750; }
+.exit-ticket-status.error { color: #813b3b; font-weight: 750; }
+
 .site-footer { padding: 2.5rem 0; border-top: 1px solid var(--line); background: #eef2ef; color: var(--muted); }
 .footer-grid { display: flex; justify-content: space-between; gap: 2rem; }
 .footer-grid strong { color: var(--ink); }

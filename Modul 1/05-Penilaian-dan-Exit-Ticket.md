@@ -114,37 +114,9 @@ Pilih satu jawapan bagi setiap soalan. Markah dan jawapan hanya dipaparkan selep
 
 ## 6. Exit ticket individu, 3 minit
 
-### Bahagian A — Kefahaman
+Lengkapkan borang berikut. Maklum balas akan disimpan dalam dokumen Google rasmi latihan selepas butang **Hantar exit ticket** ditekan.
 
-**Satu perkara yang kini saya faham tentang aplikasi pintar:**
-
-`__________________________________________________________________`
-
-### Bahagian B — Peluang
-
-**Satu kerja MPE yang wajar dikaji untuk penambahbaikan:**
-
-`__________________________________________________________________`
-
-### Bahagian C — Risiko
-
-**Satu risiko atau kawalan yang tidak boleh diabaikan:**
-
-`__________________________________________________________________`
-
-### Bahagian D — Tindakan
-
-**Dalam tempoh dua minggu, langkah pertama yang boleh dibuat ialah:**
-
-`__________________________________________________________________`
-
-### Bahagian E — Keyakinan akhir
-
-> Sejauh mana anda kini yakin boleh memilih peluang aplikasi pintar yang sesuai untuk MPE?
-
-1 tidak yakin · 2 · 3 · 4 · 5 sangat yakin
-
-Skor saya: `________`
+<div class="exit-ticket" data-exit-ticket="modul-1"></div>
 
 ## 7. Borang maklum balas modul
 
