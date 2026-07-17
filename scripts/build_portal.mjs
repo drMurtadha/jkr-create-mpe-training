@@ -6,6 +6,7 @@ const require = createRequire(import.meta.url);
 const { marked } = require('marked');
 const root = process.cwd();
 const docs = path.join(root, 'docs');
+const assetVersion = '20260717-2';
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -38,14 +39,14 @@ function shell({ title, description, prefix = '', body, extraScripts = '' }) {
   <meta name="theme-color" content="#0d272b">
   <title>${title} · Portal Latihan MPE</title>
   <link rel="icon" href="${prefix}assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="${prefix}assets/styles.css">
+  <link rel="stylesheet" href="${prefix}assets/styles.css?v=${assetVersion}">
 </head>
 <body>
 <a class="skip-link" href="#kandungan">Langkau ke kandungan</a>
 ${nav(prefix)}
 ${body}
 ${footer()}
-<script src="${prefix}assets/site.js"></script>
+<script src="${prefix}assets/site.js?v=${assetVersion}"></script>
 ${extraScripts}
 </body>
 </html>`;
