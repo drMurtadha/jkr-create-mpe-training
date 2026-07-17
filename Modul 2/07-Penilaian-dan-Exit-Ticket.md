@@ -35,8 +35,4 @@ Lengkapkan borang berikut sebelum meninggalkan sesi. Maklum balas akan disimpan 
 
 ## Bukti penyempurnaan modul
 
-- [ ] Satu draf surat berserta audit fakta.
-- [ ] Satu draf minit berserta daftar tindakan.
-- [ ] Satu perbandingan output dua platform.
-- [ ] Senarai semak kawalan rekod lengkap.
-- [ ] Exit ticket diserahkan.
+Peserta menandakan bukti melalui kotak semak dalam exit ticket di atas. Tanda ini ialah pengisytiharan kendiri, bukan kelulusan fasilitator. Senarai yang ditanda dihantar bersama maklum balas untuk semakan.

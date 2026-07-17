@@ -279,7 +279,14 @@ const exitTickets = {
       ['human_check', 'Satu pemeriksaan manusia yang wajib'],
       ['useful_prompt', 'Prompt yang paling berguna hari ini']
     ],
-    confidence: 'Tahap keyakinan saya sekarang'
+    confidence: 'Tahap keyakinan saya sekarang',
+    evidence: [
+      'Satu draf surat berserta audit fakta',
+      'Satu draf minit berserta daftar tindakan',
+      'Satu perbandingan output dua platform',
+      'Senarai semak kawalan rekod lengkap',
+      'Exit ticket diserahkan'
+    ]
   },
   'modul-3': {
     module: 'Modul 3',
