@@ -391,3 +391,91 @@ function renderExitTicket(container) {
 }
 
 document.querySelectorAll('[data-exit-ticket]').forEach(renderExitTicket);
+
+const finalEvaluationForms = {
+  participant: {
+    module: 'Penilaian Akhir Peserta',
+    ratings: [
+      ['learning_outcomes', 'Hasil pembelajaran keseluruhan program jelas'],
+      ['mpe_relevance', 'Kandungan berkaitan dengan operasi MPE'],
+      ['practical_value', 'Aktiviti dan contoh boleh digunakan dalam kerja'],
+      ['gen_ai_confidence', 'Saya lebih yakin menggunakan platform AI generatif percuma secara selamat'],
+      ['pace', 'Tempoh dan rentak keseluruhan program sesuai']
+    ],
+    fields: [
+      ['most_useful', 'Bahagian paling berguna dalam program'],
+      ['improvement', 'Bahagian yang perlu ditambah baik'],
+      ['next_action', 'Satu tindakan yang akan saya lakukan selepas latihan']
+    ],
+    button: 'Hantar maklum balas akhir'
+  },
+  facilitator: {
+    module: 'Ringkasan Fasilitator',
+    fields: [
+      ['completion_rate', 'Peratus peserta menyelesaikan tugasan utama'],
+      ['quiz_target_rate', 'Peratus peserta mencapai sasaran kuiz'],
+      ['confidence_change', 'Perubahan purata keyakinan peserta'],
+      ['human_review_rate', 'Peratus peserta mengenal pasti titik semakan manusia'],
+      ['strengths', 'Kekuatan utama program'],
+      ['follow_up', 'Tindakan susulan yang diperlukan'],
+      ['recommendations', 'Cadangan penambahbaikan program']
+    ],
+    button: 'Hantar ringkasan fasilitator'
+  }
+};
+
+function renderFinalEvaluation(container) {
+  const config = finalEvaluationForms[container.dataset.finalEvaluation];
+  if (!config) return;
+  const form = document.createElement('form');
+  form.className = 'exit-ticket-form final-evaluation-form';
+  form.innerHTML = `
+    <div class="exit-ticket-field">
+      <label>Nama <span>(${container.dataset.finalEvaluation === 'participant' ? 'pilihan' : 'fasilitator'})</span></label>
+      <input name="name" type="text" maxlength="120" ${container.dataset.finalEvaluation === 'facilitator' ? 'required' : ''}>
+    </div>
+    ${(config.ratings || []).map(([name, label]) => `
+      <fieldset class="confidence-field">
+        <legend>${label}</legend>
+        <div class="confidence-options">
+          ${[1, 2, 3, 4, 5].map(value => `<label><input type="radio" name="${name}" value="${value}" required><span>${value}</span></label>`).join('')}
+        </div>
+        <div class="confidence-scale"><span>1 · Sangat tidak setuju</span><span>5 · Sangat setuju</span></div>
+      </fieldset>
+    `).join('')}
+    ${config.fields.map(([name, label]) => `
+      <div class="exit-ticket-field">
+        <label>${label}</label>
+        <textarea name="${name}" rows="3" maxlength="2000" required></textarea>
+      </div>
+    `).join('')}
+    <div class="exit-ticket-trap" aria-hidden="true"><label>Website <input name="website" type="text" tabindex="-1"></label></div>
+    <input name="module" type="hidden" value="${config.module}">
+    <p class="exit-ticket-note">Jangan masukkan maklumat sulit, terperingkat atau data peribadi pihak lain.</p>
+    <div class="exit-ticket-actions"><button class="button" type="submit">${config.button}</button><p class="exit-ticket-status" aria-live="polite"></p></div>
+  `;
+
+  const button = form.querySelector('[type="submit"]');
+  const status = form.querySelector('.exit-ticket-status');
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    button.disabled = true;
+    status.className = 'exit-ticket-status';
+    status.textContent = 'Maklum balas sedang disimpan.';
+    try {
+      await fetch(EXIT_TICKET_ENDPOINT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form)) });
+      form.reset();
+      status.className = 'exit-ticket-status success';
+      status.textContent = 'Terima kasih. Rekod telah dihantar.';
+    } catch {
+      status.className = 'exit-ticket-status error';
+      status.textContent = 'Rekod tidak dapat dihantar. Semak sambungan internet dan cuba lagi.';
+    } finally {
+      button.disabled = false;
+    }
+  });
+  container.appendChild(form);
+}
+
+document.querySelectorAll('[data-final-evaluation]').forEach(renderFinalEvaluation);

@@ -118,42 +118,8 @@ Lengkapkan borang berikut. Maklum balas akan disimpan dalam dokumen Google rasmi
 
 <div class="exit-ticket" data-exit-ticket="modul-1"></div>
 
-## 7. Borang maklum balas modul
+## Penilaian akhir program
 
-Skala 1 sangat tidak setuju — 5 sangat setuju.
+Maklum balas keseluruhan peserta dan ringkasan penilaian fasilitator dilengkapkan sekali sahaja selepas Modul 5. Pendekatan ini mengelakkan pengulangan borang panjang pada setiap modul sambil mengekalkan kuiz dan exit ticket ringkas untuk semakan formatif.
 
-| Pernyataan | Skor 1–5 |
-|---|---:|
-| Hasil pembelajaran modul jelas | |
-| Contoh berkaitan dengan operasi MPE | |
-| Demonstrasi membantu kefahaman | |
-| Aktiviti kanvas boleh digunakan dalam kerja | |
-| Tempoh dan rentak sesuai | |
-
-**Bahagian paling berguna:**
-
-`__________________________________________________________________`
-
-**Bahagian yang perlu ditambah baik:**
-
-`__________________________________________________________________`
-
-## 8. Ringkasan penilaian fasilitator
-
-Lengkapkan selepas sesi.
-
-| Petunjuk | Sasaran | Keputusan |
-|---|---:|---:|
-| Kumpulan menghasilkan kanvas lengkap | 100% | |
-| Kanvas mendapat sekurang-kurangnya 17/32 | 80% | |
-| Peserta menjawab sekurang-kurangnya 4/5 kuiz | 80% | |
-| Keyakinan purata meningkat | +1 mata | |
-| Peserta menyatakan titik semakan manusia | 90% | |
-
-### Tindakan susulan
-
-- Pilih tiga kanvas yang paling sesuai sebagai contoh modul seterusnya.
-- Beri maklum balas kepada kumpulan yang mendapat skor di bawah 17.
-- Kumpulkan isu akses, keselamatan dan data untuk dibincangkan dengan pemilik proses.
-- Gunakan maklum balas rentak dan demo untuk menambah baik slaid.
-- Simpan keputusan agregat sahaja; jangan terbitkan respons individu tanpa kebenaran.
+[Buka Penilaian Akhir Program](../modul-5/index.html#penilaian-akhir-program)

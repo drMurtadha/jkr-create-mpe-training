@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url);
 const { marked } = require('marked');
 const root = process.cwd();
 const docs = path.join(root, 'docs');
-const assetVersion = '20260717-3';
+const assetVersion = '20260717-4';
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -134,7 +134,7 @@ await markdownPage({ source: 'Modul 1/01-Nota-Fasilitator.md', output: 'modul-1/
 await markdownPage({ source: 'Modul 1/02-Kandungan-Slaid.md', output: 'modul-1/kandungan-slaid.html', title: 'Kandungan dan Nota Slaid', description: 'Sumber kandungan bagi 22 slaid Modul 1 berserta nota penyampai.' });
 await markdownPage({ source: 'Modul 1/03-Kanvas-Peluang-Produktiviti.md', output: 'modul-1/kanvas.html', title: 'Kanvas Peluang Produktiviti MPE', description: 'Lembaran kerja kumpulan, rubrik pemarkahan dan contoh lengkap.' });
 await markdownPage({ source: 'Modul 1/04-Skrip-Demonstrasi-MPE-Hub.md', output: 'modul-1/demonstrasi.html', title: 'Demonstrasi MPE Hub', description: 'Skrip demonstrasi langsung, data rekaan, debrief dan pelan sandaran.' });
-await markdownPage({ source: 'Modul 1/05-Penilaian-dan-Exit-Ticket.md', output: 'modul-1/penilaian.html', title: 'Penilaian dan Exit Ticket', description: 'Tinjauan awal, kuiz, rubrik, exit ticket dan ringkasan fasilitator.' });
+await markdownPage({ source: 'Modul 1/05-Penilaian-dan-Exit-Ticket.md', output: 'modul-1/penilaian.html', title: 'Penilaian dan Exit Ticket', description: 'Tinjauan awal, kuiz, rubrik dan exit ticket Modul 1.' });
 
 const moduleTwoIntro = `Bahan lengkap penggunaan AI generatif untuk draf surat rasmi, minit tindakan dan kawalan rekod tidak terperingkat.`;
 await markdownPage({ source: 'Modul 2/README.md', output: 'modul-2/index.html', title: 'Modul 2 — AI Generatif untuk Dokumen Rasmi', description: moduleTwoIntro, moduleNumber: 2 });
@@ -156,7 +156,8 @@ await markdownPage({ source: 'Modul 3/05-Penilaian.md', output: 'modul-3/penilai
 
 for (const number of [4, 5]) {
   const moduleTitles = { 2: 'Automasi Digital dalam Penyediaan Dokumen Rasmi', 3: 'Analisis Data dan Pengurusan Rekod Teknikal', 4: 'Automasi Aliran Kerja dan Proses Makmal', 5: 'Dokumen Projek dan Pembentangan' };
-  await markdownPage({ source: `Modul ${number}/README.md`, output: `modul-${number}/index.html`, title: `Modul ${number} — ${moduleTitles[number]}`, description: `Ruang pembangunan kandungan Modul ${number}. Struktur portal telah tersedia untuk penambahan bahan seterusnya.`, moduleNumber: 0 });
+  const description = number === 5 ? 'Dokumen projek, pembentangan dan penilaian akhir keseluruhan program.' : `Ruang pembangunan kandungan Modul ${number}. Struktur portal telah tersedia untuk penambahan bahan seterusnya.`;
+  await markdownPage({ source: `Modul ${number}/README.md`, output: `modul-${number}/index.html`, title: `Modul ${number} — ${moduleTitles[number]}`, description, moduleNumber: 0 });
 }
 
 const slidesPage = `<!doctype html><html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0d272b"><title>Slaid Web Modul 1 · Portal Latihan MPE</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css"></head><body class="slide-mode"><main class="deck"><div class="slides-viewport" data-slides aria-live="polite"></div><div class="deck-toolbar"><a href="index.html" title="Kembali ke Modul 1">← Modul 1</a><button data-prev aria-label="Slaid sebelumnya">←</button><button data-next aria-label="Slaid seterusnya">→</button><span class="slide-count" data-slide-count></span><div class="deck-progress" aria-hidden="true"><span data-progress></span></div><button class="optional" data-notes title="Tekan N">Nota</button><button class="optional" data-fullscreen title="Tekan F">Skrin penuh</button></div></main><aside class="speaker-notes" data-notes-panel></aside><script src="../assets/slides.js"></script></body></html>`;
