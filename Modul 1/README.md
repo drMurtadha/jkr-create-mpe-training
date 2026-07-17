@@ -122,12 +122,12 @@ Pautan contoh:
 - Dokumentasi: https://drmurtadha.github.io/mpe-hub/docs.html
 - Repositori: https://github.com/drMurtadha/mpe-hub
 
-## Video Modul 1
+## Video pembelajaran berdasarkan slaid Modul 1
 
-Tonton video berikut sebagai pengenalan atau ulang kaji Modul 1.
+Video berikut dijana berdasarkan kandungan slaid Modul 1. Peserta boleh menontonnya untuk mengikuti penerangan slaid secara kendiri atau mengulang kaji selepas sesi.
 
 <div class="video-embed">
-  <iframe src="https://www.youtube-nocookie.com/embed/9t1zM88TK8c" title="Video pembelajaran Modul 1 — Pengenalan Aplikasi Pintar" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/9t1zM88TK8c" title="Video pembelajaran yang dijana berdasarkan slaid Modul 1 — Pengenalan Aplikasi Pintar" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 Jika video tidak dapat dipaparkan, [buka video Modul 1 di YouTube](https://youtu.be/9t1zM88TK8c).
