@@ -156,6 +156,21 @@ const quizzes = {
       if (score >= 3) return 'Perlu pengukuhan pada beberapa langkah.';
       return 'Ulang semakan kualiti dan kebolehkesanan rekod.';
     }
+  },
+  'modul-4': {
+    questions: [
+      { question: 'Apakah langkah pertama sebelum memilih alat automasi?', options: ['Membeli perisian', 'Memetakan proses, pelaku, keputusan dan bukti', 'Menghapuskan semua borang'], answer: 1, explanation: 'Proses dan kawalan perlu difahami sebelum alat dipilih.' },
+      { question: 'Yang manakah sesuai sebagai peraturan automatik?', options: ['Meluluskan pinjaman aset', 'Mengesahkan keputusan teknikal', 'Menyemak medan wajib dan format tarikh'], answer: 2, explanation: 'Medan wajib dan format tarikh ialah peraturan tetap yang boleh diuji.' },
+      { question: 'Apakah perbezaan status Lengkap dan Disahkan?', options: ['Tiada perbezaan', 'Lengkap bermaksud medan/bukti tersedia; Disahkan memerlukan semakan pegawai', 'Disahkan boleh ditetapkan AI'], answer: 1, explanation: 'Kelengkapan boleh disemak oleh sistem, tetapi pengesahan memerlukan pegawai ditetapkan.' },
+      { question: 'Siapakah boleh meluluskan KEW.PA-9?', options: ['AI generatif', 'Sistem notifikasi', 'Pegawai yang diberi kuasa'], answer: 2, explanation: 'Kelulusan ialah keputusan manusia oleh pegawai yang diberi kuasa.' },
+      { question: 'Apakah tindakan jika status kalibrasi peralatan MCCB kosong?', options: ['Anggap Ya', 'Hentikan atau kembalikan rekod untuk pengesahan', 'Cipta nombor sijil'], answer: 1, explanation: 'Sistem mesti gagal dengan selamat dan meminta pengesahan, bukan membuat andaian.' },
+      { question: 'Apakah bukti bahawa automasi boleh diaudit?', options: ['Paparan kelihatan moden', 'Setiap perubahan merekod masa, pelaku, status dan sebab', 'Semua keputusan dibuat automatik'], answer: 1, explanation: 'Jejak audit memerlukan identiti pelaku, masa, perubahan status dan sebab.' }
+    ],
+    result(score) {
+      if (score >= 5) return 'Bersedia mereka bentuk percubaan automasi terkawal.';
+      if (score >= 3) return 'Perlu pengukuhan pada peranan, status atau pengecualian.';
+      return 'Ulang pemetaan proses dan kawalan manusia.';
+    }
   }
 };
 
@@ -305,6 +320,25 @@ const exitTickets = {
       'Log perubahan',
       'Daftar rekod teknikal',
       'Nota batasan dan lokasi simpanan rasmi'
+    ]
+  },
+  'modul-4': {
+    module: 'Modul 4',
+    fields: [
+      ['process_issue', 'Satu masalah proses yang patut ditangani terlebih dahulu'],
+      ['automation_rule', 'Satu langkah yang sesuai diautomasi dengan peraturan'],
+      ['human_decision', 'Satu keputusan yang mesti kekal pada pegawai'],
+      ['failure_control', 'Satu kawalan apabila sistem atau notifikasi gagal']
+    ],
+    confidence: 'Keyakinan saya mereka bentuk automasi aliran kerja yang terkawal',
+    evidence: [
+      'Peta proses semasa',
+      'Senarai isu dan risiko',
+      'Peta proses cadangan',
+      'Kamus medan dan status',
+      'Matriks peranan',
+      'Sekurang-kurangnya tiga kes ujian',
+      'Spesifikasi percubaan kecil dan pelan sandaran'
     ]
   }
 };

@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url);
 const { marked } = require('marked');
 const root = process.cwd();
 const docs = path.join(root, 'docs');
-const assetVersion = '20260717-5';
+const assetVersion = '20260717-6';
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -20,6 +20,7 @@ const nav = (prefix = '') => `
       <a href="${prefix}modul-1/index.html">Modul 1</a>
       <a href="${prefix}modul-2/index.html">Modul 2</a>
       <a href="${prefix}modul-3/index.html">Modul 3</a>
+      <a href="${prefix}modul-4/index.html">Modul 4</a>
       <a href="${prefix}slaid.html">Slaid web</a>
       <a href="https://drmurtadha.github.io/mpe-hub/" target="_blank" rel="noopener">MPE Hub ↗</a>
       <a href="https://github.com/drMurtadha/jkr-create-mpe-training" target="_blank" rel="noopener">GitHub ↗</a>
@@ -95,7 +96,16 @@ function rewriteModuleLinks(markdown, moduleNumber) {
     ['./slaid/', 'slaid.html'],
     ['./data/rekod-teknikal-mpe-rekaan.csv', '../downloads/rekod-teknikal-mpe-rekaan.csv']
   ];
-  const replacements = new Map(moduleNumber === 1 ? moduleOne : moduleNumber === 2 ? moduleTwo : moduleThree);
+  const moduleFour = [
+    ['./01-Nota-Fasilitator.md', 'nota-fasilitator.html'],
+    ['./02-Pustaka-Prompt-Automasi.md', 'pustaka-prompt.html'],
+    ['./03-Latihan-Pemetaan-Proses.md', 'pemetaan-proses.html'],
+    ['./04-Latihan-Automasi-Terkawal.md', 'automasi-terkawal.html'],
+    ['./05-Penilaian.md', 'penilaian.html'],
+    ['./slaid/', 'slaid.html']
+  ];
+  const moduleLinks = { 1: moduleOne, 2: moduleTwo, 3: moduleThree, 4: moduleFour };
+  const replacements = new Map(moduleLinks[moduleNumber] || []);
   for (const [from, to] of replacements) markdown = markdown.replaceAll(`](${from}`, `](${to}`);
   return markdown;
 }
@@ -132,8 +142,9 @@ async function markdownPage({ source, output, title, description, prefix = '../'
   const moduleOneAside = `<aside class="article-nav"><strong>Dalam Modul 1</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kanvas.html">Kanvas peluang</a><a href="demonstrasi.html">Demonstrasi</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
   const moduleTwoAside = `<aside class="article-nav"><strong>Dalam Modul 2</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kandungan-slaid.html">Kandungan slaid</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="latihan-surat.html">Latihan surat</a><a href="latihan-minit.html">Latihan minit</a><a href="kawalan-rekod.html">Kawalan rekod</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
   const moduleThreeAside = `<aside class="article-nav"><strong>Dalam Modul 3</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="latihan-analisis.html">Analisis data</a><a href="rekod-teknikal.html">Rekod teknikal</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
+  const moduleFourAside = `<aside class="article-nav"><strong>Dalam Modul 4</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="pemetaan-proses.html">Pemetaan proses</a><a href="automasi-terkawal.html">Automasi terkawal</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
   const generalAside = `<aside class="article-nav"><strong>Modul bengkel</strong><a href="../modul-1/index.html">Modul 1</a><a href="../modul-2/index.html">Modul 2</a><a href="../modul-3/index.html">Modul 3</a><a href="../modul-4/index.html">Modul 4</a><a href="../modul-5/index.html">Modul 5</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
-  const aside = moduleNumber === 1 ? moduleOneAside : moduleNumber === 2 ? moduleTwoAside : moduleNumber === 3 ? moduleThreeAside : generalAside;
+  const aside = moduleNumber === 1 ? moduleOneAside : moduleNumber === 2 ? moduleTwoAside : moduleNumber === 3 ? moduleThreeAside : moduleNumber === 4 ? moduleFourAside : generalAside;
   const slideLink = slideButton ? `<a class="button accent" href="slaid.html">Buka slaid web</a>` : '';
   const downloadButtons = downloads ? `<a class="button" href="../downloads/Slaid-Modul-1-MPE.pptx">Muat turun PPTX</a><a class="button ghost" href="../downloads/Slaid-Modul-1-MPE.pdf">Muat turun PDF</a>` : '';
   const body = `${pageHero(title, description, prefix)}<main id="kandungan" class="container article-shell">${aside}<article class="prose">${content}<div class="resource-bar">${slideLink}${downloadButtons}<a class="button ghost" href="https://github.com/drMurtadha/jkr-create-mpe-training/blob/main/${encodeURI(source)}" target="_blank" rel="noopener">Lihat sumber Markdown ↗</a><button class="button ghost" onclick="window.print()">Cetak halaman</button></div></article></main>`;
@@ -147,7 +158,7 @@ const home = shell({
   <main id="kandungan">
     <section class="hero"><div class="container hero-grid"><div><p class="eyebrow">Bengkel dua hari · CREaTE JKR</p><h1>Transformasi digital untuk operasi makmal yang lebih pintar.</h1><p class="hero-copy">Portal bahan latihan, demonstrasi dan lembaran kerja bagi Makmal Penyelidikan Elektrik (MPE). Mulakan dengan masalah kerja, pilih percubaan kecil dan kekalkan manusia pada keputusan penting.</p><div class="button-row"><a class="button accent" href="modul-1/index.html">Mulakan Modul 1</a><a class="button ghost" href="modul-1/slaid.html">Buka slaid web</a></div></div><div class="hero-meta"><div class="meta-row"><span>Tarikh</span><b>28–29 Julai 2026</b></div><div class="meta-row"><span>Tempat</span><b>CREaTE JKR, Alor Gajah</b></div><div class="meta-row"><span>Tempoh</span><b>Dua hari · 5 modul</b></div><div class="meta-row"><span>Fasilitator</span><b>Prof. Madya Dr. Mohd Murtadha</b></div></div></div></section>
     <section class="section"><div class="container"><div class="section-head"><div><p class="eyebrow">Laluan pembelajaran</p><h2>Lima modul, satu perjalanan transformasi</h2></div><p>Cadangan yang dibina dalam Modul 1 menjadi konteks amali untuk automasi dokumen, analisis rekod, aliran kerja dan penyediaan bahan projek.</p></div><div class="grid module-grid">${[
-      ['1','Pengenalan aplikasi pintar','90 minit','modul-1/index.html','ready'],['2','AI generatif untuk dokumen rasmi','120 minit','modul-2/index.html','ready'],['3','Analisis data dan rekod teknikal','210 minit','modul-3/index.html','ready'],['4','Automasi aliran kerja makmal','120 minit','modul-4/index.html',''],['5','Dokumen projek dan pembentangan','120 minit','modul-5/index.html','']
+      ['1','Pengenalan aplikasi pintar','90 minit','modul-1/index.html','ready'],['2','AI generatif untuk dokumen rasmi','120 minit','modul-2/index.html','ready'],['3','Analisis data dan rekod teknikal','210 minit','modul-3/index.html','ready'],['4','Automasi aliran kerja makmal','120 minit','modul-4/index.html','ready'],['5','Dokumen projek dan pembentangan','120 minit','modul-5/index.html','']
     ].map(x=>`<a class="card-link" href="${x[3]}"><article class="card"><span class="module-number">0${x[0]}</span><h3>${x[1]}</h3><p>${x[2]}</p><span class="status ${x[4]}">${x[4]?'Kandungan lengkap':'Ruang tersedia'}</span></article></a>`).join('')}</div></div></section>
     <section class="section alt"><div class="container"><div class="section-head"><div><p class="eyebrow">Atur cara</p><h2>Jadual bengkel</h2></div><p>Dua hari yang bergerak daripada kefahaman asas kepada hasil projek dan pembentangan.</p></div><div class="timeline"><div class="timeline-item"><b>28 Jul · 09:00</b><strong>Modul 1</strong><p>Aplikasi pintar dan peluang produktiviti.</p></div><div class="timeline-item"><b>28 Jul · 11:00</b><strong>Modul 2</strong><p>AI generatif untuk surat, minit tindakan dan kawalan rekod.</p></div><div class="timeline-item"><b>28 Jul · 14:30</b><strong>Modul 3A</strong><p>Analisis data dan rekod teknikal.</p></div><div class="timeline-item"><b>29 Jul · 09:00</b><strong>Modul 3B & 4</strong><p>Sambungan analisis dan aliran kerja.</p></div><div class="timeline-item"><b>29 Jul · 14:30</b><strong>Modul 5</strong><p>Dokumen projek dan pembentangan.</p></div></div></div></section>
     <section class="section"><div class="container feature-panel"><div class="feature-copy"><p class="eyebrow">Kajian kes merentas modul</p><h2>MPE Hub: semua rekod, satu pandangan.</h2><p>Aplikasi demonstrasi menghubungkan Buku Log Makmal, KEW.PA-9 dan rekod ujian MCCB untuk menunjukkan penyatuan data, validasi, status dan kawalan manusia.</p><div class="button-row"><a class="button accent" href="https://drmurtadha.github.io/mpe-hub/" target="_blank" rel="noopener">Buka aplikasi ↗</a><a class="button ghost" href="modul-1/demonstrasi.html">Skrip demonstrasi</a></div></div><div class="feature-image" style="background-image:url('assets/mpe-hub-dashboard.png')" role="img" aria-label="Paparan dashboard demonstrasi MPE Hub"></div></div></section>
@@ -159,7 +170,7 @@ await write('index.html', home);
 const slideHub = shell({
   title: 'Slaid web',
   description: 'Pilih slaid web interaktif bagi setiap modul latihan MPE.',
-  body: `${pageHero('Slaid web', 'Pilih modul untuk membuka dek interaktif lengkap dengan nota penyampai.', '')}<main id="kandungan" class="container section"><div class="grid three"><a class="card-link" href="modul-1/slaid.html"><article class="card"><span class="module-number">01</span><h3>Modul 1</h3><p>Aplikasi pintar untuk produktiviti kerja MPE · 22 slaid</p><span class="status ready">Buka slaid</span></article></a><a class="card-link" href="modul-2/slaid.html"><article class="card"><span class="module-number">02</span><h3>Modul 2</h3><p>AI generatif untuk dokumen rasmi tidak terperingkat · 26 slaid</p><span class="status ready">Buka slaid</span></article></a><a class="card-link" href="modul-3/slaid.html"><article class="card"><span class="module-number">03</span><h3>Modul 3A + 3B</h3><p>Analisis data dan pengurusan rekod teknikal · 30 slaid</p><span class="status ready">Buka slaid</span></article></a></div></main>`
+  body: `${pageHero('Slaid web', 'Pilih modul untuk membuka dek interaktif lengkap dengan nota penyampai.', '')}<main id="kandungan" class="container section"><div class="grid module-grid"><a class="card-link" href="modul-1/slaid.html"><article class="card"><span class="module-number">01</span><h3>Modul 1</h3><p>Aplikasi pintar untuk produktiviti kerja MPE · 22 slaid</p><span class="status ready">Buka slaid</span></article></a><a class="card-link" href="modul-2/slaid.html"><article class="card"><span class="module-number">02</span><h3>Modul 2</h3><p>AI generatif untuk dokumen rasmi tidak terperingkat · 26 slaid</p><span class="status ready">Buka slaid</span></article></a><a class="card-link" href="modul-3/slaid.html"><article class="card"><span class="module-number">03</span><h3>Modul 3A + 3B</h3><p>Analisis data dan pengurusan rekod teknikal · 30 slaid</p><span class="status ready">Buka slaid</span></article></a><a class="card-link" href="modul-4/slaid.html"><article class="card"><span class="module-number">04</span><h3>Modul 4A + 4B</h3><p>Automasi aliran kerja dan proses makmal · 23 slaid</p><span class="status ready">Buka slaid</span></article></a></div></main>`
 });
 await write('slaid.html', slideHub);
 
@@ -189,7 +200,15 @@ await markdownPage({ source: 'Modul 3/03-Latihan-Analisis-Data.md', output: 'mod
 await markdownPage({ source: 'Modul 3/04-Pengurusan-Rekod-Teknikal.md', output: 'modul-3/rekod-teknikal.html', title: 'Pengurusan Rekod Teknikal', description: 'Audit dan kawalan rekod MPE rekaan yang boleh dijejak.', moduleNumber: 3 });
 await markdownPage({ source: 'Modul 3/05-Penilaian.md', output: 'modul-3/penilaian.html', title: 'Penilaian Modul 3', description: 'Kuiz, rubrik, exit ticket dan bukti penyempurnaan Modul 3.', moduleNumber: 3 });
 
-for (const number of [4, 5]) {
+const moduleFourIntro = `Pemetaan dan automasi terkawal bagi aliran QR, KEW.PA-9, rekod aktiviti dan pengujian MCCB menggunakan data latihan rekaan.`;
+await markdownPage({ source: 'Modul 4/README.md', output: 'modul-4/index.html', title: 'Modul 4 — Automasi Aliran Kerja dan Proses Makmal', description: moduleFourIntro, moduleNumber: 4, slideButton: true });
+await markdownPage({ source: 'Modul 4/01-Nota-Fasilitator.md', output: 'modul-4/nota-fasilitator.html', title: 'Nota Fasilitator Modul 4', description: 'Pelan sesi 120 minit untuk pemetaan dan automasi aliran kerja terkawal.', moduleNumber: 4 });
+await markdownPage({ source: 'Modul 4/02-Pustaka-Prompt-Automasi.md', output: 'modul-4/pustaka-prompt.html', title: 'Pustaka Prompt Automasi', description: 'Prompt lengkap yang boleh disalin untuk memetakan, mereka bentuk dan menguji aliran kerja.', moduleNumber: 4 });
+await markdownPage({ source: 'Modul 4/03-Latihan-Pemetaan-Proses.md', output: 'modul-4/pemetaan-proses.html', title: 'Latihan Pemetaan Proses', description: 'Peta proses semasa, isu dan proses cadangan makmal.', moduleNumber: 4 });
+await markdownPage({ source: 'Modul 4/04-Latihan-Automasi-Terkawal.md', output: 'modul-4/automasi-terkawal.html', title: 'Latihan Automasi Terkawal', description: 'Senario latihan KEW.PA-9 dan pengujian MCCB menggunakan data rekaan.', moduleNumber: 4 });
+await markdownPage({ source: 'Modul 4/05-Penilaian.md', output: 'modul-4/penilaian.html', title: 'Penilaian Modul 4', description: 'Kuiz, rubrik, exit ticket dan bukti penyempurnaan Modul 4.', moduleNumber: 4 });
+
+for (const number of [5]) {
   const moduleTitles = { 2: 'Automasi Digital dalam Penyediaan Dokumen Rasmi', 3: 'Analisis Data dan Pengurusan Rekod Teknikal', 4: 'Automasi Aliran Kerja dan Proses Makmal', 5: 'Dokumen Projek dan Pembentangan' };
   const description = number === 5 ? 'Dokumen projek, pembentangan dan penilaian akhir keseluruhan program.' : `Ruang pembangunan kandungan Modul ${number}. Struktur portal telah tersedia untuk penambahan bahan seterusnya.`;
   await markdownPage({ source: `Modul ${number}/README.md`, output: `modul-${number}/index.html`, title: `Modul ${number} — ${moduleTitles[number]}`, description, moduleNumber: 0 });
@@ -199,6 +218,7 @@ const slidePage = (moduleNumber, script) => `<!doctype html><html lang="ms"><hea
 await write('modul-1/slaid.html', slidePage(1, 'slides.js'));
 await write('modul-2/slaid.html', slidePage(2, 'slides-modul-2.js'));
 await write('modul-3/slaid.html', slidePage(3, 'slides-modul-3.js'));
+await write('modul-4/slaid.html', slidePage(4, 'slides-modul-4.js'));
 
 await fs.mkdir(path.join(docs, 'downloads'), { recursive: true });
 await fs.copyFile(path.join(root, 'Modul 1/slaid/Slaid-Modul-1-MPE.pptx'), path.join(docs, 'downloads/Slaid-Modul-1-MPE.pptx'));
