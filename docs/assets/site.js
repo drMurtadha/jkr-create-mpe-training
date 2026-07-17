@@ -171,6 +171,20 @@ const quizzes = {
       if (score >= 3) return 'Perlu pengukuhan pada peranan, status atau pengecualian.';
       return 'Ulang pemetaan proses dan kawalan manusia.';
     }
+  },
+  'modul-5': {
+    questions: [
+      { question: 'Apakah peranan Google Sheets dalam prototaip?', options: ['Model AI', 'Pangkalan data latihan', 'Sistem kelulusan'], answer: 1, explanation: 'Google Sheets menyimpan rekod latihan dan status; ia bukan model AI atau pelulus.' },
+      { question: 'Bolehkah AI menetapkan status Diluluskan?', options: ['Ya', 'Tidak', 'Hanya jika kod lengkap'], answer: 1, explanation: 'Status Diluluskan hanya boleh ditetapkan oleh manusia yang diberi kuasa.' },
+      { question: 'Apakah akses Web App yang patut dipilih?', options: ['Akses paling luas', 'Akses paling sempit yang memenuhi latihan', 'Sesiapa sahaja tanpa akaun'], answer: 1, explanation: 'Gunakan prinsip akses minimum untuk mengehadkan pendedahan.' },
+      { question: 'Apakah bukti aliran lengkap berfungsi?', options: ['Kod kelihatan kemas', 'Rekod muncul dalam Sheet dan Doc dijana', 'AI menyatakan kod betul'], answer: 1, explanation: 'Bukti mesti diperhatikan pada data dan dokumen sebenar dalam akaun latihan.' },
+      { question: 'Apakah tindakan apabila fungsi gagal?', options: ['Abaikan rekod', 'Gunakan laluan manual dan catat kegagalan', 'Tetapkan status Disahkan'], answer: 1, explanation: 'Laluan manual dan rekod kegagalan memastikan proses boleh dipulihkan dan diaudit.' }
+    ],
+    result(score) {
+      if (score >= 4) return 'Bersedia membina dan menguji prototaip MPE Hub.';
+      if (score >= 3) return 'Perlu pengukuhan kecil pada akses, bukti atau kawalan.';
+      return 'Ulang kit binaan, ujian kegagalan dan kawalan manusia.';
+    }
   }
 };
 
@@ -339,6 +353,25 @@ const exitTickets = {
       'Matriks peranan',
       'Sekurang-kurangnya tiga kes ujian',
       'Spesifikasi percubaan kecil dan pelan sandaran'
+    ]
+  },
+  'modul-5': {
+    module: 'Modul 5',
+    fields: [
+      ['hub_result', 'Fungsi MPE Hub yang berjaya dibina'],
+      ['test_result', 'Satu keputusan ujian yang penting'],
+      ['safety_control', 'Satu kawalan keselamatan atau akses yang digunakan'],
+      ['next_step', 'Langkah seterusnya selepas latihan']
+    ],
+    confidence: 'Keyakinan saya membina dan menguji prototaip MPE Hub',
+    evidence: [
+      'Pautan Web App boleh dibuka',
+      'Satu rekod rekaan disimpan dalam Google Sheets',
+      'Satu Google Doc dijana daripada rekod',
+      'Input tidak lengkap ditolak dengan sebab',
+      'Status dan pemilik direkodkan',
+      'Akses dan batasan prototaip disemak',
+      'Laluan manual dikenal pasti'
     ]
   }
 };

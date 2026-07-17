@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Arahan langkah demi langkah daripada Google Sheet kepada Web App dan Google Doc.">
+  <meta name="theme-color" content="#0d272b">
+  <title>Latihan Hands-on Bina MPE Hub · Portal Latihan MPE</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260717-8">
+</head>
+<body>
+<a class="skip-link" href="#kandungan">Langkau ke kandungan</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html"><span class="brand-mark">MPE</span><span>Portal Latihan<small>CREaTE JKR · 2026</small></span></a>
+    <button class="menu-button" data-menu aria-expanded="false" aria-label="Buka navigasi">Menu</button>
+    <nav class="nav-links" data-nav-links aria-label="Navigasi utama">
+      <a href="../index.html">Utama</a>
+      <a href="../modul-1/index.html">Modul 1</a>
+      <a href="../modul-2/index.html">Modul 2</a>
+      <a href="../modul-3/index.html">Modul 3</a>
+      <a href="../modul-4/index.html">Modul 4</a>
+      <a href="../modul-5/index.html">Modul 5</a>
+      <a href="../slaid.html">Slaid web</a>
+      <a href="https://drmurtadha.github.io/mpe-hub/" target="_blank" rel="noopener">MPE Hub ↗</a>
+      <a href="https://github.com/drMurtadha/jkr-create-mpe-training" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Latihan Hands-on Bina MPE Hub</div><h1>Latihan Hands-on Bina MPE Hub</h1><p>Arahan langkah demi langkah daripada Google Sheet kepada Web App dan Google Doc.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 5</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kit-binaan.html">Kit binaan & prompt</a><a href="latihan.html">Latihan MPE Hub</a><a href="penilaian.html">Penilaian akhir</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><h1>Latihan Hands-on: Bina MPE Hub</h1>
+<h2>Objektif</h2>
+<p>Menghasilkan prototaip kecil yang menerima rekod rekaan, menyimpan ke Google Sheets dan menjana Google Doc.</p>
+<h2>Langkah 1 - Tetapkan skop</h2>
+<p>Lengkapkan ayat:</p>
+<blockquote>
+<p>MPE Hub kami membantu <strong>[PENGGUNA]</strong> merekod <strong>[JENIS REKOD]</strong>, menyemak <strong>[PERATURAN]</strong> dan menghasilkan <strong>[DOKUMEN]</strong> tanpa mengambil alih keputusan <strong>[PERANAN MANUSIA]</strong>.</p>
+</blockquote>
+<h2>Langkah 2 - Cipta Google Sheet</h2>
+<ol>
+<li>Cipta Sheet baharu dalam akaun kumpulan.</li>
+<li>Namakan tab <code>Records</code>.</li>
+<li>Masukkan tajuk lajur daripada kit binaan.</li>
+<li>Bekukan baris pertama.</li>
+<li>Jangan kongsi ID Sheet dalam platform AI.</li>
+</ol>
+<h2>Langkah 3 - Cipta Apps Script</h2>
+<ol>
+<li>Dari Google Sheet pilih <strong>Extensions -&gt; Apps Script</strong>.</li>
+<li>Tampal kod <code>Code.gs</code>.</li>
+<li>Tambah <code>Index.html</code> dan tampal antaramuka.</li>
+<li>Masukkan ID Sheet secara manual.</li>
+<li>Jalankan fungsi yang diperlukan dan baca skop kebenaran.</li>
+</ol>
+<h2>Langkah 4 - Cipta templat Google Doc</h2>
+<ol>
+<li>Cipta Doc baharu.</li>
+<li>Tampal templat dengan penanda <code>{{...}}</code>.</li>
+<li>Masukkan ID Doc secara manual ke <code>Code.gs</code>.</li>
+<li>Pastikan Doc kekal dalam akaun kumpulan.</li>
+</ol>
+<h2>Langkah 5 - Sesuaikan dengan AI</h2>
+<p>Pilih maksimum dua perubahan:</p>
+<ul>
+<li>tukar tajuk dan penerangan;</li>
+<li>tambah satu jenis rekod;</li>
+<li>tambah satu medan rekaan;</li>
+<li>ubah warna atau susun atur;</li>
+<li>tambah penapis paparan.</li>
+</ul>
+<p>Gunakan prompt daripada kit. Jangan ubah banyak fungsi serentak.</p>
+<h2>Langkah 6 - Terbit dan uji</h2>
+<ol>
+<li>Terbitkan Web App dengan akses minimum.</li>
+<li>Buka pautan dalam tab baharu.</li>
+<li>Hantar satu rekod lengkap.</li>
+<li>Sahkan rekod muncul dalam Sheet.</li>
+<li>Jalankan penjanaan dokumen bagi rekod tersebut.</li>
+<li>Sahkan URL Doc direkodkan.</li>
+</ol>
+<h2>Langkah 7 - Ujian gagal dengan selamat</h2>
+<table>
+<thead>
+<tr>
+<th>Ujian</th>
+<th>Input</th>
+<th>Hasil dijangka</th>
+<th>Hasil sebenar</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lengkap</td>
+<td>Semua medan wajib</td>
+<td>Rekod Draf disimpan</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tidak lengkap</td>
+<td>Pemilik kosong</td>
+<td>Rekod ditolak dengan sebab</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>Langkah 8 - Audit kawalan</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Semua data adalah rekaan.</li>
+<li><input disabled="" type="checkbox"> Tiada ID, pautan peribadi atau data sebenar dihantar kepada AI.</li>
+<li><input disabled="" type="checkbox"> Akses Web App tidak lebih luas daripada keperluan.</li>
+<li><input disabled="" type="checkbox"> AI tidak menetapkan status Disahkan atau Diluluskan.</li>
+<li><input disabled="" type="checkbox"> Sheet menyimpan masa, ID, status dan pemilik.</li>
+<li><input disabled="" type="checkbox"> Ujian input tidak lengkap mempunyai mesej jelas.</li>
+<li><input disabled="" type="checkbox"> Kumpulan boleh menerangkan batasan prototaip.</li>
+<li><input disabled="" type="checkbox"> Laluan manual dikenal pasti jika Web App gagal.</li>
+</ul>
+<h2>Demonstrasi dua minit</h2>
+<ol>
+<li>Nyatakan masalah kerja.</li>
+<li>Tunjukkan borang MPE Hub.</li>
+<li>Hantar satu rekod rekaan.</li>
+<li>Tunjukkan baris dalam Sheet.</li>
+<li>Tunjukkan Google Doc.</li>
+<li>Nyatakan satu kawalan dan satu penambahbaikan.</li>
+</ol>
+<h2>Bukti penyempurnaan</h2>
+<p>Catat pautan Web App, ID rekod rekaan, pautan Doc, keputusan dua ujian, pemilik prototaip dan nota bahawa ia bukan sistem pengeluaran.</p>
+<div class="resource-bar"><a class="button ghost" href="https://github.com/drMurtadha/jkr-create-mpe-training/blob/main/Modul%205/04-Latihan-Bina-MPE-Hub.md" target="_blank" rel="noopener">Lihat sumber Markdown ↗</a><button class="button ghost" onclick="window.print()">Cetak halaman</button></div></article></main>
+<footer class="site-footer"><div class="container footer-grid"><div><strong>Bengkel Transformasi Digital dan Pemerkasaan Operasi Pintar MPE</strong><br>CREaTE JKR · 28–29 Julai 2026</div><div>Prof. Madya Dr. Mohd Murtadha Mohamad<br><a href="https://github.com/drMurtadha/jkr-create-mpe-training">Sumber terbuka di GitHub</a></div></div></footer>
+<script src="../assets/site.js?v=20260717-8"></script>
+
+</body>
+</html>
