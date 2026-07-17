@@ -102,6 +102,16 @@ Pakej-Modul-2-Kumpulan-X/
 - [Google — Gemini Apps Privacy Hub](https://support.google.com/gemini/answer/13594961?hl=en)
 - [Anthropic — Model Training and Privacy](https://privacy.claude.com/en/articles/10023555-how-do-you-use-personal-data-in-model-training)
 
+## Video pembelajaran berdasarkan slaid Modul 2
+
+Video berikut dijana berdasarkan kandungan slaid Modul 2. Peserta boleh menontonnya untuk mengikuti penerangan slaid secara kendiri atau mengulang kaji selepas sesi.
+
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/8tuuNw4py90" title="Video pembelajaran yang dijana berdasarkan slaid Modul 2 — AI Generatif untuk Dokumen Rasmi" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+Jika video tidak dapat dipaparkan, [buka video Modul 2 di YouTube](https://youtu.be/8tuuNw4py90).
+
 ## Kriteria Modul 2 lengkap
 
 - [x] skop dan hasil pembelajaran ditetapkan;
