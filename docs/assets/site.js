@@ -1,9 +1,26 @@
 const menuButton = document.querySelector('[data-menu]');
 const menu = document.querySelector('[data-nav-links]');
 if (menuButton && menu) {
-  menuButton.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
+  const setMenuState = (open) => {
+    menu.classList.toggle('open', open);
     menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Tutup navigasi' : 'Buka navigasi');
+    menuButton.textContent = open ? 'Tutup' : 'Menu';
+  };
+
+  menuButton.addEventListener('click', () => {
+    setMenuState(menuButton.getAttribute('aria-expanded') !== 'true');
+  });
+
+  menu.addEventListener('click', (event) => {
+    if (event.target.closest('a')) setMenuState(false);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+      setMenuState(false);
+      menuButton.focus();
+    }
   });
 }
 
@@ -546,3 +563,138 @@ function renderFinalEvaluation(container) {
 }
 
 document.querySelectorAll('[data-final-evaluation]').forEach(renderFinalEvaluation);
+
+function findSectionTable(title) {
+  const heading = [...document.querySelectorAll('.prose h2')].find((item) => item.textContent.trim() === title);
+  if (!heading) return null;
+  let element = heading.nextElementSibling;
+  while (element && element.tagName !== 'H2') {
+    if (element.tagName === 'TABLE') return element;
+    element = element.nextElementSibling;
+  }
+  return null;
+}
+
+function enhanceModuleFiveWorkspace() {
+  if (!location.pathname.endsWith('/modul-5/latihan.html')) return;
+
+  const storageKey = 'mpe-module-5-workspace-v1';
+  const load = () => {
+    try { return JSON.parse(localStorage.getItem(storageKey)) || {}; } catch { return {}; }
+  };
+  const state = load();
+  const save = () => localStorage.setItem(storageKey, JSON.stringify(state));
+
+  const checklistHeadings = ['Sebelum pemasa dimulakan', 'Checklist serahan'];
+  const checkboxes = [];
+  checklistHeadings.forEach((title) => {
+    const heading = [...document.querySelectorAll('.prose h2')].find((item) => item.textContent.trim() === title);
+    const list = heading?.nextElementSibling;
+    if (!list || list.tagName !== 'UL') return;
+    list.classList.add('saved-checklist');
+    list.querySelectorAll('input[type="checkbox"]').forEach((input) => {
+      input.disabled = false;
+      checkboxes.push(input);
+    });
+  });
+
+  const progress = document.createElement('section');
+  progress.className = 'workspace-progress';
+  progress.setAttribute('aria-live', 'polite');
+  progress.innerHTML = '<div><strong>Kemajuan latihan</strong><span data-progress-label></span></div><progress max="100" value="0" data-workspace-progress></progress><small>Disimpan secara automatik pada peranti ini.</small>';
+  const firstHeading = [...document.querySelectorAll('.prose h2')].find((item) => item.textContent.trim() === checklistHeadings[0]);
+  firstHeading?.insertAdjacentElement('afterend', progress);
+
+  const updateProgress = () => {
+    const completed = checkboxes.filter((input) => input.checked).length;
+    const percent = checkboxes.length ? Math.round((completed / checkboxes.length) * 100) : 0;
+    progress.querySelector('[data-workspace-progress]').value = percent;
+    progress.querySelector('[data-progress-label]').textContent = `${completed}/${checkboxes.length} item · ${percent}%`;
+  };
+
+  checkboxes.forEach((input, index) => {
+    input.checked = Boolean(state.checks?.[index]);
+    input.addEventListener('change', () => {
+      state.checks = checkboxes.map((item) => item.checked);
+      save();
+      updateProgress();
+    });
+  });
+  updateProgress();
+
+  const table = findSectionTable('Ujian penerimaan minimum');
+  if (!table) return;
+  table.classList.add('uat-table');
+
+  const panel = document.createElement('section');
+  panel.className = 'uat-panel';
+  panel.innerHTML = `
+    <div class="uat-fields">
+      <label>Penguji<input type="text" maxlength="120" data-uat-meta="tester" autocomplete="name"></label>
+      <label>Tarikh<input type="date" data-uat-meta="date"></label>
+      <label>Persekitaran / versi<input type="text" maxlength="120" data-uat-meta="build" placeholder="Contoh: E3 · v1.1"></label>
+    </div>
+    <div class="uat-actions">
+      <button class="button" type="button" data-export-uat>Eksport CSV</button>
+      <button class="button ghost" type="button" data-reset-uat>Kosongkan lembaran</button>
+      <span role="status">Disimpan secara automatik pada peranti ini.</span>
+    </div>`;
+  table.insertAdjacentElement('beforebegin', panel);
+
+  panel.querySelectorAll('[data-uat-meta]').forEach((input) => {
+    const key = input.dataset.uatMeta;
+    input.value = state.meta?.[key] || '';
+    input.addEventListener('input', () => {
+      state.meta = { ...(state.meta || {}), [key]: input.value };
+      save();
+    });
+  });
+
+  const rows = [...table.tBodies[0].rows];
+  rows.forEach((row, index) => {
+    const actual = document.createElement('textarea');
+    actual.rows = 2;
+    actual.maxLength = 1000;
+    actual.setAttribute('aria-label', `Hasil sebenar untuk ${row.cells[0].textContent.trim()}`);
+    actual.value = state.tests?.[index]?.actual || '';
+
+    const status = document.createElement('select');
+    status.setAttribute('aria-label', `Status untuk ${row.cells[0].textContent.trim()}`);
+    ['Belum diuji', 'Lulus', 'Gagal', 'Terhalang'].forEach((value) => status.add(new Option(value, value)));
+    status.value = state.tests?.[index]?.status || 'Belum diuji';
+
+    row.cells[3].replaceChildren(actual);
+    row.cells[4].replaceChildren(status);
+    [actual, status].forEach((control) => control.addEventListener('input', () => {
+      state.tests = rows.map((item) => ({
+        actual: item.cells[3].querySelector('textarea').value,
+        status: item.cells[4].querySelector('select').value
+      }));
+      save();
+    }));
+  });
+
+  panel.querySelector('[data-export-uat]').addEventListener('click', () => {
+    const escapeCsv = (value) => `"${String(value).replaceAll('"', '""')}"`;
+    const metadata = panel.querySelectorAll('[data-uat-meta]');
+    const lines = [
+      ['Penguji', metadata[0].value], ['Tarikh', metadata[1].value], ['Persekitaran / versi', metadata[2].value], [],
+      ['ID', 'Senario', 'Hasil dijangka', 'Hasil sebenar', 'Status'],
+      ...rows.map((row) => [...row.cells].map((cell) => cell.querySelector('textarea, select')?.value || cell.textContent.trim()))
+    ];
+    const blob = new Blob(['\ufeff' + lines.map((line) => line.map(escapeCsv).join(',')).join('\r\n')], { type: 'text/csv;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `MPE-UAT-${metadata[1].value || 'tanpa-tarikh'}.csv`;
+    link.click();
+    URL.revokeObjectURL(link.href);
+  });
+
+  panel.querySelector('[data-reset-uat]').addEventListener('click', () => {
+    if (!window.confirm('Kosongkan semua kemajuan dan keputusan UAT yang disimpan pada peranti ini?')) return;
+    localStorage.removeItem(storageKey);
+    location.reload();
+  });
+}
+
+enhanceModuleFiveWorkspace();

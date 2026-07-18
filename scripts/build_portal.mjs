@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url);
 const { marked } = require('marked');
 const root = process.cwd();
 const docs = path.join(root, 'docs');
-const assetVersion = '20260718-9';
+const assetVersion = '20260718-10';
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -29,6 +29,8 @@ const nav = (prefix = '') => `
   </div>
 </header>`;
 
+const trainingBanner = () => `<div class="training-banner" role="status"><div class="container"><strong>Persekitaran latihan</strong><span>Gunakan data rekaan sahaja · bukan sistem pengeluaran atau repositori rasmi</span></div></div>`;
+
 const footer = () => `<footer class="site-footer"><div class="container footer-grid"><div><strong>Bengkel Transformasi Digital dan Pemerkasaan Operasi Pintar MPE</strong><br>CREaTE JKR · 28–29 Julai 2026</div><div>Prof. Madya Dr. Mohd Murtadha Mohamad<br><a href="https://github.com/drMurtadha/jkr-create-mpe-training">Sumber terbuka di GitHub</a></div></div></footer>`;
 
 function shell({ title, description, prefix = '', body, extraScripts = '' }) {
@@ -46,6 +48,7 @@ function shell({ title, description, prefix = '', body, extraScripts = '' }) {
 <body>
 <a class="skip-link" href="#kandungan">Langkau ke kandungan</a>
 ${nav(prefix)}
+${trainingBanner()}
 ${body}
 ${footer()}
 <script src="${prefix}assets/site.js?v=${assetVersion}"></script>
