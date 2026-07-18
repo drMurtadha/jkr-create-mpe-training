@@ -1,5 +1,7 @@
 # Modul 4 — Automasi Aliran Kerja dan Pendigitalan Proses Makmal
 
+## Maklumat sesi
+
 - **Tarikh:** 29 Julai 2026
 - **Masa:** 11.00 pagi–1.00 petang
 - **Tempoh:** 120 minit
