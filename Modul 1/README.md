@@ -13,7 +13,7 @@
 
 Modul ini membina kefahaman asas tentang aplikasi pintar dan membantu peserta mengenal pasti peluang peningkatan produktiviti dalam operasi Makmal Penyelidikan Elektrik (MPE). Fokusnya ialah pemilihan masalah dan penyelesaian yang tepat sebelum peserta bergerak kepada automasi dokumen, analisis data, aliran kerja dan penyediaan bahan projek dalam Modul 2–5.
 
-## Navigasi bahan
+## Bahan modul
 
 | Bahan | Kegunaan |
 |---|---|

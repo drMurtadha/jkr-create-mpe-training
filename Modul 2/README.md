@@ -29,7 +29,7 @@ Pilih satu platform. Semua latihan menggunakan prompt neutral platform dan tidak
 
 Rujukan semasa: [ChatGPT Free Tier](https://help.openai.com/en/articles/9275245-using-chatgpt-s-free-tier), [Gemini Apps limits](https://support.google.com/gemini/answer/16275805?hl=en) dan [Claude Free](https://www.anthropic.com/pricing?subjects=claude&type=product).
 
-## Navigasi bahan
+## Bahan modul
 
 | Bahan | Kegunaan |
 |---|---|
