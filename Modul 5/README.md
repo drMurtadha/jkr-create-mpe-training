@@ -94,7 +94,7 @@ Kredensial Google tidak diletakkan dalam kod pelayar. Namun endpoint yang boleh 
 
 ## Panduan peserta langkah demi langkah
 
-Gunakan urutan ini semasa latihan. Jangan bergerak ke langkah seterusnya sehingga tanda **Semak sebelum teruskan** dipenuhi. Pembahagian masa ialah panduan; fasilitator boleh menggunakan laluan demonstrasi jika akses organisasi menyekat sesuatu langkah.
+Gunakan urutan ini semasa latihan. Jangan bergerak ke langkah seterusnya sehingga tanda **Selesai apabila** dipenuhi. Pembahagian masa ialah panduan; fasilitator boleh menggunakan laluan demonstrasi jika akses organisasi menyekat sesuatu langkah.
 
 ### Langkah 1 — Tetapkan peranan dan buka bahan, 5 minit
 
@@ -106,7 +106,7 @@ Gunakan urutan ini semasa latihan. Jangan bergerak ke langkah seterusnya sehingg
    - [Repositori templat](https://github.com/drMurtadha/mpe-hub);
    - [Kit persediaan dan prompt](./03-Kit-Binaan-dan-Pustaka-Prompt.md).
 
-**Semak sebelum teruskan:** semua ahli tahu peranan masing-masing dan sekurang-kurangnya seorang ahli boleh membuka GitHub serta Google Drive.
+**Selesai apabila:** semua ahli tahu peranan masing-masing dan sekurang-kurangnya seorang ahli boleh membuka GitHub serta Google Drive.
 
 ### Langkah 2 — Salin repositori latihan, 5 minit
 
@@ -115,7 +115,7 @@ Gunakan urutan ini semasa latihan. Jangan bergerak ke langkah seterusnya sehingg
 3. Pastikan repositori tidak mengandungi token, ID fail, URL deployment atau data operasi sebenar.
 4. Buka tab **Code** dan kenal pasti fail HTML, CSS, JavaScript serta konfigurasi contoh.
 
-**Semak sebelum teruskan:** repositori muncul dalam akaun kumpulan dan ahli boleh melihat senarai failnya.
+**Selesai apabila:** repositori muncul dalam akaun kumpulan dan ahli boleh melihat senarai failnya.
 
 **Jika tersekat:** seorang ahli yang mempunyai akses menjadi pemilik repositori; ahli lain bekerja sebagai penyemak atau menggunakan salinan demonstrasi fasilitator.
 
@@ -140,7 +140,7 @@ Gunakan urutan ini semasa latihan. Jangan bergerak ke langkah seterusnya sehingg
 4. Benarkan akses hanya melalui akaun kumpulan yang diluluskan.
 5. Sahkan tab `logbook`, `asset` dan `mccb` telah diwujudkan.
 
-**Semak sebelum teruskan:** ketiga-tiga tab wujud dan tiada data sebenar dimasukkan.
+**Selesai apabila:** ketiga-tiga tab wujud dan tiada data sebenar dimasukkan.
 
 **Jika tersekat:** gunakan spreadsheet dan deployment demonstrasi fasilitator; jangan cuba memintas sekatan akaun organisasi.
 
@@ -152,7 +152,7 @@ Gunakan urutan ini semasa latihan. Jangan bergerak ke langkah seterusnya sehingg
 4. Jangan tampal URL tersebut ke platform AI, ruang sembang umum atau tangkap layar yang akan diterbitkan.
 5. Buka aplikasi dan semak status sambungan.
 
-**Semak sebelum teruskan:** aplikasi tidak memaparkan status luar talian dan satu permintaan ujian tidak menghasilkan ralat sambungan.
+**Selesai apabila:** aplikasi tidak memaparkan status luar talian dan satu permintaan ujian tidak menghasilkan ralat sambungan.
 
 ### Langkah 6 — Masukkan tiga rekod rekaan, 15 minit
 
@@ -164,7 +164,7 @@ Masukkan satu rekod bagi setiap modul:
 
 Selepas setiap penghantaran, catat ID rekod dan mesej yang dipaparkan.
 
-**Semak sebelum teruskan:** tiga mesej berjaya atau tiga ID rekod telah direkodkan. Jangan gunakan nama, nombor aset, tandatangan atau bacaan sebenar.
+**Selesai apabila:** tiga mesej berjaya atau tiga ID rekod telah direkodkan. Jangan gunakan nama, nombor aset, tandatangan atau bacaan sebenar.
 
 ### Langkah 7 — Sahkan Google Sheets dan Drive, 10 minit
 
@@ -185,7 +185,7 @@ Selepas setiap penghantaran, catat ID rekod dan mesej yang dipaparkan.
 4. Tukar hanya pautan stylesheet atau pemboleh ubah warna yang berkaitan.
 5. Pastikan perubahan tidak menjejaskan borang, label dan navigasi papan kekunci.
 
-**Semak sebelum teruskan:** tema baharu kelihatan pada pratonton tempatan dan semua kandungan masih boleh dibaca.
+**Selesai apabila:** tema baharu kelihatan pada pratonton tempatan dan semua kandungan masih boleh dibaca.
 
 ### Langkah 9 — Commit, terbitkan dan uji GitHub Pages, 5 minit
 
@@ -195,7 +195,7 @@ Selepas setiap penghantaran, catat ID rekod dan mesej yang dipaparkan.
 4. Aktifkan atau semak GitHub Pages melalui **Settings → Pages**.
 5. Tunggu workflow bertukar hijau, kemudian lakukan hard refresh.
 
-**Semak sebelum teruskan:** URL GitHub Pages boleh dibuka dan perubahan gaya dipaparkan.
+**Selesai apabila:** URL GitHub Pages boleh dibuka dan perubahan gaya dipaparkan.
 
 ### Langkah 10 — Jalankan UAT dan sediakan bukti, 5 minit
 
