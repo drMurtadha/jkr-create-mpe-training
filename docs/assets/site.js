@@ -306,6 +306,34 @@ document.querySelectorAll('[data-quiz]').forEach(renderQuiz);
 
 const EXIT_TICKET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwNWocv0bT-AoGPU_VGu1FiGIV--Z2IJ9ZDD4yJ22VS_Jc18-KQpxVpOzmNKftigNYR/exec';
 
+function saveFormDraft(form, key) {
+  const fields = {};
+  [...form.elements].forEach((field) => {
+    if (!field.name || field.type === 'hidden' || field.name === 'website') return;
+    if (field.type === 'checkbox') {
+      fields[field.name] ??= [];
+      if (field.checked) fields[field.name].push(field.value || 'on');
+    } else if (field.type === 'radio') {
+      if (field.checked) fields[field.name] = field.value;
+    } else {
+      fields[field.name] = field.value;
+    }
+  });
+  localStorage.setItem(key, JSON.stringify(fields));
+}
+
+function restoreFormDraft(form, key) {
+  let fields;
+  try { fields = JSON.parse(localStorage.getItem(key)); } catch { return; }
+  if (!fields) return;
+  [...form.elements].forEach((field) => {
+    if (!field.name || fields[field.name] === undefined) return;
+    if (field.type === 'checkbox') field.checked = fields[field.name].includes(field.value || 'on');
+    else if (field.type === 'radio') field.checked = fields[field.name] === field.value;
+    else field.value = fields[field.name];
+  });
+}
+
 const exitTickets = {
   'modul-1': {
     module: 'Modul 1',
@@ -397,9 +425,15 @@ function renderExitTicket(container) {
   const ticket = exitTickets[container.dataset.exitTicket];
   if (!ticket) return;
 
+  const draftKey = `mpe-exit-ticket-draft-${container.dataset.exitTicket}`;
+
   const form = document.createElement('form');
   form.className = 'exit-ticket-form';
   form.innerHTML = `
+    <aside class="submission-disclosure">
+      <strong>Destinasi dan privasi</strong>
+      <p>Respons dihantar kepada storan penilaian fasilitator melalui Google Apps Script. Jangan masukkan maklumat sulit, terperingkat atau data peribadi pihak lain. Draf disimpan pada peranti ini sehingga penghantaran selesai atau anda memadamkannya.</p>
+    </aside>
     <div class="exit-ticket-field">
       <label for="${container.dataset.exitTicket}-name">Nama <span>(pilihan)</span></label>
       <input id="${container.dataset.exitTicket}-name" name="name" type="text" maxlength="120" autocomplete="name">
@@ -432,15 +466,25 @@ function renderExitTicket(container) {
       <label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label>
     </div>
     <input name="module" type="hidden" value="${ticket.module}">
-    <p class="exit-ticket-note">Jangan masukkan maklumat sulit, terperingkat atau data peribadi pihak lain.</p>
+    <label class="submission-consent"><input name="submission_consent" type="checkbox" value="disahkan" required><span>Saya faham destinasi respons dan mengesahkan kandungan ini menggunakan data latihan yang sesuai.</span></label>
     <div class="exit-ticket-actions">
       <button class="button" type="submit">Hantar exit ticket</button>
+      <button class="button ghost" type="button" data-clear-draft>Padam draf lokal</button>
       <p class="exit-ticket-status" aria-live="polite"></p>
     </div>
   `;
 
   const button = form.querySelector('[type="submit"]');
   const status = form.querySelector('.exit-ticket-status');
+  restoreFormDraft(form, draftKey);
+  form.addEventListener('input', () => saveFormDraft(form, draftKey));
+  form.addEventListener('change', () => saveFormDraft(form, draftKey));
+  form.querySelector('[data-clear-draft]').addEventListener('click', () => {
+    if (!window.confirm('Padam draf exit ticket yang disimpan pada peranti ini?')) return;
+    localStorage.removeItem(draftKey);
+    form.reset();
+    status.textContent = 'Draf lokal telah dipadam.';
+  });
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
@@ -460,8 +504,9 @@ function renderExitTicket(container) {
         body: new URLSearchParams(formData)
       });
       form.reset();
+      localStorage.removeItem(draftKey);
       status.className = 'exit-ticket-status success';
-      status.textContent = 'Terima kasih. Exit ticket telah dihantar.';
+      status.textContent = 'Permintaan telah dihantar. Oleh sebab pelayan tidak memberikan pengesahan terus, fasilitator perlu menyemak rekod destinasi.';
     } catch {
       status.className = 'exit-ticket-status error';
       status.textContent = 'Maklum balas tidak dapat dihantar. Semak sambungan internet dan cuba lagi.';
@@ -511,9 +556,14 @@ const finalEvaluationForms = {
 function renderFinalEvaluation(container) {
   const config = finalEvaluationForms[container.dataset.finalEvaluation];
   if (!config) return;
+  const draftKey = `mpe-final-evaluation-draft-${container.dataset.finalEvaluation}`;
   const form = document.createElement('form');
   form.className = 'exit-ticket-form final-evaluation-form';
   form.innerHTML = `
+    <aside class="submission-disclosure">
+      <strong>Destinasi dan privasi</strong>
+      <p>Respons dihantar kepada storan penilaian fasilitator melalui Google Apps Script. Draf disimpan pada peranti ini. Jangan masukkan maklumat sulit, terperingkat atau data peribadi pihak lain.</p>
+    </aside>
     <div class="exit-ticket-field">
       <label>Nama <span>(${container.dataset.finalEvaluation === 'participant' ? 'pilihan' : 'fasilitator'})</span></label>
       <input name="name" type="text" maxlength="120" ${container.dataset.finalEvaluation === 'facilitator' ? 'required' : ''}>
@@ -535,12 +585,21 @@ function renderFinalEvaluation(container) {
     `).join('')}
     <div class="exit-ticket-trap" aria-hidden="true"><label>Website <input name="website" type="text" tabindex="-1"></label></div>
     <input name="module" type="hidden" value="${config.module}">
-    <p class="exit-ticket-note">Jangan masukkan maklumat sulit, terperingkat atau data peribadi pihak lain.</p>
-    <div class="exit-ticket-actions"><button class="button" type="submit">${config.button}</button><p class="exit-ticket-status" aria-live="polite"></p></div>
+    <label class="submission-consent"><input name="submission_consent" type="checkbox" value="disahkan" required><span>Saya faham destinasi respons dan mengesahkan kandungan ini sesuai untuk latihan.</span></label>
+    <div class="exit-ticket-actions"><button class="button" type="submit">${config.button}</button><button class="button ghost" type="button" data-clear-draft>Padam draf lokal</button><p class="exit-ticket-status" aria-live="polite"></p></div>
   `;
 
   const button = form.querySelector('[type="submit"]');
   const status = form.querySelector('.exit-ticket-status');
+  restoreFormDraft(form, draftKey);
+  form.addEventListener('input', () => saveFormDraft(form, draftKey));
+  form.addEventListener('change', () => saveFormDraft(form, draftKey));
+  form.querySelector('[data-clear-draft]').addEventListener('click', () => {
+    if (!window.confirm('Padam draf penilaian yang disimpan pada peranti ini?')) return;
+    localStorage.removeItem(draftKey);
+    form.reset();
+    status.textContent = 'Draf lokal telah dipadam.';
+  });
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
@@ -550,8 +609,9 @@ function renderFinalEvaluation(container) {
     try {
       await fetch(EXIT_TICKET_ENDPOINT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form)) });
       form.reset();
+      localStorage.removeItem(draftKey);
       status.className = 'exit-ticket-status success';
-      status.textContent = 'Terima kasih. Rekod telah dihantar.';
+      status.textContent = 'Permintaan telah dihantar. Fasilitator perlu menyemak rekod destinasi kerana pelayan tidak memberikan pengesahan terus.';
     } catch {
       status.className = 'exit-ticket-status error';
       status.textContent = 'Rekod tidak dapat dihantar. Semak sambungan internet dan cuba lagi.';
@@ -563,6 +623,122 @@ function renderFinalEvaluation(container) {
 }
 
 document.querySelectorAll('[data-final-evaluation]').forEach(renderFinalEvaluation);
+
+const activityPath = [
+  { path: '/modul-1/kanvas.html', label: 'Kanvas peluang', module: 'Modul 1', minutes: 18, next: '../modul-2/latihan-surat.html' },
+  { path: '/modul-2/latihan-surat.html', label: 'Draf surat rasmi', module: 'Modul 2', prev: '../modul-1/kanvas.html', next: 'latihan-minit.html' },
+  { path: '/modul-2/latihan-minit.html', label: 'Minit dan tindakan', module: 'Modul 2', prev: 'latihan-surat.html', next: '../modul-3/latihan-analisis.html' },
+  { path: '/modul-3/latihan-analisis.html', label: 'Analisis data', module: 'Modul 3', prev: '../modul-2/latihan-minit.html', next: 'rekod-teknikal.html' },
+  { path: '/modul-3/rekod-teknikal.html', label: 'Rekod teknikal', module: 'Modul 3', prev: 'latihan-analisis.html', next: '../modul-4/pemetaan-proses.html' },
+  { path: '/modul-4/pemetaan-proses.html', label: 'Pemetaan proses', module: 'Modul 4', prev: '../modul-3/rekod-teknikal.html', next: 'automasi-terkawal.html' },
+  { path: '/modul-4/automasi-terkawal.html', label: 'Automasi terkawal', module: 'Modul 4', prev: 'pemetaan-proses.html', next: 'penilaian.html' }
+];
+
+function enhanceParticipantWorkspace() {
+  const configIndex = activityPath.findIndex((item) => location.pathname.endsWith(item.path));
+  if (configIndex < 0) return;
+  const config = activityPath[configIndex];
+  const prose = document.querySelector('.prose');
+  if (!prose) return;
+
+  const key = `mpe-participant-workspace-${config.path}`;
+  let state = {};
+  try { state = JSON.parse(localStorage.getItem(key)) || {}; } catch { state = {}; }
+  const save = () => localStorage.setItem(key, JSON.stringify(state));
+
+  const responseControls = [];
+  prose.querySelectorAll('tbody td:empty').forEach((cell, index) => {
+    const input = document.createElement('textarea');
+    input.rows = 2;
+    input.maxLength = 1500;
+    input.value = state.responses?.[`cell-${index}`] || '';
+    input.setAttribute('aria-label', `Jawapan jadual ${cell.closest('tr').cells[0].textContent.trim() || index + 1}`);
+    input.dataset.workspaceField = `cell-${index}`;
+    cell.appendChild(input);
+    responseControls.push(input);
+  });
+
+  prose.querySelectorAll('code').forEach((code, index) => {
+    if (!/^_{8,}$/.test(code.textContent.trim())) return;
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.maxLength = 500;
+    input.className = 'inline-response';
+    input.value = state.responses?.[`line-${index}`] || '';
+    input.setAttribute('aria-label', `Jawapan ${code.closest('p')?.textContent.replace(/_+/g, '').trim() || index + 1}`);
+    input.dataset.workspaceField = `line-${index}`;
+    code.replaceWith(input);
+    responseControls.push(input);
+  });
+
+  const checkboxes = [...prose.querySelectorAll('input[type="checkbox"]')];
+  checkboxes.forEach((input, index) => {
+    input.disabled = false;
+    input.checked = Boolean(state.checks?.[index]);
+  });
+
+  const workspace = document.createElement('section');
+  workspace.className = 'participant-workspace';
+  workspace.innerHTML = `
+    <div class="workspace-step"><span>${config.module}</span><strong>Langkah ${configIndex + 1} daripada ${activityPath.length} · ${config.label}</strong></div>
+    <div class="workspace-progress"><div><strong>Kemajuan halaman</strong><span data-activity-progress>0%</span></div><progress max="100" value="0"></progress><small>Jawapan disimpan secara automatik pada peranti ini.</small></div>
+    ${config.minutes ? '<div class="activity-timer"><strong data-timer-display>18:00</strong><button class="button ghost" type="button" data-start-timer>Mulakan pemasa</button></div>' : ''}
+    <div class="workspace-actions"><button class="button ghost" type="button" data-export-activity>Eksport jawapan CSV</button><button class="button ghost" type="button" data-reset-activity>Kosongkan halaman</button>${config.prev ? `<a class="button ghost" href="${config.prev}">← Sebelumnya</a>` : ''}<a class="button" href="${config.next}">Teruskan →</a></div>`;
+  prose.prepend(workspace);
+
+  const update = () => {
+    state.responses = Object.fromEntries(responseControls.map((input) => [input.dataset.workspaceField, input.value]));
+    state.checks = checkboxes.map((input) => input.checked);
+    const completed = responseControls.filter((input) => input.value.trim()).length + checkboxes.filter((input) => input.checked).length;
+    const total = responseControls.length + checkboxes.length;
+    const percent = total ? Math.round(completed / total * 100) : 0;
+    workspace.querySelector('progress').value = percent;
+    workspace.querySelector('[data-activity-progress]').textContent = `${completed}/${total} item · ${percent}%`;
+    save();
+  };
+  responseControls.forEach((input) => input.addEventListener('input', update));
+  checkboxes.forEach((input) => input.addEventListener('change', update));
+  update();
+
+  workspace.querySelector('[data-export-activity]').addEventListener('click', () => {
+    const escapeCsv = (value) => `"${String(value).replaceAll('"', '""')}"`;
+    const lines = [['Aktiviti', config.label], [], ['Item', 'Jawapan']];
+    responseControls.forEach((input) => lines.push([input.getAttribute('aria-label'), input.value]));
+    checkboxes.forEach((input, index) => lines.push([input.parentElement.textContent.trim() || `Checklist ${index + 1}`, input.checked ? 'Selesai' : 'Belum']));
+    const blob = new Blob(['\ufeff' + lines.map((line) => line.map(escapeCsv).join(',')).join('\r\n')], { type: 'text/csv;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `${config.module.replace(' ', '-')}-${config.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.csv`;
+    link.click();
+    URL.revokeObjectURL(link.href);
+  });
+
+  workspace.querySelector('[data-reset-activity]').addEventListener('click', () => {
+    if (!window.confirm('Kosongkan semua jawapan halaman ini yang disimpan pada peranti?')) return;
+    localStorage.removeItem(key);
+    location.reload();
+  });
+
+  if (config.minutes) {
+    const display = workspace.querySelector('[data-timer-display]');
+    const start = workspace.querySelector('[data-start-timer]');
+    const renderTimer = () => {
+      const remaining = state.timerEnd ? Math.max(0, Math.ceil((state.timerEnd - Date.now()) / 1000)) : config.minutes * 60;
+      display.textContent = `${String(Math.floor(remaining / 60)).padStart(2, '0')}:${String(remaining % 60).padStart(2, '0')}`;
+      display.classList.toggle('expired', remaining === 0);
+      start.textContent = state.timerEnd ? 'Mulakan semula' : 'Mulakan pemasa';
+    };
+    start.addEventListener('click', () => {
+      state.timerEnd = Date.now() + config.minutes * 60 * 1000;
+      save();
+      renderTimer();
+    });
+    renderTimer();
+    window.setInterval(renderTimer, 1000);
+  }
+}
+
+enhanceParticipantWorkspace();
 
 function findSectionTable(title) {
   const heading = [...document.querySelectorAll('.prose h2')].find((item) => item.textContent.trim() === title);

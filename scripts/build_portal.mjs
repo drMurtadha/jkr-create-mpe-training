@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url);
 const { marked } = require('marked');
 const root = process.cwd();
 const docs = path.join(root, 'docs');
-const assetVersion = '20260718-10';
+const assetVersion = '20260718-11';
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -151,6 +151,8 @@ async function markdownPage({ source, output, title, description, prefix = '../'
   let markdown = await fs.readFile(path.join(root, source), 'utf8');
   markdown = removeMarkdownSections(markdown, hiddenSections);
   markdown = rewriteModuleLinks(markdown, moduleNumber);
+  markdown = markdown.replace(/^#\s+[^\n]+\n+/, '');
+  markdown = markdown.replace(/^#\s+/gm, '## ');
   const content = marked.parse(markdown);
   const moduleOneAside = `<aside class="article-nav"><strong>Dalam Modul 1</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kanvas.html">Kanvas peluang</a><a href="demonstrasi.html">Demonstrasi</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
   const moduleTwoAside = `<aside class="article-nav"><strong>Dalam Modul 2</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kandungan-slaid.html">Kandungan slaid</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="latihan-surat.html">Latihan surat</a><a href="latihan-minit.html">Latihan minit</a><a href="kawalan-rekod.html">Kawalan rekod</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;

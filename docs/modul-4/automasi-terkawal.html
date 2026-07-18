@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#0d272b">
   <title>Latihan Automasi Terkawal · Portal Latihan MPE</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/styles.css?v=20260718-10">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260718-11">
 </head>
 <body>
 <a class="skip-link" href="#kandungan">Langkau ke kandungan</a>
@@ -30,8 +30,7 @@
   </div>
 </header>
 <div class="training-banner" role="status"><div class="container"><strong>Persekitaran latihan</strong><span>Gunakan data rekaan sahaja · bukan sistem pengeluaran atau repositori rasmi</span></div></div>
-<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Latihan Automasi Terkawal</div><h1>Latihan Automasi Terkawal</h1><p>Senario latihan KEW.PA-9 dan pengujian MCCB menggunakan data rekaan.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 4</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="pemetaan-proses.html">Pemetaan proses</a><a href="automasi-terkawal.html">Automasi terkawal</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><h1>Latihan — Automasi Terkawal KEW.PA-9 dan MCCB</h1>
-<p>Semua nama, nombor aset dan bacaan di bawah ialah rekaan.</p>
+<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Latihan Automasi Terkawal</div><h1>Latihan Automasi Terkawal</h1><p>Senario latihan KEW.PA-9 dan pengujian MCCB menggunakan data rekaan.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 4</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="pemetaan-proses.html">Pemetaan proses</a><a href="automasi-terkawal.html">Automasi terkawal</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><p>Semua nama, nombor aset dan bacaan di bawah ialah rekaan.</p>
 <h2>Laluan A — Pergerakan atau pinjaman aset</h2>
 <h3>Data latihan</h3>
 <table>
@@ -145,14 +144,60 @@
 <li>penguji dan penyemak/pengesah mesti individu atau peranan berasingan.</li>
 </ul>
 <h2>Kes ujian minimum</h2>
-<ol>
-<li>Laluan biasa yang lengkap.</li>
-<li>Tarikh pulang lebih awal daripada tarikh pinjam.</li>
-<li>Lampiran bukti tiada.</li>
-<li>Peralatan ujian tidak mempunyai status kalibrasi.</li>
-<li>Notifikasi gagal dihantar.</li>
-<li>Penyemak mengembalikan rekod dengan sebab.</li>
-</ol>
+<p>Lengkapkan hasil sebenar dan status. Ruang ini disimpan secara automatik pada peranti dan boleh dieksport sebagai CSV.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Senario</th>
+<th>Hasil dijangka</th>
+<th>Hasil sebenar</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>UAT-01</td>
+<td>Laluan biasa yang lengkap</td>
+<td>Rekod disimpan sekali dengan ID, status dan bukti lengkap</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>UAT-02</td>
+<td>Tarikh pulang lebih awal daripada tarikh pinjam</td>
+<td>Penghantaran disekat dan ralat tarikh diterangkan</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>UAT-03</td>
+<td>Lampiran bukti tiada</td>
+<td>Rekod tidak dilengkapkan tanpa bukti wajib</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>UAT-04</td>
+<td>Status kalibrasi peralatan tiada</td>
+<td>Amaran dipaparkan dan pengesahan teknikal disekat</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>UAT-05</td>
+<td>Notifikasi gagal dihantar</td>
+<td>Rekod kekal boleh dijejak dan laluan cuba semula/manual ditunjukkan</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>UAT-06</td>
+<td>Penyemak mengembalikan rekod dengan sebab</td>
+<td>Status, sebab, masa dan pelaku direkodkan</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 <h2>Hasil kumpulan</h2>
 <ul>
 <li>kamus medan;</li>
@@ -164,7 +209,7 @@
 </ul>
 <div class="resource-bar"><a class="button ghost" href="https://github.com/drMurtadha/jkr-create-mpe-training/blob/main/Modul%204/04-Latihan-Automasi-Terkawal.md" target="_blank" rel="noopener">Lihat sumber Markdown ↗</a><button class="button ghost" onclick="window.print()">Cetak halaman</button></div></article></main>
 <footer class="site-footer"><div class="container footer-grid"><div><strong>Bengkel Transformasi Digital dan Pemerkasaan Operasi Pintar MPE</strong><br>CREaTE JKR · 28–29 Julai 2026</div><div>Prof. Madya Dr. Mohd Murtadha Mohamad<br><a href="https://github.com/drMurtadha/jkr-create-mpe-training">Sumber terbuka di GitHub</a></div></div></footer>
-<script src="../assets/site.js?v=20260718-10"></script>
+<script src="../assets/site.js?v=20260718-11"></script>
 
 </body>
 </html>

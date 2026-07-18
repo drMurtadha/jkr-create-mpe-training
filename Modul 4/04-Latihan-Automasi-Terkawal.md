@@ -53,12 +53,16 @@ Semua nama, nombor aset dan bacaan di bawah ialah rekaan.
 
 ## Kes ujian minimum
 
-1. Laluan biasa yang lengkap.
-2. Tarikh pulang lebih awal daripada tarikh pinjam.
-3. Lampiran bukti tiada.
-4. Peralatan ujian tidak mempunyai status kalibrasi.
-5. Notifikasi gagal dihantar.
-6. Penyemak mengembalikan rekod dengan sebab.
+Lengkapkan hasil sebenar dan status. Ruang ini disimpan secara automatik pada peranti dan boleh dieksport sebagai CSV.
+
+| ID | Senario | Hasil dijangka | Hasil sebenar | Status |
+|---|---|---|---|---|
+| UAT-01 | Laluan biasa yang lengkap | Rekod disimpan sekali dengan ID, status dan bukti lengkap |  |  |
+| UAT-02 | Tarikh pulang lebih awal daripada tarikh pinjam | Penghantaran disekat dan ralat tarikh diterangkan |  |  |
+| UAT-03 | Lampiran bukti tiada | Rekod tidak dilengkapkan tanpa bukti wajib |  |  |
+| UAT-04 | Status kalibrasi peralatan tiada | Amaran dipaparkan dan pengesahan teknikal disekat |  |  |
+| UAT-05 | Notifikasi gagal dihantar | Rekod kekal boleh dijejak dan laluan cuba semula/manual ditunjukkan |  |  |
+| UAT-06 | Penyemak mengembalikan rekod dengan sebab | Status, sebab, masa dan pelaku direkodkan |  |  |
 
 ## Hasil kumpulan
 
