@@ -15,20 +15,25 @@ Paparkan sepanjang sesi:
 - sediakan `data/rekod-teknikal-mpe-rekaan.csv`;
 - pastikan peserta boleh membuka CSV dalam Excel atau Google Sheets;
 - sediakan pelan sandaran: tampal 10–20 baris data terus ke ruangan chat;
+- kumpulkan username GitHub peserta dan sediakan pembahagian tiga kumpulan beranggotakan tiga orang;
+- pastikan sekurang-kurangnya seorang peserta setiap kumpulan boleh mencipta repositori dan menjemput kolaborator;
 - jangan menjanjikan model, bilangan muat naik atau kuota tertentu.
 
 ## Modul 3A — 120 minit
 
 | Masa | Aktiviti | Hasil |
 |---:|---|---|
-| 0–10 | Sambungan Modul 2 serta had dan kawalan keselamatan data | Data dibenarkan dikenal pasti |
-| 10–25 | Tanya: bina soalan analisis | Soalan, pengguna dan keputusan |
-| 25–40 | Kenal: baca metadata dan kamus data | Definisi lajur, unit dan sumber |
-| 40–60 | Semak: profil kualiti data | Isu lengkap, sah, konsisten dan unik |
-| 60–75 | Bersih: cadangan pembetulan | Log perubahan tanpa mengubah sumber |
-| 75–100 | Analisis: trend dan perbandingan | Jadual ringkasan dan carta |
-| 100–112 | Sah: audit pengiraan dan dakwaan | Bukti serta batasan |
-| 112–120 | Rekod: pakej hasil | Nama fail, versi dan lokasi rasmi |
+| 0–30 | GitHub asas secara hands-on: kumpulan, kolaborator, branch, PR dan merge | Tiga repositori kumpulan dan satu PR dimerge |
+| 30–38 | Sambungan Modul 2 serta had dan kawalan keselamatan data | Data dibenarkan dikenal pasti |
+| 38–50 | Tanya: bina soalan analisis | Soalan, pengguna dan keputusan |
+| 50–62 | Kenal: baca metadata dan kamus data | Definisi lajur, unit dan sumber |
+| 62–78 | Semak: profil kualiti data | Isu lengkap, sah, konsisten dan unik |
+| 78–90 | Bersih: cadangan pembetulan | Log perubahan tanpa mengubah sumber |
+| 90–105 | Analisis: trend dan perbandingan | Jadual ringkasan dan carta |
+| 105–114 | Sah: audit pengiraan dan dakwaan | Bukti serta batasan |
+| 114–120 | Rekod: pakej hasil | Nama fail, versi dan lokasi rasmi |
+
+Gunakan halaman [GitHub Asas dan Kerja Berpasukan](./06-GitHub-Asas-dan-Kerja-Berpasukan.md) sebagai lembaran aktiviti pada 30 minit pertama. Elakkan syarahan panjang; fasilitator menunjukkan satu tindakan, kemudian peserta terus melakukannya dalam kumpulan.
 
 ### Demonstrasi wajib
 

@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aktiviti hands-on untuk menyediakan tiga kumpulan projek sebelum membina MPE Hub.">
+  <meta name="theme-color" content="#0d272b">
+  <title>GitHub Asas dan Kerja Berpasukan · Portal Latihan MPE</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260718-13">
+</head>
+<body>
+<a class="skip-link" href="#kandungan">Langkau ke kandungan</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html"><span class="brand-mark">MPE</span><span>Portal Latihan<small>CREaTE JKR · 2026</small></span></a>
+    <button class="menu-button" data-menu aria-expanded="false" aria-label="Buka navigasi">Menu</button>
+    <nav class="nav-links" data-nav-links aria-label="Navigasi utama">
+      <a href="../index.html">Utama</a>
+      <a href="../modul-1/index.html">Modul 1</a>
+      <a href="../modul-2/index.html">Modul 2</a>
+      <a href="../modul-3/index.html">Modul 3</a>
+      <a href="../modul-4/index.html">Modul 4</a>
+      <a href="../modul-5/index.html">Modul 5</a>
+      <a href="../slaid.html">Slaid web</a>
+      <a href="https://drmurtadha.github.io/mpe-hub/" target="_blank" rel="noopener">MPE Hub ↗</a>
+      <a href="https://github.com/drMurtadha/jkr-create-mpe-training" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+<div class="training-banner" role="status"><div class="container"><strong>Persekitaran latihan</strong><span>Gunakan data rekaan sahaja · bukan sistem pengeluaran atau repositori rasmi</span></div></div>
+<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / GitHub Asas dan Kerja Berpasukan</div><h1>GitHub Asas dan Kerja Berpasukan</h1><p>Aktiviti hands-on untuk menyediakan tiga kumpulan projek sebelum membina MPE Hub.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 3</strong><a href="index.html">Ringkasan modul</a><a href="github-asas.html">GitHub asas</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="latihan-analisis.html">Analisis data</a><a href="rekod-teknikal.html">Rekod teknikal</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><h2>Tujuan aktiviti</h2>
+<p>Aktiviti 30 minit ini menyediakan peserta untuk bekerja sebagai satu pasukan projek dalam Modul 5. Bagi sembilan peserta, bentuk <strong>tiga kumpulan yang terdiri daripada tiga orang</strong>. Setiap kumpulan menggunakan satu repositori latihan dan semua ahli mesti melakukan sekurang-kurangnya satu tindakan di GitHub.</p>
+<blockquote>
+<p>GitHub menyimpan sejarah perubahan projek. Ia bukan storan bagi kata laluan, token, URL deployment, ID Google atau data operasi sebenar.</p>
+</blockquote>
+<h2>Hasil akhir</h2>
+<p>Setiap kumpulan perlu mempunyai:</p>
+<ul>
+<li>satu repositori latihan;</li>
+<li>seorang ketua projek dan dua ahli yang telah menerima jemputan;</li>
+<li>sekurang-kurangnya satu branch selain <code>main</code>;</li>
+<li>satu commit daripada ahli;</li>
+<li>satu pull request yang disemak;</li>
+<li>satu perubahan yang telah dimerge ke <code>main</code>.</li>
+</ul>
+<h2>Sebelum bengkel</h2>
+<p>Setiap peserta perlu:</p>
+<ol>
+<li><a href="https://github.com/signup">mencipta akaun GitHub</a>;</li>
+<li>mengesahkan alamat e-mel;</li>
+<li>mengaktifkan pengesahan dua faktor atau passkey jika dibenarkan;</li>
+<li>mencatat <strong>username GitHub</strong> sendiri;</li>
+<li>memastikan boleh log masuk tanpa berkongsi kata laluan atau kod pemulihan.</li>
+</ol>
+<p>Rujukan rasmi: <a href="https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github">Mencipta akaun GitHub</a> dan <a href="https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account">Bermula dengan akaun GitHub</a>.</p>
+<h2>Kenali istilah asas</h2>
+<table>
+<thead>
+<tr>
+<th>Istilah</th>
+<th>Maksud mudah</th>
+<th>Contoh dalam latihan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Repository</td>
+<td>Folder projek dan sejarahnya</td>
+<td><code>mpe-hub-kumpulan-1</code></td>
+</tr>
+<tr>
+<td>Branch</td>
+<td>Ruang kerja berasingan</td>
+<td><code>ali-kemas-kini-readme</code></td>
+</tr>
+<tr>
+<td>Commit</td>
+<td>Rekod satu set perubahan</td>
+<td><code>Tambah peranan kumpulan</code></td>
+</tr>
+<tr>
+<td>Push</td>
+<td>Menghantar commit ke GitHub</td>
+<td>Branch muncul dalam repositori</td>
+</tr>
+<tr>
+<td>Pull request (PR)</td>
+<td>Permintaan menyemak perubahan</td>
+<td>Ahli meminta ketua menyemak</td>
+</tr>
+<tr>
+<td>Review</td>
+<td>Semakan sebelum perubahan diterima</td>
+<td>Komen atau kelulusan</td>
+</tr>
+<tr>
+<td>Merge</td>
+<td>Memasukkan perubahan ke <code>main</code></td>
+<td>PR ditutup sebagai <code>Merged</code></td>
+</tr>
+<tr>
+<td>GitHub Actions</td>
+<td>Kerja automatik selepas perubahan</td>
+<td>Membina portal</td>
+</tr>
+<tr>
+<td>GitHub Pages</td>
+<td>Laman web daripada repositori</td>
+<td>URL hasil kumpulan</td>
+</tr>
+</tbody></table>
+<p>Aliran kerja yang perlu diingati:</p>
+<pre><code class="language-text">branch → edit → commit → pull request → review → merge → semak hasil
+</code></pre>
+<h2>Pembahagian peranan</h2>
+<table>
+<thead>
+<tr>
+<th>Peranan</th>
+<th>Tanggungjawab semasa latihan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ketua projek</td>
+<td>Cipta repositori, jemput ahli, semak PR dan merge</td>
+</tr>
+<tr>
+<td>Penyumbang</td>
+<td>Cipta branch, ubah fail, commit dan buka PR</td>
+</tr>
+<tr>
+<td>Penyemak/penguji</td>
+<td>Semak <code>Files changed</code>, uji hasil dan beri maklum balas</td>
+</tr>
+</tbody></table>
+<p>Tukar peranan dalam Modul 5 supaya setiap peserta mengalami lebih daripada satu tugas.</p>
+<h2>Jadual hands-on 30 minit</h2>
+<table>
+<thead>
+<tr>
+<th>Minit</th>
+<th>Aktiviti</th>
+<th>Bukti</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0–5</td>
+<td>Semak akaun, e-mel dan username</td>
+<td>Semua peserta boleh log masuk</td>
+</tr>
+<tr>
+<td>5–10</td>
+<td>Bentuk tiga kumpulan dan tetapkan peranan</td>
+<td>Senarai peranan kumpulan</td>
+</tr>
+<tr>
+<td>10–15</td>
+<td>Ketua mencipta repositori dan menjemput ahli</td>
+<td>Dua jemputan dihantar</td>
+</tr>
+<tr>
+<td>15–20</td>
+<td>Ahli menerima jemputan dan mencipta branch</td>
+<td>Branch baharu kelihatan</td>
+</tr>
+<tr>
+<td>20–25</td>
+<td>Ahli mengedit README, commit dan membuka PR</td>
+<td>Satu PR terbuka</td>
+</tr>
+<tr>
+<td>25–30</td>
+<td>Penyemak memeriksa dan ketua merge</td>
+<td>Status PR <code>Merged</code></td>
+</tr>
+</tbody></table>
+<h2>Bahagian A — Langkah ketua projek</h2>
+<h3>A1. Cipta repositori kumpulan</h3>
+<ol>
+<li>Di penjuru kanan atas GitHub, pilih ikon <strong>+</strong>.</li>
+<li>Pilih <strong>New repository</strong>.</li>
+<li>Gunakan nama <code>mpe-hub-kumpulan-X</code>; gantikan <code>X</code> dengan nombor kumpulan.</li>
+<li>Masukkan penerangan ringkas dan pilih keterlihatan yang diarahkan fasilitator.</li>
+<li>Tandakan <strong>Add a README file</strong>.</li>
+<li>Pilih <strong>Create repository</strong>.</li>
+</ol>
+<p><img src="../assets/github-guides/repositori-dan-menu.png" alt="Contoh kawasan repositori GitHub dengan tab Code, Issues, Pull requests dan Settings"></p>
+<p><strong>Semak sebelum teruskan:</strong> nama repositori betul, fail <code>README.md</code> wujud dan tiada data sebenar.</p>
+<h3>A2. Jemput dua ahli</h3>
+<ol>
+<li>Minta <strong>username GitHub</strong> kedua-dua ahli.</li>
+<li>Dalam repositori, buka <strong>Settings</strong>.</li>
+<li>Pada menu Access, pilih <strong>Collaborators</strong> atau <strong>Collaborators and teams</strong>.</li>
+<li>Pilih <strong>Add people</strong>.</li>
+<li>Cari username, pilih akaun yang betul dan hantar jemputan.</li>
+<li>Ulang untuk ahli kedua.</li>
+</ol>
+<p><img src="../assets/github-guides/tambah-kolaborator.png" alt="Contoh halaman Collaborators untuk menambah ahli projek"></p>
+<p><strong>Semak sebelum teruskan:</strong> dua jemputan ditunjukkan sebagai <code>Pending</code> atau telah diterima.</p>
+<p>Rujukan rasmi: <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository">Menjemput kolaborator ke repositori peribadi</a>.</p>
+<h2>Bahagian B — Langkah ahli projek</h2>
+<h3>B1. Terima jemputan</h3>
+<ol>
+<li>Buka e-mel atau notifikasi GitHub.</li>
+<li>Pilih jemputan repositori kumpulan.</li>
+<li>Pilih <strong>Accept invitation</strong>.</li>
+<li>Kembali ke halaman utama repositori.</li>
+</ol>
+<p><strong>Semak sebelum teruskan:</strong> ahli boleh membuka repositori dan melihat tab <code>Code</code>.</p>
+<h3>B2. Cipta branch sendiri</h3>
+<ol>
+<li>Pada tab <strong>Code</strong>, pilih menu branch yang memaparkan <code>main</code>.</li>
+<li>Taip nama branch mengikut format <code>nama-tugas</code>, contohnya <code>siti-kemas-kini-readme</code>.</li>
+<li>Pilih <strong>Create branch</strong>.</li>
+<li>Pastikan nama branch baharu kini dipaparkan pada menu.</li>
+</ol>
+<p><img src="../assets/github-guides/cipta-branch.png" alt="Contoh menu branch GitHub untuk mencipta ruang kerja berasingan"></p>
+<p><strong>Jangan</strong> membuat latihan terus pada <code>main</code>.</p>
+<h3>B3. Edit README dan commit</h3>
+<ol>
+<li>Buka <code>README.md</code>.</li>
+<li>Pilih ikon pensel <strong>Edit this file</strong>.</li>
+<li>Tambah nama kumpulan, peranan dan satu objektif projek rekaan.</li>
+<li>Pilih <strong>Commit changes</strong>.</li>
+<li>Gunakan mesej ringkas, contohnya <code>Tambah peranan kumpulan</code>.</li>
+<li>Pastikan commit dibuat pada branch sendiri.</li>
+</ol>
+<p><strong>Semak sebelum teruskan:</strong> halaman branch menunjukkan commit baharu dan fail berubah seperti yang dijangka.</p>
+<h3>B4. Buka pull request</h3>
+<ol>
+<li>Pilih <strong>Compare &amp; pull request</strong> atau buka tab <strong>Pull requests → New pull request</strong>.</li>
+<li>Pastikan <code>base: main</code> dan <code>compare: branch-anda</code>.</li>
+<li>Masukkan tajuk yang menerangkan perubahan.</li>
+<li>Dalam huraian, nyatakan apa yang berubah dan cara menyemaknya.</li>
+<li>Pilih <strong>Create pull request</strong>.</li>
+</ol>
+<p><img src="../assets/github-guides/buka-pull-request.png" alt="Contoh halaman pull request dengan base main, branch perbandingan dan butang Create pull request"></p>
+<p><strong>Semak sebelum teruskan:</strong> PR berstatus <code>Open</code> dan hanya fail yang dimaksudkan dipaparkan.</p>
+<h2>Bahagian C — Langkah penyemak dan ketua</h2>
+<h3>C1. Semak perubahan</h3>
+<ol>
+<li>Buka PR dan pilih <strong>Files changed</strong>.</li>
+<li>Pastikan perubahan hanya melibatkan <code>README.md</code>.</li>
+<li>Semak bahawa tiada kata laluan, token, e-mel peribadi atau data operasi.</li>
+<li>Tinggalkan komen jika pembetulan diperlukan.</li>
+<li>Jika betul, pilih <strong>Review changes → Approve</strong> jika pilihan tersedia.</li>
+</ol>
+<h3>C2. Merge ke main</h3>
+<ol>
+<li>Ketua projek kembali ke tab <strong>Conversation</strong>.</li>
+<li>Pastikan paparan menyatakan branch boleh dimerge dan tiada konflik.</li>
+<li>Pilih <strong>Merge pull request</strong>.</li>
+<li>Pilih <strong>Confirm merge</strong>.</li>
+<li>Semak status berubah kepada <code>Merged</code>.</li>
+</ol>
+<p><img src="../assets/github-guides/merge-pull-request.png" alt="Contoh pull request yang sedia untuk dimerge ke main"></p>
+<p><strong>Semak akhir:</strong> buka tab <code>Code</code>, pilih <code>main</code> dan pastikan kandungan README baharu kelihatan.</p>
+<h2>Jika menu tidak kelihatan atau sesuatu gagal</h2>
+<table>
+<thead>
+<tr>
+<th>Gejala</th>
+<th>Punca biasa</th>
+<th>Tindakan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tiada tab Settings</td>
+<td>Bukan pemilik repositori</td>
+<td>Minta ketua projek melaksanakan langkah tersebut</td>
+</tr>
+<tr>
+<td>Jemputan tidak diterima</td>
+<td>Username salah atau e-mel belum disemak</td>
+<td>Semak username dan notifikasi GitHub</td>
+</tr>
+<tr>
+<td>Tidak boleh mencipta repositori</td>
+<td>E-mel belum disahkan</td>
+<td>Lengkapkan pengesahan e-mel</td>
+</tr>
+<tr>
+<td>Tidak boleh push atau commit</td>
+<td>Jemputan belum diterima</td>
+<td>Terima jemputan dan muat semula halaman</td>
+</tr>
+<tr>
+<td>Perubahan berada pada <code>main</code></td>
+<td>Branch tidak ditukar sebelum edit</td>
+<td>Hentikan dan minta fasilitator menyemak sebelum meneruskan</td>
+</tr>
+<tr>
+<td>PR menunjukkan konflik</td>
+<td>Fail sama diubah oleh dua orang</td>
+<td>Jangan paksa merge; minta fasilitator membantu menyelesaikan konflik</td>
+</tr>
+<tr>
+<td>Workflow merah</td>
+<td>Binaan atau ujian gagal</td>
+<td>Buka Actions, baca langkah merah dan betulkan pada branch</td>
+</tr>
+</tbody></table>
+<h2>Checklist kumpulan</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Ketiga-tiga peserta boleh log masuk.</li>
+<li><input disabled="" type="checkbox"> Ketua projek dan dua ahli telah dikenal pasti.</li>
+<li><input disabled="" type="checkbox"> Dua ahli telah menerima jemputan.</li>
+<li><input disabled="" type="checkbox"> Satu branch peserta diwujudkan.</li>
+<li><input disabled="" type="checkbox"> Satu commit mempunyai mesej yang jelas.</li>
+<li><input disabled="" type="checkbox"> Satu PR telah disemak.</li>
+<li><input disabled="" type="checkbox"> PR berjaya dimerge ke <code>main</code>.</li>
+<li><input disabled="" type="checkbox"> Tiada rahsia atau data sebenar dimasukkan.</li>
+</ul>
+<h2>Sambungan ke Modul 5</h2>
+<p>Gunakan repositori dan peranan kumpulan yang sama dalam Modul 5. Ketua projek mengurus tetapan dan merge; ahli membuat perubahan melalui branch; penyemak menguji antaramuka, rekod dan GitHub Pages sebelum penerbitan.</p>
+<div class="resource-bar"><a class="button ghost" href="https://github.com/drMurtadha/jkr-create-mpe-training/blob/main/Modul%203/06-GitHub-Asas-dan-Kerja-Berpasukan.md" target="_blank" rel="noopener">Lihat sumber Markdown ↗</a><button class="button ghost" onclick="window.print()">Cetak halaman</button></div></article></main>
+<footer class="site-footer"><div class="container footer-grid"><div><strong>Bengkel Transformasi Digital dan Pemerkasaan Operasi Pintar MPE</strong><br>CREaTE JKR · 28–29 Julai 2026</div><div>Prof. Madya Dr. Mohd Murtadha Mohamad<br><a href="https://github.com/drMurtadha/jkr-create-mpe-training">Sumber terbuka di GitHub</a></div></div></footer>
+<script src="../assets/site.js?v=20260718-13"></script>
+
+</body>
+</html>
