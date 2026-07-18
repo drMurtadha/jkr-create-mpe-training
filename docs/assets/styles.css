@@ -141,6 +141,7 @@ button, .button { font: inherit; }
 .copy-prompt.copied { border-color: var(--lime); background: #214b38; color: var(--lime); }
 
 .resource-bar { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.5rem; }
+.module-slide-cta { margin: 0 0 1.5rem; }
 .notice { padding: 1rem 1.2rem; border-left: 4px solid var(--amber); background: #fff5df; color: #674b17; }
 
 /* Saved Module 5 execution workspace */
