@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contoh Antaramuka MPE</title>
+  <link id="tema" rel="stylesheet" href="tema-korporat.css">
+</head>
+<body>
+  <header><strong>MPE Hub</strong><nav><a href="#">Dashboard</a><a href="#">Rekod</a><a href="#">Laporan</a></nav></header>
+  <main>
+    <section class="hero"><p class="eyebrow">Operasi makmal</p><h1>Semua rekod, satu pandangan.</h1><p>Pantau aktiviti, tindakan dan status peralatan menggunakan data latihan rekaan.</p><button>Tambah rekod</button></section>
+    <section class="metrics"><article><span>Rekod aktif</span><strong>24</strong></article><article><span>Perlu tindakan</span><strong>5</strong></article><article><span>Selesai minggu ini</span><strong>18</strong></article></section>
+    <section class="panel"><h2>Tindakan terkini</h2><table><thead><tr><th>Perkara</th><th>Status</th><th>Pemilik</th></tr></thead><tbody><tr><td>Semakan MCCB</td><td><span class="status">Dalam semakan</span></td><td>Pasukan A</td></tr><tr><td>Kemas kini Buku Log</td><td><span class="status done">Selesai</span></td><td>Pasukan B</td></tr></tbody></table></section>
+  </main>
+  <script>
+    const pilihan = new URLSearchParams(location.search).get('tema');
+    const dibenarkan = ['korporat', 'makmal', 'minimal', 'dashboard'];
+    if (dibenarkan.includes(pilihan)) document.querySelector('#tema').href = `tema-${pilihan}.css`;
+  </script>
+</body>
+</html>
