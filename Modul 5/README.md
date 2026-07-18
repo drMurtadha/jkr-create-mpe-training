@@ -1,5 +1,7 @@
 # Modul 5 - Daripada Idea kepada MPE Hub: Aplikasi Web Operasi Makmal
 
+## Maklumat sesi
+
 - **Tarikh:** 29 Julai 2026
 - **Masa:** 2.30-4.30 petang
 - **Tempoh keseluruhan:** 120 minit

@@ -1,6 +1,6 @@
 # Modul 1 — Pengenalan Aplikasi Pintar untuk Meningkatkan Produktiviti Kerja MPE
 
-## Kedudukan dalam bengkel
+## Maklumat sesi
 
 - Tarikh: 28 Julai 2026 (Selasa)
 - Masa: 9.00–10.30 pagi

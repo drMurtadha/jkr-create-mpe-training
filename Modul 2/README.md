@@ -1,6 +1,6 @@
 # Modul 2 — Penggunaan AI Generatif dalam Penyediaan Dokumen Rasmi Tidak Terperingkat
 
-## Kedudukan dalam bengkel
+## Maklumat sesi
 
 - Tarikh: 28 Julai 2026 (Selasa)
 - Masa: 11.00 pagi–1.00 petang
