@@ -34,12 +34,12 @@ Soalan latihan cadangan:
 
 Gunakan Prompt 3. Periksa sekurang-kurangnya:
 
-- tarikh boleh ditafsir sebagai tarikh;
-- gabungan tarikh dan sektor unik;
-- nilai penggunaan bernombor dan tidak negatif;
-- semua kategori mempunyai tempoh yang dijangka;
-- nilai kosong atau perubahan luar biasa;
-- data sementara dikenal pasti.
+- Tarikh boleh ditafsir sebagai tarikh;
+- Gabungan tarikh dan sektor unik;
+- Nilai penggunaan bernombor dan tidak negatif;
+- Semua kategori mempunyai tempoh yang dijangka;
+- Nilai kosong atau perubahan luar biasa;
+- Data sementara dikenal pasti.
 
 ### D. Bersih
 
@@ -55,11 +55,11 @@ Jika dataset tidak memerlukan pembetulan, catat `Tiada perubahan; semakan kualit
 
 Gunakan Prompt 5 untuk menghasilkan:
 
-1. penggunaan bulanan tertinggi dan terendah bagi setiap sektor;
-2. purata tahunan mengikut sektor;
-3. perubahan peratus tahun ke tahun;
-4. perbandingan komersial dengan domestik;
-5. satu jadual data yang akan diplot.
+1. Penggunaan bulanan tertinggi dan terendah bagi setiap sektor;
+2. Purata tahunan mengikut sektor;
+3. Perubahan peratus tahun ke tahun;
+4. Perbandingan komersial dengan domestik;
+5. Satu jadual data yang akan diplot.
 
 Semak sekurang-kurangnya dua pengiraan secara manual atau menggunakan formula hamparan.
 
@@ -82,14 +82,14 @@ M3_Elektrik_Ringkasan_v01.docx
 
 ## Hasil serahan
 
-- soalan analisis;
-- kamus data;
-- laporan kualiti;
-- jadual ringkasan;
-- satu carta dengan unit dan nota sumber;
-- dua pengiraan semula;
-- nota batasan;
-- senarai fail dan versi.
+- Soalan analisis;
+- Kamus data;
+- Laporan kualiti;
+- Jadual ringkasan;
+- Satu carta dengan unit dan nota sumber;
+- Dua pengiraan semula;
+- Nota batasan;
+- Senarai fail dan versi.
 
 ## Rubrik ringkas
 

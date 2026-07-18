@@ -51,11 +51,11 @@ Dokumen ini menyediakan kandungan untuk **22 slaid**. Setiap slaid mengandungi t
 
 Pada 10.30 pagi, setiap kumpulan mempunyai:
 
-1. satu masalah operasi MPE yang jelas;
-2. satu cadangan aplikasi pintar;
-3. satu ukuran kejayaan;
-4. satu kawalan risiko;
-5. satu percubaan kecil.
+1. Satu masalah operasi MPE yang jelas;
+2. Satu cadangan aplikasi pintar;
+3. Satu ukuran kejayaan;
+4. Satu kawalan risiko;
+5. Satu percubaan kecil.
 
 **Nota penyampai:** Tekankan hasil yang boleh dilihat, bukan hanya pengetahuan teori.
 
@@ -80,10 +80,10 @@ Pilih peluang → Automasi dok. → Analisis data → Aliran kerja → Projek & 
 
 Pernahkah anda:
 
-- memasukkan maklumat sama lebih daripada sekali?
-- mencari versi fail yang betul melebihi lima minit?
-- menunggu status semakan atau permohonan?
-- membina laporan daripada beberapa sumber berasingan?
+- Memasukkan maklumat sama lebih daripada sekali?
+- Mencari versi fail yang betul melebihi lima minit?
+- Menunggu status semakan atau permohonan?
+- Membina laporan daripada beberapa sumber berasingan?
 
 **Interaksi:** Angkat tangan atau undian digital.
 
@@ -93,7 +93,7 @@ Pernahkah anda:
 
 **Teks pada skrin**
 
-> Aplikasi pintar menggunakan data, peraturan atau AI untuk membantu manusia menangkap, menyusun, menyemak, melaksanakan dan memantau kerja dengan lebih konsisten.
+> Aplikasi pintar menggunakan data, peraturan atau AI untuk membantu manusia mengumpul, menyusun, menyemak, melaksanakan dan memantau kerja dengan lebih konsisten.
 
 **Kata kunci:** Data · tindakan · keputusan · kawalan
 
@@ -107,7 +107,7 @@ Pernahkah anda:
 
 | Manual | Digital | Pintar |
 |---|---|---|
-| Tulis dan pindah | Isi pada skrin | Tangkap sekali |
+| Tulis dan pindah | Isi pada skrin | Kumpul sekali |
 | Cari secara manual | Fail elektronik | Cari dan jejak |
 | Semak di akhir | Semak menggunakan senarai | Validasi semasa input |
 | Ringkasan manual | Laporan berasingan | Status dan metrik tersedia |
@@ -164,10 +164,10 @@ Pintar: borang mudah alih → validasi → ID → lampiran → dashboard
 
 Dalam dua minit:
 
-1. tulis satu masalah operasi;
-2. satu nota, satu masalah;
-3. nyatakan kesan;
-4. jangan sebut nama aplikasi.
+1. Tulis satu masalah operasi;
+2. Satu nota, satu masalah;
+3. Nyatakan kesan;
+4. Jangan sebut nama aplikasi.
 
 **Interaksi:** Peserta menampal respons di bawah lima kategori kebocoran.
 
@@ -177,7 +177,7 @@ Dalam dua minit:
 
 **Teks pada skrin**
 
-| Menangkap | Menyusun | Menyemak |
+| Mengumpul | Menyusun | Menyemak |
 |---|---|---|
 | Borang, imej, bacaan | ID, kategori, carian | Wajib, format, julat |
 
@@ -193,7 +193,7 @@ Dalam dua minit:
 
 | Tugas | Keupayaan sesuai |
 |---|---|
-| Rekod aktiviti di lokasi | Menangkap + menyemak |
+| Rekod aktiviti di lokasi | Mengumpul + menyemak |
 | Cari sijil kalibrasi | Menyusun + memantau |
 | Sediakan draf ringkasan ujian | Membantu + semakan manusia |
 | Jejak pinjaman aset | Mengautomasi + memantau |
@@ -221,18 +221,18 @@ Dalam dua minit:
 
 Skor 1–5:
 
-- nilai operasi;
-- kekerapan;
-- kebolehlaksanaan;
-- risiko.
+- Nilai operasi;
+- Kekerapan;
+- Kebolehlaksanaan;
+- Risiko.
 
 **Formula:** Keutamaan = Nilai + Kekerapan + Kebolehlaksanaan − Risiko
 
 **Tafsiran:**
 
-- 10–14: calon percubaan awal;
-- 6–9: perlu penjelasan;
-- 2–5: nilai semula atau kawal risiko dahulu.
+- 10–14: Calon percubaan awal;
+- 6–9: Perlu penjelasan;
+- 2–5: Nilai semula atau kawal risiko dahulu.
 
 **Nota penyampai:** Skor ialah alat perbincangan, bukan keputusan automatik.
 
@@ -242,12 +242,12 @@ Skor 1–5:
 
 Sebelum melaksanakan, tentukan:
 
-- siapa pemilik proses;
-- siapa boleh melihat dan mengubah data;
-- output mana perlu disahkan;
-- bagaimana ralat dibetulkan;
-- berapa lama rekod disimpan;
-- bagaimana sistem disandarkan.
+- Siapa pemilik proses;
+- Siapa boleh melihat dan mengubah data;
+- Output mana perlu disahkan;
+- Bagaimana ralat dibetulkan;
+- Berapa lama rekod disimpan;
+- Bagaimana sistem disandarkan.
 
 **Nota penyampai:** Risiko bukan alasan untuk berhenti; ia ialah keperluan reka bentuk.
 
@@ -292,7 +292,7 @@ Pengguna → Borang responsif → Validasi/pengiraan → Rekod ber-ID
 
 **Soalan pemerhatian:**
 
-1. Data apa ditangkap sekali?
+1. Data apa dikumpul sekali?
 2. Ralat apa dicegah?
 3. Status apa boleh dilihat?
 4. Keputusan apa masih memerlukan manusia?
@@ -305,14 +305,14 @@ Pengguna → Borang responsif → Validasi/pengiraan → Rekod ber-ID
 
 Lengkapkan lapan bahagian:
 
-1. pengguna dan masalah;
-2. keadaan semasa;
-3. kesan;
-4. keupayaan pintar;
-5. data/dokumen;
-6. ukuran kejayaan;
-7. risiko dan semakan manusia;
-8. percubaan kecil.
+1. Pengguna dan masalah;
+2. Keadaan semasa;
+3. Kesan;
+4. Keupayaan pintar;
+5. Data/dokumen;
+6. Ukuran kejayaan;
+7. Risiko dan semakan manusia;
+8. Percubaan kecil.
 
 **Nota penyampai:** Edarkan atau rujuk kanvas A3.
 
@@ -344,7 +344,7 @@ Lengkapkan lapan bahagian:
 **Teks pada skrin**
 
 1. Mulakan dengan masalah kerja.
-2. Tangkap data sekali, gunakan berkali-kali.
+2. Kumpul data sekali, gunakan berkali-kali.
 3. Kekalkan manusia pada titik keputusan penting.
 
 **Exit ticket:**
@@ -359,15 +359,15 @@ Lengkapkan lapan bahagian:
 
 ## Senarai aset visual yang diperlukan
 
-- foto neutral Makmal Energy Efficiency;
-- rajah manual–digital–pintar;
-- ilustrasi lima kebocoran produktiviti;
-- enam ikon keupayaan aplikasi pintar;
-- tangkap layar dashboard MPE Hub;
-- tangkap layar Buku Log, KEW.PA-9 dan MCCB;
-- rajah aliran MPE Hub yang dipermudah;
-- imej Kanvas Peluang Produktiviti yang telah diisi;
-- kod QR ke aplikasi, dokumentasi dan repositori MPE Hub.
+- Foto neutral Makmal Energy Efficiency;
+- Rajah manual–digital–pintar;
+- Ilustrasi lima kebocoran produktiviti;
+- Enam ikon keupayaan aplikasi pintar;
+- Tangkap layar dashboard MPE Hub;
+- Tangkap layar Buku Log, KEW.PA-9 dan MCCB;
+- Rajah aliran MPE Hub yang dipermudah;
+- Imej Kanvas Peluang Produktiviti yang telah diisi;
+- Kod QR ke aplikasi, dokumentasi dan repositori MPE Hub.
 
 ## Semakan sebelum menghasilkan PPTX
 

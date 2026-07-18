@@ -6,29 +6,29 @@ Folder ini menempatkan visual, tangkap layar dan bahan sandaran yang digunakan d
 
 ### Visual slaid
 
-- foto neutral Makmal Energy Efficiency dengan kebenaran penggunaan;
-- rajah manual–digital–pintar;
-- ilustrasi lima kebocoran produktiviti;
-- enam ikon keupayaan aplikasi pintar;
-- rajah manusia dalam kawalan;
-- imej Kanvas Peluang Produktiviti yang telah diisi.
+- Foto neutral Makmal Energy Efficiency dengan kebenaran penggunaan;
+- Rajah manual–digital–pintar;
+- Ilustrasi lima kebocoran produktiviti;
+- Enam ikon keupayaan aplikasi pintar;
+- Rajah manusia dalam kawalan;
+- Imej Kanvas Peluang Produktiviti yang telah diisi.
 
 ### Tangkap layar MPE Hub
 
-- dashboard;
+- Dashboard;
 - Buku Log pada paparan telefon;
 - KEW.PA-9 dengan data rekaan;
 - MCCB dengan data rekaan;
-- mesej ID rekod;
-- dokumentasi web;
-- rajah seni bina ringkas.
+- Mesej ID rekod;
+- Dokumentasi web;
+- Rajah seni bina ringkas.
 
 ### Kod QR
 
-- aplikasi MPE Hub;
-- dokumentasi MPE Hub;
-- repositori MPE Hub;
-- repositori induk latihan.
+- Aplikasi MPE Hub;
+- Dokumentasi MPE Hub;
+- Repositori MPE Hub;
+- Repositori induk latihan.
 
 ## Konvensyen nama fail
 

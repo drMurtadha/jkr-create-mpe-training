@@ -8,11 +8,11 @@ Satu fail latihan menggabungkan rekod Buku Log, pergerakan aset KEW.PA-9 dan uji
 
 ## Objektif
 
-1. mengesan isu identiti, format, pendua, status dan bukti;
-2. membezakan pembetulan automatik daripada pengesahan pemilik rekod;
-3. menghubungkan rekod dengan ID aset dan sumber;
-4. membina daftar rekod teknikal;
-5. menentukan versi, pemilik, penyemak dan lokasi simpanan rasmi.
+1. Mengesan isu identiti, format, pendua, status dan bukti;
+2. Membezakan pembetulan automatik daripada pengesahan pemilik rekod;
+3. Menghubungkan rekod dengan ID aset dan sumber;
+4. Membina daftar rekod teknikal;
+5. Menentukan versi, pemilik, penyemak dan lokasi simpanan rasmi.
 
 ## Struktur medan
 
@@ -41,12 +41,12 @@ Jangan menulis ganti fail asal. Salin sebagai data kerja dan rekodkan checksum a
 Gunakan Prompt 8. Cari isu berikut dan petik baris bukti:
 
 - `MPE-MCCB-01`, `mpe-mccb-01` dan `MCCB01`;
-- tarikh ISO, format `DD/MM/YYYY` dan tarikh tidak sah;
+- Tarikh ISO, format `DD/MM/YYYY` dan tarikh tidak sah;
 - `Pass`, `LULUS`, `Passed` dan status kosong;
-- satu ID rekod pendua;
-- bacaan tanpa unit;
-- rekod “Diluluskan” tanpa penyemak;
-- versi atau fail sumber yang tiada.
+- Satu ID rekod pendua;
+- Bacaan tanpa unit;
+- Rekod “Diluluskan” tanpa penyemak;
+- Versi atau fail sumber yang tiada.
 
 ### 3. Tentukan autoriti
 
@@ -65,11 +65,11 @@ AI tidak boleh memilih rekod “paling masuk akal” apabila sumber bercanggah.
 Cadangkan peraturan, tetapi jangan laksanakan tanpa semakan:
 
 - ID aset kepada pola `MPE-[JENIS]-NN`;
-- tarikh kepada ISO 8601;
-- kamus status terkawal;
-- unit wajib bagi bacaan;
-- rekod pendua ditanda, bukan terus dipadam;
-- nilai hilang menggunakan `[PERLU PENGESAHAN]`, bukan sifar.
+- Tarikh kepada ISO 8601;
+- Kamus status terkawal;
+- Unit wajib bagi bacaan;
+- Rekod pendua ditanda, bukan terus dipadam;
+- Nilai hilang menggunakan `[PERLU PENGESAHAN]`, bukan sifar.
 
 ### 5. Daftar dan pakej rekod
 
@@ -99,10 +99,10 @@ AI tidak boleh menetapkan `Disahkan` atau `Diluluskan`.
 
 ## Hasil serahan
 
-- laporan isu dengan nombor baris;
-- kamus status dan pola ID;
-- log perubahan cadangan;
-- daftar rekod teknikal;
-- peta sumber autoritatif;
-- struktur folder dan kaedah penamaan versi;
-- senarai perkara yang perlu dirujuk kepada pemilik rekod.
+- Laporan isu dengan nombor baris;
+- Kamus status dan pola ID;
+- Log perubahan cadangan;
+- Daftar rekod teknikal;
+- Peta sumber autoritatif;
+- Struktur folder dan kaedah penamaan versi;
+- Senarai perkara yang perlu dirujuk kepada pemilik rekod.

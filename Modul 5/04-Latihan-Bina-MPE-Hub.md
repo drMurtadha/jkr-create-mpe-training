@@ -28,9 +28,9 @@ Peserta menyediakan salinan MPE Hub, menghubungkannya kepada Google Apps Script,
 
 Gunakan data rekaan untuk menghantar:
 
-1. satu rekod Buku Log;
-2. satu permohonan KEW.PA-9;
-3. satu laporan MCCB.
+1. Satu rekod Buku Log;
+2. Satu permohonan KEW.PA-9;
+3. Satu laporan MCCB.
 
 Catat ID rekod selepas setiap penghantaran. Jangan gunakan nama, nombor aset, tandatangan atau bacaan sebenar.
 
@@ -50,19 +50,19 @@ Catat ID rekod selepas setiap penghantaran. Jangan gunakan nama, nombor aset, ta
 
 Pilih satu perubahan kecil sahaja:
 
-- ubah label atau arahan;
-- tambah satu pilihan rekaan;
-- perkemas satu mesej ralat;
-- ubah satu unsur warna atau susun atur;
-- tambah nota keselamatan.
+- Ubah label atau arahan;
+- Tambah satu pilihan rekaan;
+- Perkemas satu mesej ralat;
+- Ubah satu unsur warna atau susun atur;
+- Tambah nota keselamatan.
 
 Gunakan AI untuk menerangkan atau mencadangkan perubahan. Jangan berikan `config.js`, URL `/exec`, ID Google atau data sebenar kepada AI.
 
 Selepas semakan:
 
-1. commit perubahan dalam repositori peserta;
-2. gunakan mesej yang menerangkan tujuan perubahan;
-3. pastikan tiada maklumat rahsia dalam perbezaan kod.
+1. Commit perubahan dalam repositori peserta;
+2. Gunakan mesej yang menerangkan tujuan perubahan;
+3. Pastikan tiada maklumat rahsia dalam perbezaan kod.
 
 **Bukti:** satu commit baharu.
 

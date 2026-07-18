@@ -79,7 +79,7 @@ Tandakan kesan yang berkaitan dan nyatakan bukti jika ada.
 
 Pilih maksimum tiga keupayaan bagi percubaan awal.
 
-- [ ] Menangkap — borang mudah alih, gambar, bacaan atau lampiran
+- [ ] Mengumpul — borang mudah alih, gambar, bacaan atau lampiran
 - [ ] Menyusun — ID, kategori, nama fail, carian atau hubungan rekod
 - [ ] Menyemak — medan wajib, format, unit, julat atau pendua
 - [ ] Membantu — carian, ringkasan, klasifikasi, cadangan atau draf
@@ -174,9 +174,9 @@ Skor keutamaan = Nilai + Kekerapan + Kebolehlaksanaan − Risiko
 
 **Tafsiran awal:**
 
-- 10–14: calon percubaan awal;
-- 6–9: perlu penjelasan atau kawalan tambahan;
-- 2–5: nilai semula skop atau selesaikan prasyarat dahulu.
+- 10–14: Calon percubaan awal;
+- 6–9: Perlu penjelasan atau kawalan tambahan;
+- 2–5: Nilai semula skop atau selesaikan prasyarat dahulu.
 
 Skor membantu perbincangan. Ia tidak menggantikan kelulusan pemilik proses atau penilaian keselamatan.
 
@@ -213,7 +213,7 @@ Kebocoran utama ialah kemasukan semula bacaan, nama fail tidak konsisten dan sta
 
 ## Keupayaan pintar
 
-- Menangkap bacaan pada satu borang.
+- Mengumpul bacaan pada satu borang.
 - Menyemak medan wajib, unit dan julat.
 - Memantau status Draf, Untuk Semakan, Perlu Pembetulan dan Disahkan.
 

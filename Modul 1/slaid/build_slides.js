@@ -258,7 +258,7 @@ function addBullets(slide, items, x, y, w, h, opts = {}) {
   const slide = baseSlide('Konsep', 5);
   addTitle(slide, 'Apakah aplikasi pintar?', 'Aplikasi tidak perlu menggunakan AI untuk menghasilkan kerja yang lebih pintar.');
   slide.addShape(S.roundRect, { x: 0.78, y: 1.75, w: 11.78, h: 1.28, rectRadius: 0.07, fill: { color: C.navy }, line: { color: C.navy } });
-  slide.addText('Aplikasi pintar menggunakan data, peraturan atau AI untuk membantu manusia menangkap, menyusun, menyemak, melaksanakan dan memantau kerja dengan lebih konsisten.', {
+  slide.addText('Aplikasi pintar menggunakan data, peraturan atau AI untuk membantu manusia mengumpul, menyusun, menyemak, melaksanakan dan memantau kerja dengan lebih konsisten.', {
     x: 1.12, y: 2.02, w: 11.1, h: 0.67, margin: 0,
     align: 'center', valign: 'mid', fontSize: 18, bold: true, color: C.white, fit: 'shrink'
   });
@@ -285,7 +285,7 @@ function addBullets(slide, items, x, y, w, h, opts = {}) {
   const cols = [
     ['MANUAL', C.gray, ['Tulis dan pindah', 'Cari secara manual', 'Semak di akhir', 'Ringkasan manual']],
     ['DIGITAL', C.blue, ['Isi pada skrin', 'Fail elektronik', 'Semak senarai', 'Laporan berasingan']],
-    ['PINTAR', C.teal, ['Tangkap sekali', 'Cari dan jejak', 'Validasi semasa input', 'Status dan metrik tersedia']]
+    ['PINTAR', C.teal, ['Kumpul sekali', 'Cari dan jejak', 'Validasi semasa input', 'Status dan metrik tersedia']]
   ];
   cols.forEach((c, i) => {
     const x = 0.75 + i * 4.15;
@@ -297,7 +297,7 @@ function addBullets(slide, items, x, y, w, h, opts = {}) {
     });
   });
   slide.addText('Soalan: Pada tahap manakah setiap proses MPE berada sekarang?', { x: 0.9, y: 6.1, w: 11.5, h: 0.38, margin: 0, align: 'center', fontSize: 15, bold: true, color: C.navy });
-  addNotes(slide, 'Gunakan Buku Log sebagai contoh. Manual menggunakan catatan dan fail fizikal. Digital memindahkan borang ke skrin tetapi mungkin masih memerlukan salinan data. Pintar menangkap sekali, menyemak awal dan menyediakan status.');
+  addNotes(slide, 'Gunakan Buku Log sebagai contoh. Manual menggunakan catatan dan fail fizikal. Digital memindahkan borang ke skrin tetapi mungkin masih memerlukan salinan data. Pintar mengumpul sekali, menyemak awal dan menyediakan status.');
 }
 
 // 7 — Logbook flow
@@ -320,7 +320,7 @@ function addBullets(slide, items, x, y, w, h, opts = {}) {
     });
   });
   slide.addShape(S.roundRect, { x: 2.25, y: 5.8, w: 9.95, h: 0.58, rectRadius: 0.05, fill: { color: C.navy }, line: { color: C.navy } });
-  slide.addText('Prinsip: tangkap data di punca dan kurangkan pemindahan yang tidak menambah nilai.', { x: 2.5, y: 5.98, w: 9.45, h: 0.24, margin: 0, align: 'center', fontSize: 13.5, bold: true, color: C.white });
+  slide.addText('Prinsip: kumpul data di punca dan kurangkan pemindahan yang tidak menambah nilai.', { x: 2.5, y: 5.98, w: 9.45, h: 0.24, margin: 0, align: 'center', fontSize: 13.5, bold: true, color: C.white });
   addNotes(slide, 'Tanya peserta sama ada semua proses perlu sampai ke tahap pintar. Jawapan: tidak. Tahap penyelesaian perlu sepadan dengan nilai, kekerapan, kebolehlaksanaan dan risiko.');
 }
 
@@ -399,7 +399,7 @@ function addBullets(slide, items, x, y, w, h, opts = {}) {
   const slide = baseSlide('Keupayaan', 11);
   addTitle(slide, 'Enam keupayaan aplikasi pintar', 'Fikirkan fungsi yang diperlukan — bukan jenama alat.');
   const caps = [
-    ['01', 'Menangkap', 'Borang, imej, bacaan dan lampiran', C.teal],
+    ['01', 'Mengumpul', 'Borang, imej, bacaan dan lampiran', C.teal],
     ['02', 'Menyusun', 'ID, kategori, nama dan carian', C.blue],
     ['03', 'Menyemak', 'Wajib, format, unit dan julat', C.green],
     ['04', 'Membantu', 'Carian, ringkasan, klasifikasi dan draf', C.amber],
@@ -423,7 +423,7 @@ function addBullets(slide, items, x, y, w, h, opts = {}) {
   const slide = baseSlide('Keupayaan', 12);
   addTitle(slide, 'Padankan keupayaan dengan kerja MPE', 'Contoh padanan — peserta boleh mencadangkan gabungan lain dengan justifikasi.');
   const pairs = [
-    ['Rekod aktiviti di lokasi', 'MENANGKAP + MENYEMAK'],
+    ['Rekod aktiviti di lokasi', 'MENGUMPUL + MENYEMAK'],
     ['Cari sijil kalibrasi', 'MENYUSUN + MEMANTAU'],
     ['Sediakan draf ringkasan ujian', 'MEMBANTU + MENYEMAK'],
     ['Jejak pinjaman aset', 'MENGAUTOMASI + MEMANTAU'],
@@ -488,7 +488,7 @@ function addBullets(slide, items, x, y, w, h, opts = {}) {
   const slide = baseSlide('Kawalan', 15, { dark: true });
   addTitle(slide, 'Manusia kekal dalam kawalan', 'Aplikasi membantu kerja rutin; pegawai mengesahkan keputusan penting.', { color: C.white, subColor: 'BFD0D2' });
   const steps = [
-    ['1', 'APLIKASI MEMBANTU', 'Tangkap data\nSemak input\nSusun maklumat', C.teal],
+    ['1', 'APLIKASI MEMBANTU', 'Kumpul data\nSemak input\nSusun maklumat', C.teal],
     ['2', 'MANUSIA MENYEMAK', 'Nilai output\nBuat keputusan teknikal\nSahkan ketepatan', C.lime],
     ['3', 'TINDAKAN DIREKOD', 'Rekod kelulusan\nTarikh dan masa\nJejak audit', C.blue]
   ];
@@ -548,7 +548,7 @@ function addBullets(slide, items, x, y, w, h, opts = {}) {
   rect(slide, 4.25, 1.55, 4.85, 4.55, C.white, 'C4D2CF', true);
   slide.addImage({ path: LOGBOOK, x: 4.42, y: 1.73, w: 4.51, h: 4.05, altText: 'Tangkap layar sebenar borang Buku Log Makmal' });
   const qs = [
-    ['1', 'Penyatuan', 'Data apa ditangkap sekali?'],
+    ['1', 'Penyatuan', 'Data apa dikumpul sekali?'],
     ['2', 'Pencegahan', 'Ralat apa dicegah semasa input?'],
     ['3', 'Ketelusan', 'Status apa boleh dilihat oleh pengguna yang dibenarkan?'],
     ['4', 'Titik kawalan', 'Keputusan apa kekal di tangan manusia?']
@@ -650,7 +650,7 @@ function addBullets(slide, items, x, y, w, h, opts = {}) {
   addTitle(slide, 'Tiga prinsip untuk dibawa pulang', 'Produktiviti meningkat apabila kerja direka dengan sengaja.', { color: C.white, subColor: 'BFD0D2' });
   const principles = [
     ['1', 'Mulakan dengan masalah kerja.', 'Teknologi ialah alat, bukan matlamat.'],
-    ['2', 'Tangkap data sekali, gunakan berkali-kali.', 'Kurangkan pemindahan dan ralat.'],
+    ['2', 'Kumpul data sekali, gunakan berkali-kali.', 'Kurangkan pemindahan dan ralat.'],
     ['3', 'Kekalkan manusia pada keputusan penting.', 'Automasi proses, sahkan hasil.']
   ];
   principles.forEach((p, i) => {
@@ -664,7 +664,7 @@ function addBullets(slide, items, x, y, w, h, opts = {}) {
   slide.addText('EXIT TICKET', { x: 0.95, y: 5.14, w: 1.55, h: 0.3, margin: 0, fontSize: 13, bold: true, color: C.navy });
   slide.addText('Satu kefahaman · satu peluang · satu risiko · satu langkah dua minggu', { x: 2.75, y: 5.12, w: 8.95, h: 0.35, margin: 0, align: 'center', fontSize: 15.5, bold: true, color: C.navy, fit: 'shrink' });
   slide.addText('Seterusnya: Modul 2 — Automasi digital dalam penyediaan dokumen rasmi', { x: 0.68, y: 6.38, w: 11.99, h: 0.35, margin: 0, align: 'center', fontSize: 13.5, bold: true, color: C.white });
-  addNotes(slide, 'Rumusan: produktiviti tidak meningkat kerana lebih banyak aplikasi. Ia meningkat apabila data ditangkap dengan betul, kerja berulang dikurangkan, pengecualian kelihatan dan pegawai boleh membuat keputusan dengan yakin. Minta peserta melengkapkan exit ticket.');
+  addNotes(slide, 'Rumusan: produktiviti tidak meningkat kerana lebih banyak aplikasi. Ia meningkat apabila data dikumpul dengan betul, kerja berulang dikurangkan, pengecualian kelihatan dan pegawai boleh membuat keputusan dengan yakin. Minta peserta melengkapkan exit ticket.');
 }
 
 pptx.writeFile({ fileName: OUT, compression: true });

@@ -21,13 +21,13 @@ Paparkan sepanjang aktiviti:
 
 ### Peralatan
 
-- komputer fasilitator dan projektor;
-- capaian internet serta pelan sandaran luar talian;
-- satu peranti bagi setiap dua hingga empat peserta;
-- pelayar web terkini;
-- pemasa yang boleh dilihat;
-- folder hasil kumpulan yang telah diwujudkan;
-- salinan bercetak data latihan jika rangkaian terganggu.
+- Komputer fasilitator dan projektor;
+- Capaian internet serta pelan sandaran luar talian;
+- Satu peranti bagi setiap dua hingga empat peserta;
+- Pelayar web terkini;
+- Pemasa yang boleh dilihat;
+- Folder hasil kumpulan yang telah diwujudkan;
+- Salinan bercetak data latihan jika rangkaian terganggu.
 
 ### Platform
 
@@ -45,8 +45,8 @@ Jangan menjanjikan model, ciri muat naik atau jumlah mesej tertentu kerana had p
 - `04-Latihan-Surat-Rasmi.md`;
 - `05-Latihan-Minit-Tindakan.md`;
 - `06-Kawalan-Rekod-dan-Semakan.md`;
-- folder `templat/`;
-- satu contoh output lemah dan satu contoh output baik.
+- Folder `templat/`;
+- Satu contoh output lemah dan satu contoh output baik.
 
 ## Agihan kumpulan
 
@@ -101,10 +101,10 @@ Tulis surat rasmi tentang kalibrasi alat makmal.
 Tunjukkan masalah yang mungkin berlaku:
 
 - AI mencipta nama penerima atau tarikh;
-- tujuan surat tidak jelas;
-- gaya dan format tidak seragam;
-- tindakan penerima kabur;
-- tiada pemisahan fakta dan cadangan.
+- Tujuan surat tidak jelas;
+- Gaya dan format tidak seragam;
+- Tindakan penerima kabur;
+- Tiada pemisahan fakta dan cadangan.
 
 Kemudian gunakan prompt berstruktur daripada buku kerja. Bandingkan kedua-dua hasil.
 
@@ -133,9 +133,9 @@ Minta setiap kumpulan menambah satu ayat bagi setiap bahagian.
 3. Mereka menggantikan teks dalam kurungan siku.
 4. Jalankan prompt pada platform masing-masing.
 5. Tandakan teks output menggunakan kod berikut:
-   - hijau: fakta disokong;
-   - kuning: bahasa/cadangan yang perlu dipertimbangkan;
-   - merah: fakta dicipta atau arahan tidak dipatuhi.
+   - Hijau: fakta disokong;
+   - Kuning: bahasa/cadangan yang perlu dipertimbangkan;
+   - Merah: fakta dicipta atau arahan tidak dipatuhi.
 6. Gunakan Prompt 2 untuk audit draf.
 7. Sunting secara manual dan labelkan versi.
 
@@ -148,12 +148,12 @@ Checkpoint pada minit ke-55:
 1. Edarkan catatan mesyuarat simulasi.
 2. Gunakan prompt minit tanpa menambah maklumat.
 3. Pastikan output membezakan:
-   - perkara dibincangkan;
-   - keputusan;
-   - tindakan;
-   - pemilik tindakan;
-   - tarikh sasaran;
-   - perkara perlu pengesahan.
+   - Perkara dibincangkan;
+   - Keputusan;
+   - Tindakan;
+   - Pemilik tindakan;
+   - Tarikh sasaran;
+   - Perkara perlu pengesahan.
 4. Pindahkan tindakan kepada daftar tindakan.
 
 Sebut:
@@ -171,9 +171,9 @@ Setiap kumpulan menampal satu perenggan surat dan satu baris tindakan. Peserta m
 
 Fasilitator merumuskan:
 
-- platform berbeza boleh menghasilkan susunan dan pilihan kata berbeza;
-- jawapan paling lancar tidak semestinya paling tepat;
-- rubrik yang sama membolehkan hasil dinilai secara adil.
+- Platform berbeza boleh menghasilkan susunan dan pilihan kata berbeza;
+- Jawapan paling lancar tidak semestinya paling tepat;
+- Rubrik yang sama membolehkan hasil dinilai secara adil.
 
 ### 102–113 minit — Kawalan rekod
 
@@ -187,10 +187,10 @@ MPE-Surat-Kalibrasi-20260728-v1.0-DILULUSKAN.pdf
 
 Tegaskan:
 
-- perbualan AI bukan rekod akhir;
-- draf AI tidak boleh disalah anggap sebagai versi diluluskan;
-- versi akhir mesti disimpan di lokasi/sistem jabatan yang dibenarkan;
-- metadata penyedia, penyemak, pelulus dan tarikh perlu jelas.
+- Perbualan AI bukan rekod akhir;
+- Draf AI tidak boleh disalah anggap sebagai versi diluluskan;
+- Versi akhir mesti disimpan di lokasi/sistem jabatan yang dibenarkan;
+- Metadata penyedia, penyemak, pelulus dan tarikh perlu jelas.
 
 ### 113–120 minit — Penilaian dan penutup
 
@@ -222,24 +222,24 @@ Dalam latihan, simpan prompt akhir dan fakta input supaya proses boleh diterangk
 
 ### Jika internet perlahan
 
-- gunakan output contoh yang telah dicetak;
-- peserta menjalankan aktiviti audit dan penyuntingan secara luar talian;
-- fasilitator menjalankan satu demonstrasi sahaja.
+- Gunakan output contoh yang telah dicetak;
+- Peserta menjalankan aktiviti audit dan penyuntingan secara luar talian;
+- Fasilitator menjalankan satu demonstrasi sahaja.
 
 ### Jika had akaun percuma dicapai
 
-- tukar kepada platform lain;
-- gabungkan dua kumpulan;
-- teruskan dengan output contoh;
-- utamakan satu prompt surat dan satu prompt audit.
+- Tukar kepada platform lain;
+- Gabungkan dua kumpulan;
+- Teruskan dengan output contoh;
+- Utamakan satu prompt surat dan satu prompt audit.
 
 ### Jika peserta memasukkan maklumat sebenar
 
-1. hentikan aktiviti;
-2. jangan paparkan input pada projektor;
-3. minta peserta memadam kandungan mengikut fungsi platform yang tersedia;
-4. rujuk tatacara jabatan jika maklumat sensitif telah didedahkan;
-5. gantikan dengan data simulasi.
+1. Hentikan aktiviti;
+2. Jangan paparkan input pada projektor;
+3. Minta peserta memadam kandungan mengikut fungsi platform yang tersedia;
+4. Rujuk tatacara jabatan jika maklumat sensitif telah didedahkan;
+5. Gantikan dengan data simulasi.
 
 ## Semakan fasilitator selepas sesi
 

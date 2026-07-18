@@ -10,14 +10,14 @@ Paparkan sepanjang sesi:
 
 ## Persediaan
 
-- buka ChatGPT, Gemini dan Claude; satu platform bagi setiap kumpulan memadai;
-- muat turun CSV Penggunaan Elektrik Bulanan daripada data.gov.my;
-- sediakan `data/rekod-teknikal-mpe-rekaan.csv`;
-- pastikan peserta boleh membuka CSV dalam Excel atau Google Sheets;
-- sediakan pelan sandaran: tampal 10–20 baris data terus ke ruangan chat;
-- kumpulkan username GitHub peserta dan sediakan pembahagian tiga kumpulan beranggotakan tiga orang;
-- pastikan sekurang-kurangnya seorang peserta setiap kumpulan boleh mencipta repositori dan menjemput kolaborator;
-- jangan menjanjikan model, bilangan muat naik atau kuota tertentu.
+- Buka ChatGPT, Gemini dan Claude; satu platform bagi setiap kumpulan memadai;
+- Muat turun CSV Penggunaan Elektrik Bulanan daripada data.gov.my;
+- Sediakan `data/rekod-teknikal-mpe-rekaan.csv`;
+- Pastikan peserta boleh membuka CSV dalam Excel atau Google Sheets;
+- Sediakan pelan sandaran: tampal 10–20 baris data terus ke ruangan chat;
+- Kumpulkan username GitHub peserta dan sediakan pembahagian tiga kumpulan beranggotakan tiga orang;
+- Pastikan sekurang-kurangnya seorang peserta setiap kumpulan boleh mencipta repositori dan menjemput kolaborator;
+- Jangan menjanjikan model, bilangan muat naik atau kuota tertentu.
 
 ## Modul 3A — 120 minit
 
@@ -65,14 +65,14 @@ Gunakan halaman [GitHub Asas dan Kerja Berpasukan](./06-GitHub-Asas-dan-Kerja-Be
 
 ## Tanda bahaya dalam output AI
 
-- menganggap nilai hilang sebagai sifar;
-- membuang pencilan tanpa alasan;
-- menggabungkan unit berbeza;
-- mengira jumlah bagi kategori yang bertindih;
-- menyatakan sebab hanya berdasarkan korelasi;
-- mencipta nama lajur, tarikh, status atau rekod;
-- menyebut data “bersih” tanpa laporan semakan;
-- memberi status lulus, sah atau diluluskan.
+- Menganggap nilai hilang sebagai sifar;
+- Membuang pencilan tanpa alasan;
+- Menggabungkan unit berbeza;
+- Mengira jumlah bagi kategori yang bertindih;
+- Menyatakan sebab hanya berdasarkan korelasi;
+- Mencipta nama lajur, tarikh, status atau rekod;
+- Menyebut data “bersih” tanpa laporan semakan;
+- Memberi status lulus, sah atau diluluskan.
 
 ## Pelan sandaran had platform
 

@@ -4,18 +4,18 @@
 
 Penilaian Modul 1 mengukur sama ada peserta boleh:
 
-1. membezakan kerja manual, digital dan pintar;
-2. menyatakan masalah operasi sebelum memilih alat;
-3. memadankan masalah dengan keupayaan aplikasi pintar;
-4. memilih ukuran kejayaan dan kawalan risiko;
-5. mencadangkan percubaan kecil yang boleh dilaksanakan.
+1. Membezakan kerja manual, digital dan pintar;
+2. Menyatakan masalah operasi sebelum memilih alat;
+3. Memadankan masalah dengan keupayaan aplikasi pintar;
+4. Memilih ukuran kejayaan dan kawalan risiko;
+5. Mencadangkan percubaan kecil yang boleh dilaksanakan.
 
 Penilaian terdiri daripada empat bahagian:
 
-- tinjauan awal;
-- semakan formatif semasa sesi;
-- rubrik Kanvas Peluang Produktiviti;
-- exit ticket individu.
+- Tinjauan awal;
+- Semakan formatif semasa sesi;
+- Rubrik Kanvas Peluang Produktiviti;
+- Exit ticket individu.
 
 ## 1. Tinjauan awal, 3 minit
 
@@ -87,9 +87,9 @@ Gunakan skala 1–4 bagi setiap kriteria.
 ### Pengiraan
 
 - Skor maksimum: 32.
-- 25–32: sedia dibawa ke reka bentuk modul seterusnya.
-- 17–24: boleh diteruskan selepas penjelasan.
-- 8–16: perlu dirangka semula bersama pemilik proses.
+- 25–32: Sedia dibawa ke reka bentuk modul seterusnya.
+- 17–24: Boleh diteruskan selepas penjelasan.
+- 8–16: Perlu dirangka semula bersama pemilik proses.
 
 Rubrik menilai mutu cadangan pembelajaran, bukan memberi kelulusan projek.
 

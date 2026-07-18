@@ -4,12 +4,12 @@
 
 Peserta perlu menyelesaikan perkara berikut sebelum sesi hands-on bermula:
 
-1. log masuk akaun Google dan GitHub;
-2. buka [Google Apps Script](https://script.google.com) dan pastikan projek boleh dicipta;
-3. buka [repositori MPE Hub](https://github.com/drMurtadha/mpe-hub);
-4. pastikan GitHub Pages tidak disekat;
-5. pilih ChatGPT, Gemini atau Claude percuma;
-6. gunakan komputer riba dan data rekaan sahaja.
+1. Log masuk akaun Google dan GitHub;
+2. Buka [Google Apps Script](https://script.google.com) dan pastikan projek boleh dicipta;
+3. Buka [repositori MPE Hub](https://github.com/drMurtadha/mpe-hub);
+4. Pastikan GitHub Pages tidak disekat;
+5. Pilih ChatGPT, Gemini atau Claude percuma;
+6. Gunakan komputer riba dan data rekaan sahaja.
 
 Jika akaun organisasi menyekat Apps Script, peserta perlu menggunakan akaun Google lain yang dibenarkan atau bekerja bersama pemilik akaun kumpulan. Jangan cuba memintas polisi organisasi.
 
@@ -17,10 +17,10 @@ Jika akaun organisasi menyekat Apps Script, peserta perlu menggunakan akaun Goog
 
 Pilihan tanpa terminal:
 
-1. buka repositori MPE Hub;
-2. gunakan **Use this template** atau **Fork** jika tersedia;
-3. namakan repositori `mpe-hub-latihan`;
-4. pastikan fail `index.html`, `styles.css`, `app.js`, `config.js` dan folder `apps-script` tersedia.
+1. Buka repositori MPE Hub;
+2. Gunakan **Use this template** atau **Fork** jika tersedia;
+3. Namakan repositori `mpe-hub-latihan`;
+4. Pastikan fail `index.html`, `styles.css`, `app.js`, `config.js` dan folder `apps-script` tersedia.
 
 Peserta hanya menyesuaikan salinan sendiri. Jangan membuat perubahan terus pada repositori sumber fasilitator.
 
@@ -41,9 +41,9 @@ Jangan hantar URL `/exec` kepada AI. Gantikan dengan `[URL_APPS_SCRIPT]` apabila
 
 Fungsi `ensureSetup` menyediakan:
 
-- spreadsheet dengan tab `logbook`, `asset` dan `mccb`;
-- folder Google Drive untuk lampiran;
-- tajuk lajur yang diperlukan aplikasi.
+- Spreadsheet dengan tab `logbook`, `asset` dan `mccb`;
+- Folder Google Drive untuk lampiran;
+- Tajuk lajur yang diperlukan aplikasi.
 
 Google Sheets dan folder Drive kekal dalam akaun pemilik deployment. Catat pemilik, pentadbir kedua dan kaedah sandaran.
 

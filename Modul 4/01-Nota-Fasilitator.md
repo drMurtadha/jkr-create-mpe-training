@@ -10,12 +10,12 @@ Paparkan sepanjang sesi:
 
 ## Persediaan
 
-- paparkan contoh rekaan buku log, KEW.PA-9 dan datasheet MCCB;
-- jangan edarkan imej buku log asal yang mengandungi nama individu;
-- buka satu platform AI generatif percuma bagi setiap kumpulan;
-- sediakan kertas besar atau hamparan untuk peta proses;
-- sediakan pelan sandaran tanpa internet menggunakan prompt bercetak;
-- bahagikan peserta kepada kumpulan proses aset dan kumpulan proses ujian.
+- Paparkan contoh rekaan buku log, KEW.PA-9 dan datasheet MCCB;
+- Jangan edarkan imej buku log asal yang mengandungi nama individu;
+- Buka satu platform AI generatif percuma bagi setiap kumpulan;
+- Sediakan kertas besar atau hamparan untuk peta proses;
+- Sediakan pelan sandaran tanpa internet menggunakan prompt bercetak;
+- Bahagikan peserta kepada kumpulan proses aset dan kumpulan proses ujian.
 
 ## Aliran sesi 120 minit
 
@@ -43,7 +43,7 @@ Paparkan sepanjang sesi:
 ## Soalan debrief
 
 - Apakah pencetus sebenar proses ini?
-- Data mana patut ditangkap sekali dan digunakan semula?
+- Data mana patut dikumpul sekali dan digunakan semula?
 - Langkah mana peraturan tetap, dan langkah mana memerlukan pertimbangan manusia?
 - Apakah bukti minimum sebelum status boleh berubah?
 - Siapakah boleh meluluskan KEW.PA-9 atau mengesahkan keputusan MCCB?
@@ -52,13 +52,13 @@ Paparkan sepanjang sesi:
 
 ## Tanda bahaya
 
-- mengautomasi proses tanpa pemilik;
-- menggunakan status “Lengkap”, “Disahkan” dan “Diluluskan” sebagai maksud yang sama;
-- notifikasi dihantar kepada penerima yang salah;
-- data asal ditindih tanpa log;
+- Mengautomasi proses tanpa pemilik;
+- Menggunakan status “Lengkap”, “Disahkan” dan “Diluluskan” sebagai maksud yang sama;
+- Notifikasi dihantar kepada penerima yang salah;
+- Data asal ditindih tanpa log;
 - AI mencipta nombor aset, bacaan, tandatangan atau keputusan;
-- tiada laluan pembetulan atau pelan manual;
-- kejayaan diukur hanya dengan “borang berjaya dihantar”.
+- Tiada laluan pembetulan atau pelan manual;
+- Kejayaan diukur hanya dengan “borang berjaya dihantar”.
 
 ## Pelan sandaran
 

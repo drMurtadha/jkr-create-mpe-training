@@ -6,7 +6,7 @@ Sumber utama kandungan ialah [02-Kandungan-Slaid.md](../02-Kandungan-Slaid.md). 
 
 - [Slaid-Modul-1-MPE.pptx](Slaid-Modul-1-MPE.pptx) — 22 slaid yang boleh disunting, lengkap dengan nota penyampai;
 - [Slaid-Modul-1-MPE.pdf](Slaid-Modul-1-MPE.pdf) — versi edaran atau sandaran;
-- [build_slides.js](build_slides.js) — sumber binaan untuk menghasilkan semula fail PPTX.
+- [Build_slides.js](build_slides.js) — sumber binaan untuk menghasilkan semula fail PPTX.
 
 Reka bentuk mengambil arah visual teknikal daripada `MPE_Smart_Productivity_Blueprint.pptx`, tetapi dibina semula menggunakan objek PowerPoint yang boleh disunting. Tangkap layar demonstrasi sebenar disimpan dalam folder [`../aset`](../aset/).
 

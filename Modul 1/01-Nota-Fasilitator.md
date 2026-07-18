@@ -21,7 +21,7 @@ Dokumen ini ialah panduan pelaksanaan lengkap bagi sesi 90 minit. Ia perlu dibac
 Gunakan tiga ayat ini secara konsisten sepanjang sesi:
 
 1. **Mulakan dengan masalah kerja, bukan dengan nama alat.**
-2. **Tangkap data sekali, gunakan berkali-kali.**
+2. **Kumpul data sekali, gunakan berkali-kali.**
 3. **Aplikasi membantu; pegawai bertanggungjawab kekal membuat pengesahan.**
 
 ## 3. Persediaan sebelum sesi
@@ -58,20 +58,20 @@ Gunakan tiga ayat ini secara konsisten sepanjang sesi:
 
 ### Bahan fasilitator
 
-- komputer dan pengecas;
-- alat kawalan slaid;
-- sambungan internet serta hotspot sandaran;
-- versi tempatan MPE Hub;
-- slaid, nota ini dan skrip demo;
-- satu kanvas contoh yang telah diisi;
-- pemasa.
+- Komputer dan pengecas;
+- Alat kawalan slaid;
+- Sambungan internet serta hotspot sandaran;
+- Versi tempatan MPE Hub;
+- Slaid, nota ini dan skrip demo;
+- Satu kanvas contoh yang telah diisi;
+- Pemasa.
 
 ### Bahan peserta
 
 - Kanvas Peluang Produktiviti MPE;
-- pen penanda dan nota pelekat;
-- telefon atau komputer riba bagi satu kumpulan;
-- exit ticket.
+- Pen penanda dan nota pelekat;
+- Telefon atau komputer riba bagi satu kumpulan;
+- Exit ticket.
 
 ## 5. Pelan pelaksanaan 90 minit
 
@@ -136,11 +136,11 @@ Jumlah: **90 minit**.
 
 **Lima kebocoran produktiviti:**
 
-1. data dimasukkan berulang kali;
-2. fail atau versi sukar ditemukan;
-3. semakan dan kelulusan tertangguh;
-4. pengiraan atau pemformatan berulang;
-5. ralat dikesan terlalu lewat.
+1. Data dimasukkan berulang kali;
+2. Fail atau versi sukar ditemukan;
+3. Semakan dan kelulusan tertangguh;
+4. Pengiraan atau pemformatan berulang;
+5. Ralat dikesan terlalu lewat.
 
 **Aktiviti dua minit:**
 
@@ -163,7 +163,7 @@ Jumlah: **90 minit**.
 
 | Keupayaan | Soalan panduan | Contoh MPE |
 |---|---|---|
-| Menangkap | Bagaimana data direkod pada punca? | Borang mudah alih, gambar, bacaan |
+| Mengumpul | Bagaimana data direkod pada punca? | Borang mudah alih, gambar, bacaan |
 | Menyusun | Bagaimana rekod dinamakan dan dikelaskan? | ID rekod dan folder konsisten |
 | Menyemak | Apakah ralat boleh dikesan lebih awal? | Medan wajib, julat dan unit |
 | Membantu | Apakah kerja kognitif boleh dipercepat? | Ringkasan, carian dan draf |
@@ -184,7 +184,7 @@ Ikuti [Skrip Demonstrasi MPE Hub](./04-Skrip-Demonstrasi-MPE-Hub.md). Hadkan kep
 
 **Soalan pemerhatian kepada peserta:**
 
-1. Apakah data yang ditangkap sekali?
+1. Apakah data yang dikumpul sekali?
 2. Apakah kesilapan yang dicegah?
 3. Apakah status yang kini boleh dijejaki?
 4. Apakah keputusan yang masih memerlukan manusia?
@@ -203,11 +203,11 @@ Ikuti [Skrip Demonstrasi MPE Hub](./04-Skrip-Demonstrasi-MPE-Hub.md). Hadkan kep
 
 **Peranan kumpulan:**
 
-- pemilik masalah;
-- pencatat;
-- penjaga masa;
-- pencabar risiko;
-- pembentang.
+- Pemilik masalah;
+- Pencatat;
+- Penjaga masa;
+- Pencabar risiko;
+- Pembentang.
 
 **Soalan fasilitator semasa bergerak:**
 
@@ -229,7 +229,7 @@ Jika terdapat lebih daripada lima kumpulan, pilih tiga kumpulan untuk berkongsi 
 
 **Rumusan satu minit:**
 
-> Produktiviti tidak meningkat kerana kita mempunyai lebih banyak aplikasi. Produktiviti meningkat apabila data ditangkap dengan betul, kerja berulang dikurangkan, pengecualian mudah dilihat dan pegawai boleh membuat keputusan dengan lebih yakin.
+> Produktiviti tidak meningkat kerana kita mempunyai lebih banyak aplikasi. Produktiviti meningkat apabila data dikumpul dengan betul, kerja berulang dikurangkan, pengecualian mudah dilihat dan pegawai boleh membuat keputusan dengan lebih yakin.
 
 Minta peserta melengkapkan exit ticket. Terangkan bahawa cadangan hari ini menjadi input bagi automasi dokumen, analisis rekod, aliran kerja dan bahan projek dalam Modul 2–5.
 
@@ -254,7 +254,7 @@ Minta peserta melengkapkan exit ticket. Terangkan bahawa cadangan hari ini menja
 
 ## 9. Istilah kerja
 
-- **Aplikasi pintar:** Sistem yang menangkap, menyusun, menyemak, membantu, mengautomasi atau memantau kerja dengan menggunakan data dan peraturan atau AI.
+- **Aplikasi pintar:** Sistem yang mengumpul, menyusun, menyemak, membantu, mengautomasi atau memantau kerja dengan menggunakan data dan peraturan atau AI.
 - **Automasi:** Pelaksanaan langkah rutin secara konsisten berdasarkan pencetus dan peraturan.
 - **AI:** Keupayaan sistem mengenal pola atau menghasilkan cadangan/kandungan yang masih perlu dinilai mengikut konteks.
 - **Jejak audit:** Rekod tentang apa yang berlaku, bila, oleh siapa dan perubahan yang dibuat.

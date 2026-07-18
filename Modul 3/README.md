@@ -18,13 +18,13 @@ Sembilan peserta dibahagikan kepada **tiga kumpulan beranggotakan tiga orang**. 
 
 Pada akhir modul, peserta boleh:
 
-1. menggunakan aliran sistematik **Tanya–Kenal–Semak–Bersih–Analisis–Sah–Rekod**;
-2. membezakan pemerhatian, pengiraan, tafsiran dan keputusan;
-3. mengesan data hilang, pendua, format tidak seragam, julat luar biasa dan konflik rekod;
-4. meminta AI menerangkan kaedah serta menunjukkan pengiraan yang boleh disemak;
-5. menghasilkan jadual atau carta yang menjawab soalan kerja tertentu;
-6. membina daftar rekod teknikal dengan ID, sumber, versi, status dan pemilik;
-7. menyimpan hanya hasil yang telah disahkan ke dalam repositori rekod rasmi.
+1. Menggunakan aliran sistematik **Tanya–Kenal–Semak–Bersih–Analisis–Sah–Rekod**;
+2. Membezakan pemerhatian, pengiraan, tafsiran dan keputusan;
+3. Mengesan data hilang, pendua, format tidak seragam, julat luar biasa dan konflik rekod;
+4. Meminta AI menerangkan kaedah serta menunjukkan pengiraan yang boleh disemak;
+5. Menghasilkan jadual atau carta yang menjawab soalan kerja tertentu;
+6. Membina daftar rekod teknikal dengan ID, sumber, versi, status dan pemilik;
+7. Menyimpan hanya hasil yang telah disahkan ke dalam repositori rekod rasmi.
 
 ## Tiga jalur modul
 
@@ -53,12 +53,12 @@ Demonstrasi menggunakan dataset kerajaan terbuka **Penggunaan Elektrik Bulanan**
 Latihan menggunakan rekod MPE rekaan yang menyerupai Buku Log Makmal, KEW.PA-9 dan rekod ujian MCCB. Kesalahan dimasukkan dengan sengaja supaya peserta boleh mengesan:
 
 - ID aset tidak seragam;
-- tarikh dalam pelbagai format;
-- rekod pendua;
-- unit tidak dinyatakan;
-- status bercanggah;
-- keputusan tanpa bukti atau penyemak;
-- fail tanpa versi dan lokasi rekod rasmi.
+- Tarikh dalam pelbagai format;
+- Rekod pendua;
+- Unit tidak dinyatakan;
+- Status bercanggah;
+- Keputusan tanpa bukti atau penyemak;
+- Fail tanpa versi dan lokasi rekod rasmi.
 
 ## Bahan modul
 
@@ -85,13 +85,13 @@ Rujukan semasa: [ChatGPT Free Tier](https://help.openai.com/en/articles/9275245-
 
 ## Hasil akhir peserta
 
-1. satu pernyataan soalan analisis;
-2. satu kamus data ringkas;
-3. satu laporan kualiti data;
-4. satu dataset kerja dengan log perubahan;
-5. satu jadual ringkasan dan satu carta yang disahkan;
-6. satu daftar rekod teknikal dan cadangan kawalan;
-7. satu nota batasan dan jejak sumber.
+1. Satu pernyataan soalan analisis;
+2. Satu kamus data ringkas;
+3. Satu laporan kualiti data;
+4. Satu dataset kerja dengan log perubahan;
+5. Satu jadual ringkasan dan satu carta yang disahkan;
+6. Satu daftar rekod teknikal dan cadangan kawalan;
+7. Satu nota batasan dan jejak sumber.
 
 ## Video pembelajaran berdasarkan slaid Modul 3
 

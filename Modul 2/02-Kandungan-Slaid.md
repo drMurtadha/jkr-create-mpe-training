@@ -24,11 +24,11 @@ Surat rasmi · minit tindakan · kawalan rekod
 
 Pada jam 1.00 petang, setiap kumpulan mempunyai:
 
-1. satu prompt surat yang boleh digunakan semula;
-2. satu draf surat yang telah diaudit;
-3. satu draf minit dan daftar tindakan;
-4. satu senarai semak kawalan rekod;
-5. satu amalan selamat untuk dibawa ke tempat kerja.
+1. Satu prompt surat yang boleh digunakan semula;
+2. Satu draf surat yang telah diaudit;
+3. Satu draf minit dan daftar tindakan;
+4. Satu senarai semak kawalan rekod;
+5. Satu amalan selamat untuk dibawa ke tempat kerja.
 
 **Nota penyampai:** Tunjukkan bahawa hasil dinilai berdasarkan ketepatan dan kawalan, bukan kecantikan bahasa sahaja.
 
@@ -72,17 +72,17 @@ Dokumen diluluskan + rekod
 
 **Dalam skop**
 
-- dokumen tidak terperingkat;
-- identiti dan nombor rujukan rekaan;
-- fakta simulasi yang disediakan;
-- platform AI pengguna percuma.
+- Dokumen tidak terperingkat;
+- Identiti dan nombor rujukan rekaan;
+- Fakta simulasi yang disediakan;
+- Platform AI pengguna percuma.
 
 **Di luar skop**
 
 - Rahsia Besar, Rahsia, Sulit atau Terhad;
-- data peribadi atau operasi sebenar;
-- keputusan teknikal atau kelulusan rasmi;
-- memuat naik dokumen jabatan tanpa kebenaran.
+- Data peribadi atau operasi sebenar;
+- Keputusan teknikal atau kelulusan rasmi;
+- Memuat naik dokumen jabatan tanpa kebenaran.
 
 ---
 
@@ -112,11 +112,11 @@ Prinsip: **satu kaedah prompt, tiga platform, satu rubrik semakan**.
 
 ## Slaid 8 — Mengapa hasil AI berbeza?
 
-- model dan konfigurasi berbeza;
-- arahan boleh ditafsir secara berbeza;
-- konteks chat sebelumnya boleh mempengaruhi hasil;
+- Model dan konfigurasi berbeza;
+- Arahan boleh ditafsir secara berbeza;
+- Konteks chat sebelumnya boleh mempengaruhi hasil;
 - AI memilih susunan dan perkataan secara kebarangkalian;
-- jawapan lancar masih boleh mengandungi kesilapan.
+- Jawapan lancar masih boleh mengandungi kesilapan.
 
 **Nota penyampai:** Variasi ialah sebab kita memerlukan fakta terkawal dan rubrik, bukan alasan memilih hasil yang paling panjang.
 
@@ -130,12 +130,12 @@ Tulis surat rasmi tentang kalibrasi alat makmal.
 
 Apa yang AI tidak tahu?
 
-- siapa penerima;
-- tujuan sebenar;
-- fakta dan tarikh;
-- tindakan yang diminta;
-- format dan panjang;
-- apa yang tidak boleh dicipta.
+- Siapa penerima;
+- Tujuan sebenar;
+- Fakta dan tarikh;
+- Tindakan yang diminta;
+- Format dan panjang;
+- Apa yang tidak boleh dicipta.
 
 ---
 
@@ -185,14 +185,14 @@ Gunakan tiga label semasa menyemak:
 
 Semak sekurang-kurangnya:
 
-- alamat pengirim dan penerima;
-- nombor rujukan dan tarikh;
-- tajuk;
-- pembukaan dan pengakhiran;
-- tujuan serta tindakan penerima;
-- penomboran perenggan;
-- lampiran jika berkenaan;
-- nama, jawatan dan kuasa menandatangani.
+- Alamat pengirim dan penerima;
+- Nombor rujukan dan tarikh;
+- Tajuk;
+- Pembukaan dan pengakhiran;
+- Tujuan serta tindakan penerima;
+- Penomboran perenggan;
+- Lampiran jika berkenaan;
+- Nama, jawatan dan kuasa menandatangani.
 
 **Rujukan:** MyPPSM — Urusan Surat Kerajaan.
 
@@ -204,12 +204,12 @@ Semak sekurang-kurangnya:
 
 Input:
 
-- tiga peralatan;
-- tarikh cadangan;
-- tempat;
-- tindakan penerima;
-- tarikh maklum balas;
-- pegawai untuk dihubungi — identiti rekaan.
+- Tiga peralatan;
+- Tarikh cadangan;
+- Tempat;
+- Tindakan penerima;
+- Tarikh maklum balas;
+- Pegawai untuk dihubungi — identiti rekaan.
 
 Hasil: satu draf maksimum satu setengah halaman.
 
@@ -233,11 +233,11 @@ Hasil: satu draf maksimum satu setengah halaman.
 
 Arahan yang boleh diuji:
 
-- senaraikan setiap fakta dalam draf dan sumbernya;
-- tandakan tarikh atau nombor yang tiada dalam input;
-- semak tujuh elemen surat;
-- kesan ayat yang boleh disalah tafsir;
-- asingkan pembetulan wajib dan cadangan gaya.
+- Senaraikan setiap fakta dalam draf dan sumbernya;
+- Tandakan tarikh atau nombor yang tiada dalam input;
+- Semak tujuh elemen surat;
+- Kesan ayat yang boleh disalah tafsir;
+- Asingkan pembetulan wajib dan cadangan gaya.
 
 **Nota penyampai:** Semakan perlu mempunyai kriteria dan bukti.
 
@@ -283,12 +283,12 @@ Minit + daftar tindakan
 
 ## Slaid 20 — Aktiviti minit: 20 minit
 
-- salin prompt minit;
-- tampal catatan simulasi;
-- jana tiga bahagian: ringkasan, keputusan dan tindakan;
-- pindahkan tindakan kepada jadual;
-- tandakan semua ketidakpastian;
-- bandingkan dengan kumpulan lain.
+- Salin prompt minit;
+- Tampal catatan simulasi;
+- Jana tiga bahagian: ringkasan, keputusan dan tindakan;
+- Pindahkan tindakan kepada jadual;
+- Tandakan semua ketidakpastian;
+- Bandingkan dengan kumpulan lain.
 
 **Hasil:** satu draf minit dan sekurang-kurangnya empat baris daftar tindakan.
 
@@ -308,11 +308,11 @@ Peraturan: jika pemilik atau tarikh tidak disebut, tulis `[PERLU PENGESAHAN]`.
 
 Nilai hasil menggunakan skala 0–2:
 
-- ketepatan fakta;
-- pematuhan arahan;
-- kejelasan bahasa;
-- penandaan ketidakpastian;
-- kebolehgunaan selepas semakan.
+- Ketepatan fakta;
+- Pematuhan arahan;
+- Kejelasan bahasa;
+- Penandaan ketidakpastian;
+- Kebolehgunaan selepas semakan.
 
 Jumlah maksimum: 10. Nama platform bukan komponen skor.
 
@@ -341,11 +341,11 @@ MPE-Surat-Kalibrasi-20260728-v1.0-DILULUSKAN.pdf
 
 Selepas draf diluluskan:
 
-- simpan di lokasi/sistem jabatan yang dibenarkan;
-- kaitkan nombor rujukan dan klasifikasi fail;
-- rekod penyedia, penyemak, pelulus dan tarikh;
-- lindungi versi diluluskan daripada perubahan tidak terkawal;
-- ikut tempoh simpanan dan tatacara pelupusan.
+- Simpan di lokasi/sistem jabatan yang dibenarkan;
+- Kaitkan nombor rujukan dan klasifikasi fail;
+- Rekod penyedia, penyemak, pelulus dan tarikh;
+- Lindungi versi diluluskan daripada perubahan tidak terkawal;
+- Ikut tempoh simpanan dan tatacara pelupusan.
 
 ---
 
@@ -375,9 +375,9 @@ Tiga prinsip:
 
 Exit ticket:
 
-- satu prompt yang akan saya guna semula;
-- satu risiko yang akan saya kawal;
-- satu semakan manusia yang tidak boleh ditinggalkan.
+- Satu prompt yang akan saya guna semula;
+- Satu risiko yang akan saya kawal;
+- Satu semakan manusia yang tidak boleh ditinggalkan.
 
 **Jambatan ke Modul 3:** fakta dan daftar tindakan yang berstruktur menjadi data untuk analisis serta pengurusan rekod teknikal.
 
