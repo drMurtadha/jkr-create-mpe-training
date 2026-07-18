@@ -210,7 +210,7 @@ Selepas setiap penghantaran, catat ID rekod dan mesej yang dipaparkan.
 
 > **Peringatan keselamatan:** gunakan data rekaan sahaja. Jangan paparkan atau serahkan URL deployment, ID Google, token, maklumat akaun atau data operasi sebenar.
 
-## Bahan Modul 5
+## Bahan modul
 
 | Bahan | Kegunaan |
 |---|---|
