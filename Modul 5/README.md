@@ -92,6 +92,124 @@ Kredensial Google tidak diletakkan dalam kod pelayar. Namun endpoint yang boleh 
 | 20 minit | Buat satu perubahan dan commit |
 | 10 minit | Semak GitHub Pages |
 
+## Panduan peserta langkah demi langkah
+
+Gunakan urutan ini semasa latihan. Jangan bergerak ke langkah seterusnya sehingga tanda **Semak sebelum teruskan** dipenuhi. Pembahagian masa ialah panduan; fasilitator boleh menggunakan laluan demonstrasi jika akses organisasi menyekat sesuatu langkah.
+
+### Langkah 1 — Tetapkan peranan dan buka bahan, 5 minit
+
+1. Bentuk kumpulan dua hingga empat orang.
+2. Tetapkan seorang **pemilik akaun**, seorang **pencatat**, seorang **penguji** dan, jika ada, seorang **penyemak keselamatan**.
+3. Buka dalam tab berasingan:
+   - [aplikasi contoh MPE Hub](https://drmurtadha.github.io/mpe-hub/);
+   - [dokumentasi MPE Hub](https://drmurtadha.github.io/mpe-hub/docs.html);
+   - [repositori templat](https://github.com/drMurtadha/mpe-hub);
+   - [kit persediaan dan prompt](./03-Kit-Binaan-dan-Pustaka-Prompt.md).
+
+**Semak sebelum teruskan:** semua ahli tahu peranan masing-masing dan sekurang-kurangnya seorang ahli boleh membuka GitHub serta Google Drive.
+
+### Langkah 2 — Salin repositori latihan, 5 minit
+
+1. Pada repositori templat, pilih **Use this template** atau **Fork** mengikut arahan fasilitator.
+2. Namakan repositori `mpe-hub-latihan`.
+3. Pastikan repositori tidak mengandungi token, ID fail, URL deployment atau data operasi sebenar.
+4. Buka tab **Code** dan kenal pasti fail HTML, CSS, JavaScript serta konfigurasi contoh.
+
+**Semak sebelum teruskan:** repositori muncul dalam akaun kumpulan dan ahli boleh melihat senarai failnya.
+
+**Jika tersekat:** seorang ahli yang mempunyai akses menjadi pemilik repositori; ahli lain bekerja sebagai penyemak atau menggunakan salinan demonstrasi fasilitator.
+
+### Langkah 3 — Fahami tiga modul dan peta medan, 10 minit
+
+1. Buka **Buku Log**, **KEW.PA-9** dan **MCCB** pada aplikasi contoh.
+2. Bagi setiap modul, pilih sekurang-kurangnya satu medan:
+   - wajib;
+   - pilihan;
+   - terbitan sistem;
+   - teknikal.
+3. Catat siapa yang mengisi, menyemak dan membetulkan rekod.
+4. Padankan modul kepada tab storan: `logbook`, `asset` dan `mccb`.
+
+**Hasil langkah:** satu jadual ringkas medan, tab storan dan pemilik tindakan.
+
+### Langkah 4 — Sediakan Google Sheets dan Apps Script, 10 minit
+
+1. Ikuti bahagian persediaan dalam [dokumentasi MPE Hub](https://drmurtadha.github.io/mpe-hub/docs.html).
+2. Cipta atau salin Google Spreadsheet latihan.
+3. Buka projek Google Apps Script dan jalankan fungsi persediaan yang dinyatakan dalam dokumentasi.
+4. Benarkan akses hanya melalui akaun kumpulan yang diluluskan.
+5. Sahkan tab `logbook`, `asset` dan `mccb` telah diwujudkan.
+
+**Semak sebelum teruskan:** ketiga-tiga tab wujud dan tiada data sebenar dimasukkan.
+
+**Jika tersekat:** gunakan spreadsheet dan deployment demonstrasi fasilitator; jangan cuba memintas sekatan akaun organisasi.
+
+### Langkah 5 — Terbitkan Web App dan sambungkan frontend, 10 minit
+
+1. Dalam Apps Script, pilih **Deploy → New deployment → Web app**.
+2. Pilih tetapan akses latihan yang diterangkan oleh fasilitator.
+3. Salin URL yang berakhir dengan `/exec` ke lokasi konfigurasi yang ditetapkan dalam dokumentasi.
+4. Jangan tampal URL tersebut ke platform AI, ruang sembang umum atau tangkap layar yang akan diterbitkan.
+5. Buka aplikasi dan semak status sambungan.
+
+**Semak sebelum teruskan:** aplikasi tidak memaparkan status luar talian dan satu permintaan ujian tidak menghasilkan ralat sambungan.
+
+### Langkah 6 — Masukkan tiga rekod rekaan, 15 minit
+
+Masukkan satu rekod bagi setiap modul:
+
+1. **Buku Log:** aktiviti makmal rekaan dan lampiran contoh jika dibenarkan.
+2. **KEW.PA-9:** permohonan atau butiran aset rekaan.
+3. **MCCB:** bacaan teknikal rekaan yang munasabah.
+
+Selepas setiap penghantaran, catat ID rekod dan mesej yang dipaparkan.
+
+**Semak sebelum teruskan:** tiga mesej berjaya atau tiga ID rekod telah direkodkan. Jangan gunakan nama, nombor aset, tandatangan atau bacaan sebenar.
+
+### Langkah 7 — Sahkan Google Sheets dan Drive, 10 minit
+
+1. Cari ID Buku Log pada tab `logbook`.
+2. Cari ID KEW.PA-9 pada tab `asset`.
+3. Cari ID MCCB pada tab `mccb`.
+4. Pastikan satu penghantaran menghasilkan satu baris lengkap.
+5. Jika lampiran digunakan, semak fail dan URLnya dalam folder Drive latihan.
+6. Bandingkan nilai pada aplikasi dengan nilai dalam storan.
+
+**Hasil langkah:** tiga baris dapat dijejak dan sebarang lampiran rekaan boleh dikenal pasti.
+
+### Langkah 8 — Pilih dan gunakan satu gaya antaramuka, 5 minit
+
+1. Buka halaman [Pilih gaya antaramuka](./06-Pilih-Gaya-Antaramuka.md).
+2. Bandingkan tema Korporat Cerah, Makmal Gelap, Minimal dan Dashboard Operasi.
+3. Muat turun satu fail CSS atau pek lengkap.
+4. Tukar hanya pautan stylesheet atau pemboleh ubah warna yang berkaitan.
+5. Pastikan perubahan tidak menjejaskan borang, label dan navigasi papan kekunci.
+
+**Semak sebelum teruskan:** tema baharu kelihatan pada pratonton tempatan dan semua kandungan masih boleh dibaca.
+
+### Langkah 9 — Commit, terbitkan dan uji GitHub Pages, 5 minit
+
+1. Semak perbezaan kod dan pastikan tiada rahsia atau data sebenar.
+2. Commit dengan mesej yang menerangkan tujuan perubahan, contohnya `Apply accessible corporate interface theme`.
+3. Push perubahan ke repositori kumpulan.
+4. Aktifkan atau semak GitHub Pages melalui **Settings → Pages**.
+5. Tunggu workflow bertukar hijau, kemudian lakukan hard refresh.
+
+**Semak sebelum teruskan:** URL GitHub Pages boleh dibuka dan perubahan gaya dipaparkan.
+
+### Langkah 10 — Jalankan UAT dan sediakan bukti, 5 minit
+
+1. Buka aplikasi pada desktop dan paparan telefon.
+2. Hantar satu rekod ujian tambahan.
+3. Semak mesej ralat dengan satu input wajib dikosongkan.
+4. Pastikan dashboard dan storan masih sepadan.
+5. Rekod keputusan dalam [halaman Latihan 80 minit](./04-Latihan-Bina-MPE-Hub.md).
+6. Sediakan URL aplikasi, ID commit dan ringkasan satu perubahan untuk demonstrasi kumpulan.
+
+**Selesai apabila:** aplikasi boleh dibuka, tiga modul telah diuji, storan disahkan, satu perubahan diterbitkan dan checklist serahan dilengkapkan.
+
+> **Peringatan keselamatan:** gunakan data rekaan sahaja. Jangan paparkan atau serahkan URL deployment, ID Google, token, maklumat akaun atau data operasi sebenar.
+
 ## Bahan Modul 5
 
 | Bahan | Kegunaan |
@@ -100,6 +218,7 @@ Kredensial Google tidak diletakkan dalam kod pelayar. Namun endpoint yang boleh 
 | [Kandungan slaid untuk cetakan](./02-Kandungan-Slaid.md) | Sumber slaid Modul 5 |
 | [Kit persediaan dan prompt](./03-Kit-Binaan-dan-Pustaka-Prompt.md) | Prasyarat, konfigurasi dan prompt bantuan AI |
 | [Latihan MPE Hub](./04-Latihan-Bina-MPE-Hub.md) | Arahan amali 80 minit |
+| [Pilih gaya antaramuka](./06-Pilih-Gaya-Antaramuka.md) | Pratonton dan pek tema CSS peserta |
 | [Penilaian akhir](./05-Penilaian-Akhir.md) | Kuiz, rubrik, exit ticket dan penilaian program |
 
 ## Had dan kawalan keselamatan
