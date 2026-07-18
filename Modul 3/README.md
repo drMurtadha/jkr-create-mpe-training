@@ -8,6 +8,12 @@
 - **Platform:** ChatGPT, Gemini atau Claude melalui pelan percuma
 - **Prinsip:** AI membantu meneroka dan menyusun; manusia mengesahkan data, kaedah, tafsiran dan rekod rasmi
 
+### Aktiviti pembuka Modul 3A — GitHub hands-on, 30 minit
+
+Sembilan peserta dibahagikan kepada **tiga kumpulan beranggotakan tiga orang**. Setiap kumpulan berlatih aliran `branch → commit → pull request → review → merge` supaya mereka bersedia untuk projek MPE Hub dalam Modul 5.
+
+[Buka GitHub Asas dan Kerja Berpasukan](./06-GitHub-Asas-dan-Kerja-Berpasukan.md)
+
 ## Hasil pembelajaran
 
 Pada akhir modul, peserta boleh:
@@ -59,6 +65,7 @@ Latihan menggunakan rekod MPE rekaan yang menyerupai Buku Log Makmal, KEW.PA-9 d
 | Bahan | Kegunaan |
 |---|---|
 | [Nota fasilitator](./01-Nota-Fasilitator.md) | Pelaksanaan Modul 3A dan 3B |
+| [GitHub asas dan kerja berpasukan](./06-GitHub-Asas-dan-Kerja-Berpasukan.md) | Aktiviti hands-on 30 minit bagi tiga kumpulan |
 | [Kandungan slaid untuk cetakan](./02-Kandungan-Slaid.md) | Sumber 30 slaid Modul 3A dan 3B |
 | [Pustaka prompt boleh salin](./02-Pustaka-Prompt-Analisis-dan-Rekod.md) | Arahan lengkap, neutral platform |
 | [Latihan analisis data](./03-Latihan-Analisis-Data.md) | Dataset kerajaan dan lembaran kerja |
