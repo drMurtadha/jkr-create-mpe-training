@@ -13,14 +13,14 @@ Modul ini menyepadukan hasil Modul 1-4 dengan membimbing peserta menyediakan sal
 
 ## Hasil akhir peserta
 
-1. satu salinan repositori MPE Hub dalam akaun GitHub kumpulan;
-2. satu URL aplikasi melalui GitHub Pages;
-3. satu Google Apps Script Web App sebagai API;
-4. satu Google Spreadsheet dengan tab `logbook`, `asset` dan `mccb`;
-5. satu folder Google Drive bagi lampiran latihan;
-6. sekurang-kurangnya satu rekod rekaan bagi setiap modul;
-7. satu perubahan antaramuka atau medan yang dicadangkan dengan AI;
-8. keputusan ujian penerimaan dan checklist serahan.
+1. Satu salinan repositori MPE Hub dalam akaun GitHub kumpulan;
+2. Satu URL aplikasi melalui GitHub Pages;
+3. Satu Google Apps Script Web App sebagai API;
+4. Satu Google Spreadsheet dengan tab `logbook`, `asset` dan `mccb`;
+5. Satu folder Google Drive bagi lampiran latihan;
+6. Sekurang-kurangnya satu rekod rekaan bagi setiap modul;
+7. Satu perubahan antaramuka atau medan yang dicadangkan dengan AI;
+8. Keputusan ujian penerimaan dan checklist serahan.
 
 ## Seni bina yang digunakan
 
@@ -101,10 +101,10 @@ Gunakan urutan ini semasa latihan. Jangan bergerak ke langkah seterusnya sehingg
 1. Bentuk kumpulan dua hingga empat orang.
 2. Tetapkan seorang **pemilik akaun**, seorang **pencatat**, seorang **penguji** dan, jika ada, seorang **penyemak keselamatan**.
 3. Buka dalam tab berasingan:
-   - [aplikasi contoh MPE Hub](https://drmurtadha.github.io/mpe-hub/);
-   - [dokumentasi MPE Hub](https://drmurtadha.github.io/mpe-hub/docs.html);
-   - [repositori templat](https://github.com/drMurtadha/mpe-hub);
-   - [kit persediaan dan prompt](./03-Kit-Binaan-dan-Pustaka-Prompt.md).
+   - [Aplikasi contoh MPE Hub](https://drmurtadha.github.io/mpe-hub/);
+   - [Dokumentasi MPE Hub](https://drmurtadha.github.io/mpe-hub/docs.html);
+   - [Repositori templat](https://github.com/drMurtadha/mpe-hub);
+   - [Kit persediaan dan prompt](./03-Kit-Binaan-dan-Pustaka-Prompt.md).
 
 **Semak sebelum teruskan:** semua ahli tahu peranan masing-masing dan sekurang-kurangnya seorang ahli boleh membuka GitHub serta Google Drive.
 
@@ -123,10 +123,10 @@ Gunakan urutan ini semasa latihan. Jangan bergerak ke langkah seterusnya sehingg
 
 1. Buka **Buku Log**, **KEW.PA-9** dan **MCCB** pada aplikasi contoh.
 2. Bagi setiap modul, pilih sekurang-kurangnya satu medan:
-   - wajib;
-   - pilihan;
-   - terbitan sistem;
-   - teknikal.
+   - Wajib;
+   - Pilihan;
+   - Terbitan sistem;
+   - Teknikal.
 3. Catat siapa yang mengisi, menyemak dan membetulkan rekod.
 4. Padankan modul kepada tab storan: `logbook`, `asset` dan `mccb`.
 

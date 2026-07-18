@@ -20,11 +20,11 @@ Semua nama, nombor aset dan bacaan di bawah ialah rekaan.
 
 ### Peraturan yang perlu direka
 
-- aset, tujuan dan tarikh wajib diisi;
-- tarikh dijangka pulang tidak boleh lebih awal daripada tarikh dipinjam;
-- hanya pelulus aset boleh memberi keputusan;
-- pemulangan memerlukan tarikh dipulangkan dan penerima;
-- perubahan status merekod masa dan pelaku.
+- Aset, tujuan dan tarikh wajib diisi;
+- Tarikh dijangka pulang tidak boleh lebih awal daripada tarikh dipinjam;
+- Hanya pelulus aset boleh memberi keputusan;
+- Pemulangan memerlukan tarikh dipulangkan dan penerima;
+- Perubahan status merekod masa dan pelaku.
 
 ## Laluan B — Pengujian MCCB
 
@@ -45,11 +45,11 @@ Semua nama, nombor aset dan bacaan di bawah ialah rekaan.
 
 ### Peraturan yang perlu direka
 
-- medan peralatan, kalibrasi, bacaan dan masa wajib;
-- formula arus ujian dipaparkan untuk semakan;
-- sistem memberi amaran jika kalibrasi “Tidak” atau kosong;
-- keputusan automatik hanya cadangan semakan, bukan pengesahan teknikal;
-- penguji dan penyemak/pengesah mesti individu atau peranan berasingan.
+- Medan peralatan, kalibrasi, bacaan dan masa wajib;
+- Formula arus ujian dipaparkan untuk semakan;
+- Sistem memberi amaran jika kalibrasi “Tidak” atau kosong;
+- Keputusan automatik hanya cadangan semakan, bukan pengesahan teknikal;
+- Penguji dan penyemak/pengesah mesti individu atau peranan berasingan.
 
 ## Kes ujian minimum
 
@@ -66,9 +66,9 @@ Lengkapkan hasil sebenar dan status. Ruang ini disimpan secara automatik pada pe
 
 ## Hasil kumpulan
 
-- kamus medan;
-- kamus status;
-- matriks peranan;
-- enam kes ujian;
-- spesifikasi percubaan kecil;
-- pelan manual ketika sistem gagal.
+- Kamus medan;
+- Kamus status;
+- Matriks peranan;
+- Enam kes ujian;
+- Spesifikasi percubaan kecil;
+- Pelan manual ketika sistem gagal.

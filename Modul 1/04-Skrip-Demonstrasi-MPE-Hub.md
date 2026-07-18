@@ -6,10 +6,10 @@ Demonstrasi 12 minit ini menunjukkan bagaimana prinsip aplikasi pintar diterjema
 
 Pada akhir demonstrasi, peserta perlu dapat mengenal pasti:
 
-- data yang ditangkap sekali;
-- validasi atau pengiraan yang mengurangkan ralat;
-- status dan rekod yang boleh dijejaki;
-- keputusan yang masih memerlukan manusia.
+- Data yang dikumpul sekali;
+- Validasi atau pengiraan yang mengurangkan ralat;
+- Status dan rekod yang boleh dijejaki;
+- Keputusan yang masih memerlukan manusia.
 
 ## Pautan
 
@@ -78,7 +78,7 @@ Gunakan data rekaan berikut. Jangan gunakan data pekerja, aset atau keputusan uj
 
 Paparkan atau sebut sebelum membuka aplikasi:
 
-1. Apakah data yang ditangkap sekali?
+1. Apakah data yang dikumpul sekali?
 2. Apakah kesilapan yang dicegah semasa input?
 3. Apakah status yang boleh dilihat tanpa bertanya kepada orang lain?
 4. Apakah keputusan yang masih memerlukan pegawai?
@@ -93,7 +93,7 @@ Paparkan atau sebut sebelum membuka aplikasi:
 
 > Tiga proses ini mempunyai pengguna, medan dan tujuan yang berbeza. Masalah bermula apabila data dimasukkan semula, fail dinamakan secara tidak konsisten dan status hanya diketahui melalui mesej atau ingatan individu.
 
-**Mesej:** Matlamat bukan menghapuskan borang rasmi, tetapi menambah baik cara data ditangkap, disemak dan dijejaki.
+**Mesej:** Matlamat bukan menghapuskan borang rasmi, tetapi menambah baik cara data dikumpul, disemak dan dijejaki.
 
 ### 1:00–2:15 — Dashboard sebagai pandangan kerja
 
@@ -105,15 +105,15 @@ Paparkan atau sebut sebelum membuka aplikasi:
 
 **Tunjuk:**
 
-- jumlah rekod;
-- pinjaman aktif;
-- kadar lulus atau status;
-- tindakan belum selesai;
-- aktiviti terkini.
+- Jumlah rekod;
+- Pinjaman aktif;
+- Kadar lulus atau status;
+- Tindakan belum selesai;
+- Aktiviti terkini.
 
 **Hubungkan dengan keupayaan:** Memantau dan menyusun.
 
-### 2:15–5:15 — Buku Log: tangkap sekali
+### 2:15–5:15 — Buku Log: kumpul sekali
 
 **Tindakan:** Buka Buku Log pada paparan bersaiz telefon.
 
@@ -123,17 +123,17 @@ Paparkan atau sebut sebelum membuka aplikasi:
 
 **Tunjuk:**
 
-- maklumat kehadiran;
-- aktiviti dan status;
-- medan wajib;
-- lampiran;
-- paparan responsif.
+- Maklumat kehadiran;
+- Aktiviti dan status;
+- Medan wajib;
+- Lampiran;
+- Paparan responsif.
 
 **Jika selamat menghantar data:** Isi data contoh dan hantar. Tunjuk ID rekod yang dijana.
 
 **Jika tidak selamat:** Jangan hantar. Paparkan tangkap layar mesej kejayaan.
 
-**Hubungkan dengan keupayaan:** Menangkap, menyemak dan menyusun.
+**Hubungkan dengan keupayaan:** Mengumpul, menyemak dan menyusun.
 
 ### 5:15–6:45 — KEW.PA-9: rekod berstruktur
 
@@ -145,10 +145,10 @@ Paparkan atau sebut sebelum membuka aplikasi:
 
 **Tunjuk:**
 
-- maklumat pemohon;
-- senarai aset berulang;
-- pengesahan;
-- status.
+- Maklumat pemohon;
+- Senarai aset berulang;
+- Pengesahan;
+- Status.
 
 **Hubungkan dengan keupayaan:** Menyusun dan mengautomasi.
 
@@ -162,11 +162,11 @@ Paparkan atau sebut sebelum membuka aplikasi:
 
 **Tunjuk:**
 
-- unit pada label;
-- keadaan kerja;
-- senarai peralatan;
-- pengiraan 1.05 dan 1.30 jika tersedia;
-- ruang penguji dan verifikasi.
+- Unit pada label;
+- Keadaan kerja;
+- Senarai peralatan;
+- Pengiraan 1.05 dan 1.30 jika tersedia;
+- Ruang penguji dan verifikasi.
 
 **Hubungkan dengan keupayaan:** Menyemak, membantu dan memantau.
 
@@ -190,7 +190,7 @@ Pengguna → GitHub Pages → Apps Script → Sheets/Drive → Dashboard
 
 Minta peserta memberikan jawapan pendek:
 
-- Data ditangkap sekali: butiran pengguna, aktiviti, aset atau bacaan.
+- Data dikumpul sekali: butiran pengguna, aktiviti, aset atau bacaan.
 - Ralat dicegah: medan kosong, format, unit atau pengiraan.
 - Status dijejaki: rekod, pinjaman, tindakan atau keputusan.
 - Manusia mengesahkan: data teknikal, kelulusan rasmi dan keputusan akhir.
@@ -199,7 +199,7 @@ Minta peserta memberikan jawapan pendek:
 
 **Skrip:**
 
-> MPE Hub bukan jawapan bagi semua masalah. Nilainya ialah menunjukkan corak: tangkap sekali, semak awal, jejak status dan kekalkan manusia pada keputusan penting. Sekarang pilih satu masalah kerja anda dan tentukan corak mana yang benar-benar diperlukan.
+> MPE Hub bukan jawapan bagi semua masalah. Nilainya ialah menunjukkan corak: kumpul sekali, semak awal, jejak status dan kekalkan manusia pada keputusan penting. Sekarang pilih satu masalah kerja anda dan tentukan corak mana yang benar-benar diperlukan.
 
 Paparkan slaid Kanvas Peluang Produktiviti.
 
@@ -219,12 +219,12 @@ Buka `http://localhost:4173`. Terangkan bahawa penghantaran ke backend mungkin t
 
 Susunan tangkap layar minimum:
 
-1. dashboard;
+1. Dashboard;
 2. Buku Log pada telefon;
 3. KEW.PA-9 dengan dua aset;
 4. MCCB dengan pengiraan;
-5. mesej ID rekod;
-6. rajah storan.
+5. Mesej ID rekod;
+6. Rajah storan.
 
 ### Tahap 3 — Demonstrasi naratif
 

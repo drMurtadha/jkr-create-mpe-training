@@ -31,24 +31,24 @@ Modul ini membina kefahaman asas tentang aplikasi pintar dan membantu peserta me
 
 Pada akhir sesi, peserta dapat:
 
-1. menerangkan maksud aplikasi pintar dalam konteks kerja MPE;
-2. membezakan kerja manual, kerja digital dan kerja pintar;
-3. mengenal pasti aktiviti berulang, kelewatan, penduaan data dan risiko ralat dalam operasi semasa;
-4. menilai satu peluang aplikasi pintar berdasarkan nilai, kebolehlaksanaan dan risiko;
-5. menghasilkan satu Kanvas Peluang Produktiviti MPE yang akan digunakan dalam modul seterusnya.
+1. Menerangkan maksud aplikasi pintar dalam konteks kerja MPE;
+2. Membezakan kerja manual, kerja digital dan kerja pintar;
+3. Mengenal pasti aktiviti berulang, kelewatan, penduaan data dan risiko ralat dalam operasi semasa;
+4. Menilai satu peluang aplikasi pintar berdasarkan nilai, kebolehlaksanaan dan risiko;
+5. Menghasilkan satu Kanvas Peluang Produktiviti MPE yang akan digunakan dalam modul seterusnya.
 
 ## Hasil serahan peserta
 
 Setiap kumpulan menghasilkan satu cadangan ringkas yang mengandungi:
 
-- masalah operasi yang hendak diselesaikan;
-- pengguna dan pemilik proses;
-- keadaan semasa dan kesannya;
-- cadangan fungsi pintar;
-- data atau dokumen yang diperlukan;
-- ukuran kejayaan;
-- risiko, kawalan dan keperluan semakan manusia;
-- langkah pertama bagi satu percubaan kecil.
+- Masalah operasi yang hendak diselesaikan;
+- Pengguna dan pemilik proses;
+- Keadaan semasa dan kesannya;
+- Cadangan fungsi pintar;
+- Data atau dokumen yang diperlukan;
+- Ukuran kejayaan;
+- Risiko, kawalan dan keperluan semakan manusia;
+- Langkah pertama bagi satu percubaan kecil.
 
 ## Aliran sesi 90 minit
 
@@ -69,35 +69,35 @@ Setiap kumpulan menghasilkan satu cadangan ringkas yang mengandungi:
 
 - Kerja manual: maklumat ditulis, dipindahkan dan disemak secara berasingan.
 - Kerja digital: borang atau dokumen dipindahkan ke skrin, tetapi aliran kerja asas masih sama.
-- Kerja pintar: sistem membantu menangkap data sekali, menyemak input, mengira, mencadangkan, mengarahkan tindakan dan menyediakan jejak audit.
+- Kerja pintar: sistem membantu mengumpul data sekali, menyemak input, mengira, mencadangkan, mengarahkan tindakan dan menyediakan jejak audit.
 
 Prinsip: mulakan dengan masalah kerja, bukan dengan nama alat.
 
 ### 2. Lima punca kehilangan produktiviti
 
-- kemasukan data yang sama berulang kali;
-- pencarian fail, rekod atau versi yang betul;
-- menunggu semakan, kelulusan atau maklum balas;
-- pengiraan dan pemformatan berulang;
-- ralat yang hanya dikesan pada peringkat akhir.
+- Kemasukan data yang sama berulang kali;
+- Pencarian fail, rekod atau versi yang betul;
+- Menunggu semakan, kelulusan atau maklum balas;
+- Pengiraan dan pemformatan berulang;
+- Ralat yang hanya dikesan pada peringkat akhir.
 
 ### 3. Enam keupayaan aplikasi pintar
 
-- menangkap: borang mudah alih, imej, bacaan dan lampiran;
-- menyusun: menstrukturkan data serta menamakan rekod secara konsisten;
-- menyemak: mengesan medan kosong, format salah dan nilai luar julat;
-- membantu: merumus, mencari, menggubal dan memberi cadangan;
-- mengautomasi: menghantar notifikasi, mencipta dokumen dan mengemas kini status;
-- memantau: memaparkan metrik, tunggakan, trend dan pengecualian.
+- Mengumpul: borang mudah alih, imej, bacaan dan lampiran;
+- Menyusun: menstrukturkan data serta menamakan rekod secara konsisten;
+- Menyemak: mengesan medan kosong, format salah dan nilai luar julat;
+- Membantu: merumus, mencari, menggubal dan memberi cadangan;
+- Mengautomasi: menghantar notifikasi, mencipta dokumen dan mengemas kini status;
+- Memantau: memaparkan metrik, tunggakan, trend dan pengecualian.
 
 ### 4. Kerangka pemilihan peluang
 
 Nilai setiap cadangan dari 1 hingga 5 bagi empat dimensi:
 
-- nilai operasi: masa, kualiti, keselamatan atau kebolehkesanan;
-- kekerapan: berapa kerap masalah berlaku;
-- kebolehlaksanaan: data, alat, pemilik dan masa tersedia;
-- risiko: sensitiviti data, kesilapan keputusan dan kesan kegagalan.
+- Nilai operasi: masa, kualiti, keselamatan atau kebolehkesanan;
+- Kekerapan: berapa kerap masalah berlaku;
+- Kebolehlaksanaan: data, alat, pemilik dan masa tersedia;
+- Risiko: sensitiviti data, kesilapan keputusan dan kesan kegagalan.
 
 Keutamaan awal diberikan kepada kerja yang bernilai tinggi, kerap berlaku, mudah diuji dan mempunyai risiko terkawal.
 
@@ -109,12 +109,12 @@ Aplikasi pintar boleh membantu menyediakan draf, mengesan pola dan mengautomasi 
 
 Demonstrasi menggunakan projek lengkap dalam folder `../JKRCreate MPE Chatgpt`:
 
-1. tunjuk keadaan asal: Buku Log, KEW.PA-9 dan laporan ujian sebagai rekod berasingan;
-2. buka dashboard MPE Hub;
-3. tunjuk satu borang mudah alih dan validasi medan;
-4. tunjuk bagaimana rekod disimpan dan boleh dijejaki;
-5. tunjuk ringkasan dashboard;
-6. kaitkan demonstrasi dengan Modul 2–5 tanpa menerangkan kod secara terperinci.
+1. Tunjuk keadaan asal: Buku Log, KEW.PA-9 dan laporan ujian sebagai rekod berasingan;
+2. Buka dashboard MPE Hub;
+3. Tunjuk satu borang mudah alih dan validasi medan;
+4. Tunjuk bagaimana rekod disimpan dan boleh dijejaki;
+5. Tunjuk ringkasan dashboard;
+6. Kaitkan demonstrasi dengan Modul 2–5 tanpa menerangkan kod secara terperinci.
 
 Pautan contoh:
 
@@ -150,14 +150,14 @@ Modul 1/
 
 ## Kriteria Modul 1 lengkap
 
-- [x] sumber kandungan 22 slaid tersedia;
-- [x] nota fasilitator mempunyai skrip serta masa bagi setiap segmen;
+- [x] Sumber kandungan 22 slaid tersedia;
+- [x] Nota fasilitator mempunyai skrip serta masa bagi setiap segmen;
 - [x] Kanvas Peluang Produktiviti mempunyai versi kosong dan contoh lengkap;
-- [x] demonstrasi MPE Hub mempunyai data contoh serta pelan sandaran;
-- [x] penilaian awal, rubrik, kuiz dan exit ticket tersedia;
-- [ ] istilah dan contoh operasi disahkan oleh pemilik proses MPE;
-- [x] reka bentuk visual slaid ditambah baik dan dieksport kepada PPTX/PDF;
-- [ ] nota dan lembaran kerja diformat sebagai PDF cetak;
-- [x] dokumentasi web Modul 1 tersedia dalam portal GitHub Pages.
+- [x] Demonstrasi MPE Hub mempunyai data contoh serta pelan sandaran;
+- [x] Penilaian awal, rubrik, kuiz dan exit ticket tersedia;
+- [ ] Istilah dan contoh operasi disahkan oleh pemilik proses MPE;
+- [x] Reka bentuk visual slaid ditambah baik dan dieksport kepada PPTX/PDF;
+- [ ] Nota dan lembaran kerja diformat sebagai PDF cetak;
+- [x] Dokumentasi web Modul 1 tersedia dalam portal GitHub Pages.
 
 Kandungan pengajaran sumber telah siap. Item yang belum ditanda ialah kerja pengeluaran visual, pengesahan pemilik proses dan penerbitan akhir.

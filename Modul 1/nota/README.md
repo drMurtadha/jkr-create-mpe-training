@@ -13,17 +13,17 @@ Folder ini menempatkan hasil nota yang telah diformat untuk fasilitator dan pese
 
 - `Nota-Fasilitator-Modul-1.pdf`;
 - `Nota-Peserta-Modul-1.pdf`;
-- versi DOCX jika penyuntingan pejabat diperlukan.
+- Versi DOCX jika penyuntingan pejabat diperlukan.
 
 ## Kandungan nota peserta yang disyorkan
 
-1. hasil pembelajaran;
-2. manual, digital dan pintar;
-3. lima kebocoran produktiviti;
-4. enam keupayaan aplikasi pintar;
-5. automasi berbanding AI;
-6. pemilihan dan skor peluang;
-7. manusia dalam kawalan;
-8. kajian kes MPE Hub;
-9. ruang refleksi dan tindakan susulan.
+1. Hasil pembelajaran;
+2. Manual, digital dan pintar;
+3. Lima kebocoran produktiviti;
+4. Enam keupayaan aplikasi pintar;
+5. Automasi berbanding AI;
+6. Pemilihan dan skor peluang;
+7. Manusia dalam kawalan;
+8. Kajian kes MPE Hub;
+9. Ruang refleksi dan tindakan susulan.
 

@@ -25,14 +25,14 @@ Data rekaan sahaja. Setiap perubahan status mesti meninggalkan jejak.
 
 Satu spesifikasi automasi kecil yang boleh diuji, terdiri daripada:
 
-1. peta semasa;
-2. senarai isu;
-3. peta cadangan;
-4. kamus medan;
-5. matriks peranan;
-6. kes ujian;
-7. pelan sandaran;
-8. ukuran kejayaan.
+1. Peta semasa;
+2. Senarai isu;
+3. Peta cadangan;
+4. Kamus medan;
+5. Matriks peranan;
+6. Kes ujian;
+7. Pelan sandaran;
+8. Ukuran kejayaan.
 
 **Nota penyampai:** Hasil ini ialah reka bentuk proses, bukan aplikasi pengeluaran.
 
@@ -71,11 +71,11 @@ Gunakan urutan ini untuk kedua-dua cabang latihan.
 
 Setiap langkah proses mesti menyatakan:
 
-- pelaku;
-- tindakan;
-- data masuk;
-- keputusan;
-- bukti atau hasil.
+- Pelaku;
+- Tindakan;
+- Data masuk;
+- Keputusan;
+- Bukti atau hasil.
 
 Gunakan kata kerja yang boleh diperhatikan, bukan istilah umum seperti “proses” atau “urus”.
 
@@ -155,13 +155,13 @@ Sistem boleh mengesan ralat tetapi tidak memberi kelulusan.
 
 Medan utama:
 
-- rujukan ujian;
-- butiran MCCB;
-- keadaan kerja;
-- peralatan dan kalibrasi;
-- tetapan arus;
-- masa trip;
-- penguji dan penyemak.
+- Rujukan ujian;
+- Butiran MCCB;
+- Keadaan kerja;
+- Peralatan dan kalibrasi;
+- Tetapan arus;
+- Masa trip;
+- Penguji dan penyemak.
 
 Gunakan struktur `F-CREaTE-ERL-TP02-01`, tetapi semua nilai latihan mestilah rekaan.
 
@@ -169,12 +169,12 @@ Gunakan struktur `F-CREaTE-ERL-TP02-01`, tetapi semua nilai latihan mestilah rek
 
 ## Slaid 15 - Apa yang boleh diperiksa sistem?
 
-- medan wajib dan format;
-- formula `(a) x TCD`;
-- status kalibrasi dan fungsi peralatan;
-- unit serta masa bagi bacaan;
-- penguji berbeza daripada penyemak;
-- keputusan dihantar untuk semakan pegawai.
+- Medan wajib dan format;
+- Formula `(a) x TCD`;
+- Status kalibrasi dan fungsi peralatan;
+- Unit serta masa bagi bacaan;
+- Penguji berbeza daripada penyemak;
+- Keputusan dihantar untuk semakan pegawai.
 
 Formula sahaja tidak menentukan penerimaan teknikal.
 
@@ -227,13 +227,13 @@ Tetapkan garis dasar sebelum percubaan. Cepat sahaja tidak mencukupi.
 
 ## Slaid 21 - Had dan kawalan keselamatan
 
-- gunakan data rekaan;
-- jangan masukkan tandatangan atau nombor aset sebenar;
+- Gunakan data rekaan;
+- Jangan masukkan tandatangan atau nombor aset sebenar;
 - AI tidak meluluskan;
-- simpan log perubahan;
-- kawal akses mengikut peranan;
-- gunakan repositori rasmi;
-- sediakan pelan manual.
+- Simpan log perubahan;
+- Kawal akses mengikut peranan;
+- Gunakan repositori rasmi;
+- Sediakan pelan manual.
 
 Foto buku log asal tidak diedarkan kerana mengandungi nama individu.
 

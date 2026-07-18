@@ -46,13 +46,13 @@ Rujukan semasa: [ChatGPT Free Tier](https://help.openai.com/en/articles/9275245-
 
 Pada akhir sesi, peserta dapat:
 
-1. menerangkan peranan dan batas AI generatif dalam penyediaan dokumen rasmi;
-2. mengenal pasti maklumat yang tidak boleh dimasukkan ke platform AI pengguna;
-3. membina prompt berstruktur menggunakan kerangka **KONTEKS–TUGAS–BAHAN–FORMAT–SEMAKAN**;
-4. menghasilkan draf surat rasmi daripada fakta yang diluluskan tanpa membenarkan AI mencipta fakta;
-5. menukar catatan mesyuarat simulasi kepada draf minit dan daftar tindakan;
-6. menyemak ketepatan, kelengkapan, bahasa, format dan pematuhan hasil AI;
-7. mengawal versi, metadata, semakan manusia dan penyimpanan rekod akhir.
+1. Menerangkan peranan dan batas AI generatif dalam penyediaan dokumen rasmi;
+2. Mengenal pasti maklumat yang tidak boleh dimasukkan ke platform AI pengguna;
+3. Membina prompt berstruktur menggunakan kerangka **KONTEKS–TUGAS–BAHAN–FORMAT–SEMAKAN**;
+4. Menghasilkan draf surat rasmi daripada fakta yang diluluskan tanpa membenarkan AI mencipta fakta;
+5. Menukar catatan mesyuarat simulasi kepada draf minit dan daftar tindakan;
+6. Menyemak ketepatan, kelengkapan, bahasa, format dan pematuhan hasil AI;
+7. Mengawal versi, metadata, semakan manusia dan penyimpanan rekod akhir.
 
 ## Hasil serahan peserta
 
@@ -112,13 +112,13 @@ Jika video tidak dapat dipaparkan, [buka video Modul 2 di YouTube](https://youtu
 
 ## Kriteria Modul 2 lengkap
 
-- [x] skop dan hasil pembelajaran ditetapkan;
-- [x] nota fasilitator dan aliran 120 minit tersedia;
-- [x] kandungan sumber 26 slaid tersedia;
-- [x] pustaka prompt neutral platform tersedia;
-- [x] latihan surat rasmi menggunakan data rekaan tersedia;
-- [x] latihan minit tindakan menggunakan catatan simulasi tersedia;
-- [x] kawalan rekod, rubrik dan penilaian tersedia;
-- [ ] istilah serta format surat disahkan oleh pemilik proses JKR;
+- [x] Skop dan hasil pembelajaran ditetapkan;
+- [x] Nota fasilitator dan aliran 120 minit tersedia;
+- [x] Kandungan sumber 26 slaid tersedia;
+- [x] Pustaka prompt neutral platform tersedia;
+- [x] Latihan surat rasmi menggunakan data rekaan tersedia;
+- [x] Latihan minit tindakan menggunakan catatan simulasi tersedia;
+- [x] Kawalan rekod, rubrik dan penilaian tersedia;
+- [ ] Istilah serta format surat disahkan oleh pemilik proses JKR;
 - [ ] PPTX/PDF Modul 2 dikeluarkan dan diperiksa secara visual;
-- [ ] ujian rintis dilaksanakan menggunakan akaun percuma sebenar pada hari latihan.
+- [ ] Ujian rintis dilaksanakan menggunakan akaun percuma sebenar pada hari latihan.

@@ -12,10 +12,10 @@
 
 Modul menggunakan empat bahan proses yang dibekalkan oleh JKR CREaTE sebagai rujukan reka bentuk:
 
-1. buku log aktiviti makmal bertulis tangan;
-2. aliran Sistem Pengurusan Makmal: imbas QR, pilih aktiviti, rekod, lampir bukti, tetapkan status, notifikasi dan pengesahan;
+1. Buku log aktiviti makmal bertulis tangan;
+2. Aliran Sistem Pengurusan Makmal: imbas QR, pilih aktiviti, rekod, lampir bukti, tetapkan status, notifikasi dan pengesahan;
 3. KEW.PA-9 bagi permohonan pergerakan atau pinjaman aset alih;
-4. datasheet ujian MCCB `F-CREaTE-ERL-TP02-01` bagi ujian pembukaan dalam keadaan beban lampau.
+4. Datasheet ujian MCCB `F-CREaTE-ERL-TP02-01` bagi ujian pembukaan dalam keadaan beban lampau.
 
 Semua contoh peserta menggunakan nama, nombor aset dan bacaan **rekaan**. Dokumen asal tidak dimuat naik ke platform AI pengguna.
 
@@ -23,13 +23,13 @@ Semua contoh peserta menggunakan nama, nombor aset dan bacaan **rekaan**. Dokume
 
 Pada akhir modul, peserta dapat:
 
-1. memetakan proses semasa menggunakan pencetus, pelaku, langkah, keputusan, bukti dan hasil;
-2. mengenal pasti kelewatan, pengulangan, jurang data dan risiko dalam aliran kerja;
-3. mereka bentuk proses cadangan tanpa menghapuskan kawalan manusia;
-4. membezakan automasi berasaskan peraturan daripada bantuan AI generatif;
-5. menentukan medan wajib, status, peranan, notifikasi dan jejak audit;
-6. menguji aliran biasa, pengecualian dan kegagalan dengan data rekaan;
-7. menyediakan spesifikasi automasi kecil yang boleh dinilai sebelum dibangunkan.
+1. Memetakan proses semasa menggunakan pencetus, pelaku, langkah, keputusan, bukti dan hasil;
+2. Mengenal pasti kelewatan, pengulangan, jurang data dan risiko dalam aliran kerja;
+3. Mereka bentuk proses cadangan tanpa menghapuskan kawalan manusia;
+4. Membezakan automasi berasaskan peraturan daripada bantuan AI generatif;
+5. Menentukan medan wajib, status, peranan, notifikasi dan jejak audit;
+6. Menguji aliran biasa, pengecualian dan kegagalan dengan data rekaan;
+7. Menyediakan spesifikasi automasi kecil yang boleh dinilai sebelum dibangunkan.
 
 ## Modul 4A — Peta sebelum automasi
 
@@ -38,7 +38,7 @@ Gunakan urutan **Pencetus–Rekod–Semak–Keputusan–Tindakan–Bukti–Simpa
 | Unsur | Soalan kawalan | Contoh MPE |
 |---|---|---|
 | Pencetus | Apakah yang memulakan proses? | Imbas QR atau permohonan pinjaman |
-| Rekod | Data apa perlu ditangkap sekali sahaja? | Identiti, aktiviti, aset, tarikh dan bacaan |
+| Rekod | Data apa perlu dikumpul sekali sahaja? | Identiti, aktiviti, aset, tarikh dan bacaan |
 | Semak | Apakah peraturan yang boleh disahkan? | Medan wajib, format ID, tarikh dan julat |
 | Keputusan | Siapa mempunyai kuasa? | Pelulus aset atau penyemak ujian |
 | Tindakan | Apa berlaku selepas keputusan? | Notifikasi, pembetulan atau penutupan |
@@ -49,14 +49,14 @@ Gunakan urutan **Pencetus–Rekod–Semak–Keputusan–Tindakan–Bukti–Simpa
 
 Aliran sasaran latihan:
 
-1. pegawai mengimbas QR dan memilih aktiviti;
-2. sistem memaparkan borang khusus mengikut aktiviti;
-3. peraturan menyemak medan wajib, format dan kelengkapan bukti;
-4. rekod tidak lengkap dikembalikan kepada penyedia;
-5. rekod lengkap dihantar kepada pegawai yang ditetapkan;
-6. pegawai menyemak serta memberi keputusan;
-7. sistem menghantar notifikasi dan merekod masa, peranan serta tindakan;
-8. hanya rekod yang disahkan disimpan sebagai rekod rasmi.
+1. Pegawai mengimbas QR dan memilih aktiviti;
+2. Sistem memaparkan borang khusus mengikut aktiviti;
+3. Peraturan menyemak medan wajib, format dan kelengkapan bukti;
+4. Rekod tidak lengkap dikembalikan kepada penyedia;
+5. Rekod lengkap dihantar kepada pegawai yang ditetapkan;
+6. Pegawai menyemak serta memberi keputusan;
+7. Sistem menghantar notifikasi dan merekod masa, peranan serta tindakan;
+8. Hanya rekod yang disahkan disimpan sebagai rekod rasmi.
 
 ## Cabang proses latihan
 
@@ -90,13 +90,13 @@ Medan penting: nombor rujukan ujian, butiran MCCB, keadaan kerja, faktor TCD, se
 
 ## Hasil akhir peserta
 
-1. satu peta proses semasa;
-2. satu senarai isu dan risiko;
-3. satu peta proses cadangan;
-4. satu matriks peranan dan keputusan;
-5. satu kamus medan serta status;
-6. sekurang-kurangnya tiga kes ujian termasuk satu pengecualian;
-7. satu spesifikasi percubaan kecil dengan ukuran kejayaan dan pelan sandaran.
+1. Satu peta proses semasa;
+2. Satu senarai isu dan risiko;
+3. Satu peta proses cadangan;
+4. Satu matriks peranan dan keputusan;
+5. Satu kamus medan serta status;
+6. Sekurang-kurangnya tiga kes ujian termasuk satu pengecualian;
+7. Satu spesifikasi percubaan kecil dengan ukuran kejayaan dan pelan sandaran.
 
 ## Video pembelajaran berdasarkan slaid Modul 4
 

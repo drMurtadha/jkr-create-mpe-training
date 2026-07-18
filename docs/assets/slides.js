@@ -31,20 +31,20 @@ const slides = [
   {
     section: 'Konsep', title: 'Apakah aplikasi pintar?',
     lead: 'Aplikasi tidak perlu menggunakan AI untuk menghasilkan kerja yang lebih pintar.',
-    html: `<div class="pitch"><b>Aplikasi pintar</b> membantu manusia menangkap data sekali, menyemak lebih awal, mengautomasi langkah rutin, memantau status dan mengekalkan kawalan keputusan.</div><div class="slide-grid" style="--cols:4">${['Kurang sentuhan','Ralat dicegah','Status jelas','Jejak tersedia'].map(x=>`<div class="slide-card accent"><h3>${x}</h3></div>`).join('')}</div>`,
+    html: `<div class="pitch"><b>Aplikasi pintar</b> membantu manusia mengumpul data sekali, menyemak lebih awal, mengautomasi langkah rutin, memantau status dan mengekalkan kawalan keputusan.</div><div class="slide-grid" style="--cols:4">${['Kurang sentuhan','Ralat dicegah','Status jelas','Jejak tersedia'].map(x=>`<div class="slide-card accent"><h3>${x}</h3></div>`).join('')}</div>`,
     notes: 'Tekankan bahawa nilai datang daripada reka bentuk kerja yang lebih baik, bukan semata-mata penggunaan AI.'
   },
   {
     section: 'Konsep', title: 'Tiga tahap kematangan kerja',
     lead: 'Digital ialah langkah penting, tetapi belum tentu menghapuskan kerja berulang.',
-    html: `<div class="slide-grid" style="--cols:3"><div class="slide-card"><h3>MANUAL</h3><p>Tulis dan pindah<br>Cari secara manual<br>Semak di akhir<br>Ringkasan manual</p></div><div class="slide-card"><h3>DIGITAL</h3><p>Isi pada skrin<br>Fail elektronik<br>Semak senarai<br>Laporan berasingan</p></div><div class="slide-card accent"><h3>PINTAR</h3><p>Tangkap sekali<br>Cari dan jejak<br>Validasi semasa input<br>Status dan metrik tersedia</p></div></div>`,
+    html: `<div class="slide-grid" style="--cols:3"><div class="slide-card"><h3>MANUAL</h3><p>Tulis dan pindah<br>Cari secara manual<br>Semak di akhir<br>Ringkasan manual</p></div><div class="slide-card"><h3>DIGITAL</h3><p>Isi pada skrin<br>Fail elektronik<br>Semak senarai<br>Laporan berasingan</p></div><div class="slide-card accent"><h3>PINTAR</h3><p>Kumpul sekali<br>Cari dan jejak<br>Validasi semasa input<br>Status dan metrik tersedia</p></div></div>`,
     notes: 'Minta peserta meletakkan satu proses MPE pada tahap manual, digital atau pintar.'
   },
   {
     section: 'Konsep', title: 'Contoh: perjalanan Buku Log Makmal',
     lead: 'Perhatikan bagaimana bilangan sentuhan dan kelewatan berubah.',
     html: `<div class="flow">${['Catat aktiviti','Semak medan','Simpan rekod','Jejak status','Ringkaskan'].map((x,i)=>`${i?'<span>→</span>':''}<div><span class="big-number">0${i+1}</span><h3>${x}</h3></div>`).join('')}</div><div class="pitch">Matlamatnya bukan sekadar borang digital — matlamatnya ialah aliran kerja yang lebih jelas dan boleh dijejak.</div>`,
-    notes: 'Bandingkan aliran berasingan dengan satu aliran yang menangkap, menyemak dan menggunakan semula data.'
+    notes: 'Bandingkan aliran berasingan dengan satu aliran yang mengumpul, menyemak dan menggunakan semula data.'
   },
   {
     section: 'Masalah', dark: true, title: 'Lima kebocoran produktiviti',
@@ -70,14 +70,14 @@ const slides = [
     section: 'Keupayaan', title: 'Enam keupayaan aplikasi pintar',
     lead: 'Fikirkan fungsi yang diperlukan — bukan jenama alat.',
     html: `<div class="slide-grid" style="--cols:3">${[
-      ['Menangkap','Borang, imej, bacaan dan lampiran'],['Menyusun','Struktur data dan nama rekod'],['Menyemak','Medan kosong, format dan julat'],['Membantu','Mencari, merumus dan menggubal'],['Mengautomasi','Notifikasi, dokumen dan status'],['Memantau','Metrik, tunggakan dan pengecualian']
+      ['Mengumpul','Borang, imej, bacaan dan lampiran'],['Menyusun','Struktur data dan nama rekod'],['Menyemak','Medan kosong, format dan julat'],['Membantu','Mencari, merumus dan menggubal'],['Mengautomasi','Notifikasi, dokumen dan status'],['Memantau','Metrik, tunggakan dan pengecualian']
     ].map(x=>`<div class="slide-card accent"><h3>${x[0]}</h3><p>${x[1]}</p></div>`).join('')}</div>`,
     notes: 'Satu percubaan awal biasanya hanya memerlukan dua atau tiga keupayaan.'
   },
   {
     section: 'Keupayaan', title: 'Padankan keupayaan dengan kerja MPE',
     lead: 'Peserta boleh mencadangkan gabungan lain dengan justifikasi.',
-    html: `<div class="compare"><div class="compare-list">${['Rekod aktiviti di lokasi','Cari sijil kalibrasi','Sediakan draf ringkasan ujian','Jejak pinjaman aset','Pantau keputusan ujian'].map(x=>`<div class="compare-item">${x}</div>`).join('')}</div><span>→</span><div class="compare-list">${['Menangkap + menyemak','Menyusun + memantau','Membantu + menyemak','Mengautomasi + memantau','Menyemak + memantau'].map(x=>`<div class="compare-item"><b>${x}</b></div>`).join('')}</div></div>`,
+    html: `<div class="compare"><div class="compare-list">${['Rekod aktiviti di lokasi','Cari sijil kalibrasi','Sediakan draf ringkasan ujian','Jejak pinjaman aset','Pantau keputusan ujian'].map(x=>`<div class="compare-item">${x}</div>`).join('')}</div><span>→</span><div class="compare-list">${['Mengumpul + menyemak','Menyusun + memantau','Membantu + menyemak','Mengautomasi + memantau','Menyemak + memantau'].map(x=>`<div class="compare-item"><b>${x}</b></div>`).join('')}</div></div>`,
     notes: 'Pilih dua nota masalah dan minta peserta menerangkan padanan yang dipilih.'
   },
   {
@@ -114,7 +114,7 @@ const slides = [
     section: 'Demonstrasi', title: 'Apa yang menjadikannya pintar?',
     lead: 'Perhatikan empat perkara semasa demonstrasi MPE Hub.',
     html: `<div class="slide-grid" style="--cols:4">${[
-      ['01','Penyatuan','Data ditangkap sekali'],['02','Pencegahan','Ralat dicegah semasa input'],['03','Ketelusan','Status dilihat pengguna dibenarkan'],['04','Titik kawalan','Keputusan penting kekal pada manusia']
+      ['01','Penyatuan','Data dikumpul sekali'],['02','Pencegahan','Ralat dicegah semasa input'],['03','Ketelusan','Status dilihat pengguna dibenarkan'],['04','Titik kawalan','Keputusan penting kekal pada manusia']
     ].map(x=>`<div class="slide-card accent"><span class="big-number">${x[0]}</span><h3>${x[1]}</h3><p>${x[2]}</p></div>`).join('')}</div>`,
     notes: 'Selepas demo, minta satu jawapan ringkas bagi setiap soalan.'
   },
@@ -141,7 +141,7 @@ const slides = [
   {
     section: 'Penutup', dark: true, title: 'Tiga prinsip untuk dibawa pulang',
     lead: 'Produktiviti meningkat apabila kerja direka dengan sengaja.',
-    html: `<div class="slide-grid" style="--cols:3"><div class="slide-card"><span class="big-number">1</span><h3>Mulakan dengan masalah kerja.</h3><p>Teknologi ialah alat, bukan matlamat.</p></div><div class="slide-card lime"><span class="big-number">2</span><h3>Tangkap data sekali, gunakan berkali-kali.</h3><p>Kurangkan pemindahan dan ralat.</p></div><div class="slide-card"><span class="big-number">3</span><h3>Kekalkan manusia pada keputusan penting.</h3><p>Automasi proses, sahkan hasil.</p></div></div><div class="pitch"><b>Exit ticket:</b> satu kefahaman · satu peluang · satu risiko · satu langkah dua minggu</div>`,
+    html: `<div class="slide-grid" style="--cols:3"><div class="slide-card"><span class="big-number">1</span><h3>Mulakan dengan masalah kerja.</h3><p>Teknologi ialah alat, bukan matlamat.</p></div><div class="slide-card lime"><span class="big-number">2</span><h3>Kumpul data sekali, gunakan berkali-kali.</h3><p>Kurangkan pemindahan dan ralat.</p></div><div class="slide-card"><span class="big-number">3</span><h3>Kekalkan manusia pada keputusan penting.</h3><p>Automasi proses, sahkan hasil.</p></div></div><div class="pitch"><b>Exit ticket:</b> satu kefahaman · satu peluang · satu risiko · satu langkah dua minggu</div>`,
     notes: 'Minta peserta melengkapkan exit ticket sebelum bergerak ke Modul 2.'
   }
 ];

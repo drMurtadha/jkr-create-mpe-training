@@ -10,22 +10,22 @@ Aktiviti 30 minit ini menyediakan peserta untuk bekerja sebagai satu pasukan pro
 
 Setiap kumpulan perlu mempunyai:
 
-- satu repositori latihan;
-- seorang ketua projek dan dua ahli yang telah menerima jemputan;
-- sekurang-kurangnya satu branch selain `main`;
-- satu commit daripada ahli;
-- satu pull request yang disemak;
-- satu perubahan yang telah dimerge ke `main`.
+- Satu repositori latihan;
+- Seorang ketua projek dan dua ahli yang telah menerima jemputan;
+- Sekurang-kurangnya satu branch selain `main`;
+- Satu commit daripada ahli;
+- Satu pull request yang disemak;
+- Satu perubahan yang telah dimerge ke `main`.
 
 ## Sebelum bengkel
 
 Setiap peserta perlu:
 
-1. [mencipta akaun GitHub](https://github.com/signup);
-2. mengesahkan alamat e-mel;
-3. mengaktifkan pengesahan dua faktor atau passkey jika dibenarkan;
-4. mencatat **username GitHub** sendiri;
-5. memastikan boleh log masuk tanpa berkongsi kata laluan atau kod pemulihan.
+1. [Mencipta akaun GitHub](https://github.com/signup);
+2. Mengesahkan alamat e-mel;
+3. Mengaktifkan pengesahan dua faktor atau passkey jika dibenarkan;
+4. Mencatat **username GitHub** sendiri;
+5. Memastikan boleh log masuk tanpa berkongsi kata laluan atau kod pemulihan.
 
 Rujukan rasmi: [Mencipta akaun GitHub](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) dan [Bermula dengan akaun GitHub](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account).
 

@@ -32,11 +32,11 @@ Gunakan tujuh kotak berikut:
 
 Tambahkan:
 
-- satu laluan rekod tidak lengkap;
-- satu laluan kegagalan notifikasi;
-- satu titik keputusan manusia;
-- satu lokasi penyimpanan rasmi;
-- satu ukuran kejayaan.
+- Satu laluan rekod tidak lengkap;
+- Satu laluan kegagalan notifikasi;
+- Satu titik keputusan manusia;
+- Satu lokasi penyimpanan rasmi;
+- Satu ukuran kejayaan.
 
 ## Semakan silang
 

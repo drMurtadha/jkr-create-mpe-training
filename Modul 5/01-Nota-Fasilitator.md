@@ -16,13 +16,13 @@ Peserta menyesuaikan templat MPE Hub dan membuktikan aliran GitHub Pages -> Apps
 
 ## Hasil minimum lulus
 
-- repositori peserta dan GitHub Pages boleh dibuka;
+- Repositori peserta dan GitHub Pages boleh dibuka;
 - URL Apps Script `/exec` dikonfigurasi secara peribadi;
-- rekod rekaan Buku Log, KEW.PA-9 dan MCCB disimpan;
-- data muncul pada tab Google Sheets yang betul;
-- lampiran rekaan, jika digunakan, muncul dalam Drive;
-- satu perubahan kecil telah di-commit;
-- ujian penerimaan dan checklist serahan dilengkapkan.
+- Rekod rekaan Buku Log, KEW.PA-9 dan MCCB disimpan;
+- Data muncul pada tab Google Sheets yang betul;
+- Lampiran rekaan, jika digunakan, muncul dalam Drive;
+- Satu perubahan kecil telah di-commit;
+- Ujian penerimaan dan checklist serahan dilengkapkan.
 
 ## Pelan 120 minit
 
@@ -70,10 +70,10 @@ Jika GitHub Pages lambat, semak commit dan status Pages, kemudian teruskan check
 
 ## Tanda bahaya
 
-- peserta cuba membina semula semua kod dari kosong;
+- Peserta cuba membina semula semua kod dari kosong;
 - URL `/exec` atau ID Google dimasukkan ke prompt AI;
-- data sebenar digunakan;
-- endpoint `Anyone` dianggap selamat untuk operasi sebenar;
-- perubahan merosakkan padanan frontend dan backend;
-- peserta mengubah lebih daripada satu fungsi besar;
-- tiada bukti storan atau sejarah commit.
+- Data sebenar digunakan;
+- Endpoint `Anyone` dianggap selamat untuk operasi sebenar;
+- Perubahan merosakkan padanan frontend dan backend;
+- Peserta mengubah lebih daripada satu fungsi besar;
+- Tiada bukti storan atau sejarah commit.
