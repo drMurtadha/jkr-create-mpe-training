@@ -1,7 +1,5 @@
 # Modul 2 — Penggunaan AI Generatif dalam Penyediaan Dokumen Rasmi Tidak Terperingkat
 
-[Buka slaid web Modul 2](./slaid/)
-
 ## Kedudukan dalam bengkel
 
 - Tarikh: 28 Julai 2026 (Selasa)
