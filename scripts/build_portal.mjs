@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url);
 const { marked } = require('marked');
 const root = process.cwd();
 const docs = path.join(root, 'docs');
-const assetVersion = '20260718-12';
+const assetVersion = '20260718-13';
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -115,6 +115,7 @@ function rewriteModuleLinks(markdown, moduleNumber) {
     ['./02-Kandungan-Slaid.md', 'kandungan-slaid.html'],
     ['./03-Kit-Binaan-dan-Pustaka-Prompt.md', 'kit-binaan.html'],
     ['./04-Latihan-Bina-MPE-Hub.md', 'latihan.html'],
+    ['./06-Pilih-Gaya-Antaramuka.md', 'gaya-antaramuka.html'],
     ['./05-Penilaian-Akhir.md', 'penilaian.html']
   ];
   const moduleLinks = { 1: moduleOne, 2: moduleTwo, 3: moduleThree, 4: moduleFour, 5: moduleFive };
@@ -158,7 +159,7 @@ async function markdownPage({ source, output, title, description, prefix = '../'
   const moduleTwoAside = `<aside class="article-nav"><strong>Dalam Modul 2</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kandungan-slaid.html">Kandungan slaid</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="latihan-surat.html">Latihan surat</a><a href="latihan-minit.html">Latihan minit</a><a href="kawalan-rekod.html">Kawalan rekod</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
   const moduleThreeAside = `<aside class="article-nav"><strong>Dalam Modul 3</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="latihan-analisis.html">Analisis data</a><a href="rekod-teknikal.html">Rekod teknikal</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
   const moduleFourAside = `<aside class="article-nav"><strong>Dalam Modul 4</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="pustaka-prompt.html">Pustaka prompt</a><a href="pemetaan-proses.html">Pemetaan proses</a><a href="automasi-terkawal.html">Automasi terkawal</a><a href="penilaian.html">Penilaian</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
-  const moduleFiveAside = `<aside class="article-nav"><strong>Dalam Modul 5</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kit-binaan.html">Prasyarat & prompt</a><a href="latihan.html">Latihan 80 minit</a><a href="penilaian.html">Penilaian akhir</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
+  const moduleFiveAside = `<aside class="article-nav"><strong>Dalam Modul 5</strong><a href="index.html">Ringkasan modul</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kit-binaan.html">Prasyarat & prompt</a><a href="gaya-antaramuka.html">Pilih gaya antaramuka</a><a href="latihan.html">Latihan 80 minit</a><a href="penilaian.html">Penilaian akhir</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
   const generalAside = `<aside class="article-nav"><strong>Modul bengkel</strong><a href="../modul-1/index.html">Modul 1</a><a href="../modul-2/index.html">Modul 2</a><a href="../modul-3/index.html">Modul 3</a><a href="../modul-4/index.html">Modul 4</a><a href="../modul-5/index.html">Modul 5</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
   const aside = moduleNumber === 1 ? moduleOneAside : moduleNumber === 2 ? moduleTwoAside : moduleNumber === 3 ? moduleThreeAside : moduleNumber === 4 ? moduleFourAside : moduleNumber === 5 ? moduleFiveAside : generalAside;
   const slideLink = slideButton ? `<div class="module-slide-cta"><a class="button accent" href="slaid.html">Buka slaid web Modul ${moduleNumber}</a></div>` : '';
@@ -231,6 +232,7 @@ await markdownPage({ source: 'Modul 5/README.md', output: 'modul-5/index.html', 
 await markdownPage({ source: 'Modul 5/01-Nota-Fasilitator.md', output: 'modul-5/nota-fasilitator.html', title: 'Nota Fasilitator Modul 5', description: 'Pelan hands-on 120 minit untuk membina dan menguji MPE Hub.', moduleNumber: 5 });
 await markdownPage({ source: 'Modul 5/02-Kandungan-Slaid.md', output: 'modul-5/kandungan-slaid.html', title: 'Kandungan Slaid Modul 5', description: 'Sumber cetak bagi 20 slaid Modul 5.', moduleNumber: 5 });
 await markdownPage({ source: 'Modul 5/03-Kit-Binaan-dan-Pustaka-Prompt.md', output: 'modul-5/kit-binaan.html', title: 'Kit Persediaan dan Pustaka Prompt', description: 'Prasyarat, konfigurasi akaun dan prompt bantuan AI untuk menyesuaikan MPE Hub.', moduleNumber: 5 });
+await markdownPage({ source: 'Modul 5/06-Pilih-Gaya-Antaramuka.md', output: 'modul-5/gaya-antaramuka.html', title: 'Pilih Gaya Antaramuka', description: 'Empat tema CSS dengan pratonton, panduan penggunaan dan pek yang boleh dimuat turun.', moduleNumber: 5 });
 await markdownPage({ source: 'Modul 5/04-Latihan-Bina-MPE-Hub.md', output: 'modul-5/latihan.html', title: 'Latihan Amali MPE Hub — 80 Minit', description: 'Peta medan, isi tiga modul, semak storan, ubah, commit dan uji GitHub Pages.', moduleNumber: 5 });
 await markdownPage({ source: 'Modul 5/05-Penilaian-Akhir.md', output: 'modul-5/penilaian.html', title: 'Penilaian Akhir Modul 5', description: 'Kuiz, rubrik, exit ticket dan penilaian akhir program.', moduleNumber: 5 });
 
@@ -240,6 +242,8 @@ await write('modul-2/slaid.html', slidePage(2, 'slides-modul-2.js'));
 await write('modul-3/slaid.html', slidePage(3, 'slides-modul-3.js'));
 await write('modul-4/slaid.html', slidePage(4, 'slides-modul-4.js'));
 await write('modul-5/slaid.html', slidePage(5, 'slides-modul-5.js'));
+
+await fs.cp(path.join(root, 'Modul 5/templat-antaramuka'), path.join(docs, 'downloads/templat-antaramuka'), { recursive: true });
 
 await fs.mkdir(path.join(docs, 'downloads'), { recursive: true });
 await fs.copyFile(path.join(root, 'Modul 1/slaid/Slaid-Modul-1-MPE.pptx'), path.join(docs, 'downloads/Slaid-Modul-1-MPE.pptx'));

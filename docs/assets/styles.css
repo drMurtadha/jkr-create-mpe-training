@@ -144,6 +144,22 @@ button, .button { font: inherit; }
 .module-slide-cta { margin: 0 0 1.5rem; }
 .notice { padding: 1rem 1.2rem; border-left: 4px solid var(--amber); background: #fff5df; color: #674b17; }
 
+/* Module 5 interface template gallery */
+.template-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin: 1.5rem 0 2rem; }
+.template-card { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: #fbfcfa; }
+.template-card img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-bottom: 1px solid var(--line); background: #e8eeeb; }
+.template-card > div { padding: 1.1rem; }
+.template-card h3 { margin: 0 0 .35rem; }
+.template-card p { min-height: 3.3em; margin: 0 0 1rem; }
+.download-panel { display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; margin: 1.5rem 0 2rem; padding: 1.25rem; border: 2px solid var(--teal); border-radius: 16px; background: var(--teal-soft); }
+.download-panel strong { color: var(--ink); font-size: 1.15rem; }
+.download-panel p { margin: .25rem 0 0; }
+@media (max-width: 760px) {
+  .template-gallery { grid-template-columns: 1fr; }
+  .template-card p { min-height: 0; }
+  .download-panel { align-items: stretch; flex-direction: column; }
+}
+
 /* Saved Module 5 execution workspace */
 .workspace-progress, .uat-panel { margin: 1rem 0 1.5rem; padding: 1rem; border: 1px solid var(--line); border-radius: 14px; background: #f8fbfa; }
 .workspace-progress > div { display: flex; justify-content: space-between; gap: 1rem; color: var(--ink); }
