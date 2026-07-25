@@ -10,3 +10,5 @@ temp/
 *.tmp
 ~$*
 
+# Artifak konfigurasi NSS/PKCS#11 tempatan
+pkcs11.txt
