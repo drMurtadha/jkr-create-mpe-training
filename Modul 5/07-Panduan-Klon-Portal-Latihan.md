@@ -33,6 +33,41 @@ Apabila selesai, peserta mempunyai:
 - [ ] Nama repositori dipilih; cadangan `portal-latihan-mpe`.
 - [ ] Semua kandungan yang akan diterbitkan ialah data rekaan atau bahan yang dibenarkan untuk paparan awam.
 
+## Jika peserta menggunakan Windows
+
+“Terminal” bukan bermaksud peserta mesti menggunakan MacBook. Pada Windows, pilih alat mengikut tahap kemahiran:
+
+| Pilihan Windows | Sesuai untuk | Perlu command line |
+|---|---|---:|
+| GitHub Desktop | Peserta baharu yang mahu clone, commit dan push melalui aplikasi grafik | Tidak |
+| Git Bash | Peserta yang mahu mengikuti arahan `bash` dalam panduan ini | Ya |
+| Windows Terminal + PowerShell | Peserta yang sudah biasa dengan persekitaran Windows | Ya |
+| Command Prompt | Boleh digunakan untuk arahan asas, tetapi bukan pilihan latihan utama | Ya |
+| WSL | Pengguna teknikal yang memang telah mengkonfigurasinya | Ya |
+
+### Cadangan fasilitator
+
+- **Pilihan utama tanpa terminal:** GitHub Desktop.
+- **Pilihan utama jika terminal diperlukan:** Git Bash.
+- **Pilihan pegawai teknikal Windows:** Windows Terminal dengan PowerShell.
+- Jangan meminta peserta memasang WSL semasa bengkel jika ia belum tersedia.
+
+### Persediaan Windows
+
+1. Pasang [Git for Windows](https://git-scm.com/download/win). Pemasangan ini menyediakan Git dan Git Bash.
+2. Jika memilih aplikasi grafik, pasang dan log masuk ke [GitHub Desktop](https://desktop.github.com/download/).
+3. Jika memilih PowerShell, buka **Start → Windows Terminal → PowerShell**.
+4. Jika memilih Git Bash, buka **Start → Git Bash**.
+5. Semak pemasangan:
+
+```bash
+git --version
+node --version
+npm --version
+```
+
+Arahan `git` dan `npm` dalam panduan ini berfungsi dalam Git Bash dan PowerShell. Simbol prompt mungkin berbeza, tetapi peserta tidak perlu menaip simbol seperti `$` atau `PS>`.
+
 ## Laluan A — Fork melalui pelayar
 
 ### A1. Cipta salinan
@@ -80,7 +115,12 @@ GitHub turut memaparkan URL sebenar pada halaman deployment. Gunakan URL yang di
 
 ### B1. Semak Git
 
-Buka Terminal, PowerShell atau Git Bash:
+Buka salah satu:
+
+- **macOS/Linux:** Terminal;
+- **Windows:** Git Bash atau Windows Terminal dengan PowerShell.
+
+Kemudian jalankan:
 
 ```bash
 git --version
@@ -182,7 +222,7 @@ Semak setiap penggantian. Jangan menukar pautan MPE Hub jika portal peserta masi
 
 ## Bina dan uji secara tempatan
 
-Pasang Node.js versi 20 atau lebih baharu, kemudian jalankan:
+Pasang Node.js versi 20 atau lebih baharu. Arahan yang sama boleh digunakan dalam Terminal macOS/Linux, Git Bash atau PowerShell:
 
 ```bash
 npm install
@@ -194,6 +234,8 @@ Hidangkan folder `docs`:
 ```bash
 npm run serve
 ```
+
+Arahan `npm run serve` menggunakan Node.js dan berfungsi pada Windows, macOS serta Linux; pemasangan Python tidak diperlukan.
 
 Buka:
 
@@ -258,6 +300,8 @@ Jika berlaku konflik, jangan pilih “accept all” secara automatik. Semak perb
 | Perubahan tidak muncul | Workflow belum selesai atau cache pelayar | Tunggu hijau dan lakukan hard refresh |
 | Aset/CSS hilang | Struktur `docs/` atau pautan relatif berubah | Pulihkan struktur asal dan jalankan `npm run build` |
 | `npm install` gagal | Node terlalu lama atau rangkaian menyekat npm | Gunakan Node 20+ atau teruskan dengan deployment GitHub Actions |
+| `git` tidak dikenali pada Windows | Git for Windows belum dipasang atau terminal belum dibuka semula | Pasang Git for Windows, tutup dan buka semula Git Bash/PowerShell |
+| `node` atau `npm` tidak dikenali | Node.js belum dipasang atau `PATH` belum dikemas kini | Pasang Node.js 20+, kemudian buka semula terminal |
 | Push ditolak | Remote atau akses salah | Jalankan `git remote -v` dan pastikan `origin` milik peserta |
 | Dasar organisasi menyekat Pages | Tetapan organisasi mengatasi repositori | Gunakan akaun latihan yang dibenarkan atau minta pentadbir |
 
@@ -296,3 +340,6 @@ Serahkan lima perkara:
 - [About remote repositories](https://docs.github.com/en/get-started/git-basics/about-remote-repositories)
 - [Using custom workflows with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
 - [Managing GitHub Actions settings](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository)
+- [GitHub Desktop untuk clone dan fork](https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop)
+- [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/)
+- [Git for Windows](https://git-scm.com/download/win)

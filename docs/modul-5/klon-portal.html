@@ -82,6 +82,62 @@
 <li><input disabled="" type="checkbox"> Nama repositori dipilih; cadangan <code>portal-latihan-mpe</code>.</li>
 <li><input disabled="" type="checkbox"> Semua kandungan yang akan diterbitkan ialah data rekaan atau bahan yang dibenarkan untuk paparan awam.</li>
 </ul>
+<h2>Jika peserta menggunakan Windows</h2>
+<p>“Terminal” bukan bermaksud peserta mesti menggunakan MacBook. Pada Windows, pilih alat mengikut tahap kemahiran:</p>
+<table>
+<thead>
+<tr>
+<th>Pilihan Windows</th>
+<th>Sesuai untuk</th>
+<th align="right">Perlu command line</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GitHub Desktop</td>
+<td>Peserta baharu yang mahu clone, commit dan push melalui aplikasi grafik</td>
+<td align="right">Tidak</td>
+</tr>
+<tr>
+<td>Git Bash</td>
+<td>Peserta yang mahu mengikuti arahan <code>bash</code> dalam panduan ini</td>
+<td align="right">Ya</td>
+</tr>
+<tr>
+<td>Windows Terminal + PowerShell</td>
+<td>Peserta yang sudah biasa dengan persekitaran Windows</td>
+<td align="right">Ya</td>
+</tr>
+<tr>
+<td>Command Prompt</td>
+<td>Boleh digunakan untuk arahan asas, tetapi bukan pilihan latihan utama</td>
+<td align="right">Ya</td>
+</tr>
+<tr>
+<td>WSL</td>
+<td>Pengguna teknikal yang memang telah mengkonfigurasinya</td>
+<td align="right">Ya</td>
+</tr>
+</tbody></table>
+<h3>Cadangan fasilitator</h3>
+<ul>
+<li><strong>Pilihan utama tanpa terminal:</strong> GitHub Desktop.</li>
+<li><strong>Pilihan utama jika terminal diperlukan:</strong> Git Bash.</li>
+<li><strong>Pilihan pegawai teknikal Windows:</strong> Windows Terminal dengan PowerShell.</li>
+<li>Jangan meminta peserta memasang WSL semasa bengkel jika ia belum tersedia.</li>
+</ul>
+<h3>Persediaan Windows</h3>
+<ol>
+<li>Pasang <a href="https://git-scm.com/download/win">Git for Windows</a>. Pemasangan ini menyediakan Git dan Git Bash.</li>
+<li>Jika memilih aplikasi grafik, pasang dan log masuk ke <a href="https://desktop.github.com/download/">GitHub Desktop</a>.</li>
+<li>Jika memilih PowerShell, buka <strong>Start → Windows Terminal → PowerShell</strong>.</li>
+<li>Jika memilih Git Bash, buka <strong>Start → Git Bash</strong>.</li>
+<li>Semak pemasangan:</li>
+</ol>
+<pre><code class="language-bash">git --version
+node --version
+npm --version
+</code></pre>
+<p>Arahan <code>git</code> dan <code>npm</code> dalam panduan ini berfungsi dalam Git Bash dan PowerShell. Simbol prompt mungkin berbeza, tetapi peserta tidak perlu menaip simbol seperti <code>$</code> atau <code>PS&gt;</code>.</p>
 <h2>Laluan A — Fork melalui pelayar</h2>
 <h3>A1. Cipta salinan</h3>
 <ol>
@@ -119,7 +175,12 @@
 <p><strong>Selesai apabila:</strong> halaman utama dan sekurang-kurangnya satu halaman modul boleh dibuka tanpa log masuk.</p>
 <h2>Laluan B — Clone melalui Git</h2>
 <h3>B1. Semak Git</h3>
-<p>Buka Terminal, PowerShell atau Git Bash:</p>
+<p>Buka salah satu:</p>
+<ul>
+<li><strong>macOS/Linux:</strong> Terminal;</li>
+<li><strong>Windows:</strong> Git Bash atau Windows Terminal dengan PowerShell.</li>
+</ul>
+<p>Kemudian jalankan:</p>
 <pre><code class="language-bash">git --version
 </code></pre>
 <p>Jika arahan tidak ditemui, pasang Git atau gunakan Laluan A/C.</p>
@@ -231,13 +292,14 @@ Prof. Madya Dr. Mohd Murtadha
 </code></pre>
 <p>Semak setiap penggantian. Jangan menukar pautan MPE Hub jika portal peserta masih menggunakan kajian kes asal.</p>
 <h2>Bina dan uji secara tempatan</h2>
-<p>Pasang Node.js versi 20 atau lebih baharu, kemudian jalankan:</p>
+<p>Pasang Node.js versi 20 atau lebih baharu. Arahan yang sama boleh digunakan dalam Terminal macOS/Linux, Git Bash atau PowerShell:</p>
 <pre><code class="language-bash">npm install
 npm run build
 </code></pre>
 <p>Hidangkan folder <code>docs</code>:</p>
 <pre><code class="language-bash">npm run serve
 </code></pre>
+<p>Arahan <code>npm run serve</code> menggunakan Node.js dan berfungsi pada Windows, macOS serta Linux; pemasangan Python tidak diperlukan.</p>
 <p>Buka:</p>
 <pre><code class="language-text">http://localhost:4173/
 </code></pre>
@@ -318,6 +380,16 @@ git push origin main
 <td>Gunakan Node 20+ atau teruskan dengan deployment GitHub Actions</td>
 </tr>
 <tr>
+<td><code>git</code> tidak dikenali pada Windows</td>
+<td>Git for Windows belum dipasang atau terminal belum dibuka semula</td>
+<td>Pasang Git for Windows, tutup dan buka semula Git Bash/PowerShell</td>
+</tr>
+<tr>
+<td><code>node</code> atau <code>npm</code> tidak dikenali</td>
+<td>Node.js belum dipasang atau <code>PATH</code> belum dikemas kini</td>
+<td>Pasang Node.js 20+, kemudian buka semula terminal</td>
+</tr>
+<tr>
 <td>Push ditolak</td>
 <td>Remote atau akses salah</td>
 <td>Jalankan <code>git remote -v</code> dan pastikan <code>origin</code> milik peserta</td>
@@ -384,6 +456,9 @@ git push origin main
 <li><a href="https://docs.github.com/en/get-started/git-basics/about-remote-repositories">About remote repositories</a></li>
 <li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages">Using custom workflows with GitHub Pages</a></li>
 <li><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository">Managing GitHub Actions settings</a></li>
+<li><a href="https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop">GitHub Desktop untuk clone dan fork</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows/terminal/">Windows Terminal</a></li>
+<li><a href="https://git-scm.com/download/win">Git for Windows</a></li>
 </ul>
 <div class="resource-bar"><a class="button ghost" href="https://github.com/drMurtadha/jkr-create-mpe-training/blob/main/Modul%205/07-Panduan-Klon-Portal-Latihan.md" target="_blank" rel="noopener">Lihat sumber Markdown ↗</a><button class="button ghost" onclick="window.print()">Cetak halaman</button></div></article></main>
 <footer class="site-footer"><div class="container footer-grid"><div><strong>Bengkel Transformasi Digital dan Pemerkasaan Operasi Pintar MPE</strong><br>CREaTE JKR · 28–29 Julai 2026</div><div>Prof. Madya Dr. Mohd Murtadha Mohamad<br><a href="https://github.com/drMurtadha/jkr-create-mpe-training">Sumber terbuka di GitHub</a></div></div></footer>
