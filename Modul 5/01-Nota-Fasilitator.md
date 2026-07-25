@@ -13,6 +13,7 @@ Peserta menyesuaikan templat MPE Hub dan membuktikan aliran GitHub Pages -> Apps
 5. Sediakan data rekaan Buku Log, KEW.PA-9 dan MCCB.
 6. Bentuk kumpulan dua atau tiga orang dengan seorang pemilik akaun.
 7. Sediakan laluan sandaran jika akaun organisasi menyekat Apps Script.
+8. Edarkan [Panduan klon Portal Latihan](./07-Panduan-Klon-Portal-Latihan.md) sebagai tugasan kendiri jika segmen penerbitan tidak sempat diselesaikan.
 
 ## Hasil minimum lulus
 
@@ -67,6 +68,8 @@ Lengkapkan kuiz, exit ticket dan penilaian akhir program.
 Jika Apps Script disekat, peserta bekerja bersama kumpulan yang mempunyai deployment sah atau menggunakan demonstrasi fasilitator untuk latihan peta medan, ujian dan perubahan frontend. Jangan memintas kawalan organisasi.
 
 Jika GitHub Pages lambat, semak commit dan status Pages, kemudian teruskan checklist menggunakan pratonton repositori. Catat ujian Pages sebagai belum selesai.
+
+Jika masa amali tidak mencukupi, tunjuk hanya Laluan A dalam [Panduan klon Portal Latihan](./07-Panduan-Klon-Portal-Latihan.md): Fork, benarkan Actions, pilih Pages melalui GitHub Actions dan jalankan workflow. Peserta boleh melengkapkan penyesuaian serta ujian selepas bengkel dan menyerahkan lima bukti yang disenaraikan dalam panduan.
 
 ## Tanda bahaya
 

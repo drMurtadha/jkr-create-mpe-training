@@ -3,9 +3,6 @@ name: Terbit portal latihan
 on:
   push:
     branches: [main]
-    paths:
-      - "docs/**"
-      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -26,6 +23,15 @@ jobs:
     steps:
       - name: Ambil repositori
         uses: actions/checkout@v4
+      - name: Sediakan Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Pasang kebergantungan
+        run: npm ci
+      - name: Bina portal
+        run: npm run build
       - name: Konfigurasi Pages
         uses: actions/configure-pages@v5
       - name: Muat naik portal

@@ -219,7 +219,14 @@ Selepas setiap penghantaran, catat ID rekod dan mesej yang dipaparkan.
 | [Kit persediaan dan prompt](./03-Kit-Binaan-dan-Pustaka-Prompt.md) | Prasyarat, konfigurasi dan prompt bantuan AI |
 | [Latihan MPE Hub](./04-Latihan-Bina-MPE-Hub.md) | Arahan amali 80 minit |
 | [Pilih gaya antaramuka](./06-Pilih-Gaya-Antaramuka.md) | Pratonton dan pek tema CSS peserta |
+| [Panduan klon Portal Latihan](./07-Panduan-Klon-Portal-Latihan.md) | Panduan kendiri Fork/Clone, GitHub Actions, Pages, penyesuaian dan ujian |
 | [Penilaian akhir](./05-Penilaian-Akhir.md) | Kuiz, rubrik, exit ticket dan penilaian program |
+
+## Laluan kendiri jika masa tidak mencukupi
+
+Jika penerbitan portal tidak sempat dibuat dalam sesi langsung, peserta boleh menyelesaikannya selepas bengkel menggunakan [Panduan klon Portal Latihan](./07-Panduan-Klon-Portal-Latihan.md). Laluan ini tidak memerlukan Apps Script atau data operasi dan boleh disiapkan melalui pelayar menggunakan Fork, GitHub Actions serta GitHub Pages.
+
+Bukti minimum kendiri ialah URL repositori, URL Pages, satu commit penyesuaian, tangkap layar workflow hijau dan checklist ujian.
 
 ## Had dan kawalan keselamatan
 
