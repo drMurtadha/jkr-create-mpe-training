@@ -1,0 +1,17 @@
+{
+  "name": "jkr-create-mpe-training",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portal bahan latihan Transformasi Digital dan Pemerkasaan Operasi Pintar MPE",
+  "scripts": {
+    "build": "node scripts/build_portal.mjs",
+    "serve": "python3 -m http.server 4173 --directory docs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "marked": "18.0.7"
+  }
+}

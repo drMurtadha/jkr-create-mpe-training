@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Arahan lengkap Fork/Clone, tetapan Actions dan Pages, penyesuaian, ujian serta penyelesaian masalah.">
+  <meta name="theme-color" content="#0d272b">
+  <title>Panduan Kendiri — Klon Portal Latihan · Portal Latihan MPE</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css?v=20260725-14">
+</head>
+<body>
+<a class="skip-link" href="#kandungan">Langkau ke kandungan</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html"><span class="brand-mark">MPE</span><span>Portal Latihan<small>CREaTE JKR · 2026</small></span></a>
+    <button class="menu-button" data-menu aria-expanded="false" aria-label="Buka navigasi">Menu</button>
+    <nav class="nav-links" data-nav-links aria-label="Navigasi utama">
+      <a href="../index.html">Utama</a>
+      <a href="../modul-1/index.html">Modul 1</a>
+      <a href="../modul-2/index.html">Modul 2</a>
+      <a href="../modul-3/index.html">Modul 3</a>
+      <a href="../modul-4/index.html">Modul 4</a>
+      <a href="../modul-5/index.html">Modul 5</a>
+      <a href="../slaid.html">Slaid web</a>
+      <a href="https://drmurtadha.github.io/mpe-hub/" target="_blank" rel="noopener">MPE Hub ↗</a>
+      <a href="https://github.com/drMurtadha/jkr-create-mpe-training" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+<div class="training-banner" role="status"><div class="container"><strong>Persekitaran latihan</strong><span>Gunakan data rekaan sahaja · bukan sistem pengeluaran atau repositori rasmi</span></div></div>
+<section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="../index.html">Portal latihan</a> / Panduan Kendiri — Klon Portal Latihan</div><h1>Panduan Kendiri — Klon Portal Latihan</h1><p>Arahan lengkap Fork/Clone, tetapan Actions dan Pages, penyesuaian, ujian serta penyelesaian masalah.</p></div></section><main id="kandungan" class="container article-shell"><aside class="article-nav"><strong>Dalam Modul 5</strong><a href="index.html">Ringkasan modul</a><a href="latihan.html">Panduan langkah demi langkah</a><a href="klon-portal.html">Klon portal kendiri</a><a href="slaid.html">Slaid web</a><a href="kandungan-slaid.html">Kandungan slaid (cetak)</a><a href="nota-fasilitator.html">Nota fasilitator</a><a href="kit-binaan.html">Prasyarat & prompt</a><a href="gaya-antaramuka.html">Pilih gaya antaramuka</a><a href="penilaian.html">Penilaian akhir</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside><article class="prose"><p>Panduan ini membolehkan peserta menghasilkan salinan Portal Latihan MPE dalam akaun GitHub sendiri. Ia boleh dilaksanakan semasa Modul 5 atau secara kendiri selepas bengkel.</p>
+<blockquote>
+<p><strong>Skop panduan:</strong> menerbitkan salinan portal latihan statik. Ia tidak menghubungkan portal kepada Google Sheets, Google Drive atau Apps Script. Untuk membina aplikasi operasi MPE Hub, gunakan <a href="latihan.html">Latihan MPE Hub</a>.</p>
+</blockquote>
+<h2>Hasil akhir</h2>
+<p>Apabila selesai, peserta mempunyai:</p>
+<ol>
+<li>Satu repositori portal dalam akaun GitHub sendiri;</li>
+<li>Satu URL GitHub Pages yang boleh dibuka;</li>
+<li>Satu workflow penerbitan yang berjaya;</li>
+<li>Satu perubahan kecil dengan sejarah commit;</li>
+<li>Satu checklist keselamatan dan ujian.</li>
+</ol>
+<h2>Pilih laluan</h2>
+<table>
+<thead>
+<tr>
+<th>Laluan</th>
+<th>Sesuai untuk</th>
+<th align="right">Terminal</th>
+<th align="right">Cadangan masa</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A — Fork melalui pelayar</td>
+<td>Peserta baharu atau masa terhad</td>
+<td align="right">Tidak</td>
+<td align="right">20–30 minit</td>
+</tr>
+<tr>
+<td>B — Clone melalui Git</td>
+<td>Peserta yang mahu bekerja secara tempatan</td>
+<td align="right">Ya</td>
+<td align="right">35–50 minit</td>
+</tr>
+<tr>
+<td>C — GitHub Desktop</td>
+<td>Peserta yang mahu aplikasi grafik</td>
+<td align="right">Tidak</td>
+<td align="right">35–50 minit</td>
+</tr>
+</tbody></table>
+<p><strong>Laluan A disyorkan.</strong> Fork menghasilkan salinan yang mempunyai sejarah Git dan boleh dikemas kini daripada repositori asal. Muat turun ZIP sahaja tidak mencukupi untuk penerbitan berulang kerana ia tidak mengekalkan sambungan Git.</p>
+<h2>Sebelum bermula</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Akaun GitHub aktif dan e-mel telah disahkan.</li>
+<li><input disabled="" type="checkbox"> Boleh membuka <a href="https://github.com/drMurtadha/jkr-create-mpe-training">repositori Portal Latihan MPE</a>.</li>
+<li><input disabled="" type="checkbox"> Boleh membuka tab <strong>Actions</strong> dan <strong>Settings</strong> dalam repositori milik sendiri.</li>
+<li><input disabled="" type="checkbox"> Nama pengguna GitHub diketahui; contoh dalam panduan menggunakan <code>NAMA-PENGGUNA</code>.</li>
+<li><input disabled="" type="checkbox"> Nama repositori dipilih; cadangan <code>portal-latihan-mpe</code>.</li>
+<li><input disabled="" type="checkbox"> Semua kandungan yang akan diterbitkan ialah data rekaan atau bahan yang dibenarkan untuk paparan awam.</li>
+</ul>
+<h2>Laluan A — Fork melalui pelayar</h2>
+<h3>A1. Cipta salinan</h3>
+<ol>
+<li>Buka <a href="https://github.com/drMurtadha/jkr-create-mpe-training">repositori asal</a>.</li>
+<li>Tekan <strong>Fork</strong>.</li>
+<li>Pada bahagian <strong>Owner</strong>, pilih akaun atau organisasi kumpulan.</li>
+<li>Tukar nama kepada <code>portal-latihan-mpe</code> jika dikehendaki.</li>
+<li>Kekalkan cabang lalai <code>main</code> dan tekan <strong>Create fork</strong>.</li>
+<li>Tunggu sehingga halaman repositori baharu dipaparkan.</li>
+</ol>
+<p><strong>Selesai apabila:</strong> alamat pelayar bermula dengan <code>https://github.com/NAMA-PENGGUNA/</code> dan bukan lagi <code>drMurtadha/</code>.</p>
+<h3>A2. Benarkan workflow</h3>
+<ol>
+<li>Buka tab <strong>Actions</strong>.</li>
+<li>Jika GitHub memaparkan amaran bahawa workflow fork belum berjalan, tekan <strong>I understand my workflows, go ahead and enable them</strong>.</li>
+<li>Buka <strong>Settings → Actions → General</strong>.</li>
+<li>Pastikan tindakan yang dibina oleh GitHub dibenarkan. Workflow portal menggunakan <code>actions/checkout</code>, <code>actions/setup-node</code>, <code>actions/configure-pages</code>, <code>actions/upload-pages-artifact</code> dan <code>actions/deploy-pages</code>.</li>
+<li>Kekalkan kebenaran lalai paling terhad. Workflow portal telah meminta hanya <code>contents: read</code>, <code>pages: write</code> dan <code>id-token: write</code>.</li>
+</ol>
+<p>Jika akaun organisasi mengunci tetapan Actions, minta pentadbir membenarkan tindakan rasmi GitHub. Jangan cuba memintas dasar organisasi.</p>
+<h3>A3. Tetapkan GitHub Pages</h3>
+<ol>
+<li>Buka <strong>Settings → Pages</strong>.</li>
+<li>Pada <strong>Build and deployment</strong>, pilih <strong>Source: GitHub Actions</strong>.</li>
+<li>Jangan pilih tema Jekyll dan jangan tetapkan custom domain untuk latihan awal.</li>
+<li>Buka semula tab <strong>Actions</strong>.</li>
+<li>Pilih workflow <strong>Terbit portal latihan</strong>.</li>
+<li>Tekan <strong>Run workflow</strong>, pilih cabang <code>main</code>, kemudian tekan <strong>Run workflow</strong> sekali lagi.</li>
+<li>Tunggu semua langkah bertukar hijau.</li>
+</ol>
+<p>URL lazim ialah:</p>
+<pre><code class="language-text">https://NAMA-PENGGUNA.github.io/portal-latihan-mpe/
+</code></pre>
+<p>GitHub turut memaparkan URL sebenar pada halaman deployment. Gunakan URL yang dipaparkan oleh GitHub jika nama repositori berbeza.</p>
+<p><strong>Selesai apabila:</strong> halaman utama dan sekurang-kurangnya satu halaman modul boleh dibuka tanpa log masuk.</p>
+<h2>Laluan B — Clone melalui Git</h2>
+<h3>B1. Semak Git</h3>
+<p>Buka Terminal, PowerShell atau Git Bash:</p>
+<pre><code class="language-bash">git --version
+</code></pre>
+<p>Jika arahan tidak ditemui, pasang Git atau gunakan Laluan A/C.</p>
+<h3>B2. Clone repositori asal</h3>
+<pre><code class="language-bash">git clone https://github.com/drMurtadha/jkr-create-mpe-training.git portal-latihan-mpe
+cd portal-latihan-mpe
+git status
+</code></pre>
+<p>Simpan repositori asal sebagai <code>upstream</code>:</p>
+<pre><code class="language-bash">git remote rename origin upstream
+git remote -v
+</code></pre>
+<h3>B3. Cipta repositori GitHub sendiri</h3>
+<ol>
+<li>Pada GitHub, tekan <strong>New repository</strong>.</li>
+<li>Namakan <code>portal-latihan-mpe</code>.</li>
+<li>Pilih <strong>Public</strong> untuk latihan GitHub Free, selepas memastikan tiada data sebenar.</li>
+<li>Jangan tambah README, <code>.gitignore</code> atau lesen kerana fail tersebut sudah ada.</li>
+<li>Tekan <strong>Create repository</strong>.</li>
+</ol>
+<p>Sambungkan clone tempatan kepada repositori baharu:</p>
+<pre><code class="language-bash">git remote add origin https://github.com/NAMA-PENGGUNA/portal-latihan-mpe.git
+git push -u origin main
+git remote -v
+</code></pre>
+<p>Selepas push, laksanakan tetapan Actions dan Pages dalam langkah A2 dan A3.</p>
+<h2>Laluan C — GitHub Desktop</h2>
+<ol>
+<li>Fork repositori menggunakan langkah A1.</li>
+<li>Tekan <strong>Code → Open with GitHub Desktop</strong>.</li>
+<li>Pilih folder tempatan dan tekan <strong>Clone</strong>.</li>
+<li>Buka <strong>Repository → Repository Settings → Remote</strong> dan pastikan remote menunjuk kepada fork milik peserta.</li>
+<li>Buat perubahan, isi ringkasan commit, tekan <strong>Commit to main</strong>, kemudian <strong>Push origin</strong>.</li>
+<li>Laksanakan tetapan Actions dan Pages dalam langkah A2 dan A3.</li>
+</ol>
+<h2>Tetapan yang perlu diperiksa</h2>
+<table>
+<thead>
+<tr>
+<th>Tetapan</th>
+<th>Nilai latihan yang disyorkan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Visibility</td>
+<td>Public, hanya selepas audit kandungan</td>
+</tr>
+<tr>
+<td>Default branch</td>
+<td><code>main</code></td>
+</tr>
+<tr>
+<td>Actions</td>
+<td>Benarkan tindakan rasmi GitHub</td>
+</tr>
+<tr>
+<td>Workflow</td>
+<td><code>.github/workflows/pages.yml</code></td>
+</tr>
+<tr>
+<td>Pages source</td>
+<td>GitHub Actions</td>
+</tr>
+<tr>
+<td>Pages environment</td>
+<td><code>github-pages</code>, dicipta oleh workflow</td>
+</tr>
+<tr>
+<td>Custom domain</td>
+<td>Kosong untuk latihan awal</td>
+</tr>
+<tr>
+<td>Secrets</td>
+<td>Tidak diperlukan untuk portal statik</td>
+</tr>
+<tr>
+<td>Data operasi</td>
+<td>Tidak dibenarkan</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>Repositori organisasi mungkin mempunyai dasar yang lebih ketat. Tetapan organisasi mengatasi tetapan repositori.</p>
+</blockquote>
+<h2>Cara portal dibina</h2>
+<ul>
+<li>Bahan sumber berada dalam folder <code>Modul 1</code> hingga <code>Modul 5</code>.</li>
+<li><code>scripts/build_portal.mjs</code> menukar Markdown kepada HTML.</li>
+<li>Hasil laman berada dalam <code>docs/</code>.</li>
+<li><code>package.json</code> menyediakan arahan binaan.</li>
+<li><code>.github/workflows/pages.yml</code> membina semula portal dan menerbitkan folder <code>docs/</code> apabila <code>main</code> berubah.</li>
+<li><code>.nojekyll</code> memastikan GitHub Pages menghidangkan aset tanpa pemprosesan Jekyll.</li>
+</ul>
+<p>Peserta boleh menerbitkan salinan asal tanpa memasang Node.js. Node.js hanya diperlukan untuk pratonton atau binaan tempatan.</p>
+<h2>Penyesuaian minimum</h2>
+<p>Lakukan satu perubahan kecil dahulu. Jangan menukar keseluruhan portal serentak.</p>
+<p>Cadangan perubahan:</p>
+<ul>
+<li>Tajuk atau penerangan organisasi pada <code>README.md</code>;</li>
+<li>Nama fasilitator atau tempat pada <code>scripts/build_portal.mjs</code>;</li>
+<li>Satu nota dalam fail Markdown modul;</li>
+<li>Warna melalui pemboleh ubah pada <code>docs/assets/styles.css</code>;</li>
+<li>Pautan repositori <code>drMurtadha/jkr-create-mpe-training</code> kepada repositori peserta.</li>
+</ul>
+<p>Dalam Visual Studio Code atau penyunting GitHub, gunakan carian seluruh projek untuk:</p>
+<pre><code class="language-text">drMurtadha
+jkr-create-mpe-training
+CREaTE JKR
+Prof. Madya Dr. Mohd Murtadha
+</code></pre>
+<p>Semak setiap penggantian. Jangan menukar pautan MPE Hub jika portal peserta masih menggunakan kajian kes asal.</p>
+<h2>Bina dan uji secara tempatan</h2>
+<p>Pasang Node.js versi 20 atau lebih baharu, kemudian jalankan:</p>
+<pre><code class="language-bash">npm install
+npm run build
+</code></pre>
+<p>Hidangkan folder <code>docs</code>:</p>
+<pre><code class="language-bash">npm run serve
+</code></pre>
+<p>Buka:</p>
+<pre><code class="language-text">http://localhost:4173/
+</code></pre>
+<p>Tekan <code>Ctrl+C</code> untuk menghentikan pelayan.</p>
+<h2>Commit dan terbitkan perubahan</h2>
+<p>Semak dahulu:</p>
+<pre><code class="language-bash">git status
+git diff
+</code></pre>
+<p>Kemudian commit dan push:</p>
+<pre><code class="language-bash">git add README.md &quot;Modul 5&quot; scripts docs package.json package-lock.json
+git commit -m &quot;Personalize training portal&quot;
+git push origin main
+</code></pre>
+<p>Workflow akan berjalan selepas push. Jika hanya fail sumber Markdown berubah, workflow akan membina semula <code>docs/</code> sebelum deployment.</p>
+<h2>Terima kemas kini daripada repositori asal</h2>
+<p>Langkah ini untuk Laluan B yang mempunyai remote <code>upstream</code>:</p>
+<pre><code class="language-bash">git fetch upstream
+git switch main
+git merge upstream/main
+git push origin main
+</code></pre>
+<p>Jika berlaku konflik, jangan pilih “accept all” secara automatik. Semak perbezaan, kekalkan penyesuaian yang dikehendaki dan uji portal semula.</p>
+<h2>Checklist ujian penerimaan</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Workflow <strong>Terbit portal latihan</strong> berwarna hijau.</li>
+<li><input disabled="" type="checkbox"> URL utama memberi paparan portal, bukan ralat 404.</li>
+<li><input disabled="" type="checkbox"> Modul 1 hingga Modul 5 boleh dibuka.</li>
+<li><input disabled="" type="checkbox"> Slaid web boleh bergerak ke hadapan dan belakang.</li>
+<li><input disabled="" type="checkbox"> Pautan prompt dan muat turun yang diperlukan berfungsi.</li>
+<li><input disabled="" type="checkbox"> Menu telefon boleh dibuka dan ditutup.</li>
+<li><input disabled="" type="checkbox"> Tiada pautan kembali ke repositori peserta lain secara tidak sengaja.</li>
+<li><input disabled="" type="checkbox"> Tiada data sebenar, token, ID Google atau URL Apps Script peribadi.</li>
+<li><input disabled="" type="checkbox"> Satu commit penyesuaian dapat dikenal pasti.</li>
+</ul>
+<h2>Penyelesaian masalah</h2>
+<table>
+<thead>
+<tr>
+<th>Masalah</th>
+<th>Semakan</th>
+<th>Tindakan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Actions tidak berjalan</td>
+<td>Workflow fork belum dibenarkan</td>
+<td>Buka tab Actions dan benarkan workflow</td>
+</tr>
+<tr>
+<td>Workflow tidak kelihatan</td>
+<td>Fail <code>.github/workflows/pages.yml</code> tiada</td>
+<td>Pastikan clone/fork lengkap dan cabang <code>main</code> digunakan</td>
+</tr>
+<tr>
+<td>Deployment gagal pada Actions</td>
+<td>Tindakan rasmi GitHub disekat</td>
+<td>Semak Settings → Actions → General atau hubungi pentadbir</td>
+</tr>
+<tr>
+<td>Pages menunjukkan 404</td>
+<td>Pages belum menggunakan GitHub Actions atau URL salah</td>
+<td>Semak Settings → Pages dan buka URL deployment sebenar</td>
+</tr>
+<tr>
+<td>Perubahan tidak muncul</td>
+<td>Workflow belum selesai atau cache pelayar</td>
+<td>Tunggu hijau dan lakukan hard refresh</td>
+</tr>
+<tr>
+<td>Aset/CSS hilang</td>
+<td>Struktur <code>docs/</code> atau pautan relatif berubah</td>
+<td>Pulihkan struktur asal dan jalankan <code>npm run build</code></td>
+</tr>
+<tr>
+<td><code>npm install</code> gagal</td>
+<td>Node terlalu lama atau rangkaian menyekat npm</td>
+<td>Gunakan Node 20+ atau teruskan dengan deployment GitHub Actions</td>
+</tr>
+<tr>
+<td>Push ditolak</td>
+<td>Remote atau akses salah</td>
+<td>Jalankan <code>git remote -v</code> dan pastikan <code>origin</code> milik peserta</td>
+</tr>
+<tr>
+<td>Dasar organisasi menyekat Pages</td>
+<td>Tetapan organisasi mengatasi repositori</td>
+<td>Gunakan akaun latihan yang dibenarkan atau minta pentadbir</td>
+</tr>
+</tbody></table>
+<h2>Keselamatan</h2>
+<ol>
+<li>Anggap semua fail dalam repositori Public boleh dibaca orang ramai.</li>
+<li>Jangan commit token, kata laluan, URL Apps Script <code>/exec</code>, ID Google, tandatangan atau data operasi sebenar.</li>
+<li>Jangan meletakkan storan rasmi kerajaan dalam repositori latihan.</li>
+<li>Semak <code>git diff --cached</code> sebelum setiap commit.</li>
+<li>Jika rahsia tersalah commit, jangan hanya memadam fail dalam commit seterusnya; hentikan penerbitan dan tukar/batalkan rahsia tersebut mengikut prosedur organisasi.</li>
+</ol>
+<h2>Bukti penyempurnaan kendiri</h2>
+<p>Serahkan lima perkara:</p>
+<ol>
+<li>URL repositori peserta;</li>
+<li>URL GitHub Pages;</li>
+<li>ID atau pautan commit penyesuaian;</li>
+<li>Tangkap layar workflow hijau;</li>
+<li>Checklist ujian penerimaan yang lengkap.</li>
+</ol>
+<h2>Pelan masa kendiri</h2>
+<table>
+<thead>
+<tr>
+<th align="right">Minit</th>
+<th>Aktiviti</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">0–10</td>
+<td>Fork/clone dan semak struktur</td>
+</tr>
+<tr>
+<td align="right">10–20</td>
+<td>Benarkan Actions dan tetapkan Pages</td>
+</tr>
+<tr>
+<td align="right">20–30</td>
+<td>Jalankan deployment pertama</td>
+</tr>
+<tr>
+<td align="right">30–45</td>
+<td>Buat satu penyesuaian kecil</td>
+</tr>
+<tr>
+<td align="right">45–55</td>
+<td>Commit, push dan tunggu deployment</td>
+</tr>
+<tr>
+<td align="right">55–60</td>
+<td>Lengkapkan ujian dan bukti</td>
+</tr>
+</tbody></table>
+<h2>Rujukan rasmi GitHub</h2>
+<ul>
+<li><a href="https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository#cloning-a-repository">Cloning a repository</a></li>
+<li><a href="https://docs.github.com/en/get-started/git-basics/about-remote-repositories">About remote repositories</a></li>
+<li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages">Using custom workflows with GitHub Pages</a></li>
+<li><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository">Managing GitHub Actions settings</a></li>
+</ul>
+<div class="resource-bar"><a class="button ghost" href="https://github.com/drMurtadha/jkr-create-mpe-training/blob/main/Modul%205/07-Panduan-Klon-Portal-Latihan.md" target="_blank" rel="noopener">Lihat sumber Markdown ↗</a><button class="button ghost" onclick="window.print()">Cetak halaman</button></div></article></main>
+<footer class="site-footer"><div class="container footer-grid"><div><strong>Bengkel Transformasi Digital dan Pemerkasaan Operasi Pintar MPE</strong><br>CREaTE JKR · 28–29 Julai 2026</div><div>Prof. Madya Dr. Mohd Murtadha Mohamad<br><a href="https://github.com/drMurtadha/jkr-create-mpe-training">Sumber terbuka di GitHub</a></div></div></footer>
+<script src="../assets/site.js?v=20260725-14"></script>
+
+</body>
+</html>

@@ -23,6 +23,8 @@ Skor maksimum: 12. Cadangan tahap: 10-12 bersedia untuk demonstrasi; 7-9 perlu p
 
 <div class="exit-ticket" data-exit-ticket="modul-5"></div>
 
+Jika peserta menyelesaikan penerbitan selepas bengkel, gunakan bukti kendiri dalam [Panduan klon Portal Latihan](./07-Panduan-Klon-Portal-Latihan.md): URL repositori, URL Pages, commit penyesuaian, workflow hijau dan checklist ujian.
+
 ## Penilaian akhir program
 
 ### Maklum balas peserta

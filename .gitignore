@@ -7,6 +7,9 @@ Surat Lantikan Penceramah_*.pdf
 # Fail sementara dan hasil sistem
 tmp/
 temp/
+node_modules/
 *.tmp
 ~$*
 
+# Artifak konfigurasi NSS/PKCS#11 tempatan
+pkcs11.txt

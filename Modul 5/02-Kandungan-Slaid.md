@@ -77,7 +77,9 @@ Spreadsheet mempunyai tab `logbook`, `asset` dan `mccb`; lampiran rekaan disimpa
 
 ## Slaid 12 - Terbit GitHub Pages
 
-Settings -> Pages -> Deploy from a branch -> `main` -> `/(root)`.
+Untuk MPE Hub statik, ikut tetapan penerbitan yang dinyatakan dalam repositori templat. Untuk menyalin Portal Latihan lengkap, gunakan **Settings -> Pages -> GitHub Actions** dan jalankan workflow **Terbit portal latihan**.
+
+**Nota penyampai:** Jika masa tidak mencukupi, berikan pautan [Panduan klon Portal Latihan](./07-Panduan-Klon-Portal-Latihan.md) untuk diselesaikan sendiri selepas bengkel.
 
 ---
 
