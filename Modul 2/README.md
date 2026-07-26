@@ -35,6 +35,7 @@ Rujukan semasa: [ChatGPT Free Tier](https://help.openai.com/en/articles/9275245-
 |---|---|
 | [Nota Fasilitator](./01-Nota-Fasilitator.md) | Persediaan, skrip, masa dan pelan sandaran sesi 120 minit |
 | [Kandungan Slaid](./02-Kandungan-Slaid.md) | Sumber 26 slaid dengan nota penyampai dan interaksi |
+| [Pakej slaid PPTX/PDF](./slaid/) | Deck 26 slaid, PDF dan nota penceramah bagi setiap slaid |
 | [Buku Kerja dan Pustaka Prompt](./03-Buku-Kerja-dan-Pustaka-Prompt.md) | Kerangka prompt dan contoh yang boleh disalin |
 | [Latihan Surat Rasmi](./04-Latihan-Surat-Rasmi.md) | Data simulasi, tugasan, semakan dan contoh hasil |
 | [Latihan Minit Tindakan](./05-Latihan-Minit-Tindakan.md) | Catatan mesyuarat simulasi dan daftar tindakan |
@@ -120,5 +121,5 @@ Jika video tidak dapat dipaparkan, [buka video Modul 2 di YouTube](https://youtu
 - [x] Latihan minit tindakan menggunakan catatan simulasi tersedia;
 - [x] Kawalan rekod, rubrik dan penilaian tersedia;
 - [ ] Istilah serta format surat disahkan oleh pemilik proses JKR;
-- [ ] PPTX/PDF Modul 2 dikeluarkan dan diperiksa secara visual;
+- [x] PPTX/PDF Modul 2 dikeluarkan dan diperiksa secara visual;
 - [ ] Ujian rintis dilaksanakan menggunakan akaun percuma sebenar pada hari latihan.
