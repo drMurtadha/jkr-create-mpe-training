@@ -165,7 +165,7 @@ async function markdownPage({ source, output, title, description, prefix = '../'
   const generalAside = `<aside class="article-nav"><strong>Modul bengkel</strong><a href="../modul-1/index.html">Modul 1</a><a href="../modul-2/index.html">Modul 2</a><a href="../modul-3/index.html">Modul 3</a><a href="../modul-4/index.html">Modul 4</a><a href="../modul-5/index.html">Modul 5</a><strong style="margin-top:1rem">Pada halaman ini</strong><div data-article-nav></div></aside>`;
   const aside = moduleNumber === 1 ? moduleOneAside : moduleNumber === 2 ? moduleTwoAside : moduleNumber === 3 ? moduleThreeAside : moduleNumber === 4 ? moduleFourAside : moduleNumber === 5 ? moduleFiveAside : generalAside;
   const slideLink = slideButton ? `<div class="module-slide-cta"><a class="button accent" href="slaid.html">Buka slaid web Modul ${moduleNumber}</a></div>` : '';
-  const downloadButtons = downloads ? `<a class="button" href="../downloads/Slaid-Modul-1-MPE.pptx">Muat turun PPTX</a><a class="button ghost" href="../downloads/Slaid-Modul-1-MPE.pdf">Muat turun PDF</a>` : '';
+  const downloadButtons = downloads ? `<a class="button" href="../downloads/Slaid-Modul-${downloads}-MPE.pptx">Muat turun PPTX</a><a class="button ghost" href="../downloads/Slaid-Modul-${downloads}-MPE.pdf">Muat turun PDF</a>${Number(downloads) > 1 ? `<a class="button ghost" href="../downloads/Nota-Deck-Modul-${downloads}.md">Nota penceramah</a>` : ''}` : '';
   const body = `${pageHero(title, description, prefix)}<main id="kandungan" class="container article-shell">${aside}<article class="prose">${slideLink}${content}<div class="resource-bar">${downloadButtons}<a class="button ghost" href="https://github.com/drMurtadha/jkr-create-mpe-training/blob/main/${encodeURI(source)}" target="_blank" rel="noopener">Lihat sumber Markdown ↗</a><button class="button ghost" onclick="window.print()">Cetak halaman</button></div></article></main>`;
   await write(output, shell({ title, description, prefix, body }));
 }
@@ -194,7 +194,7 @@ const slideHub = shell({
 await write('slaid.html', slideHub);
 
 const moduleOneIntro = `Portal Modul 1 lengkap dengan slaid web, nota penyampai, aktiviti kanvas, demonstrasi MPE Hub dan penilaian.`;
-await markdownPage({ source: 'Modul 1/README.md', output: 'modul-1/index.html', title: 'Modul 1 — Pengenalan Aplikasi Pintar', description: moduleOneIntro, downloads: true, slideButton: true, hiddenSections: ['Struktur bahan', 'Kriteria Modul 1 lengkap'] });
+await markdownPage({ source: 'Modul 1/README.md', output: 'modul-1/index.html', title: 'Modul 1 — Pengenalan Aplikasi Pintar', description: moduleOneIntro, downloads: 1, slideButton: true, hiddenSections: ['Struktur bahan', 'Kriteria Modul 1 lengkap'] });
 await markdownPage({ source: 'Modul 1/06-Panduan-Peserta-Langkah-demi-Langkah.md', output: 'modul-1/panduan-peserta.html', title: 'Panduan Peserta Modul 1', description: 'Lapan langkah daripada masalah kerja kepada cadangan percubaan kecil yang boleh diuji.' });
 await markdownPage({ source: 'Modul 1/01-Nota-Fasilitator.md', output: 'modul-1/nota-fasilitator.html', title: 'Nota Fasilitator', description: 'Panduan persediaan, skrip dan pelaksanaan sesi Modul 1 selama 90 minit.' });
 await markdownPage({ source: 'Modul 1/02-Kandungan-Slaid.md', output: 'modul-1/kandungan-slaid.html', title: 'Kandungan dan Nota Slaid', description: 'Sumber kandungan bagi 22 slaid Modul 1 berserta nota penyampai.' });
@@ -203,7 +203,7 @@ await markdownPage({ source: 'Modul 1/04-Skrip-Demonstrasi-MPE-Hub.md', output: 
 await markdownPage({ source: 'Modul 1/05-Penilaian-dan-Exit-Ticket.md', output: 'modul-1/penilaian.html', title: 'Penilaian dan Exit Ticket', description: 'Tinjauan awal, kuiz, rubrik dan exit ticket Modul 1.' });
 
 const moduleTwoIntro = `Bahan lengkap penggunaan AI generatif untuk draf surat rasmi, minit tindakan dan kawalan rekod tidak terperingkat.`;
-await markdownPage({ source: 'Modul 2/README.md', output: 'modul-2/index.html', title: 'Modul 2 — AI Generatif untuk Dokumen Rasmi', description: moduleTwoIntro, moduleNumber: 2, slideButton: true, hiddenSections: ['Kriteria Modul 2 lengkap'] });
+await markdownPage({ source: 'Modul 2/README.md', output: 'modul-2/index.html', title: 'Modul 2 — AI Generatif untuk Dokumen Rasmi', description: moduleTwoIntro, moduleNumber: 2, downloads: 2, slideButton: true, hiddenSections: ['Kriteria Modul 2 lengkap'] });
 await markdownPage({ source: 'Modul 2/08-Panduan-Peserta-Langkah-demi-Langkah.md', output: 'modul-2/panduan-peserta.html', title: 'Panduan Peserta Modul 2', description: 'Sembilan langkah menghasilkan dan mengesahkan draf dokumen rasmi menggunakan AI.', moduleNumber: 2 });
 await markdownPage({ source: 'Modul 2/01-Nota-Fasilitator.md', output: 'modul-2/nota-fasilitator.html', title: 'Nota Fasilitator Modul 2', description: 'Panduan terperinci pelaksanaan sesi selama 120 minit.', moduleNumber: 2 });
 await markdownPage({ source: 'Modul 2/02-Kandungan-Slaid.md', output: 'modul-2/kandungan-slaid.html', title: 'Kandungan Slaid Modul 2', description: 'Sumber 26 slaid, nota penyampai dan aktiviti interaktif.', moduleNumber: 2 });
@@ -214,7 +214,7 @@ await markdownPage({ source: 'Modul 2/06-Kawalan-Rekod-dan-Semakan.md', output: 
 await markdownPage({ source: 'Modul 2/07-Penilaian-dan-Exit-Ticket.md', output: 'modul-2/penilaian.html', title: 'Penilaian dan Exit Ticket Modul 2', description: 'Kuiz, rubrik hasil kumpulan dan refleksi individu.', moduleNumber: 2 });
 
 const moduleThreeIntro = `Kaedah tujuh langkah untuk menyoal, memahami, menyemak, membersih, menganalisis, mengesahkan dan merekod data teknikal.`;
-await markdownPage({ source: 'Modul 3/README.md', output: 'modul-3/index.html', title: 'Modul 3 — Pendekatan Sistematik dalam Analisis Data dan Pengurusan Rekod Teknikal', description: moduleThreeIntro, moduleNumber: 3, slideButton: true });
+await markdownPage({ source: 'Modul 3/README.md', output: 'modul-3/index.html', title: 'Modul 3 — Pendekatan Sistematik dalam Analisis Data dan Pengurusan Rekod Teknikal', description: moduleThreeIntro, moduleNumber: 3, downloads: 3, slideButton: true });
 await markdownPage({ source: 'Modul 3/07-Panduan-Peserta-Langkah-demi-Langkah.md', output: 'modul-3/panduan-peserta.html', title: 'Panduan Peserta Modul 3', description: 'Aktiviti GitHub, analisis data dan audit rekod teknikal secara berurutan.', moduleNumber: 3 });
 await markdownPage({ source: 'Modul 3/06-GitHub-Asas-dan-Kerja-Berpasukan.md', output: 'modul-3/github-asas.html', title: 'GitHub Asas dan Kerja Berpasukan', description: 'Aktiviti hands-on untuk menyediakan tiga kumpulan projek sebelum membina MPE Hub.', moduleNumber: 3 });
 await markdownPage({ source: 'Modul 3/01-Nota-Fasilitator.md', output: 'modul-3/nota-fasilitator.html', title: 'Nota Fasilitator Modul 3', description: 'Pelan terperinci Modul 3A dan 3B selama 210 minit.', moduleNumber: 3 });
@@ -225,7 +225,7 @@ await markdownPage({ source: 'Modul 3/04-Pengurusan-Rekod-Teknikal.md', output: 
 await markdownPage({ source: 'Modul 3/05-Penilaian.md', output: 'modul-3/penilaian.html', title: 'Penilaian Modul 3', description: 'Kuiz, rubrik, exit ticket dan bukti penyempurnaan Modul 3.', moduleNumber: 3 });
 
 const moduleFourIntro = `Pemetaan dan automasi terkawal bagi aliran QR, KEW.PA-9, rekod aktiviti dan pengujian MCCB menggunakan data latihan rekaan.`;
-await markdownPage({ source: 'Modul 4/README.md', output: 'modul-4/index.html', title: 'Modul 4 — Automasi Aliran Kerja dan Proses Makmal', description: moduleFourIntro, moduleNumber: 4, slideButton: true });
+await markdownPage({ source: 'Modul 4/README.md', output: 'modul-4/index.html', title: 'Modul 4 — Automasi Aliran Kerja dan Proses Makmal', description: moduleFourIntro, moduleNumber: 4, downloads: 4, slideButton: true });
 await markdownPage({ source: 'Modul 4/06-Panduan-Peserta-Langkah-demi-Langkah.md', output: 'modul-4/panduan-peserta.html', title: 'Panduan Peserta Modul 4', description: 'Sepuluh langkah memetakan, mereka bentuk dan menguji automasi terkawal.', moduleNumber: 4 });
 await markdownPage({ source: 'Modul 4/01-Nota-Fasilitator.md', output: 'modul-4/nota-fasilitator.html', title: 'Nota Fasilitator Modul 4', description: 'Pelan sesi 120 minit untuk pemetaan dan automasi aliran kerja terkawal.', moduleNumber: 4 });
 await markdownPage({ source: 'Modul 4/02-Kandungan-Slaid.md', output: 'modul-4/kandungan-slaid.html', title: 'Kandungan Slaid Modul 4', description: 'Sumber cetak bagi 23 slaid Modul 4 berserta nota penyampai.', moduleNumber: 4 });
@@ -235,7 +235,7 @@ await markdownPage({ source: 'Modul 4/04-Latihan-Automasi-Terkawal.md', output: 
 await markdownPage({ source: 'Modul 4/05-Penilaian.md', output: 'modul-4/penilaian.html', title: 'Penilaian Modul 4', description: 'Kuiz, rubrik, exit ticket dan bukti penyempurnaan Modul 4.', moduleNumber: 4 });
 
 const moduleFiveIntro = `Sesi integrasi hands-on untuk mengkonfigurasi, menyesuaikan dan menguji MPE Hub melalui GitHub Pages, Google Apps Script, Sheets dan Drive.`;
-await markdownPage({ source: 'Modul 5/README.md', output: 'modul-5/index.html', title: 'Modul 5 — Daripada Idea kepada MPE Hub', description: moduleFiveIntro, moduleNumber: 5, slideButton: true });
+await markdownPage({ source: 'Modul 5/README.md', output: 'modul-5/index.html', title: 'Modul 5 — Daripada Idea kepada MPE Hub', description: moduleFiveIntro, moduleNumber: 5, downloads: 5, slideButton: true });
 await markdownPage({ source: 'Modul 5/01-Nota-Fasilitator.md', output: 'modul-5/nota-fasilitator.html', title: 'Nota Fasilitator Modul 5', description: 'Pelan hands-on 120 minit untuk membina dan menguji MPE Hub.', moduleNumber: 5 });
 await markdownPage({ source: 'Modul 5/02-Kandungan-Slaid.md', output: 'modul-5/kandungan-slaid.html', title: 'Kandungan Slaid Modul 5', description: 'Sumber cetak bagi 20 slaid Modul 5.', moduleNumber: 5 });
 await markdownPage({ source: 'Modul 5/03-Kit-Binaan-dan-Pustaka-Prompt.md', output: 'modul-5/kit-binaan.html', title: 'Kit Persediaan dan Pustaka Prompt', description: 'Prasyarat, konfigurasi akaun dan prompt bantuan AI untuk menyesuaikan MPE Hub.', moduleNumber: 5 });
@@ -254,8 +254,13 @@ await write('modul-5/slaid.html', slidePage(5, 'slides-modul-5.js'));
 await fs.cp(path.join(root, 'Modul 5/templat-antaramuka'), path.join(docs, 'downloads/templat-antaramuka'), { recursive: true });
 
 await fs.mkdir(path.join(docs, 'downloads'), { recursive: true });
-await fs.copyFile(path.join(root, 'Modul 1/slaid/Slaid-Modul-1-MPE.pptx'), path.join(docs, 'downloads/Slaid-Modul-1-MPE.pptx'));
-await fs.copyFile(path.join(root, 'Modul 1/slaid/Slaid-Modul-1-MPE.pdf'), path.join(docs, 'downloads/Slaid-Modul-1-MPE.pdf'));
+for (const moduleNumber of [1, 2, 3, 4, 5]) {
+  await fs.copyFile(path.join(root, `Modul ${moduleNumber}/slaid/Slaid-Modul-${moduleNumber}-MPE.pptx`), path.join(docs, `downloads/Slaid-Modul-${moduleNumber}-MPE.pptx`));
+  await fs.copyFile(path.join(root, `Modul ${moduleNumber}/slaid/Slaid-Modul-${moduleNumber}-MPE.pdf`), path.join(docs, `downloads/Slaid-Modul-${moduleNumber}-MPE.pdf`));
+  if (moduleNumber > 1) {
+    await fs.copyFile(path.join(root, `Modul ${moduleNumber}/slaid/Nota-Deck-Modul-${moduleNumber}.md`), path.join(docs, `downloads/Nota-Deck-Modul-${moduleNumber}.md`));
+  }
+}
 await fs.copyFile(path.join(root, 'Modul 1/aset/mpe-hub-dashboard.png'), path.join(docs, 'assets/mpe-hub-dashboard.png'));
 await fs.copyFile(path.join(root, 'Modul 1/aset/mpe-hub-buku-log.png'), path.join(docs, 'assets/mpe-hub-buku-log.png'));
 await fs.copyFile(path.join(root, 'Modul 3/data/rekod-teknikal-mpe-rekaan.csv'), path.join(docs, 'downloads/rekod-teknikal-mpe-rekaan.csv'));

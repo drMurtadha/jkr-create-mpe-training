@@ -216,6 +216,7 @@ Selepas setiap penghantaran, catat ID rekod dan mesej yang dipaparkan.
 |---|---|
 | [Nota fasilitator](./01-Nota-Fasilitator.md) | Pelaksanaan sesi dan laluan sandaran |
 | [Kandungan slaid untuk cetakan](./02-Kandungan-Slaid.md) | Sumber slaid Modul 5 |
+| [Pakej slaid PPTX/PDF](./slaid/) | Deck 20 slaid, PDF dan nota penceramah bagi setiap slaid |
 | [Kit persediaan dan prompt](./03-Kit-Binaan-dan-Pustaka-Prompt.md) | Prasyarat, konfigurasi dan prompt bantuan AI |
 | [Latihan MPE Hub](./04-Latihan-Bina-MPE-Hub.md) | Arahan amali 80 minit |
 | [Pilih gaya antaramuka](./06-Pilih-Gaya-Antaramuka.md) | Pratonton dan pek tema CSS peserta |

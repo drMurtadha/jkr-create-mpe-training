@@ -15,10 +15,10 @@ Repositori induk bahan latihan bagi Bengkel Transformasi Digital dan Pemerkasaan
 | Modul | Tarikh dan masa | Fokus | Kedudukan bahan |
 |---|---|---|---|
 | [Modul 1](./Modul%201/) | 28 Julai, 9.00–10.30 pagi | Pengenalan aplikasi pintar untuk meningkatkan produktiviti kerja MPE | Kandungan, PPTX/PDF dan portal web lengkap |
-| [Modul 2](./Modul%202/) | 28 Julai, 11.00 pagi–1.00 petang | AI generatif untuk surat rasmi, minit tindakan dan kawalan rekod tidak terperingkat | Kandungan, latihan, pustaka prompt dan portal web lengkap |
-| [Modul 3](./Modul%203/) | 28 Julai, 2.30–4.30 petang dan 29 Julai, 9.00–10.30 pagi | Pendekatan sistematik dalam analisis data dan pengurusan rekod teknikal | Kandungan lengkap |
-| [Modul 4](./Modul%204/) | 29 Julai, 11.00 pagi–1.00 petang | Automasi untuk penambahbaikan aliran kerja dan pendigitalan proses makmal | Kandungan lengkap |
-| [Modul 5](./Modul%205/) | 29 Julai, 2.30–4.30 petang | Daripada idea kepada MPE Hub: aplikasi web operasi makmal | Kandungan lengkap |
+| [Modul 2](./Modul%202/) | 28 Julai, 11.00 pagi–1.00 petang | AI generatif untuk surat rasmi, minit tindakan dan kawalan rekod tidak terperingkat | Kandungan, PPTX/PDF, nota penceramah dan portal web lengkap |
+| [Modul 3](./Modul%203/) | 28 Julai, 2.30–4.30 petang dan 29 Julai, 9.00–10.30 pagi | Pendekatan sistematik dalam analisis data dan pengurusan rekod teknikal | Kandungan, PPTX/PDF, nota penceramah dan portal web lengkap |
+| [Modul 4](./Modul%204/) | 29 Julai, 11.00 pagi–1.00 petang | Automasi untuk penambahbaikan aliran kerja dan pendigitalan proses makmal | Kandungan, PPTX/PDF, nota penceramah dan portal web lengkap |
+| [Modul 5](./Modul%205/) | 29 Julai, 2.30–4.30 petang | Daripada idea kepada MPE Hub: aplikasi web operasi makmal | Kandungan, PPTX/PDF, nota penceramah dan portal web lengkap |
 
 ## Kajian kes lengkap: MPE Hub
 
