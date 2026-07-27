@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url);
 const { marked } = require('marked');
 const root = process.cwd();
 const docs = path.join(root, 'docs');
-const assetVersion = '20260725-15';
+const assetVersion = '20260727-16';
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -118,7 +118,8 @@ function rewriteModuleLinks(markdown, moduleNumber) {
     ['./04-Latihan-Bina-MPE-Hub.md', 'latihan.html'],
     ['./06-Pilih-Gaya-Antaramuka.md', 'gaya-antaramuka.html'],
     ['./07-Panduan-Klon-Portal-Latihan.md', 'klon-portal.html'],
-    ['./05-Penilaian-Akhir.md', 'penilaian.html']
+    ['./05-Penilaian-Akhir.md', 'penilaian.html'],
+    ['./slaid/', 'slaid.html']
   ];
   const moduleLinks = { 1: moduleOne, 2: moduleTwo, 3: moduleThree, 4: moduleFour, 5: moduleFive };
   const replacements = new Map(moduleLinks[moduleNumber] || []);

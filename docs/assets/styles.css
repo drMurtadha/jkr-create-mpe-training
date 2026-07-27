@@ -251,6 +251,9 @@ button, .button { font: inherit; }
 .workspace-step span { padding: .2rem .5rem; border-radius: 999px; background: var(--ink-deep); color: var(--lime); font-size: .75rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
 .participant-workspace .workspace-progress { margin: 1rem 0; background: white; }
 .workspace-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1rem; }
+.workspace-document-status { margin: .85rem 0 0; padding: .8rem 1rem; border-radius: 12px; background: #e9f7f3; color: var(--ink); font-size: .92rem; }
+.workspace-document-status:empty { display: none; }
+.workspace-document-status a { font-weight: 800; }
 .activity-timer { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; padding: .8rem 0; border-top: 1px solid var(--line); }
 .activity-timer strong { min-width: 78px; color: var(--ink); font-size: 1.45rem; font-variant-numeric: tabular-nums; }
 .activity-timer strong.expired { color: var(--red); }
