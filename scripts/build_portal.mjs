@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url);
 const { marked } = require('marked');
 const root = process.cwd();
 const docs = path.join(root, 'docs');
-const assetVersion = '20260728-22';
+const assetVersion = '20260728-23';
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -42,7 +42,7 @@ function shell({ title, description, prefix = '', body, extraScripts = '' }) {
   <meta name="description" content="${description.replaceAll('"', '&quot;')}">
   <meta name="theme-color" content="#343638">
   <title>${title} · Portal Latihan MPE</title>
-  <link rel="icon" href="${prefix}assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="${prefix}assets/logo-CREaTE.jpg?v=${assetVersion}" type="image/jpeg">
   <link rel="stylesheet" href="${prefix}assets/styles.css?v=${assetVersion}">
 </head>
 <body>
@@ -245,7 +245,7 @@ await markdownPage({ source: 'Modul 5/07-Panduan-Klon-Portal-Latihan.md', output
 await markdownPage({ source: 'Modul 5/04-Latihan-Bina-MPE-Hub.md', output: 'modul-5/latihan.html', title: 'Latihan Amali MPE Hub — 80 Minit', description: 'Peta medan, isi tiga modul, semak storan, ubah, commit dan uji GitHub Pages.', moduleNumber: 5 });
 await markdownPage({ source: 'Modul 5/05-Penilaian-Akhir.md', output: 'modul-5/penilaian.html', title: 'Penilaian Akhir Modul 5', description: 'Kuiz, rubrik, exit ticket dan penilaian akhir program.', moduleNumber: 5 });
 
-const slidePage = (moduleNumber, script) => `<!doctype html><html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#343638"><title>Slaid Web Modul ${moduleNumber} · Portal Latihan MPE</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css?v=${assetVersion}"></head><body class="slide-mode"><main class="deck"><div class="slides-viewport" data-slides aria-live="polite"></div><div class="deck-toolbar"><a href="index.html" title="Kembali ke Modul ${moduleNumber}">← Modul ${moduleNumber}</a><button data-prev aria-label="Slaid sebelumnya">←</button><button data-next aria-label="Slaid seterusnya">→</button><span class="slide-count" data-slide-count></span><div class="deck-progress" aria-hidden="true"><span data-progress></span></div><button class="optional" data-notes title="Tekan N">Nota</button><button class="optional" data-fullscreen title="Tekan F">Skrin penuh</button></div></main><aside class="speaker-notes" data-notes-panel></aside><script src="../assets/${script}?v=${assetVersion}"></script></body></html>`;
+const slidePage = (moduleNumber, script) => `<!doctype html><html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#343638"><title>Slaid Web Modul ${moduleNumber} · Portal Latihan MPE</title><link rel="icon" href="../assets/logo-CREaTE.jpg?v=${assetVersion}" type="image/jpeg"><link rel="stylesheet" href="../assets/styles.css?v=${assetVersion}"></head><body class="slide-mode"><main class="deck"><div class="slides-viewport" data-slides aria-live="polite"></div><div class="deck-toolbar"><a href="index.html" title="Kembali ke Modul ${moduleNumber}">← Modul ${moduleNumber}</a><button data-prev aria-label="Slaid sebelumnya">←</button><button data-next aria-label="Slaid seterusnya">→</button><span class="slide-count" data-slide-count></span><div class="deck-progress" aria-hidden="true"><span data-progress></span></div><button class="optional" data-notes title="Tekan N">Nota</button><button class="optional" data-fullscreen title="Tekan F">Skrin penuh</button></div></main><aside class="speaker-notes" data-notes-panel></aside><script src="../assets/${script}?v=${assetVersion}"></script></body></html>`;
 await write('modul-1/slaid.html', slidePage(1, 'slides.js'));
 await write('modul-2/slaid.html', slidePage(2, 'slides-modul-2.js'));
 await write('modul-3/slaid.html', slidePage(3, 'slides-modul-3.js'));
