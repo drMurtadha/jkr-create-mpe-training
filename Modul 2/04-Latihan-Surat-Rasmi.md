@@ -1,4 +1,4 @@
-# Latihan Surat Rasmi
+# Latihan Memo dan Surat Rasmi
 
 ## Gunakan Kad Projek Modul 1
 
@@ -76,6 +76,12 @@ Sekian, terima kasih.
 ```
 
 Contoh ini menunjukkan tahap ketepatan yang diharapkan, bukan surat yang telah diluluskan.
+
+## Hasilkan surat rasmi di Google Drive
+
+Semak dan sunting draf simulasi di bawah. Setelah fakta, maklumat belum lengkap dan skop permohonan disahkan, simpan hasil sebagai Google Doc berasingan untuk semakan rakan sekerja.
+
+<div data-official-letter-workspace></div>
 
 ## Semakan rakan sekerja
 

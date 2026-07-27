@@ -1016,9 +1016,102 @@ function enhanceProjectCardBridge() {
   });
 }
 
+function enhanceModuleTwoLetterWorkspace() {
+  const container = document.querySelector('[data-official-letter-workspace]');
+  if (!container) return;
+
+  const storageKey = 'mpe-module-2-official-letter-v1';
+  const defaults = {
+    sender: 'Unit Operasi Makmal, Jabatan Infrastruktur Teknikal Contoh (JITC)',
+    recipient: 'Pengurus Operasi\nSyarikat Kalibrasi Cekap Sdn. Bhd. (rekaan)',
+    reference: 'JITC.MPE.600-3/2/1 Jld. 1 (05) — SIMULASI',
+    letterDate: '28 Julai 2026',
+    salutation: 'Tuan/Puan,',
+    subject: 'Permohonan Pengesahan Tarikh Lawatan Kalibrasi Peralatan Makmal',
+    body: 'Dengan hormatnya perkara di atas dirujuk.\n\n2. Unit ini memohon pengesahan pihak tuan/puan bagi cadangan lawatan kalibrasi pada 5 Ogos 2026, dari 9.30 pagi hingga 12.30 tengah hari, di Makmal Tenaga Contoh, Blok F, Kompleks Latihan Contoh.\n\n3. Peralatan yang terlibat ialah Power Quality Analyser (LAT-PQA-014) dan Insulation Tester (LAT-INS-022). Juruteknik dimohon membawa sijil rujukan kalibrasi dan senarai peralatan kerja.\n\n4. Mohon pengesahan diterima selewat-lewatnya pada 31 Julai 2026, jam 12.00 tengah hari melalui amir.latihan@example.com. Nombor telefon: [PERLU PENGESAHAN].',
+    contact: 'Encik Amir Latihan, Penolong Jurutera (rekaan) · amir.latihan@example.com · Telefon: [PERLU PENGESAHAN]',
+    signatory: '[PENANDATANGAN PERLU PENGESAHAN]'
+  };
+  let state = {};
+  try { state = JSON.parse(localStorage.getItem(storageKey)) || {}; } catch { state = {}; }
+  const values = { ...defaults, ...state };
+  const escapeMarkup = (value) => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+
+  container.className = 'official-letter-workspace';
+  container.innerHTML = `
+    <div class="project-card-bridge__status">
+      <strong>Draf surat simulasi</strong>
+      <span>Medan telah diisi daripada lembaran fakta latihan. Semak dan sunting sebelum mencipta Google Doc.</span>
+    </div>
+    <div class="official-letter-workspace__grid">
+      <label>Pengirim<input data-letter-field="sender" value="${escapeMarkup(values.sender)}" required></label>
+      <label>Penerima<textarea data-letter-field="recipient" rows="3" required>${escapeMarkup(values.recipient)}</textarea></label>
+      <label>Rujukan<input data-letter-field="reference" value="${escapeMarkup(values.reference)}"></label>
+      <label>Tarikh surat<input data-letter-field="letterDate" value="${escapeMarkup(values.letterDate)}"></label>
+      <label>Salutasi<input data-letter-field="salutation" value="${escapeMarkup(values.salutation)}"></label>
+      <label>Penandatangan<input data-letter-field="signatory" value="${escapeMarkup(values.signatory)}"></label>
+      <label class="full">Perkara<input data-letter-field="subject" value="${escapeMarkup(values.subject)}" required></label>
+      <label class="full">Kandungan surat<textarea data-letter-field="body" rows="12" required>${escapeMarkup(values.body)}</textarea></label>
+      <label class="full">Pegawai hubungan<input data-letter-field="contact" value="${escapeMarkup(values.contact)}"></label>
+    </div>
+    <div class="workspace-actions">
+      <button class="button accent" type="button" data-create-module-two-letter>Hasilkan Surat Rasmi di Google Drive</button>
+      <a class="button ghost" data-open-module-two-letter href="${state.documentUrl || '#'}" target="_blank" rel="noopener" ${state.documentUrl ? '' : 'hidden'}>Buka Surat Google Doc ↗</a>
+    </div>
+    <p class="workspace-document-status" data-module-two-letter-status aria-live="polite"></p>`;
+
+  const fields = [...container.querySelectorAll('[data-letter-field]')];
+  const save = () => {
+    fields.forEach((field) => { state[field.dataset.letterField] = field.value; });
+    localStorage.setItem(storageKey, JSON.stringify(state));
+  };
+  fields.forEach((field) => field.addEventListener('input', save));
+
+  container.querySelector('[data-create-module-two-letter]').addEventListener('click', async (event) => {
+    save();
+    const missing = fields.find((field) => field.required && !field.value.trim());
+    if (missing) {
+      window.alert('Lengkapkan semua medan wajib sebelum menghasilkan surat.');
+      missing.focus();
+      return;
+    }
+
+    const button = event.currentTarget;
+    const status = container.querySelector('[data-module-two-letter-status]');
+    const openLetter = container.querySelector('[data-open-module-two-letter]');
+    const originalText = button.textContent;
+    button.disabled = true;
+    button.textContent = 'Mencipta Surat Google Doc...';
+    status.textContent = 'Surat simulasi sedang disusun dan disimpan dalam Google Drive.';
+    try {
+      const response = await fetch(projectCardEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ action: 'createModuleTwoLetter', data: Object.fromEntries(fields.map((field) => [field.dataset.letterField, field.value])) }),
+        redirect: 'follow'
+      });
+      if (!response.ok) throw new Error(`Ralat rangkaian (${response.status})`);
+      const result = await response.json();
+      if (!result.ok || !result.documentUrl) throw new Error(result.error || 'Surat tidak dapat dicipta');
+      state.documentUrl = result.documentUrl;
+      localStorage.setItem(storageKey, JSON.stringify(state));
+      openLetter.href = result.documentUrl;
+      openLetter.hidden = false;
+      status.innerHTML = `Surat simulasi berjaya disimpan. <a href="${result.documentUrl}" target="_blank" rel="noopener">Buka Google Doc ↗</a><br><small>${result.sharingWarning || 'Semak surat bersama rakan sekerja sebelum sebarang penggunaan lanjut.'}</small>`;
+    } catch (error) {
+      status.textContent = `Surat tidak dapat dicipta: ${error.message || 'ralat tidak diketahui'}. Pastikan Apps Script telah dikemas kini dan dideploy semula.`;
+    } finally {
+      button.disabled = false;
+      button.textContent = originalText;
+    }
+  });
+}
+
 enhanceProjectCardBridge();
 
 enhanceParticipantWorkspace();
+
+enhanceModuleTwoLetterWorkspace();
 
 function findSectionTable(title) {
   const heading = [...document.querySelectorAll('.prose h2')].find((item) => item.textContent.trim() === title);
