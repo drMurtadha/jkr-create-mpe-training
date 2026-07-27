@@ -6,14 +6,14 @@ const require = createRequire(import.meta.url);
 const { marked } = require('marked');
 const root = process.cwd();
 const docs = path.join(root, 'docs');
-const assetVersion = '20260728-20';
+const assetVersion = '20260728-21';
 
 marked.setOptions({ gfm: true, breaks: false });
 
 const nav = (prefix = '') => `
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="${prefix}index.html"><span class="brand-mark">MPE</span><span>Portal Latihan<small>CREaTE JKR · 2026</small></span></a>
+    <a class="brand" href="${prefix}index.html"><img class="brand-logo" src="${prefix}assets/logo-CREaTE.jpg" alt="Logo CREaTE"><span>Portal Latihan<small>CREaTE JKR · 2026</small></span></a>
     <button class="menu-button" data-menu aria-expanded="false" aria-label="Buka navigasi">Menu</button>
     <nav class="nav-links" data-nav-links aria-label="Navigasi utama">
       <a href="${prefix}index.html">Utama</a>
@@ -40,7 +40,7 @@ function shell({ title, description, prefix = '', body, extraScripts = '' }) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${description.replaceAll('"', '&quot;')}">
-  <meta name="theme-color" content="#0d272b">
+  <meta name="theme-color" content="#343638">
   <title>${title} · Portal Latihan MPE</title>
   <link rel="icon" href="${prefix}assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="${prefix}assets/styles.css?v=${assetVersion}">
@@ -245,7 +245,7 @@ await markdownPage({ source: 'Modul 5/07-Panduan-Klon-Portal-Latihan.md', output
 await markdownPage({ source: 'Modul 5/04-Latihan-Bina-MPE-Hub.md', output: 'modul-5/latihan.html', title: 'Latihan Amali MPE Hub — 80 Minit', description: 'Peta medan, isi tiga modul, semak storan, ubah, commit dan uji GitHub Pages.', moduleNumber: 5 });
 await markdownPage({ source: 'Modul 5/05-Penilaian-Akhir.md', output: 'modul-5/penilaian.html', title: 'Penilaian Akhir Modul 5', description: 'Kuiz, rubrik, exit ticket dan penilaian akhir program.', moduleNumber: 5 });
 
-const slidePage = (moduleNumber, script) => `<!doctype html><html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0d272b"><title>Slaid Web Modul ${moduleNumber} · Portal Latihan MPE</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css?v=${assetVersion}"></head><body class="slide-mode"><main class="deck"><div class="slides-viewport" data-slides aria-live="polite"></div><div class="deck-toolbar"><a href="index.html" title="Kembali ke Modul ${moduleNumber}">← Modul ${moduleNumber}</a><button data-prev aria-label="Slaid sebelumnya">←</button><button data-next aria-label="Slaid seterusnya">→</button><span class="slide-count" data-slide-count></span><div class="deck-progress" aria-hidden="true"><span data-progress></span></div><button class="optional" data-notes title="Tekan N">Nota</button><button class="optional" data-fullscreen title="Tekan F">Skrin penuh</button></div></main><aside class="speaker-notes" data-notes-panel></aside><script src="../assets/${script}?v=${assetVersion}"></script></body></html>`;
+const slidePage = (moduleNumber, script) => `<!doctype html><html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#343638"><title>Slaid Web Modul ${moduleNumber} · Portal Latihan MPE</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css?v=${assetVersion}"></head><body class="slide-mode"><main class="deck"><div class="slides-viewport" data-slides aria-live="polite"></div><div class="deck-toolbar"><a href="index.html" title="Kembali ke Modul ${moduleNumber}">← Modul ${moduleNumber}</a><button data-prev aria-label="Slaid sebelumnya">←</button><button data-next aria-label="Slaid seterusnya">→</button><span class="slide-count" data-slide-count></span><div class="deck-progress" aria-hidden="true"><span data-progress></span></div><button class="optional" data-notes title="Tekan N">Nota</button><button class="optional" data-fullscreen title="Tekan F">Skrin penuh</button></div></main><aside class="speaker-notes" data-notes-panel></aside><script src="../assets/${script}?v=${assetVersion}"></script></body></html>`;
 await write('modul-1/slaid.html', slidePage(1, 'slides.js'));
 await write('modul-2/slaid.html', slidePage(2, 'slides-modul-2.js'));
 await write('modul-3/slaid.html', slidePage(3, 'slides-modul-3.js'));
@@ -264,6 +264,7 @@ for (const moduleNumber of [1, 2, 3, 4, 5]) {
 }
 await fs.copyFile(path.join(root, 'Modul 1/aset/mpe-hub-dashboard.png'), path.join(docs, 'assets/mpe-hub-dashboard.png'));
 await fs.copyFile(path.join(root, 'Modul 1/aset/mpe-hub-buku-log.png'), path.join(docs, 'assets/mpe-hub-buku-log.png'));
+await fs.copyFile(path.join(root, 'logo-CREaTE.jpg'), path.join(docs, 'assets/logo-CREaTE.jpg'));
 await fs.copyFile(path.join(root, 'Modul 3/data/rekod-teknikal-mpe-rekaan.csv'), path.join(docs, 'downloads/rekod-teknikal-mpe-rekaan.csv'));
 
 console.log('Portal dibina dalam docs/');
