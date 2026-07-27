@@ -634,6 +634,46 @@ const activityPath = [
   { path: '/modul-4/automasi-terkawal.html', label: 'Automasi terkawal', module: 'Modul 4', prev: 'pemetaan-proses.html', next: 'penilaian.html' }
 ];
 
+const projectCardEndpoint = 'https://script.google.com/macros/s/AKfycbzGN842JD67hoDXScYyz5pm8tGgHYuBSflfanw8R8xAEOd7OVPdUwxMhLr5-Zc5CQg9/exec';
+const projectCardFields = [
+  ['A. Tajuk peluang', 'Tajuk peluang'],
+  ['B. Pengguna dan masalah', 'Pengguna utama'],
+  ['B. Pengguna dan masalah', 'Masalah yang dihadapi'],
+  ['B. Pengguna dan masalah', 'Punca dan kesan'],
+  ['C. Keadaan semasa', 'Proses semasa'],
+  ['C. Keadaan semasa', 'Lokasi kehilangan masa, salinan data atau ralat'],
+  ['D. Kesan masalah', 'Kesan lain'],
+  ['D. Kesan masalah', 'Bukti atau ukuran asas'],
+  ['E. Keupayaan pintar', 'Perubahan pengalaman kerja'],
+  ['E. Keupayaan pintar', 'Hasil paparan atau bantuan'],
+  ['F. Data, dokumen dan integrasi', 'Input minimum'],
+  ['F. Data, dokumen dan integrasi', 'Dokumen atau borang sumber'],
+  ['F. Data, dokumen dan integrasi', 'Output yang diperlukan'],
+  ['F. Data, dokumen dan integrasi', 'Lokasi simpanan data'],
+  ['F. Data, dokumen dan integrasi', 'Data peribadi atau sensitif'],
+  ['F. Data, dokumen dan integrasi', 'Sistem yang perlu dipautkan'],
+  ['G. Ukuran kejayaan', 'Ukuran lain'],
+  ['G. Ukuran kejayaan', 'Keadaan sekarang'],
+  ['G. Ukuran kejayaan', 'Sasaran percubaan'],
+  ['G. Ukuran kejayaan', 'Cara mengukur'],
+  ['H. Risiko dan kawalan', 'Risiko 1'],
+  ['H. Risiko dan kawalan', 'Kesan risiko 1'],
+  ['H. Risiko dan kawalan', 'Kawalan risiko 1'],
+  ['H. Risiko dan kawalan', 'Risiko 2'],
+  ['H. Risiko dan kawalan', 'Kesan risiko 2'],
+  ['H. Risiko dan kawalan', 'Kawalan risiko 2'],
+  ['H. Risiko dan kawalan', 'Tindakan yang memerlukan kelulusan manusia'],
+  ['I. Percubaan kecil', 'Tempoh dicadangkan (minggu)'],
+  ['I. Percubaan kecil', 'Bilangan pengguna'],
+  ['I. Percubaan kecil', 'Langkah pertama dalam dua minggu'],
+  ['I. Percubaan kecil', 'Pemilik percubaan'],
+  ['I. Percubaan kecil', 'Bukti yang akan dikumpulkan'],
+  ['J. Skor keutamaan', 'Nilai operasi'],
+  ['J. Skor keutamaan', 'Kekerapan'],
+  ['J. Skor keutamaan', 'Kebolehlaksanaan'],
+  ['J. Skor keutamaan', 'Risiko']
+];
+
 function enhanceParticipantWorkspace() {
   const configIndex = activityPath.findIndex((item) => location.pathname.endsWith(item.path));
   if (configIndex < 0) return;
@@ -683,7 +723,8 @@ function enhanceParticipantWorkspace() {
     <div class="workspace-step"><span>${config.module}</span><strong>Langkah ${configIndex + 1} daripada ${activityPath.length} · ${config.label}</strong></div>
     <div class="workspace-progress"><div><strong>Kemajuan halaman</strong><span data-activity-progress>0%</span></div><progress max="100" value="0"></progress><small>Jawapan disimpan secara automatik pada peranti ini.</small></div>
     ${config.minutes ? '<div class="activity-timer"><strong data-timer-display>18:00</strong><button class="button ghost" type="button" data-start-timer>Mulakan pemasa</button></div>' : ''}
-    <div class="workspace-actions"><button class="button ghost" type="button" data-export-activity>Eksport jawapan CSV</button><button class="button ghost" type="button" data-reset-activity>Kosongkan halaman</button>${config.prev ? `<a class="button ghost" href="${config.prev}">← Sebelumnya</a>` : ''}<a class="button" href="${config.next}">Teruskan →</a></div>`;
+    <div class="workspace-actions">${config.path === '/modul-1/kanvas.html' ? '<button class="button" type="button" data-create-project-card>Hasilkan Kad Projek Kumpulan</button>' : ''}<button class="button ghost" type="button" data-export-activity>Eksport jawapan CSV</button><button class="button ghost" type="button" data-reset-activity>Kosongkan halaman</button>${config.prev ? `<a class="button ghost" href="${config.prev}">← Sebelumnya</a>` : ''}<a class="button" href="${config.next}">Teruskan →</a></div>
+    ${config.path === '/modul-1/kanvas.html' ? '<p class="workspace-document-status" data-project-card-status aria-live="polite"></p>' : ''}`;
   prose.prepend(workspace);
 
   const update = () => {
@@ -711,6 +752,62 @@ function enhanceParticipantWorkspace() {
     link.download = `${config.module.replace(' ', '-')}-${config.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.csv`;
     link.click();
     URL.revokeObjectURL(link.href);
+  });
+
+  const projectCardButton = workspace.querySelector('[data-create-project-card]');
+  if (projectCardButton) projectCardButton.addEventListener('click', async () => {
+    update();
+    const title = responseControls[0]?.value.trim();
+    if (!title) {
+      window.alert('Lengkapkan Tajuk peluang sebelum menghasilkan Kad Projek Kumpulan.');
+      responseControls[0]?.focus();
+      return;
+    }
+    const groupName = window.prompt('Masukkan nama kumpulan untuk Kad Projek:', state.groupName || 'Kumpulan Latihan');
+    if (!groupName?.trim()) return;
+    state.groupName = groupName.trim();
+    save();
+
+    const sections = [];
+    const addItem = (heading, label, value) => {
+      const cleanValue = String(value || '').trim();
+      if (!cleanValue) return;
+      let section = sections.find((item) => item.heading === heading);
+      if (!section) { section = { heading, items: [] }; sections.push(section); }
+      section.items.push({ label, value: cleanValue });
+    };
+    responseControls.forEach((input, index) => {
+      const descriptor = projectCardFields[index];
+      if (descriptor) addItem(descriptor[0], descriptor[1], input.value);
+    });
+    const selectedChecks = checkboxes.map((input, index) => ({ input, index, label: input.parentElement.textContent.trim() })).filter((item) => item.input.checked);
+    selectedChecks.filter((item) => item.index < 7).forEach((item) => addItem('D. Kesan masalah', 'Kesan dipilih', item.label));
+    selectedChecks.filter((item) => item.index >= 7 && item.index < 13).forEach((item) => addItem('E. Keupayaan pintar', 'Keupayaan dipilih', item.label));
+    selectedChecks.filter((item) => item.index >= 13 && item.index < 21).forEach((item) => addItem('G. Ukuran kejayaan', 'Ukuran dipilih', item.label));
+    selectedChecks.filter((item) => item.index >= 21).forEach((item) => addItem('K. Semakan kendiri', 'Disahkan kumpulan', item.label));
+
+    const status = workspace.querySelector('[data-project-card-status]');
+    const originalText = projectCardButton.textContent;
+    projectCardButton.disabled = true;
+    projectCardButton.textContent = 'Mencipta Google Doc...';
+    status.textContent = 'Jawapan sedang disusun dan dihantar ke folder latihan Google Drive.';
+    try {
+      const response = await fetch(projectCardEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ action: 'createProjectCard', data: { groupName: groupName.trim(), title, sections } }),
+        redirect: 'follow'
+      });
+      if (!response.ok) throw new Error(`Ralat rangkaian (${response.status})`);
+      const result = await response.json();
+      if (!result.ok || !result.documentUrl) throw new Error(result.error || 'Dokumen tidak dapat dicipta');
+      status.innerHTML = `Kad Projek berjaya dicipta. <a href="${result.documentUrl}" target="_blank" rel="noopener">Buka Google Doc ↗</a><br><small>${result.sharingWarning || 'Simpan pautan ini untuk digunakan semula dalam Modul 2 hingga Modul 5.'}</small>`;
+    } catch (error) {
+      status.textContent = `Kad Projek tidak dapat dicipta: ${error.message || 'ralat tidak diketahui'}. Eksport CSV sebagai salinan sandaran.`;
+    } finally {
+      projectCardButton.disabled = false;
+      projectCardButton.textContent = originalText;
+    }
   });
 
   workspace.querySelector('[data-reset-activity]').addEventListener('click', () => {
