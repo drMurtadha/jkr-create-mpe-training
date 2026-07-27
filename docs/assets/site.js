@@ -893,7 +893,11 @@ function enhanceProjectCardBridge() {
       <h3>Bahan dan arahan untuk draf memo</h3>
       <p class="callout"><strong>Tujuan hasil:</strong> Memohon pertimbangan atau kelulusan untuk menjalankan percubaan kecil — bukan memberi kelulusan automatik.</p>
       <textarea rows="22" data-project-card-prompt aria-label="Bahan dan arahan draf memo"></textarea>
-      <div class="workspace-actions"><button class="button" type="button" data-copy-project-prompt>Salin bahan dan arahan</button></div>
+      <div class="workspace-actions">
+        <button class="button" type="button" data-copy-project-prompt>Salin bahan dan arahan</button>
+        <button class="button accent" type="button" data-create-module-two-memo>Hasilkan Memo Modul 2 di Google Drive</button>
+        <a class="button ghost" data-open-module-two-memo href="${bridgeState.moduleTwoMemoUrl || '#'}" target="_blank" rel="noopener" ${bridgeState.moduleTwoMemoUrl ? '' : 'hidden'}>Buka Memo Google Doc ↗</a>
+      </div>
       <p class="workspace-document-status" data-project-bridge-status aria-live="polite"></p>
     </div>`;
 
@@ -927,6 +931,88 @@ function enhanceProjectCardBridge() {
     }
     event.currentTarget.textContent = 'Disalin ✓';
     window.setTimeout(() => { event.currentTarget.textContent = 'Salin bahan dan arahan'; }, 1800);
+  });
+
+  container.querySelector('[data-create-module-two-memo]')?.addEventListener('click', async (event) => {
+    saveUrl();
+    const groupName = moduleOneState.groupName || bridgeState.groupName || window.prompt('Masukkan nama kumpulan untuk Memo Modul 2:', 'Kumpulan Latihan');
+    if (!groupName?.trim()) return;
+    bridgeState.groupName = groupName.trim();
+    localStorage.setItem(bridgeKey, JSON.stringify(bridgeState));
+
+    const placeholder = (index) => get(index) || '[PERLU PENGESAHAN]';
+    const sections = [
+      { heading: '1. Tujuan', items: [
+        { label: 'Permohonan', value: `Memohon pertimbangan untuk menjalankan percubaan kecil bagi ${placeholder(0)}.` }
+      ]},
+      { heading: '2. Latar belakang dan masalah semasa', items: [
+        { label: 'Pengguna utama', value: placeholder(1) },
+        { label: 'Masalah', value: placeholder(2) },
+        { label: 'Punca dan kesan', value: placeholder(3) },
+        { label: 'Proses semasa', value: placeholder(4) }
+      ]},
+      { heading: '3. Cadangan percubaan kecil', items: [
+        { label: 'Perubahan kerja dicadangkan', value: placeholder(8) },
+        { label: 'Hasil atau paparan', value: placeholder(9) },
+        { label: 'Output diperlukan', value: placeholder(12) },
+        { label: 'Tempoh', value: get(27) ? `${get(27)} minggu` : '[PERLU PENGESAHAN]' },
+        { label: 'Bilangan pengguna', value: placeholder(28) },
+        { label: 'Langkah pertama', value: placeholder(29) },
+        { label: 'Pemilik percubaan', value: placeholder(30) }
+      ]},
+      { heading: '4. Ukuran kejayaan', items: [
+        { label: 'Keadaan sekarang', value: placeholder(17) },
+        { label: 'Sasaran percubaan', value: placeholder(18) },
+        { label: 'Cara mengukur', value: placeholder(19) },
+        { label: 'Bukti dikumpulkan', value: placeholder(31) }
+      ]},
+      { heading: '5. Risiko, kawalan dan semakan manusia', items: [
+        { label: 'Risiko utama', value: placeholder(20) },
+        { label: 'Kesan risiko', value: placeholder(21) },
+        { label: 'Kawalan utama', value: placeholder(22) },
+        { label: 'Risiko kedua', value: placeholder(23) },
+        { label: 'Kesan risiko kedua', value: placeholder(24) },
+        { label: 'Kawalan risiko kedua', value: placeholder(25) },
+        { label: 'Tindakan yang memerlukan kelulusan manusia', value: placeholder(26) }
+      ]},
+      { heading: '6. Keputusan yang dimohon', items: [
+        { label: 'Keputusan', value: 'Pertimbangan dan kelulusan pegawai berkuasa untuk menjalankan percubaan kecil dalam skop yang dicadangkan. Kelulusan tidak diberikan secara automatik oleh sistem.' }
+      ]}
+    ];
+
+    const button = event.currentTarget;
+    const status = container.querySelector('[data-project-bridge-status]');
+    const openMemo = container.querySelector('[data-open-module-two-memo]');
+    const originalText = button.textContent;
+    button.disabled = true;
+    button.textContent = 'Mencipta Memo Google Doc...';
+    status.textContent = 'Memo sedang disusun dan disimpan dalam folder latihan Google Drive.';
+    try {
+      const response = await fetch(projectCardEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ action: 'createModuleTwoMemo', data: {
+          groupName: groupName.trim(),
+          title: placeholder(0),
+          sourceUrl: urlInput.value.trim(),
+          sections
+        }}),
+        redirect: 'follow'
+      });
+      if (!response.ok) throw new Error(`Ralat rangkaian (${response.status})`);
+      const result = await response.json();
+      if (!result.ok || !result.documentUrl) throw new Error(result.error || 'Memo tidak dapat dicipta');
+      bridgeState.moduleTwoMemoUrl = result.documentUrl;
+      localStorage.setItem(bridgeKey, JSON.stringify(bridgeState));
+      openMemo.href = result.documentUrl;
+      openMemo.hidden = false;
+      status.innerHTML = `Memo Modul 2 berjaya disimpan. <a href="${result.documentUrl}" target="_blank" rel="noopener">Buka Google Doc ↗</a><br><small>${result.sharingWarning || 'Gunakan pautan memo ini sebagai hasil Modul 2 dan rujukan bagi aktiviti seterusnya.'}</small>`;
+    } catch (error) {
+      status.textContent = `Memo tidak dapat dicipta: ${error.message || 'ralat tidak diketahui'}. Pastikan Apps Script telah dikemas kini dan dideploy semula.`;
+    } finally {
+      button.disabled = false;
+      button.textContent = originalText;
+    }
   });
 }
 
