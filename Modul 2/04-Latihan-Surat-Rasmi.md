@@ -1,6 +1,12 @@
 # Latihan Surat Rasmi
 
-## Senario rekaan
+## Gunakan Kad Projek Modul 1
+
+Ambil masalah, cadangan penyelesaian, ukuran kejayaan, risiko dan percubaan kecil daripada Kad Projek kumpulan. Portal akan menyusunnya sebagai bahan untuk **memo cadangan percubaan kecil**; peserta masih wajib menyemak fakta dan menandakan maklumat yang belum disahkan.
+
+<div data-project-card-bridge></div>
+
+## Senario rekaan alternatif
 
 Unit Operasi Makmal mahu mendapatkan pengesahan jadual kalibrasi daripada syarikat pembekal rekaan. Semua butiran di bawah dicipta khusus untuk latihan dan tidak merujuk mana-mana rekod sebenar.
 

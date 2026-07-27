@@ -726,9 +726,11 @@ function enhanceParticipantWorkspace() {
     <div class="workspace-actions">${config.path === '/modul-1/kanvas.html' ? '<button class="button" type="button" data-create-project-card>Hasilkan Kad Projek Kumpulan</button>' : ''}<button class="button ghost" type="button" data-export-activity>Eksport jawapan CSV</button><button class="button ghost" type="button" data-reset-activity>Kosongkan halaman</button>${config.prev ? `<a class="button ghost" href="${config.prev}">← Sebelumnya</a>` : ''}<a class="button" href="${config.next}">Teruskan →</a></div>
     ${config.path === '/modul-1/kanvas.html' ? '<p class="workspace-document-status" data-project-card-status aria-live="polite"></p>' : ''}`;
   prose.prepend(workspace);
+  const orderedResponseControls = [...prose.querySelectorAll('[data-workspace-field]')];
 
   const update = () => {
     state.responses = Object.fromEntries(responseControls.map((input) => [input.dataset.workspaceField, input.value]));
+    state.orderedResponses = orderedResponseControls.map((input) => input.value);
     state.checks = checkboxes.map((input) => input.checked);
     const completed = responseControls.filter((input) => input.value.trim()).length + checkboxes.filter((input) => input.checked).length;
     const total = responseControls.length + checkboxes.length;
@@ -757,10 +759,10 @@ function enhanceParticipantWorkspace() {
   const projectCardButton = workspace.querySelector('[data-create-project-card]');
   if (projectCardButton) projectCardButton.addEventListener('click', async () => {
     update();
-    const title = responseControls[0]?.value.trim();
+    const title = orderedResponseControls[0]?.value.trim();
     if (!title) {
       window.alert('Lengkapkan Tajuk peluang sebelum menghasilkan Kad Projek Kumpulan.');
-      responseControls[0]?.focus();
+      orderedResponseControls[0]?.focus();
       return;
     }
     const groupName = window.prompt('Masukkan nama kumpulan untuk Kad Projek:', state.groupName || 'Kumpulan Latihan');
@@ -776,7 +778,7 @@ function enhanceParticipantWorkspace() {
       if (!section) { section = { heading, items: [] }; sections.push(section); }
       section.items.push({ label, value: cleanValue });
     };
-    responseControls.forEach((input, index) => {
+    orderedResponseControls.forEach((input, index) => {
       const descriptor = projectCardFields[index];
       if (descriptor) addItem(descriptor[0], descriptor[1], input.value);
     });
@@ -801,6 +803,8 @@ function enhanceParticipantWorkspace() {
       if (!response.ok) throw new Error(`Ralat rangkaian (${response.status})`);
       const result = await response.json();
       if (!result.ok || !result.documentUrl) throw new Error(result.error || 'Dokumen tidak dapat dicipta');
+      state.projectCardUrl = result.documentUrl;
+      save();
       status.innerHTML = `Kad Projek berjaya dicipta. <a href="${result.documentUrl}" target="_blank" rel="noopener">Buka Google Doc ↗</a><br><small>${result.sharingWarning || 'Simpan pautan ini untuk digunakan semula dalam Modul 2 hingga Modul 5.'}</small>`;
     } catch (error) {
       status.textContent = `Kad Projek tidak dapat dicipta: ${error.message || 'ralat tidak diketahui'}. Eksport CSV sebagai salinan sandaran.`;
@@ -834,6 +838,80 @@ function enhanceParticipantWorkspace() {
     window.setInterval(renderTimer, 1000);
   }
 }
+
+function enhanceProjectCardBridge() {
+  const container = document.querySelector('[data-project-card-bridge]');
+  if (!container) return;
+
+  const moduleOneKey = 'mpe-participant-workspace-/modul-1/kanvas.html';
+  const bridgeKey = 'mpe-project-card-bridge-modul-2';
+  let moduleOneState = {};
+  let bridgeState = {};
+  try { moduleOneState = JSON.parse(localStorage.getItem(moduleOneKey)) || {}; } catch { moduleOneState = {}; }
+  try { bridgeState = JSON.parse(localStorage.getItem(bridgeKey)) || {}; } catch { bridgeState = {}; }
+
+  const responses = moduleOneState.responses || {};
+  const values = Array.isArray(moduleOneState.orderedResponses) ? moduleOneState.orderedResponses : [];
+  const get = (index) => String(values[index] || '').trim();
+  const hasCanvas = values.some((value) => String(value).trim());
+  const initialUrl = bridgeState.projectCardUrl || moduleOneState.projectCardUrl || '';
+
+  container.className = 'project-card-bridge';
+  container.innerHTML = `
+    <div class="project-card-bridge__status">
+      <strong>${hasCanvas ? 'Kanvas Modul 1 ditemui pada peranti ini ✓' : 'Kanvas Modul 1 belum ditemui pada peranti ini'}</strong>
+      <span>${hasCanvas ? 'Maklumat terpilih boleh disusun terus sebagai bahan memo.' : Object.keys(responses).length ? 'Buka semula Kanvas Modul 1 sekali untuk menyegerakkan susunan medan, kemudian kembali ke halaman ini.' : 'Buka Modul 1 dan lengkapkan kanvas, atau tampal pautan Kad Projek untuk rujukan.'}</span>
+    </div>
+    <label class="project-card-bridge__field">Pautan Google Doc Kad Projek
+      <input type="url" data-project-card-url placeholder="https://docs.google.com/document/d/..." value="${initialUrl.replaceAll('&', '&amp;').replaceAll('"', '&quot;')}">
+    </label>
+    <div class="workspace-actions">
+      <button class="button" type="button" data-use-project-card ${hasCanvas ? '' : 'disabled'}>Gunakan Kad Projek Modul 1</button>
+      <a class="button ghost" href="../modul-1/kanvas.html">Semak Kanvas Modul 1</a>
+      <a class="button ghost" data-open-project-card href="${initialUrl || '#'}" target="_blank" rel="noopener" ${initialUrl ? '' : 'hidden'}>Buka Google Doc ↗</a>
+    </div>
+    <div data-project-card-output hidden>
+      <h3>Bahan dan arahan untuk draf memo</h3>
+      <p class="callout"><strong>Tujuan hasil:</strong> Memohon pertimbangan atau kelulusan untuk menjalankan percubaan kecil — bukan memberi kelulusan automatik.</p>
+      <textarea rows="22" data-project-card-prompt aria-label="Bahan dan arahan draf memo"></textarea>
+      <div class="workspace-actions"><button class="button" type="button" data-copy-project-prompt>Salin bahan dan arahan</button></div>
+      <p class="workspace-document-status" data-project-bridge-status aria-live="polite"></p>
+    </div>`;
+
+  const urlInput = container.querySelector('[data-project-card-url]');
+  const openLink = container.querySelector('[data-open-project-card]');
+  const saveUrl = () => {
+    const url = urlInput.value.trim();
+    bridgeState.projectCardUrl = url;
+    localStorage.setItem(bridgeKey, JSON.stringify(bridgeState));
+    openLink.href = url || '#';
+    openLink.hidden = !url;
+  };
+  urlInput.addEventListener('input', saveUrl);
+
+  container.querySelector('[data-use-project-card]')?.addEventListener('click', () => {
+    saveUrl();
+    const sourceUrl = urlInput.value.trim() || '[PAUTAN KAD PROJEK BELUM DIMASUKKAN]';
+    const prompt = `KONTEKS:\nSaya sedang menyediakan memo cadangan percubaan kecil berdasarkan Kad Projek Modul 1. Semua maklumat ialah data rekaan untuk latihan.\n\nSUMBER RUJUKAN:\n${sourceUrl}\n\nFAKTA DARIPADA KAD PROJEK:\n- Tajuk peluang: ${get(0) || '[PERLU PENGESAHAN]'}\n- Pengguna utama: ${get(1) || '[PERLU PENGESAHAN]'}\n- Masalah: ${get(2) || '[PERLU PENGESAHAN]'}\n- Punca dan kesan: ${get(3) || '[PERLU PENGESAHAN]'}\n- Proses semasa: ${get(4) || '[PERLU PENGESAHAN]'}\n- Cadangan perubahan kerja: ${get(8) || '[PERLU PENGESAHAN]'}\n- Hasil atau paparan dicadangkan: ${get(9) || '[PERLU PENGESAHAN]'}\n- Output diperlukan: ${get(12) || '[PERLU PENGESAHAN]'}\n- Keadaan sekarang: ${get(17) || '[PERLU PENGESAHAN]'}\n- Sasaran percubaan: ${get(18) || '[PERLU PENGESAHAN]'}\n- Cara mengukur: ${get(19) || '[PERLU PENGESAHAN]'}\n- Risiko utama: ${get(20) || '[PERLU PENGESAHAN]'}\n- Kawalan utama: ${get(22) || '[PERLU PENGESAHAN]'}\n- Kelulusan manusia diperlukan: ${get(26) || '[PERLU PENGESAHAN]'}\n- Tempoh percubaan: ${get(27) ? `${get(27)} minggu` : '[PERLU PENGESAHAN]'}\n- Bilangan pengguna: ${get(28) || '[PERLU PENGESAHAN]'}\n- Langkah pertama: ${get(29) || '[PERLU PENGESAHAN]'}\n- Pemilik percubaan: ${get(30) || '[PERLU PENGESAHAN]'}\n- Bukti dikumpulkan: ${get(31) || '[PERLU PENGESAHAN]'}\n\nTUGAS:\n1. Hasilkan draf memo rasmi untuk memohon pertimbangan menjalankan percubaan kecil.\n2. Susun kepada: tujuan, latar belakang, masalah semasa, cadangan, skop dan tempoh percubaan, ukuran kejayaan, risiko dan kawalan, serta keputusan yang dimohon.\n3. Kekalkan semua fakta di atas. Jangan cipta nama pegawai, nombor rujukan, tarikh, kos, kelulusan atau komitmen yang tiada.\n4. Tandakan setiap maklumat yang belum tersedia sebagai [PERLU PENGESAHAN].\n5. Nyatakan bahawa keputusan akhir dan kelulusan kekal pada pegawai yang diberi kuasa.\n6. Tandakan dokumen sebagai DRAF — UNTUK LATIHAN SAHAJA.`;
+    container.querySelector('[data-project-card-prompt]').value = prompt;
+    container.querySelector('[data-project-card-output]').hidden = false;
+    container.querySelector('[data-project-bridge-status]').textContent = 'Bahan memo telah disusun daripada Kanvas Modul 1. Semak fakta sebelum menyalinnya ke platform AI yang diluluskan.';
+  });
+
+  container.querySelector('[data-copy-project-prompt]')?.addEventListener('click', async (event) => {
+    const text = container.querySelector('[data-project-card-prompt]').value;
+    try { await navigator.clipboard.writeText(text); }
+    catch {
+      const textarea = container.querySelector('[data-project-card-prompt]');
+      textarea.select();
+      document.execCommand('copy');
+    }
+    event.currentTarget.textContent = 'Disalin ✓';
+    window.setTimeout(() => { event.currentTarget.textContent = 'Salin bahan dan arahan'; }, 1800);
+  });
+}
+
+enhanceProjectCardBridge();
 
 enhanceParticipantWorkspace();
 
