@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url);
 const { marked } = require('marked');
 const root = process.cwd();
 const docs = path.join(root, 'docs');
-const assetVersion = '20260727-16';
+const assetVersion = '20260727-17';
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -209,7 +209,7 @@ await markdownPage({ source: 'Modul 2/08-Panduan-Peserta-Langkah-demi-Langkah.md
 await markdownPage({ source: 'Modul 2/01-Nota-Fasilitator.md', output: 'modul-2/nota-fasilitator.html', title: 'Nota Fasilitator Modul 2', description: 'Panduan terperinci pelaksanaan sesi selama 120 minit.', moduleNumber: 2 });
 await markdownPage({ source: 'Modul 2/02-Kandungan-Slaid.md', output: 'modul-2/kandungan-slaid.html', title: 'Kandungan Slaid Modul 2', description: 'Sumber 26 slaid, nota penyampai dan aktiviti interaktif.', moduleNumber: 2 });
 await markdownPage({ source: 'Modul 2/03-Buku-Kerja-dan-Pustaka-Prompt.md', output: 'modul-2/pustaka-prompt.html', title: 'Pustaka Prompt Boleh Salin', description: 'Prompt neutral platform untuk surat, minit, audit fakta dan kawalan rekod.', moduleNumber: 2 });
-await markdownPage({ source: 'Modul 2/04-Latihan-Surat-Rasmi.md', output: 'modul-2/latihan-surat.html', title: 'Latihan Surat Rasmi', description: 'Latihan draf dan audit surat menggunakan data rekaan.', moduleNumber: 2 });
+await markdownPage({ source: 'Modul 2/04-Latihan-Surat-Rasmi.md', output: 'modul-2/latihan-surat.html', title: 'Latihan Surat Rasmi', description: 'Gunakan Kad Projek Modul 1 untuk menghasilkan dan mengaudit memo cadangan percubaan kecil.', moduleNumber: 2 });
 await markdownPage({ source: 'Modul 2/05-Latihan-Minit-Tindakan.md', output: 'modul-2/latihan-minit.html', title: 'Latihan Minit dan Tindakan', description: 'Latihan menukar catatan simulasi kepada minit dan daftar tindakan.', moduleNumber: 2 });
 await markdownPage({ source: 'Modul 2/06-Kawalan-Rekod-dan-Semakan.md', output: 'modul-2/kawalan-rekod.html', title: 'Kawalan Rekod dan Semakan', description: 'Had dan kawalan keselamatan maklumat, audit manusia, kawalan versi dan rekod rasmi.', moduleNumber: 2 });
 await markdownPage({ source: 'Modul 2/07-Penilaian-dan-Exit-Ticket.md', output: 'modul-2/penilaian.html', title: 'Penilaian dan Exit Ticket Modul 2', description: 'Kuiz, rubrik hasil kumpulan dan refleksi individu.', moduleNumber: 2 });
