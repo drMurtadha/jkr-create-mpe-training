@@ -674,6 +674,19 @@ const projectCardFields = [
   ['J. Skor keutamaan', 'Risiko']
 ];
 
+// Urutan kekunci storan lama mengikut susunan visual Kanvas Modul 1.
+// Digunakan untuk memindahkan jawapan peserta yang disimpan sebelum
+// `orderedResponses` diperkenalkan.
+const legacyProjectCardResponseOrder = [
+  'line-0', 'line-1', 'line-6', 'line-7', 'line-9', 'line-10',
+  'line-11', 'line-12', 'line-13', 'line-14',
+  'cell-0', 'cell-1', 'cell-2', 'cell-3', 'cell-4', 'cell-5',
+  'line-15', 'line-16', 'line-17', 'line-18',
+  'cell-6', 'cell-7', 'cell-8', 'cell-9', 'cell-10', 'cell-11',
+  'line-19', 'line-20', 'line-21', 'line-22', 'line-23', 'line-24',
+  'cell-12', 'cell-13', 'cell-14', 'cell-15'
+];
+
 function enhanceParticipantWorkspace() {
   const configIndex = activityPath.findIndex((item) => location.pathname.endsWith(item.path));
   if (configIndex < 0) return;
@@ -851,7 +864,13 @@ function enhanceProjectCardBridge() {
   try { bridgeState = JSON.parse(localStorage.getItem(bridgeKey)) || {}; } catch { bridgeState = {}; }
 
   const responses = moduleOneState.responses || {};
-  const values = Array.isArray(moduleOneState.orderedResponses) ? moduleOneState.orderedResponses : [];
+  const savedOrder = Array.isArray(moduleOneState.orderedResponses) ? moduleOneState.orderedResponses : [];
+  const legacyOrder = legacyProjectCardResponseOrder.map((key) => responses[key] || '');
+  const values = savedOrder.some((value) => String(value).trim()) ? savedOrder : legacyOrder;
+  if (!savedOrder.length && legacyOrder.some((value) => String(value).trim())) {
+    moduleOneState.orderedResponses = legacyOrder;
+    localStorage.setItem(moduleOneKey, JSON.stringify(moduleOneState));
+  }
   const get = (index) => String(values[index] || '').trim();
   const hasCanvas = values.some((value) => String(value).trim());
   const initialUrl = bridgeState.projectCardUrl || moduleOneState.projectCardUrl || '';
@@ -860,7 +879,7 @@ function enhanceProjectCardBridge() {
   container.innerHTML = `
     <div class="project-card-bridge__status">
       <strong>${hasCanvas ? 'Kanvas Modul 1 ditemui pada peranti ini ✓' : 'Kanvas Modul 1 belum ditemui pada peranti ini'}</strong>
-      <span>${hasCanvas ? 'Maklumat terpilih boleh disusun terus sebagai bahan memo.' : Object.keys(responses).length ? 'Buka semula Kanvas Modul 1 sekali untuk menyegerakkan susunan medan, kemudian kembali ke halaman ini.' : 'Buka Modul 1 dan lengkapkan kanvas, atau tampal pautan Kad Projek untuk rujukan.'}</span>
+      <span>${hasCanvas ? 'Maklumat terpilih boleh disusun terus sebagai bahan memo.' : 'Buka Modul 1 dan lengkapkan kanvas, kemudian kembali ke halaman ini.'}</span>
     </div>
     <label class="project-card-bridge__field">Pautan Google Doc Kad Projek
       <input type="url" data-project-card-url placeholder="https://docs.google.com/document/d/..." value="${initialUrl.replaceAll('&', '&amp;').replaceAll('"', '&quot;')}">
