@@ -1,19 +1,19 @@
 :root {
-  --ink: #173440;
-  --ink-deep: #0d272b;
-  --text: #1d292c;
-  --muted: #586b70;
-  --paper: #f6f7f2;
+  --ink: #343638;
+  --ink-deep: #303234;
+  --text: #2f3032;
+  --muted: #686b6d;
+  --paper: #f7f5f1;
   --surface: #ffffff;
-  --line: #d9e2df;
-  --teal: #00a99d;
-  --teal-text: #08766f;
-  --teal-soft: #dff7f2;
-  --blue: #2f72c4;
-  --lime: #cdff3f;
-  --amber: #d79a32;
+  --line: #dedbd5;
+  --teal: #f47b17;
+  --teal-text: #a94700;
+  --teal-soft: #fff0df;
+  --blue: #73787a;
+  --lime: #ffc23a;
+  --amber: #e66f12;
   --red: #c95b5b;
-  --shadow: 0 18px 50px rgba(13, 39, 43, .10);
+  --shadow: 0 18px 50px rgba(48, 50, 52, .11);
   --radius: 22px;
   --content: 1180px;
 }
@@ -27,7 +27,7 @@ body {
   font-family: Inter, Aptos, "Segoe UI", system-ui, -apple-system, sans-serif;
   line-height: 1.65;
 }
-a { color: #066d67; text-decoration-thickness: .08em; text-underline-offset: .18em; }
+a { color: var(--teal-text); text-decoration-thickness: .08em; text-underline-offset: .18em; }
 a:hover { color: var(--blue); }
 img { max-width: 100%; height: auto; }
 .video-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 1.25rem 0; overflow: hidden; border-radius: 18px; background: var(--ink); box-shadow: var(--shadow); }
@@ -49,7 +49,7 @@ button, .button { font: inherit; }
 .training-banner strong { text-transform: uppercase; letter-spacing: .08em; }
 .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
 .brand { display: flex; align-items: center; gap: .8rem; color: var(--ink); text-decoration: none; font-weight: 800; }
-.brand-mark { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: var(--ink-deep); color: var(--lime); font-size: .8rem; letter-spacing: .08em; }
+.brand-logo { width: 58px; height: 46px; padding: 3px; object-fit: contain; border: 1px solid #e7e1d8; border-radius: 10px; background: white; box-shadow: 0 5px 16px rgba(48,50,52,.08); }
 .brand small { display: block; color: var(--muted); font-weight: 600; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
 .nav-links { display: flex; align-items: center; gap: 1.2rem; }
 .nav-links a { color: var(--ink); font-size: .92rem; font-weight: 700; text-decoration: none; }
@@ -57,7 +57,7 @@ button, .button { font: inherit; }
 .menu-button { display: none; border: 0; border-radius: 10px; padding: .6rem .75rem; color: white; background: var(--ink); }
 
 .hero { position: relative; overflow: hidden; padding: 6rem 0 4.5rem; background: var(--ink-deep); color: white; }
-.hero::after { content: ""; position: absolute; width: 520px; height: 520px; right: -170px; top: -220px; border: 1px solid rgba(205,255,63,.25); border-radius: 50%; box-shadow: 0 0 0 50px rgba(0,169,157,.08), 0 0 0 110px rgba(47,114,196,.06); }
+.hero::after { content: ""; position: absolute; width: 520px; height: 520px; right: -170px; top: -220px; border: 1px solid rgba(255,194,58,.28); border-radius: 50%; box-shadow: 0 0 0 50px rgba(244,123,23,.09), 0 0 0 110px rgba(115,120,122,.08); }
 .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.35fr .65fr; gap: 3rem; align-items: end; }
 .eyebrow { margin: 0 0 .8rem; color: var(--teal-text); font-weight: 800; font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; }
 .hero .eyebrow { color: var(--lime); }
@@ -98,7 +98,7 @@ button, .button { font: inherit; }
 .card { transition: transform .2s ease, border-color .2s ease; }
 .module-number { color: var(--teal-text); font-weight: 900; font-size: 1.7rem; }
 .status { display: inline-flex; margin-top: 1rem; padding: .25rem .55rem; border-radius: 999px; background: #eef2f1; color: var(--muted); font-size: .73rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
-.status.ready { background: var(--teal-soft); color: #08766f; }
+.status.ready { background: var(--teal-soft); color: var(--teal-text); }
 
 .timeline { display: grid; grid-template-columns: repeat(5, 1fr); gap: .8rem; counter-reset: timeline; }
 .timeline-item { min-height: 190px; padding: 1.2rem; border-top: 4px solid var(--teal); background: white; }
@@ -271,6 +271,9 @@ button, .button { font: inherit; }
 .official-letter-workspace input:focus, .official-letter-workspace textarea:focus { outline: 3px solid rgba(0,169,157,.18); border-color: var(--teal); }
 .official-letter-workspace [hidden] { display: none !important; }
 @media (max-width: 700px) { .official-letter-workspace__grid { grid-template-columns: 1fr; } .official-letter-workspace label.full { grid-column: auto; } }
+
+/* Palet CREaTE — fokus jingga yang konsisten pada semua kawalan interaktif. */
+:where(a, button, input, select, textarea):focus-visible { outline: 3px solid rgba(244,123,23,.24); outline-offset: 2px; }
 .activity-timer { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; padding: .8rem 0; border-top: 1px solid var(--line); }
 .activity-timer strong { min-width: 78px; color: var(--ink); font-size: 1.45rem; font-variant-numeric: tabular-nums; }
 .activity-timer strong.expired { color: var(--red); }
