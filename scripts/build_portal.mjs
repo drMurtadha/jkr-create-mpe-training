@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url);
 const { marked } = require('marked');
 const root = process.cwd();
 const docs = path.join(root, 'docs');
-const assetVersion = '20260728-21';
+const assetVersion = '20260728-22';
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -181,7 +181,7 @@ const home = shell({
       ['1','Pengenalan aplikasi pintar','90 minit','modul-1/index.html','ready'],['2','AI generatif untuk dokumen rasmi','120 minit','modul-2/index.html','ready'],['3','Analisis data dan rekod teknikal','210 minit','modul-3/index.html','ready'],['4','Automasi aliran kerja makmal','120 minit','modul-4/index.html','ready'],['5','Daripada idea kepada MPE Hub','120 minit','modul-5/index.html','ready']
     ].map(x=>`<a class="card-link" href="${x[3]}"><article class="card"><span class="module-number">0${x[0]}</span><h3>${x[1]}</h3><p>${x[2]}</p><span class="status ${x[4]}">${x[4]?'Kandungan lengkap':'Ruang tersedia'}</span></article></a>`).join('')}</div></div></section>
     <section class="section alt"><div class="container"><div class="section-head"><div><p class="eyebrow">Atur cara</p><h2>Jadual bengkel</h2></div><p>Dua hari yang bergerak daripada kefahaman asas kepada prototaip MPE Hub yang berfungsi.</p></div><div class="timeline"><div class="timeline-item"><b>28 Jul · 09:00</b><strong>Modul 1</strong><p>Aplikasi pintar dan peluang produktiviti.</p></div><div class="timeline-item"><b>28 Jul · 11:00</b><strong>Modul 2</strong><p>AI generatif untuk surat, minit tindakan dan kawalan rekod.</p></div><div class="timeline-item"><b>28 Jul · 14:30</b><strong>Modul 3A</strong><p>Analisis data dan rekod teknikal.</p></div><div class="timeline-item"><b>29 Jul · 09:00</b><strong>Modul 3B & 4</strong><p>Sambungan analisis dan aliran kerja.</p></div><div class="timeline-item"><b>29 Jul · 14:30</b><strong>Modul 5</strong><p>Bina dan uji MPE Hub.</p></div></div></div></section>
-    <section class="section"><div class="container feature-panel"><div class="feature-copy"><p class="eyebrow">Kajian kes merentas modul</p><h2>MPE Hub: semua rekod, satu pandangan.</h2><p>Aplikasi demonstrasi menghubungkan Buku Log Makmal, KEW.PA-9 dan rekod ujian MCCB untuk menunjukkan penyatuan data, validasi, status dan kawalan manusia.</p><div class="button-row"><a class="button accent" href="https://drmurtadha.github.io/mpe-hub/" target="_blank" rel="noopener">Buka aplikasi ↗</a><a class="button ghost" href="modul-1/demonstrasi.html">Skrip demonstrasi</a></div></div><div class="feature-image" style="background-image:url('assets/mpe-hub-dashboard.png')" role="img" aria-label="Paparan dashboard demonstrasi MPE Hub"></div></div></section>
+    <section class="section"><div class="container feature-panel"><div class="feature-copy"><p class="eyebrow">Kajian kes merentas modul</p><h2>MPE Hub: semua rekod, satu pandangan.</h2><p>Aplikasi demonstrasi menghubungkan Buku Log Makmal, KEW.PA-9 dan rekod ujian MCCB untuk menunjukkan penyatuan data, validasi, status dan kawalan manusia.</p><div class="button-row"><a class="button accent" href="https://drmurtadha.github.io/mpe-hub/" target="_blank" rel="noopener">Buka aplikasi ↗</a><a class="button ghost" href="modul-1/demonstrasi.html">Skrip demonstrasi</a></div></div><div class="feature-image" style="background-image:url('assets/mpe-hub-dashboard.png?v=${assetVersion}')" role="img" aria-label="Paparan dashboard demonstrasi MPE Hub bertema CREaTE"></div></div></section>
   </main>`
 });
 
